@@ -1,0 +1,148 @@
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary: #64748b;
+    --background: #f8fafc;
+    --surface: #ffffff;
+    --text: #1e293b;
+    --text-light: #64748b;
+    --border: #e2e8f0;
+    --success: #22c55e;
+    --radius: 12px;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+header .subtitle { opacity: 0.9; font-size: 1.1rem; }
+
+main { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+
+.search-bar { margin-bottom: 2rem; }
+.search-bar input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    transition: border-color 0.2s;
+}
+.search-bar input:focus { outline: none; border-color: var(--primary); }
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.client-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.client-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
+}
+.client-card h3 { margin-bottom: 0.5rem; }
+.client-card .count { color: var(--text-light); font-size: 0.9rem; }
+.client-card .latest {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-light);
+}
+
+.recent-deliverables h2 { margin-bottom: 1.5rem; }
+
+.deliverable-item {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.deliverable-item .info h4 { margin-bottom: 0.25rem; }
+.deliverable-item .info .meta { font-size: 0.85rem; color: var(--text-light); }
+.deliverable-item .badge {
+    background: var(--primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-light);
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+}
+footer .updated { font-size: 0.85rem; margin-top: 0.5rem; }
+
+.client-header { display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem; }
+.client-header .logo { width: 80px; height: 80px; border-radius: var(--radius); object-fit: cover; }
+.back-link { display: inline-block; margin-bottom: 1rem; color: var(--primary); text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+
+.deliverables-list { display: flex; flex-direction: column; gap: 1rem; }
+.deliverable-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+.deliverable-card h3 { margin-bottom: 0.5rem; }
+.deliverable-card .description { color: var(--text-light); margin-bottom: 1rem; }
+.deliverable-card .files { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.deliverable-card .file-link {
+    background: var(--background);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 0.9rem;
+}
+.deliverable-card .file-link:hover { background: var(--primary); color: white; }
+
+@media (max-width: 768px) {
+    header { padding: 2rem 1rem; }
+    header h1 { font-size: 1.75rem; }
+    main { padding: 1rem; }
+    .client-header { flex-direction: column; text-align: center; }
+}
