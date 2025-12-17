@@ -11,32 +11,39 @@
         <h1>Client Deliverables</h1>
         <p class="subtitle">AI-Powered Content Delivery</p>
     </header>
-    
+
     <main>
         <section class="search-bar">
             <input type="text" id="search" placeholder="Search clients or deliverables...">
         </section>
-        
+
         <section class="clients-grid" id="clients-grid">
-            <!-- Auto-populated by Derek-Deliverables agent -->
-            <div class="empty-state">
-                <p>No deliverables yet. New content will appear here automatically.</p>
-            </div>
+            <a href="clients/better-together/index.html" class="client-card">
+                <h3>Better Together</h3>
+                <p class="count">1 deliverable</p>
+                <p class="latest">Latest: Welcome Package</p>
+            </a>
         </section>
-        
+
         <section class="recent-deliverables">
             <h2>Recent Deliverables</h2>
             <div id="recent-feed">
-                <!-- Auto-populated -->
+                <div class="deliverable-item">
+                    <div class="info">
+                        <h4>Welcome Package</h4>
+                        <p class="meta">Better Together &bull; Dec 17, 2024</p>
+                    </div>
+                    <span class="badge">Document</span>
+                </div>
             </div>
         </section>
     </main>
-    
+
     <footer>
         <p>Powered by AI Acrobatics Orchestra</p>
-        <p class="updated">Last updated: <span id="last-updated">Never</span></p>
+        <p class="updated">Last updated: <span id="last-updated">December 17, 2024</span></p>
     </footer>
-    
+
     <script>
         document.getElementById('search').addEventListener('input', function(e) {
             const query = e.target.value.toLowerCase();
