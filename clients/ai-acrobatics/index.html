@@ -11,10 +11,18 @@
             --client-secondary: #1d4ed8;
             --client-accent: #3b82f6;
         }
-        header { background: linear-gradient(135deg, var(--client-primary), var(--client-secondary)); }
-        .back-link, .deliverable-card .file-link { color: var(--client-primary); }
-        .deliverable-card .file-link:hover { background: var(--client-primary); color: white; }
-        .deliverable-item .badge { background: var(--client-primary); }
+        header {
+            background: linear-gradient(135deg, var(--client-primary), var(--client-secondary));
+        }
+        .client-card:hover, .deliverable-card .file-link:hover {
+            background: var(--client-primary);
+        }
+        .back-link, .deliverable-card .file-link {
+            color: var(--client-primary);
+        }
+        .deliverable-item .badge {
+            background: var(--client-primary);
+        }
     </style>
 </head>
 <body>
@@ -22,24 +30,36 @@
         <h1>AI Acrobatics</h1>
         <p class="subtitle">Your Deliverables</p>
     </header>
+
     <main>
         <a href="../../index.html" class="back-link">&larr; Back to all clients</a>
+
         <div class="client-header">
             <div>
                 <h2>AI Acrobatics</h2>
-                <p>AI-Powered Solutions</p>
-                <p>0 deliverables</p>
+                <p>1 deliverable</p>
             </div>
         </div>
+
         <section class="deliverables-list">
-            <div class="empty-state">
-                <p>No deliverables yet. Check back soon!</p>
+            <div class="deliverable-card">
+                <div class="deliverable-header">
+                    <h3>Claude Code Setup Guide</h3>
+                    <span class="badge">Guide</span>
+                </div>
+                <p class="deliverable-date">December 17, 2025</p>
+                <p class="deliverable-desc">Comprehensive setup guide for Claude Code CLI tool with custom configurations.</p>
+                <div class="deliverable-files">
+                    <a href="deliverables/2025-12-17-guide-claude-code-setup/guide.md" class="file-link">guide.md</a>
+                    <a href="deliverables/2025-12-17-guide-claude-code-setup/quick-start.md" class="file-link">quick-start.md</a>
+                </div>
             </div>
         </section>
     </main>
+
     <footer>
         <p>Powered by AI Acrobatics Orchestra</p>
-        <p class="updated"><a href="../../index.html" style="color: var(--client-primary);">View All Clients</a></p>
+        <p class="updated">Portal: <a href="../../index.html" style="color: var(--client-primary);">View All Clients</a></p>
     </footer>
 </body>
 </html>
