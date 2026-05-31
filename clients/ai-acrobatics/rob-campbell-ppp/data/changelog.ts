@@ -1,0 +1,17 @@
+export const changelog = [
+  { date: "2026-05-30", title: "$5,500 deposit received", description: "Deposit received and the project moved into post-deposit onboarding and implementation mode.", type: "payment" },
+  { date: "2026-05-30", title: "Client send review gate set", description: "PPP link and future outbound client messages are held for Julian review before sending to Rob.", type: "operations" },
+  { date: "2026-05-30", title: "Convex integration resumed", description: "Orphaned Convex work was reconciled back into the canonical AI Acrobatics client repo.", type: "infrastructure" },
+  { date: "2026-05-27", title: "PPP portal created", description: "Rob's Progress Portal Page was created from the AI Acrobatics PPP SOP.", type: "portal" },
+  { date: "2026-05-27", title: "Linear project created", description: "Dedicated Linear project created with parent issue and seven agent-ready subtasks.", type: "operations" },
+  { date: "2026-05-27", title: "Hermes profile verified", description: "Hermes recognizes profile rob-campbell with seven local skills enabled.", type: "infrastructure" },
+  { date: "2026-05-27", title: "Workspace verifier passed", description: "Rob's Hermes workspace structural verifier passed.", type: "verification" },
+  { date: "2026-05-27", title: "Dry-run signal report seeded", description: "Sample public-data signal report and queue item created without sensitive data.", type: "verification" },
+  { date: "2026-05-27", title: "Compliance boundary documented", description: "No Dynamics writes, no NMIS writes, no client data in AI tools, and no AI investment advice.", type: "compliance" },
+  { date: "2026-05-27", title: "Retainer ladder published", description: "Operator, Growth, and Build Partner tiers added to the proposal.", type: "proposal" },
+  { date: "2026-05-27", title: "Payment links verified", description: "Deposit, paid-in-full, and subscription links were added to the proposal source map.", type: "payment" },
+  { date: "2026-05-27", title: "Source map created", description: "Fireflies, Linear, proposal, payment, and Rob contact references centralized.", type: "source" },
+  { date: "2026-05-27", title: "Agent and swarm specs created", description: "Eight agents and five swarms were defined for the AI Prospect Engine.", type: "agents" },
+  { date: "2026-05-27", title: "Preferred email captured", description: "Rob's preferred follow-up email was set to Robert.t.campbell5@gmail.com.", type: "client" },
+  { date: "2026-05-27", title: "HubSpot blocker named", description: "HubSpot remains staged/read-only until access and scope are confirmed.", type: "blocker" },
+];
