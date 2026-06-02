@@ -44,7 +44,8 @@ grep -q "Game Plans" "$DASH_DIR/app/layout.tsx" || { echo "Missing Game Plans na
 grep -q "Request Center" "$DASH_DIR/app/layout.tsx" || { echo "Missing Request Center navigation"; ERRORS=$((ERRORS + 1)); }
 grep -q "Book Call" "$DASH_DIR/app/layout.tsx" || { echo "Missing onboarding call navigation"; ERRORS=$((ERRORS + 1)); }
 grep -q "Operations" "$DASH_DIR/app/layout.tsx" || { echo "Missing Operations navigation"; ERRORS=$((ERRORS + 1)); }
-grep -q "04U7cTXkd5D4man5dniU" "$DASH_DIR/data/client-data.ts" || { echo "Missing approved onboarding booking widget"; ERRORS=$((ERRORS + 1)); }
+grep -q "1ex4RE6n3ccxoF5sTE5Y" "$DASH_DIR/data/client-data.ts" || { echo "Missing approved 1-hour onboarding booking widget"; ERRORS=$((ERRORS + 1)); }
+grep -q "04U7cTXkd5D4man5dniU" "$DASH_DIR/data/client-data.ts" || { echo "Missing approved 30-minute support booking option"; ERRORS=$((ERRORS + 1)); }
 grep -q "booking-frame" "$DASH_DIR/components/PortalSections.tsx" || { echo "Missing embedded onboarding booking frame"; ERRORS=$((ERRORS + 1)); }
 grep -q "01KSNC02C1EBXF56962CH63MFR" "$DASH_DIR/data/meeting-notes.ts" || { echo "Missing Fireflies transcript source ID"; ERRORS=$((ERRORS + 1)); }
 grep -q "portalMessages" "$DASH_DIR/app/api/client-message/route.ts" || { echo "Missing Convex portalMessages route"; ERRORS=$((ERRORS + 1)); }

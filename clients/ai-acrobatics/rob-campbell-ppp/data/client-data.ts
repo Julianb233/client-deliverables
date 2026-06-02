@@ -84,8 +84,10 @@ export const hubLinks = [
 
 export const onboardingBooking = {
   title: "Book your AI Prospect Engine onboarding call",
-  url: "https://api.leadconnectorhq.com/widget/booking/04U7cTXkd5D4man5dniU",
-  duration: "30 minutes",
+  url: "https://api.leadconnectorhq.com/widget/booking/1ex4RE6n3ccxoF5sTE5Y",
+  duration: "1 hour",
+  alternateUrl: "https://api.leadconnectorhq.com/widget/booking/04U7cTXkd5D4man5dniU",
+  alternateDuration: "30-minute support call",
   owner: "Julian Bradley",
   purpose: "Confirm HubSpot access, target-employer priorities, compliance review boundaries, reporting cadence, and the first implementation sprint.",
   prepItems: [

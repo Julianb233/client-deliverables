@@ -260,7 +260,8 @@ export function BookOnboardingPage() {
           <p>{onboardingBooking.purpose}</p>
           <div className="booking-primary-action">
             <a className="button" href={onboardingBooking.url} target="_blank" rel="noreferrer">Open booking calendar</a>
-            <span className="muted">Use this button if the embedded calendar takes a moment to load.</span>
+            <a className="button secondary" href={onboardingBooking.alternateUrl} target="_blank" rel="noreferrer">Open 30-minute option</a>
+            <span className="muted">Use the 1-hour call for onboarding. The 30-minute option is available for quick support or a shorter check-in.</span>
           </div>
           <div className="booking-frame-wrap">
             <iframe
