@@ -4,6 +4,7 @@ import { actionItems as staticActionItems } from "../data/action-items";
 import { changelog as staticChangelog } from "../data/changelog";
 import { wizardServiceOffers } from "../data/wizard-services";
 import { DEFAULT_CONVEX_URL, PORTAL_CLIENT_SLUG } from "./portal-config";
+import { isClientVisiblePortalRecord } from "./portal-visibility";
 
 type ConvexClient = {
   name?: string;
@@ -184,13 +185,19 @@ export async function getPortalRuntimeData(): Promise<PortalRuntimeData> {
     return {
       source: "convex",
       client: portalClient,
-      feed: feed.map(mapConvexFeedItem),
+      feed: feed.filter(isVisiblePortalFeedItem).map(mapConvexFeedItem),
       actionItems: actions.length > 0 ? actions.map(mapConvexActionItem) : staticActionItems,
       changelog: changelog.length > 0 ? changelog.map(mapConvexChangelogItem) : staticChangelog,
-      messages: messages.map(mapConvexMessage),
+      messages: messages.filter(isVisiblePortalMessage).map(mapConvexMessage),
       upsellOffers: offers.length > 0 ? offers.map(mapConvexUpsellOffer) : wizardServiceOffers.map(mapStaticUpsellOffer),
-      upsellIntents: intents.map(mapConvexUpsellIntent),
-      lastSyncedLabel: latestTimestampLabel([...(feed ?? []), ...(actions ?? []), ...(changelog ?? []), ...(messages ?? []), ...(intents ?? [])]),
+      upsellIntents: intents.filter(isVisibleUpsellIntent).map(mapConvexUpsellIntent),
+      lastSyncedLabel: latestTimestampLabel([
+        ...((feed ?? []).filter(isVisiblePortalFeedItem)),
+        ...(actions ?? []),
+        ...(changelog ?? []),
+        ...((messages ?? []).filter(isVisiblePortalMessage)),
+        ...((intents ?? []).filter(isVisibleUpsellIntent)),
+      ]),
     };
   } catch (error) {
     console.warn("[rob-ppp] Convex unavailable; using static fallback", error);
@@ -217,6 +224,19 @@ function mapConvexFeedItem(item: ConvexFeedItem): PortalRuntimeData["feed"][numb
     source: item.agent ? `Convex · ${item.agent}` : "Convex portal feed",
     url: item.url,
   };
+}
+
+function isVisiblePortalFeedItem(item: ConvexFeedItem) {
+  if (item.title.toLowerCase().startsWith("checkout opened:")) return false;
+  return isClientVisiblePortalRecord([item.title, item.body, item.url, item.agent]);
+}
+
+function isVisiblePortalMessage(item: ConvexMessage) {
+  return isClientVisiblePortalRecord([item.topic, item.message, item.page, item.linearIssueId, item.linearUrl]);
+}
+
+function isVisibleUpsellIntent(item: ConvexUpsellIntent) {
+  return isClientVisiblePortalRecord([item.title, item.note, item.offerSlug, item.linearIssueId, item.linearUrl]);
 }
 
 function mapConvexActionItem(item: ConvexActionItem): PortalRuntimeData["actionItems"][number] {

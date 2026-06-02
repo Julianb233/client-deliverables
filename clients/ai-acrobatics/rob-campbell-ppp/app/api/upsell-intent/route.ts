@@ -3,6 +3,7 @@ import { makeFunctionReference } from "convex/server";
 import { NextResponse } from "next/server";
 import { wizardServiceOffers } from "../../../data/wizard-services";
 import { createLinearIssue } from "../../../lib/linear";
+import { notifyInternalPortalRequest } from "../../../lib/internal-notify";
 import { DEFAULT_CONVEX_URL, PORTAL_CLIENT_SLUG } from "../../../lib/portal-config";
 
 const intentTypes = ["checkout", "request", "learn_more"] as const;
@@ -87,11 +88,26 @@ export async function POST(request: Request) {
     agent: "PPP",
   });
 
+  const notification = await notifyInternalPortalRequest({
+    title: `[${PORTAL_CLIENT_SLUG}] ${checkoutUrl ? "Checkout interest" : "Upsell request"}: ${offer.title}`,
+    body: [
+      `Offer: ${offer.title}`,
+      `Intent: ${finalIntentType}`,
+      offer.priceLabel ? `Price: ${offer.priceLabel}` : null,
+      checkoutUrl ? "Checkout link was returned to the client." : "Custom request needs Julian review before pricing or outbound follow-up.",
+      note ? `Client note: ${note}` : null,
+    ].filter(Boolean).join("\n"),
+    linearUrl: linear?.url,
+    portalUrl: `https://${request.headers.get("host") ?? "rob-campbell-ppp.vercel.app"}/billing`,
+    priority: checkoutUrl ? "medium" : "high",
+  });
+
   return NextResponse.json({
     ok: true,
     status: checkoutUrl ? "checkout_returned" : "review_required",
     checkoutUrl,
     linear,
+    notification,
     message: checkoutUrl ? "Checkout is ready." : "This request was sent to Julian's review queue.",
   });
 }
@@ -101,4 +117,3 @@ function cleanText(value: unknown, max: number, optional = false): string | unde
   const cleaned = value.replace(/\s+/g, " ").trim().slice(0, max);
   return cleaned || (optional ? undefined : "");
 }
-

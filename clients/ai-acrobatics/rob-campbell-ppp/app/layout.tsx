@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { MessageMeWidget } from "../components/ClientPortalActions";
 import { getPortalRuntimeData } from "../lib/convex";
+import { isClientVisiblePortalRecord } from "../lib/portal-visibility";
 import "./globals.css";
 
 const nav = [
@@ -35,7 +36,12 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const runtime = await getPortalRuntimeData();
-  const notifications = runtime.feed.slice(0, 6).map((item) => ({
+  const notifications = runtime.feed.filter((item) => isClientVisiblePortalRecord([
+    item.title,
+    item.description,
+    item.source,
+    item.url,
+  ])).slice(0, 6).map((item) => ({
     id: item.id,
     title: item.title,
     body: item.description,

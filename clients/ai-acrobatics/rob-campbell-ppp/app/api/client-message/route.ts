@@ -3,6 +3,7 @@ import { makeFunctionReference } from "convex/server";
 import { NextResponse } from "next/server";
 import { DEFAULT_CONVEX_URL, PORTAL_CLIENT_SLUG } from "../../../lib/portal-config";
 import { createLinearIssue } from "../../../lib/linear";
+import { notifyInternalPortalRequest } from "../../../lib/internal-notify";
 
 const categories = ["suggestion", "improvement", "idea", "bug", "question"] as const;
 const priorities = ["low", "medium", "high"] as const;
@@ -82,10 +83,27 @@ export async function POST(request: Request) {
     agent: "PPP",
   });
 
+  const notification = await notifyInternalPortalRequest({
+    title: `[${PORTAL_CLIENT_SLUG}] New portal assistant message`,
+    body: [
+      `Topic: ${topic}`,
+      `Category: ${category}`,
+      `Priority: ${priority}`,
+      page ? `Page: ${page}` : null,
+      attachments.length > 0 ? `Attachments: ${attachments.length}` : null,
+      "",
+      message,
+    ].filter(Boolean).join("\n"),
+    linearUrl: linear?.url,
+    portalUrl: `https://${request.headers.get("host") ?? "rob-campbell-ppp.vercel.app"}/request`,
+    priority,
+  });
+
   return NextResponse.json({
     ok: true,
     status: linear ? "converted_to_task" : "reviewing",
     linear,
+    notification,
     message: "Thanks — this was logged in the portal and sent to Julian's review queue.",
   });
 }

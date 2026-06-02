@@ -12,7 +12,12 @@ export const portalStandardStatus = [
   {
     label: "Linear routing",
     status: "live",
-    detail: "Client ideas, blockers, questions, and custom upsell requests create Linear issues when LINEAR_API_KEY is available.",
+    detail: "Client ideas, blockers, questions, and custom upsell requests create Linear issues in the Rob project when LINEAR_API_KEY and LINEAR_PROJECT_ID are configured.",
+  },
+  {
+    label: "Internal notifications",
+    status: "live",
+    detail: "Client messages and upsell intent events send Julian an internal Telegram alert when PORTAL_NOTIFY_TELEGRAM_BOT_TOKEN and PORTAL_NOTIFY_TELEGRAM_CHAT_ID are configured.",
   },
   {
     label: "Convex portal data",

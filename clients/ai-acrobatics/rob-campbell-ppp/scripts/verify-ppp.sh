@@ -51,6 +51,9 @@ grep -q "01KSNC02C1EBXF56962CH63MFR" "$DASH_DIR/data/meeting-notes.ts" || { echo
 grep -q "portalMessages" "$DASH_DIR/app/api/client-message/route.ts" || { echo "Missing Convex portalMessages route"; ERRORS=$((ERRORS + 1)); }
 grep -q "createLinearIssue" "$DASH_DIR/app/api/client-message/route.ts" || { echo "Missing Linear routing for client messages"; ERRORS=$((ERRORS + 1)); }
 grep -q "portalFeed" "$DASH_DIR/app/api/client-message/route.ts" || { echo "Missing portalFeed notification for client messages"; ERRORS=$((ERRORS + 1)); }
+grep -q "notifyInternalPortalRequest" "$DASH_DIR/app/api/client-message/route.ts" || { echo "Missing internal notification for client messages"; ERRORS=$((ERRORS + 1)); }
+grep -q "notifyInternalPortalRequest" "$DASH_DIR/app/api/upsell-intent/route.ts" || { echo "Missing internal notification for upsell intents"; ERRORS=$((ERRORS + 1)); }
+grep -q "PORTAL_NOTIFY_TELEGRAM" "$DASH_DIR/lib/internal-notify.ts" || { echo "Missing portal Telegram notifier helper"; ERRORS=$((ERRORS + 1)); }
 grep -q "portalChangelog" "$DASH_DIR/app/api/meeting-sync/route.ts" || { echo "Missing meeting sync changelog write"; ERRORS=$((ERRORS + 1)); }
 grep -q "MEETING_SYNC_SECRET" "$DASH_DIR/app/api/meeting-sync/route.ts" || { echo "Missing meeting sync secret support"; ERRORS=$((ERRORS + 1)); }
 grep -q "portalStandardStatus" "$DASH_DIR/data/operations.ts" || { echo "Missing PPP operations status model"; ERRORS=$((ERRORS + 1)); }

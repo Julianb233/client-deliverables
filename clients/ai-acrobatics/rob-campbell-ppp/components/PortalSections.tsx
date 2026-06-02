@@ -5,6 +5,7 @@ import { firefliesSource, gamePlans, meetingNotes } from "../data/meeting-notes"
 import { milestones } from "../data/milestones";
 import { agentRunStatuses, meetingSyncPipeline, portalStandardStatus, retainerOperations } from "../data/operations";
 import { getPortalRuntimeData } from "../lib/convex";
+import { isClientVisiblePortalRecord } from "../lib/portal-visibility";
 import { RequestCenterPanel, UpsellActionButton } from "./ClientPortalActions";
 
 function formatStatValue(stat: (typeof stats)[number]) {
@@ -307,6 +308,12 @@ export function BookOnboardingPage() {
 
 export async function RequestCenterPage() {
   const runtime = await getPortalRuntimeData();
+  const visibleMessages = runtime.messages.filter((message) => isClientVisiblePortalRecord([
+    message.topic,
+    message.message,
+    message.status,
+    message.linearUrl,
+  ]));
 
   return (
     <main className="page">
@@ -330,11 +337,11 @@ export async function RequestCenterPage() {
           </ol>
           <div className="source-card compact-source-card">
             <strong>Recent submitted items</strong>
-            <span>{runtime.messages.length > 0 ? `${runtime.messages.length} visible from Convex` : "No visible requests yet"}</span>
+            <span>{visibleMessages.length > 0 ? `${visibleMessages.length} visible from Convex` : "No visible requests yet"}</span>
           </div>
-          {runtime.messages.length > 0 ? (
+          {visibleMessages.length > 0 ? (
             <ul className="list">
-              {runtime.messages.slice(0, 5).map((message) => (
+              {visibleMessages.slice(0, 5).map((message) => (
                 <li key={message.id}>
                   <strong>{message.topic}</strong>
                   <p>{message.message}</p>
@@ -870,6 +877,12 @@ export function MorePage() {
 
 export async function BillingPage() {
   const runtime = await getPortalRuntimeData();
+  const visibleUpsellIntents = runtime.upsellIntents.filter((intent) => isClientVisiblePortalRecord([
+    intent.title,
+    intent.offerSlug,
+    intent.status,
+    intent.linearUrl,
+  ]));
 
   return (
     <main className="page">
@@ -907,9 +920,9 @@ export async function BillingPage() {
       </section>
       <section className="section panel">
         <h2>Recent upsell interest</h2>
-        {runtime.upsellIntents.length > 0 ? (
+        {visibleUpsellIntents.length > 0 ? (
           <ul className="list">
-            {runtime.upsellIntents.slice(0, 8).map((intent) => (
+            {visibleUpsellIntents.slice(0, 8).map((intent) => (
               <li key={intent.id}>
                 <strong>{intent.title}</strong>
                 <br />
