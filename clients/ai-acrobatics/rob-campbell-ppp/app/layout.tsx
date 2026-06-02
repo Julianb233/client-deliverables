@@ -8,6 +8,8 @@ const nav = [
   ["Dashboard", "/", "D"],
   ["AI Roadmap", "/progress", "R"],
   ["Game Plans", "/game-plans", "P"],
+  ["Request Center", "/request", "Q"],
+  ["Operations", "/operations", "O"],
   ["Agents", "/agents", "A"],
   ["Automations", "/automations", "W"],
   ["Content + Growth", "/content-growth", "G"],
@@ -21,7 +23,8 @@ const mobileNav = [
   ["Dashboard", "/"],
   ["Roadmap", "/progress"],
   ["Plans", "/game-plans"],
-  ["Billing", "/billing"],
+  ["Request", "/request"],
+  ["Ops", "/operations"],
 ] as const;
 
 export const metadata: Metadata = {
@@ -83,11 +86,11 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
             <div className="portal-topbar" aria-label="Portal utility bar">
               <div className="search-shell">
                 <span className="search-icon" aria-hidden="true">⌕</span>
-                <input aria-label="Search portal" placeholder="Find roadmap, agents, deliverables" />
+                <input aria-label="Search portal" placeholder="Find roadmap, requests, agents, notes" />
                 <kbd>⌘F</kbd>
               </div>
               <div className="topbar-actions">
-                <a className="topbar-icon" href="/activity" aria-label="Portal activity">✉</a>
+                <a className="topbar-icon" href="/request" aria-label="Request center">✉</a>
                 <a className="topbar-icon has-alert" href="/action-items" aria-label="Action items">●</a>
                 <div className="profile-pill" aria-label="Client profile">
                   <span className="profile-avatar">RC</span>

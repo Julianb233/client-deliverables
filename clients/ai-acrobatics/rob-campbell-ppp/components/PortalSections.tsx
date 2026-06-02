@@ -3,8 +3,9 @@ import { complianceGuardrails, health, hubLinks, paymentStatus, retainerTiers, s
 import { deliverables } from "../data/deliverables";
 import { firefliesSource, gamePlans, meetingNotes } from "../data/meeting-notes";
 import { milestones } from "../data/milestones";
+import { agentRunStatuses, meetingSyncPipeline, portalStandardStatus, retainerOperations } from "../data/operations";
 import { getPortalRuntimeData } from "../lib/convex";
-import { UpsellActionButton } from "./ClientPortalActions";
+import { RequestCenterPanel, UpsellActionButton } from "./ClientPortalActions";
 
 function formatStatValue(stat: (typeof stats)[number]) {
   if (stat.format === "currency") {
@@ -52,8 +53,8 @@ export async function HomePage() {
           </p>
           <div className="button-row">
             <a className="button" href="/action-items">Review next actions</a>
+            <a className="button secondary" href="/request">Send request</a>
             <a className="button secondary" href="/agents">Review AI agents</a>
-            <a className="button secondary" href="/billing">Review upsells</a>
           </div>
           <p className="sync-note">{runtime.lastSyncedLabel}</p>
         </div>
@@ -136,6 +137,24 @@ export async function HomePage() {
       </section>
       <section className="section grid cols-2">
         <div className="panel">
+          <div className="panel-heading-row">
+            <div>
+              <p className="eyebrow">PPP standard</p>
+              <h2>What is now wired</h2>
+            </div>
+            <Link className="button secondary compact-button" href="/operations">Ops</Link>
+          </div>
+          <ul className="list">
+            {portalStandardStatus.slice(0, 4).map((item) => (
+              <li key={item.label}>
+                <strong>{item.label}</strong>
+                <br />
+                <span className="muted">{item.status} · {item.detail}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="panel">
           <h2>Recommended next AI systems</h2>
           <div className="offer-stack">
             {runtime.upsellOffers.filter((offer) => offer.status === "recommended").slice(0, 3).map((offer) => (
@@ -213,6 +232,52 @@ export async function HomePage() {
             ))}
           </ul>
         </div>
+      </section>
+    </main>
+  );
+}
+
+export async function RequestCenterPage() {
+  const runtime = await getPortalRuntimeData();
+
+  return (
+    <main className="page">
+      <div className="page-header">
+        <p className="eyebrow">Client input zone</p>
+        <h1>Request Center</h1>
+        <p className="lead">
+          Rob can send project questions, screenshots, voice notes, blockers, and new AI system ideas here. Submissions save to Convex, create a Linear task when credentials are available, and stay behind Julian's review gate.
+        </p>
+      </div>
+      <section className="section grid request-layout">
+        <RequestCenterPanel />
+        <aside className="panel">
+          <p className="eyebrow">What happens next</p>
+          <h2>Review-gated routing</h2>
+          <ol className="number-list">
+            <li>Message and attachment metadata are submitted through the server route.</li>
+            <li>Convex stores the request in portalMessages and posts an in-app feed event.</li>
+            <li>Linear gets a follow-up task for AI Acrobatics review.</li>
+            <li>Julian approves any external reply, scope change, payment link, or client-facing recommendation.</li>
+          </ol>
+          <div className="source-card compact-source-card">
+            <strong>Recent submitted items</strong>
+            <span>{runtime.messages.length > 0 ? `${runtime.messages.length} visible from Convex` : "No visible requests yet"}</span>
+          </div>
+          {runtime.messages.length > 0 ? (
+            <ul className="list">
+              {runtime.messages.slice(0, 5).map((message) => (
+                <li key={message.id}>
+                  <strong>{message.topic}</strong>
+                  <p>{message.message}</p>
+                  <span className="muted">{message.date} · {message.category} · {message.status}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="muted">Once Rob submits a question, idea, screenshot, or voice note, it appears here after Convex sync.</p>
+          )}
+        </aside>
       </section>
     </main>
   );
@@ -331,6 +396,113 @@ export function GamePlansPage() {
                   ))}
                 </ul>
               </div>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="section grid cols-2">
+        <div className="panel">
+          <p className="eyebrow">Fireflies sync pipeline</p>
+          <h2>How new meeting notes enter the portal</h2>
+          <ol className="number-list">
+            {meetingSyncPipeline.map((step) => (
+              <li key={step}>{step}</li>
+            ))}
+          </ol>
+        </div>
+        <div className="panel">
+          <p className="eyebrow">Review gate</p>
+          <h2>Raw notes are not auto-published</h2>
+          <p>
+            The portal can now receive reviewed meeting summaries through <code>/api/meeting-sync</code>. Raw Fireflies transcript text stays internal until it is cleaned for client visibility.
+          </p>
+          <p className="muted">
+            This prevents internal strategy, pricing notes, or rough transcript language from appearing in Rob's portal before Julian approves it.
+          </p>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+export function OperationsPage() {
+  return (
+    <main className="page">
+      <div className="page-header">
+        <p className="eyebrow">Operating portal</p>
+        <h1>Agent + Retainer Operations</h1>
+        <p className="lead">
+          This page closes the gap between a static dashboard and a live operating portal: agent status, blockers, monthly tier coverage, usage reporting, and the PPP standard checks are all visible in one place.
+        </p>
+      </div>
+      <section className="section grid cols-2">
+        <div className="panel">
+          <h2>PPP standard status</h2>
+          <ul className="list">
+            {portalStandardStatus.map((item) => (
+              <li key={item.label}>
+                <strong>{item.label}</strong>
+                <p>{item.detail}</p>
+                <span className={`badge ${item.status === "live" ? "status-active" : item.status === "blocked-by-review" ? "status-pending" : "status-upcoming"}`}>{item.status}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="panel accent-panel">
+          <p className="eyebrow">Monthly report promise</p>
+          <h2>Retainer reporting should show proof, not activity theater.</h2>
+          <p>
+            Each monthly report should break down delivered work, public-signal output, HubSpot hygiene progress, AI credit usage, dev hours, consulting hours, blockers, and recommended next systems.
+          </p>
+          <Link className="button secondary" href="/billing">Review retainer tiers</Link>
+        </div>
+      </section>
+      <section className="section">
+        <div className="section-title-row">
+          <div>
+            <p className="eyebrow">Agents</p>
+            <h2>Current run status</h2>
+          </div>
+          <Link className="button secondary compact-button" href="/agents">Agent offers</Link>
+        </div>
+        <div className="agent-status-grid">
+          {agentRunStatuses.map((agent) => (
+            <article className="panel" key={agent.name}>
+              <div className="panel-heading-row">
+                <span className={`badge ${agent.status === "active" ? "status-active" : agent.status === "blocked" ? "status-pending" : "status-upcoming"}`}>{agent.status}</span>
+                <span className="muted">{agent.lastRun}</span>
+              </div>
+              <h3>{agent.name}</h3>
+              <p>{agent.role}</p>
+              <table className="ops-table">
+                <tbody>
+                  <tr><th>Next</th><td>{agent.nextRun}</td></tr>
+                  <tr><th>Proof</th><td>{agent.evidence}</td></tr>
+                </tbody>
+              </table>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="section">
+        <div className="section-title-row">
+          <div>
+            <p className="eyebrow">Retainers</p>
+            <h2>Monthly operating tiers</h2>
+          </div>
+        </div>
+        <div className="grid cols-3">
+          {retainerOperations.map((tier) => (
+            <article className="panel" key={tier.tier}>
+              <span className="badge">{tier.price}</span>
+              <h3>{tier.tier}</h3>
+              <p>{tier.bestFor}</p>
+              <p className="muted">{tier.cadence}</p>
+              <ul className="list">
+                {tier.includes.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
             </article>
           ))}
         </div>

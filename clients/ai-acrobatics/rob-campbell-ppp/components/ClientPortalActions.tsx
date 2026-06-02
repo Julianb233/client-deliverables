@@ -248,6 +248,165 @@ export function UpsellActionButton({ offer }: { offer: PortalRuntimeData["upsell
   );
 }
 
+export function RequestCenterPanel() {
+  const pathname = usePathname();
+  const [state, setState] = useState<SubmitState>("idle");
+  const [notice, setNotice] = useState("");
+  const [attachments, setAttachments] = useState<AssistantAttachment[]>([]);
+  const [recording, setRecording] = useState(false);
+  const recorderRef = useRef<MediaRecorder | null>(null);
+  const chunksRef = useRef<Blob[]>([]);
+
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setState("submitting");
+    setNotice("");
+    const form = new FormData(event.currentTarget);
+    const response = await fetch("/api/client-message", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        category: form.get("category"),
+        priority: form.get("priority"),
+        topic: form.get("topic"),
+        message: form.get("message"),
+        page: pathname,
+        assistantMode: form.get("assistantMode"),
+        attachments,
+      }),
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || !result.ok) {
+      setState("error");
+      setNotice(result.error ?? "Could not send this yet. Please try again.");
+      return;
+    }
+    event.currentTarget.reset();
+    setAttachments([]);
+    setState("success");
+    setNotice(result.message ?? "Logged in the portal and routed to Julian's review queue.");
+  }
+
+  async function onAttachmentChange(event: ChangeEvent<HTMLInputElement>) {
+    const files = Array.from(event.currentTarget.files ?? []);
+    const converted = await Promise.all(files.slice(0, 5).map(fileToAttachment));
+    setAttachments((current) => [...current, ...converted].slice(0, 5));
+    event.currentTarget.value = "";
+  }
+
+  async function toggleRecording() {
+    if (recording && recorderRef.current) {
+      recorderRef.current.stop();
+      return;
+    }
+    if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === "undefined") {
+      setState("error");
+      setNotice("Voice recording is not available in this browser. Attach an audio file or type the request instead.");
+      return;
+    }
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const recorder = new MediaRecorder(stream);
+      chunksRef.current = [];
+      recorder.ondataavailable = (event) => {
+        if (event.data.size > 0) chunksRef.current.push(event.data);
+      };
+      recorder.onstop = async () => {
+        stream.getTracks().forEach((track) => track.stop());
+        setRecording(false);
+        const blob = new Blob(chunksRef.current, { type: recorder.mimeType || "audio/webm" });
+        const attachment = await blobToAttachment(blob, `voice-note-${new Date().toISOString().slice(0, 19)}.webm`);
+        setAttachments((current) => [...current, attachment].slice(0, 5));
+      };
+      recorderRef.current = recorder;
+      recorder.start();
+      setRecording(true);
+      setNotice("Recording. Tap stop when you are done.");
+    } catch {
+      setState("error");
+      setNotice("Microphone access was not available. You can still type or attach an audio file.");
+    }
+  }
+
+  function removeAttachment(name: string) {
+    setAttachments((current) => current.filter((attachment) => attachment.name !== name));
+  }
+
+  return (
+    <form className="panel request-center-form" onSubmit={onSubmit}>
+      <div className="panel-heading-row">
+        <div>
+          <p className="eyebrow">Request center</p>
+          <h2>Send a question, idea, blocker, image, or voice note</h2>
+        </div>
+        <span className="badge status-active">Linear routed</span>
+      </div>
+      <div className="request-form-grid">
+        <label>
+          Request type
+          <select name="assistantMode" defaultValue="question">
+            <option value="question">Ask about the project</option>
+            <option value="feedback">Send feedback</option>
+            <option value="idea">Suggest a new AI system</option>
+            <option value="blocker">Flag a blocker</option>
+          </select>
+        </label>
+        <label>
+          Category
+          <select name="category" defaultValue="question">
+            <option value="question">Question</option>
+            <option value="idea">New idea</option>
+            <option value="suggestion">Suggestion</option>
+            <option value="improvement">Improvement</option>
+            <option value="bug">Bug or blocker</option>
+          </select>
+        </label>
+        <label>
+          Priority
+          <select name="priority" defaultValue="medium">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </label>
+      </div>
+      <label>
+        Topic
+        <input name="topic" required placeholder="Example: HubSpot access, signal report, retainer question" maxLength={120} />
+      </label>
+      <label>
+        Details
+        <textarea name="message" required placeholder="Write the question, feedback, or action you want reviewed." rows={7} maxLength={3000} />
+      </label>
+      <div className="assistant-tools">
+        <label className="file-tool">
+          <span>Attach image, screenshot, or audio</span>
+          <input type="file" accept="image/*,audio/*" multiple onChange={onAttachmentChange} />
+        </label>
+        <button className="button secondary" type="button" onClick={toggleRecording}>
+          {recording ? "Stop voice note" : "Record voice note"}
+        </button>
+      </div>
+      {attachments.length > 0 ? (
+        <ul className="attachment-list">
+          {attachments.map((attachment) => (
+            <li key={attachment.name}>
+              <span>{attachment.kind} · {attachment.name} · {formatBytes(attachment.size)}</span>
+              <button type="button" onClick={() => removeAttachment(attachment.name)}>Remove</button>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="helper-text">Small uploads are saved inline when possible. Large files stay metadata-only until Julian approves the larger upload path.</p>
+      )}
+      <button className="button" type="submit" disabled={state === "submitting"}>
+        {state === "submitting" ? "Sending..." : "Submit to review queue"}
+      </button>
+      {notice ? <p className={`form-notice ${state}`}>{notice}</p> : null}
+    </form>
+  );
+}
+
 async function fileToAttachment(file: File): Promise<AssistantAttachment> {
   return blobToAttachment(file, file.name);
 }
