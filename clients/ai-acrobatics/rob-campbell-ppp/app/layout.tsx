@@ -9,6 +9,7 @@ const nav = [
   ["AI Roadmap", "/progress", "R"],
   ["Game Plans", "/game-plans", "P"],
   ["Request Center", "/request", "Q"],
+  ["Book Call", "/book-onboarding", "C"],
   ["Operations", "/operations", "O"],
   ["Agents", "/agents", "A"],
   ["Automations", "/automations", "W"],
@@ -24,7 +25,7 @@ const mobileNav = [
   ["Roadmap", "/progress"],
   ["Plans", "/game-plans"],
   ["Request", "/request"],
-  ["Ops", "/operations"],
+  ["Book", "/book-onboarding"],
 ] as const;
 
 export const metadata: Metadata = {
@@ -90,6 +91,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
                 <kbd>⌘F</kbd>
               </div>
               <div className="topbar-actions">
+                <a className="topbar-icon" href="/book-onboarding" aria-label="Book onboarding call">◷</a>
                 <a className="topbar-icon" href="/request" aria-label="Request center">✉</a>
                 <a className="topbar-icon has-alert" href="/action-items" aria-label="Action items">●</a>
                 <div className="profile-pill" aria-label="Client profile">

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { complianceGuardrails, health, hubLinks, paymentStatus, retainerTiers, snapshotReport, stats } from "../data/client-data";
+import { complianceGuardrails, health, hubLinks, onboardingBooking, paymentStatus, retainerTiers, snapshotReport, stats } from "../data/client-data";
 import { deliverables } from "../data/deliverables";
 import { firefliesSource, gamePlans, meetingNotes } from "../data/meeting-notes";
 import { milestones } from "../data/milestones";
@@ -52,6 +52,7 @@ export async function HomePage() {
             For your Northwestern Mutual practice, the boundary stays tight: public prospect signals and HubSpot-side workflow support only. No Dynamics writes, no NMIS/client-record data in AI tools, and no AI-generated investment advice.
           </p>
           <div className="button-row">
+            <a className="button" href="/book-onboarding">Book onboarding call</a>
             <a className="button" href="/action-items">Review next actions</a>
             <a className="button secondary" href="/request">Send request</a>
             <a className="button secondary" href="/agents">Review AI agents</a>
@@ -232,6 +233,72 @@ export async function HomePage() {
             ))}
           </ul>
         </div>
+      </section>
+    </main>
+  );
+}
+
+export function BookOnboardingPage() {
+  return (
+    <main className="page">
+      <div className="page-header">
+        <p className="eyebrow">Onboarding call</p>
+        <h1>Rob can book the kickoff call directly from this portal.</h1>
+        <p className="lead">
+          This is the working session for turning the paid deposit into the first implementation sprint: HubSpot access, compliance boundaries, target-employer signals, reporting cadence, and immediate next actions.
+        </p>
+      </div>
+      <section className="section booking-layout">
+        <div className="panel booking-panel">
+          <div className="panel-heading-row">
+            <div>
+              <p className="eyebrow">Self-scheduling</p>
+              <h2>{onboardingBooking.title}</h2>
+            </div>
+            <span className="badge status-active">{onboardingBooking.duration}</span>
+          </div>
+          <p>{onboardingBooking.purpose}</p>
+          <div className="booking-primary-action">
+            <a className="button" href={onboardingBooking.url} target="_blank" rel="noreferrer">Open booking calendar</a>
+            <span className="muted">Use this button if the embedded calendar takes a moment to load.</span>
+          </div>
+          <div className="booking-frame-wrap">
+            <iframe
+              className="booking-frame"
+              src={onboardingBooking.url}
+              title="Book Rob Campbell AI Prospect Engine onboarding call"
+              loading="lazy"
+            />
+          </div>
+          <div className="button-row">
+            <Link className="button secondary" href="/request">Send a scheduling note</Link>
+          </div>
+        </div>
+        <aside className="panel">
+          <p className="eyebrow">Call agenda</p>
+          <h2>What to bring</h2>
+          <ul className="list">
+            {onboardingBooking.prepItems.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <table className="ops-table">
+            <tbody>
+              <tr>
+                <th>Host</th>
+                <td>{onboardingBooking.owner}</td>
+              </tr>
+              <tr>
+                <th>Scope</th>
+                <td>AI Prospect Engine onboarding, not client-record or investment-advice review.</td>
+              </tr>
+              <tr>
+                <th>Review gate</th>
+                <td>All external messaging and custom pricing still route through Julian approval.</td>
+              </tr>
+            </tbody>
+          </table>
+        </aside>
       </section>
     </main>
   );

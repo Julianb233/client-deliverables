@@ -7,7 +7,7 @@ ERRORS=0
 echo "=== PPP QUALITY GATE CHECK ==="
 echo "Directory: $DASH_DIR"
 
-REQUIRED_PAGES=("app/page.tsx" "app/progress/page.tsx" "app/game-plans/page.tsx" "app/request/page.tsx" "app/operations/page.tsx" "app/deliverables/page.tsx" "app/changelog/page.tsx" "app/action-items/page.tsx" "app/activity/page.tsx" "app/more/page.tsx")
+REQUIRED_PAGES=("app/page.tsx" "app/progress/page.tsx" "app/game-plans/page.tsx" "app/request/page.tsx" "app/book-onboarding/page.tsx" "app/operations/page.tsx" "app/deliverables/page.tsx" "app/changelog/page.tsx" "app/action-items/page.tsx" "app/activity/page.tsx" "app/more/page.tsx")
 for page in "${REQUIRED_PAGES[@]}"; do
   if [ ! -f "$DASH_DIR/$page" ]; then
     echo "MISSING: $page"
@@ -42,7 +42,10 @@ grep -q "Tasko/v0 PPP visual system" "$DASH_DIR/app/globals.css" || { echo "Miss
 grep -q "portal-topbar" "$DASH_DIR/app/layout.tsx" || { echo "Missing Tasko-style portal topbar"; ERRORS=$((ERRORS + 1)); }
 grep -q "Game Plans" "$DASH_DIR/app/layout.tsx" || { echo "Missing Game Plans navigation"; ERRORS=$((ERRORS + 1)); }
 grep -q "Request Center" "$DASH_DIR/app/layout.tsx" || { echo "Missing Request Center navigation"; ERRORS=$((ERRORS + 1)); }
+grep -q "Book Call" "$DASH_DIR/app/layout.tsx" || { echo "Missing onboarding call navigation"; ERRORS=$((ERRORS + 1)); }
 grep -q "Operations" "$DASH_DIR/app/layout.tsx" || { echo "Missing Operations navigation"; ERRORS=$((ERRORS + 1)); }
+grep -q "04U7cTXkd5D4man5dniU" "$DASH_DIR/data/client-data.ts" || { echo "Missing approved onboarding booking widget"; ERRORS=$((ERRORS + 1)); }
+grep -q "booking-frame" "$DASH_DIR/components/PortalSections.tsx" || { echo "Missing embedded onboarding booking frame"; ERRORS=$((ERRORS + 1)); }
 grep -q "01KSNC02C1EBXF56962CH63MFR" "$DASH_DIR/data/meeting-notes.ts" || { echo "Missing Fireflies transcript source ID"; ERRORS=$((ERRORS + 1)); }
 grep -q "portalMessages" "$DASH_DIR/app/api/client-message/route.ts" || { echo "Missing Convex portalMessages route"; ERRORS=$((ERRORS + 1)); }
 grep -q "createLinearIssue" "$DASH_DIR/app/api/client-message/route.ts" || { echo "Missing Linear routing for client messages"; ERRORS=$((ERRORS + 1)); }

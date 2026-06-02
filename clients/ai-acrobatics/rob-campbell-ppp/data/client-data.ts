@@ -32,6 +32,13 @@ export const stats = [
 
 export const hubLinks = [
   {
+    label: "Book Onboarding Call",
+    url: "/book-onboarding",
+    icon: "calendar",
+    description: "Pick the kickoff slot for HubSpot access, compliance boundaries, and first build priorities",
+    category: "primary",
+  },
+  {
     label: "Live Proposal",
     url: "https://rob-campbell-proposal.vercel.app/",
     icon: "proposal",
@@ -74,6 +81,20 @@ export const hubLinks = [
     category: "secondary",
   },
 ] as const;
+
+export const onboardingBooking = {
+  title: "Book your AI Prospect Engine onboarding call",
+  url: "https://api.leadconnectorhq.com/widget/booking/04U7cTXkd5D4man5dniU",
+  duration: "30 minutes",
+  owner: "Julian Bradley",
+  purpose: "Confirm HubSpot access, target-employer priorities, compliance review boundaries, reporting cadence, and the first implementation sprint.",
+  prepItems: [
+    "HubSpot access path and the safest read-only starting scope.",
+    "Target San Diego employers and equity/liquidity signals that matter most.",
+    "What Rob wants to review manually before any prospect-facing outreach.",
+    "Retainer tier fit after the initial build moves into operating mode.",
+  ],
+};
 
 export const snapshotReport = {
   month: "May 2026",

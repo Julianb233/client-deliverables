@@ -1513,6 +1513,47 @@ code {
   grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
 }
 
+.booking-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.22fr) minmax(320px, 0.78fr);
+  gap: 13px;
+  align-items: start;
+}
+
+.booking-panel {
+  min-height: 720px;
+}
+
+.booking-primary-action {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin: 14px 0;
+}
+
+.booking-primary-action .muted {
+  max-width: 360px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.booking-frame-wrap {
+  overflow: hidden;
+  height: min(760px, 78vh);
+  min-height: 560px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.booking-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .request-center-form {
   display: grid;
   gap: 14px;
@@ -1585,6 +1626,7 @@ code {
   .hero,
   .source-grid,
   .request-layout,
+  .booking-layout,
   .request-form-grid,
   .game-plan-grid,
   .agent-status-grid,
