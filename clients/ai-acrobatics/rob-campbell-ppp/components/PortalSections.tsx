@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { complianceGuardrails, health, hubLinks, onboardingBooking, paymentStatus, retainerTiers, snapshotReport, stats } from "../data/client-data";
+import { complianceGuardrails, driveResources, health, hubLinks, onboardingBooking, paymentStatus, retainerTiers, snapshotReport, stats } from "../data/client-data";
 import { deliverables } from "../data/deliverables";
 import { firefliesSource, gamePlans, meetingNotes } from "../data/meeting-notes";
 import { milestones } from "../data/milestones";
@@ -301,6 +301,196 @@ export function BookOnboardingPage() {
             </tbody>
           </table>
         </aside>
+      </section>
+    </main>
+  );
+}
+
+export function OnboardingPresentationPage() {
+  const decisionQuestions = [
+    {
+      label: "Outcome",
+      question: "What would make the first 30 days feel like a win?",
+    },
+    {
+      label: "First workflow",
+      question: "Should the first visible output be HubSpot hygiene, signal radar, or meeting briefs?",
+    },
+    {
+      label: "Targets",
+      question: "Which 10 to 20 employers and signal types should be prioritized first?",
+    },
+    {
+      label: "Access",
+      question: "Who grants HubSpot access, and what must stay read-only or manual-review?",
+    },
+    {
+      label: "Reporting",
+      question: "What should the first weekly report prove?",
+    },
+  ];
+
+  const sprintSteps = [
+    {
+      phase: "Diagnose + Roadmap",
+      summary: "Confirm access, compliance rules, employer priorities, and reporting cadence.",
+      proof: "Access checklist, target-employer list, first success metric.",
+    },
+    {
+      phase: "Build + Integrate",
+      summary: "Run a read-only HubSpot audit, map public signals, and draft the first brief format.",
+      proof: "HubSpot hygiene report, signal queue, prospect brief template.",
+    },
+    {
+      phase: "Operate + Optimize",
+      summary: "Move into weekly reviews, monthly retainer reporting, and Hearsay-ready drafts after approval.",
+      proof: "Weekly pipeline report, monthly usage report, approved next systems.",
+    },
+  ];
+
+  return (
+    <main className="page">
+      <div className="page-header">
+        <p className="eyebrow">Virtual onboarding presentation</p>
+        <h1>AI Prospect Engine kickoff.</h1>
+        <p className="lead">
+          Use this page live with Rob to align on access, safety boundaries, the first sprint, and what proof should show up in the portal after onboarding.
+        </p>
+      </div>
+
+      <section className="section presentation-hero">
+        <div className="panel glass-panel">
+          <span className="badge status-active">Deposit received</span>
+          <h2>The build is active. The next job is to prove one compliant loop.</h2>
+          <p>
+            The kickoff should leave AI Acrobatics with enough context and access to start the first sprint: public signals in, Rob-reviewed prospect context out, HubSpot organized enough to act on, and weekly reporting that shows what changed.
+          </p>
+          <div className="button-row">
+            <a className="button" href={driveResources.root.url} target="_blank" rel="noreferrer">Open Google Drive folder</a>
+            <a className="button secondary" href={driveResources.uploadedFiles[0].url} target="_blank" rel="noreferrer">Open Drive deck file</a>
+            <Link className="button secondary" href="/book-onboarding">Book call</Link>
+          </div>
+        </div>
+        <aside className="panel accent-panel">
+          <p className="eyebrow">Meeting outcome</p>
+          <h2>Decisions needed today</h2>
+          <ul className="list">
+            <li>First workflow priority.</li>
+            <li>HubSpot read-only access owner.</li>
+            <li>Initial employer and signal list.</li>
+            <li>Compliance/Hearsay review path.</li>
+            <li>Weekly report format.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section className="section">
+        <div className="section-title-row">
+          <div>
+            <p className="eyebrow">Run of show</p>
+            <h2>What we will cover</h2>
+          </div>
+          <span className="badge">60 minutes</span>
+        </div>
+        <div className="presentation-track">
+          {sprintSteps.map((step, index) => (
+            <article className="panel presentation-step" key={step.phase}>
+              <span className="step-index">{index + 1}</span>
+              <h3>{step.phase}</h3>
+              <p>{step.summary}</p>
+              <p className="muted">Proof: {step.proof}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section grid cols-2">
+        <div className="panel">
+          <p className="eyebrow">Questions for Rob</p>
+          <h2>Five unblockers</h2>
+          <div className="question-stack">
+            {decisionQuestions.map((item) => (
+              <div className="question-row" key={item.label}>
+                <strong>{item.label}</strong>
+                <p>{item.question}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="panel">
+          <p className="eyebrow">Compliance boundary</p>
+          <h2>Useful, but guarded</h2>
+          <ul className="list">
+            {complianceGuardrails.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <p className="muted">
+            Prospect briefs and signals should stay framed as public context and manual-review support, not advice or suitability conclusions.
+          </p>
+        </div>
+      </section>
+
+      <section className="section grid cols-2">
+        <div className="panel">
+          <p className="eyebrow">Access checklist</p>
+          <h2>What we need to start</h2>
+          <ul className="list">
+            <li>HubSpot read-only access and owner.</li>
+            <li>Target employer list and excluded categories.</li>
+            <li>Preferred public research sources.</li>
+            <li>Hearsay/manual approval process.</li>
+            <li>Calendar and Gmail drafting access only if approved.</li>
+            <li>Reporting recipients and cadence.</li>
+          </ul>
+        </div>
+        <div className="panel">
+          <p className="eyebrow">Shared Drive</p>
+          <h2>{driveResources.root.label}</h2>
+          <p>
+            Rob has editor access to the project folder. Use this folder for onboarding, briefs, deliverables, meeting notes, assets, and reports.
+          </p>
+          <div className="button-row">
+            <a className="button" href={driveResources.root.url} target="_blank" rel="noreferrer">Open Drive root</a>
+          </div>
+          <ul className="list">
+            {driveResources.uploadedFiles.map((file) => (
+              <li key={file.label}>
+                <a href={file.url} target="_blank" rel="noreferrer">
+                  <strong>{file.label}</strong>
+                  <br />
+                  <span className="muted">{file.description}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-title-row">
+          <div>
+            <p className="eyebrow">Folder structure</p>
+            <h2>Where everything should live</h2>
+          </div>
+          <a className="button secondary compact-button" href={driveResources.uploadedFiles[2].url} target="_blank" rel="noreferrer">Drive README</a>
+        </div>
+        <div className="drive-grid">
+          {driveResources.folders.map((folder) => (
+            <a className="panel drive-folder-card" href={folder.url} target="_blank" rel="noreferrer" key={folder.name}>
+              <span className="badge">{folder.name}</span>
+              <p>{folder.purpose}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="section panel">
+        <p className="eyebrow">Suggested close</p>
+        <h2>We are going to prove the loop first.</h2>
+        <p>
+          Public signal in, Rob-reviewed context out, HubSpot organized enough to act, and a weekly report that shows what changed. Once that works, we expand into more signals, briefs, content drafts, and retainer operations.
+        </p>
       </section>
     </main>
   );

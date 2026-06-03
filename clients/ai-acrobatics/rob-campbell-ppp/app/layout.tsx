@@ -9,6 +9,7 @@ const nav = [
   ["Dashboard", "/", "D"],
   ["AI Roadmap", "/progress", "R"],
   ["Game Plans", "/game-plans", "P"],
+  ["Onboarding", "/onboarding", "K"],
   ["Request Center", "/request", "Q"],
   ["Book Call", "/book-onboarding", "C"],
   ["Operations", "/operations", "O"],
@@ -25,8 +26,8 @@ const mobileNav = [
   ["Dashboard", "/"],
   ["Roadmap", "/progress"],
   ["Plans", "/game-plans"],
+  ["Onboard", "/onboarding"],
   ["Request", "/request"],
-  ["Book", "/book-onboarding"],
 ] as const;
 
 export const metadata: Metadata = {

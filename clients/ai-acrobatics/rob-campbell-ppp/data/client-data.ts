@@ -32,6 +32,20 @@ export const stats = [
 
 export const hubLinks = [
   {
+    label: "Onboarding Presentation",
+    url: "/onboarding",
+    icon: "presentation",
+    description: "Virtual kickoff presentation, access checklist, and implementation meeting flow",
+    category: "primary",
+  },
+  {
+    label: "Google Drive Folder",
+    url: "https://drive.google.com/drive/folders/1lQg38djGoWkdkoTSQgN0tN5vxAoNZxPJ",
+    icon: "drive",
+    description: "Shared AI Prospect Engine folder for onboarding, briefs, deliverables, meeting notes, assets, and reports",
+    category: "primary",
+  },
+  {
     label: "Book Onboarding Call",
     url: "/book-onboarding",
     icon: "calendar",
@@ -81,6 +95,68 @@ export const hubLinks = [
     category: "secondary",
   },
 ] as const;
+
+export const driveResources = {
+  root: {
+    label: "Rob Campbell — AI Acrobatics",
+    url: "https://drive.google.com/drive/folders/1lQg38djGoWkdkoTSQgN0tN5vxAoNZxPJ",
+    id: "1lQg38djGoWkdkoTSQgN0tN5vxAoNZxPJ",
+  },
+  uploadedFiles: [
+    {
+      label: "Onboarding Virtual Presentation",
+      url: "https://drive.google.com/file/d/1z2GoT0iosWWrjk67H7VfLom2XNIku2uF/view?usp=drivesdk",
+      description: "HTML meeting deck uploaded to Drive for the kickoff.",
+    },
+    {
+      label: "Onboarding Meeting Brief",
+      url: "https://drive.google.com/file/d/1a1g7dCJJvFV7wR4Hw0JI-lLg_SMQcu3z/view?usp=drivesdk",
+      description: "Questions, game plan, access checklist, and close-the-call notes.",
+    },
+    {
+      label: "Drive Folder README",
+      url: "https://drive.google.com/file/d/17ZUkcTQgp0a_3xcS_8MEcgn5ftne9gD8/view?usp=drivesdk",
+      description: "Folder structure and compliance-safe usage rules.",
+    },
+  ],
+  folders: [
+    {
+      name: "01-Contracts",
+      url: "https://drive.google.com/drive/folders/14yxOeRTzgKmYOhfNTGVNhaKWcFKt0BbY",
+      purpose: "Proposal, agreement, payment receipts, and commercial records.",
+    },
+    {
+      name: "02-Briefs",
+      url: "https://drive.google.com/drive/folders/1vGKcuJ0iTegBL_roTLI-2sgDyCaJWh8a",
+      purpose: "Onboarding briefs, prospect brief templates, and compliance-safe research briefs.",
+    },
+    {
+      name: "03-Deliverables",
+      url: "https://drive.google.com/drive/folders/16iWlrUQlIudHpd04Q_4Ty3DzY_i9ZEHj",
+      purpose: "Client-ready portal exports, reports, decks, and implementation assets.",
+    },
+    {
+      name: "04-Meeting-Notes",
+      url: "https://drive.google.com/drive/folders/1YwOdYqKZjEZKn-oADzQ8fZlLXVE3E0Eb",
+      purpose: "Fireflies summaries, call notes, action-item recaps, and meeting decisions.",
+    },
+    {
+      name: "05-Assets",
+      url: "https://drive.google.com/drive/folders/18658gQz6QfHFdKfPx_8memL-dYGdY1x9",
+      purpose: "Logos, screenshots, source assets, and public research exports.",
+    },
+    {
+      name: "06-Access-And-Onboarding",
+      url: "https://drive.google.com/drive/folders/1nvFu92xRa19sfG2KRg8d2AUEPGifoZgM",
+      purpose: "Access checklist, HubSpot setup notes, onboarding deck, call agenda, and intake.",
+    },
+    {
+      name: "07-Reports",
+      url: "https://drive.google.com/drive/folders/16-oFEf-ofaj6jkHSeCbb6fmrwh_2OXrR",
+      purpose: "Weekly signal reports, HubSpot hygiene reports, and monthly retainer reports.",
+    },
+  ],
+};
 
 export const onboardingBooking = {
   title: "Book your AI Prospect Engine onboarding call",

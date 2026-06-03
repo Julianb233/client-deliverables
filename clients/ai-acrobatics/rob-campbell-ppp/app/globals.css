@@ -1554,6 +1554,76 @@ code {
   border: 0;
 }
 
+.presentation-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.14fr) minmax(320px, 0.86fr);
+  gap: 13px;
+  align-items: stretch;
+}
+
+.presentation-track {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 13px;
+  margin-top: 12px;
+}
+
+.presentation-step {
+  position: relative;
+  min-height: 230px;
+  overflow: hidden;
+}
+
+.step-index {
+  position: absolute;
+  right: 18px;
+  bottom: 6px;
+  color: rgba(47, 143, 91, 0.1);
+  font-size: 96px;
+  font-weight: 950;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.question-stack {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.question-row {
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr);
+  gap: 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.question-row:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.question-row strong {
+  color: var(--green);
+  font-size: 13px;
+}
+
+.drive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+  margin-top: 12px;
+}
+
+.drive-folder-card {
+  display: grid;
+  gap: 10px;
+  min-height: 140px;
+  color: inherit;
+  text-decoration: none;
+}
+
 .request-center-form {
   display: grid;
   gap: 14px;
@@ -1627,6 +1697,9 @@ code {
   .source-grid,
   .request-layout,
   .booking-layout,
+  .presentation-hero,
+  .presentation-track,
+  .drive-grid,
   .request-form-grid,
   .game-plan-grid,
   .agent-status-grid,
@@ -1672,6 +1745,10 @@ code {
 
   .source-facts div {
     grid-template-columns: 96px minmax(0, 1fr);
+  }
+
+  .question-row {
+    grid-template-columns: 1fr;
   }
 
   .source-facts dt,
