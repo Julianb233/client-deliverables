@@ -29,7 +29,7 @@ export const milestones = [
     status: "active" as const,
     dateRange: "Now",
     description: "Move from proposal follow-up into implementation setup while holding client-facing sends for Julian review.",
-    deliverables: ["Review-gated PPP", "Convex-backed portal data", "HubSpot access checklist"],
+    deliverables: ["Review-gated PPP", "Convex-backed portal data", "HubSpot inspection plan", "Meeting notes source index"],
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ export const milestones = [
     status: "upcoming" as const,
     dateRange: "After access",
     description: "Prepare staged hygiene workflow, then run live read-only audit after access is approved.",
-    deliverables: ["Access checklist", "Sample data format", "Weekly pipeline report"],
+    deliverables: ["Access proof", "Object inventory", "Field hygiene map", "Cleanup candidates", "Weekly pipeline report"],
   },
   {
     id: 7,

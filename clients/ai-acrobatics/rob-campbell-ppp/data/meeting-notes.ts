@@ -1,12 +1,49 @@
 export const firefliesSource = {
-  label: "May 27 Fireflies meeting",
+  label: "May 27 Fireflies meeting + June 3 Drive onboarding assets",
   meetingDate: "2026-05-27",
   transcriptId: "01KSNC02C1EBXF56962CH63MFR",
   attendees: ["Rob Campbell", "Julian Bradley"],
-  syncStatus: "Meeting-derived summary is live in the portal. Raw transcript refresh remains an internal source-sync task.",
+  syncStatus: "May 27 Fireflies source is live. June 3 Fireflies transcript is not exposed by the connector, so agents should use the Drive onboarding brief and meeting-notes source index.",
 };
 
 export const meetingNotes = [
+  {
+    id: "june-3-hubspot-inspection",
+    title: "HubSpot inspection checklist",
+    date: "2026-06-06",
+    source: "Drive onboarding source index",
+    summary:
+      "Agents now have a read-only HubSpot inspection plan that matches Rob's goals: prospect-side CRM hygiene, target-employer readiness, public-signal mapping, manual review gates, and reporting proof.",
+    decisions: [
+      "Start with read-only access proof before inspecting or recommending any HubSpot changes.",
+      "Inspect CRM objects, lifecycle fields, lead source, employer, role, last contact, tags, pipeline stages, lists, workflows, and integrations.",
+      "Separate safe prospect-side records from unclear mixed records and blocked client/NMIS-sensitive records.",
+      "Do not merge records, change stages, activate workflows, enroll sequences, or send externally without approval.",
+    ],
+    nextActions: [
+      "Wait for Rob to resend or confirm the HubSpot invite to julian@aiacrobatics.com.",
+      "Run the inspection plan after access is confirmed.",
+      "Write the output as a HubSpot read-only audit, cleanup candidates, compliance flags, and weekly pipeline report.",
+    ],
+  },
+  {
+    id: "june-3-meeting-source-index",
+    title: "June onboarding notes source status",
+    date: "2026-06-06",
+    source: "Google Drive source index",
+    summary:
+      "Fireflies does not currently expose the June 3 Rob onboarding transcript through the connector. The Drive onboarding brief and presentation are the current meeting-derived sources, and the meeting notes folder now contains a source index for agents.",
+    decisions: [
+      "Do not claim the June 3 Fireflies transcript was reviewed until Fireflies returns it.",
+      "Use the Drive onboarding brief as the current source for kickoff questions, access checklist, and game plan.",
+      "Keep new summaries and meeting-derived decisions in the Drive meeting notes folder after review.",
+    ],
+    nextActions: [
+      "Recheck Fireflies when agents need the raw transcript.",
+      "Use the Drive source index when Fireflies is missing.",
+      "Publish only reviewed meeting summaries to the PPP.",
+    ],
+  },
   {
     id: "may-27-scope",
     title: "AI Prospect Engine scope",
@@ -89,19 +126,19 @@ export const gamePlans = [
   {
     id: "game-plan-2",
     stage: "Build + Integrate",
-    title: "HubSpot hygiene and prospect queue",
-    status: "next" as const,
+    title: "HubSpot read-only inspection",
+    status: "active" as const,
     objective:
-      "Clean the prospect-side CRM workflow and create a queue that shows who to research, why they matter, and what the next manual action should be.",
-    source: "May 27 Fireflies meeting",
+      "Inspect Rob's HubSpot safely before any cleanup work: access, objects, fields, duplicates, stale records, lists, workflows, integrations, compliance flags, and reporting readiness.",
+    source: "June 6 HubSpot inspection plan + May 27 Fireflies meeting",
     owner: "HubSpot hygiene agent + compliance-boundary agent",
     steps: [
-      "Audit lifecycle stages, stale contacts, duplicates, tags, and stuck records.",
-      "Keep the first run read-only until Rob and Julian approve the write scope.",
-      "Score prospects using public-signal relevance rather than private client data.",
-      "Create manual handoff points for Rob's review.",
+      "Confirm the HubSpot portal identity, access method, and read-only scope.",
+      "Inventory objects, properties, lists, workflows, integrations, duplicates, and stale records.",
+      "Classify data as safe prospect-side, needs manual review, or blocked from AI tools.",
+      "Recommend cleanup and prospect-queue steps without writing to HubSpot.",
     ],
-    proof: ["Weekly pipeline report", "Prospect queue", "Access blocker log"],
+    proof: ["HubSpot inspection plan", "Object inventory", "Field hygiene map", "Compliance flags", "Access blocker log"],
   },
   {
     id: "game-plan-3",

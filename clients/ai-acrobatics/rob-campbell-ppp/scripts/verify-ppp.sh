@@ -73,6 +73,7 @@ REAL_LINKS=$(grep -c "https://" "$DASH_DIR/data/client-data.ts" 2>/dev/null || e
 
 cd "$DASH_DIR"
 npm run build
+node scripts/verify-convex-portal.mjs .
 
 if [ "$ERRORS" -gt 0 ]; then
   echo "FAILED: $ERRORS errors"

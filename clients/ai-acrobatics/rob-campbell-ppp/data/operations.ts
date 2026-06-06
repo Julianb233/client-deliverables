@@ -7,7 +7,12 @@ export const portalStandardStatus = [
   {
     label: "Meeting notes",
     status: "review-gated",
-    detail: "May 27 Fireflies notes are visible now. New Fireflies notes should enter through /api/meeting-sync, then publish after Julian review.",
+    detail: "May 27 Fireflies notes are visible now. June 3 Fireflies is still missing from the connector, so the portal links the Drive onboarding brief and source index after Julian review.",
+  },
+  {
+    label: "HubSpot inspection plan",
+    status: "review-gated",
+    detail: "Agents have a read-only checklist for access proof, object inventory, data segmentation, field hygiene, duplicate/stale records, workflow risk, integrations, and reporting readiness.",
   },
   {
     label: "Linear routing",
@@ -53,8 +58,8 @@ export const agentRunStatuses = [
     role: "Audits HubSpot stages, stale contacts, duplicate patterns, and manual handoff points.",
     status: "blocked",
     lastRun: "Not run against live HubSpot",
-    nextRun: "After Rob grants approved read-only access",
-    evidence: "Action item: Confirm HubSpot access and scope",
+    nextRun: "After Rob resends or confirms the HubSpot invite to julian@aiacrobatics.com",
+    evidence: "Drive HubSpot inspection plan and Linear AI-10493",
   },
   {
     name: "prospect-brief-agent",
@@ -107,9 +112,9 @@ export const retainerOperations = [
 ];
 
 export const meetingSyncPipeline = [
-  "Fireflies meeting is captured with transcript ID and attendee metadata.",
+  "Agent checks Fireflies first, then Google Drive if the transcript is missing.",
   "Agent pulls or receives the meeting summary and writes an internal review packet.",
-  "Julian-reviewed summary is published to the PPP through /api/meeting-sync.",
+  "Julian-reviewed summary is published to the PPP through /api/meeting-sync or a source-map update.",
   "Portal feed and changelog update from Convex so Rob sees what changed.",
   "Any action item creates or updates a Linear task before it becomes client-facing work.",
 ];

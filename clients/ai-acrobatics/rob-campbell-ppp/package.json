@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "verify:convex": "node scripts/verify-convex-portal.mjs .",
     "verify:ppp": "bash scripts/verify-ppp.sh ."
   },
   "dependencies": {

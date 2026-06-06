@@ -4,7 +4,7 @@ export const clientInfo = {
   contactName: "Rob",
   contactFullName: "Rob Campbell",
   contactEmail: "Robert.t.campbell5@gmail.com",
-  contactPhone: "Pending",
+  contactPhone: "+1 602 502 5054",
   domain: "rob-campbell-proposal.vercel.app",
   industry: "Financial services and advisor prospecting",
   servicePackage: "$7,500 AI Prospect Engine build plus optional monthly retainer",
@@ -20,7 +20,7 @@ export const brand = {
 
 export const health = {
   status: "green" as "green" | "yellow" | "red",
-  summary: "Deposit is received and the build is active; HubSpot access and compliance regression tests are the next gates.",
+  summary: "Deposit is received and the build is active; the HubSpot inspection plan is ready while access confirmation remains the next gate.",
 };
 
 export const stats = [
@@ -28,6 +28,7 @@ export const stats = [
   { label: "Swarms mapped", value: 5, previousValue: 0, format: "number", trend: "up" },
   { label: "Local skills enabled", value: 7, previousValue: 0, format: "number", trend: "up" },
   { label: "Deposit received", value: 5500, previousValue: 0, format: "currency", trend: "up" },
+  { label: "HubSpot audit plan", value: 12, previousValue: 0, format: "number", trend: "up" },
 ] as const;
 
 export const hubLinks = [
@@ -46,6 +47,20 @@ export const hubLinks = [
     category: "primary",
   },
   {
+    label: "HubSpot Inspection Plan",
+    url: "https://drive.google.com/file/d/1SPdXFlkOFMpNzAlxeWXd-xfe_39e0G6g/view?usp=drivesdk",
+    icon: "crm",
+    description: "Read-only CRM inspection checklist for agents before touching Rob's HubSpot workflow",
+    category: "primary",
+  },
+  {
+    label: "Meeting Notes Source Index",
+    url: "https://drive.google.com/file/d/1wtb9UaRQpgh0zACDAXPQ2E9yAT0FXBud/view?usp=drivesdk",
+    icon: "notes",
+    description: "Where agents should look when Fireflies does not expose the June 3 onboarding transcript",
+    category: "primary",
+  },
+  {
     label: "Book Onboarding Call",
     url: "/book-onboarding",
     icon: "calendar",
@@ -61,7 +76,7 @@ export const hubLinks = [
   },
   {
     label: "Linear Project",
-    url: "https://linear.app/ai-acrobatics/project/rob-campbell-hermes-ai-prospect-engine-871e4057929b",
+    url: "https://linear.app/ai-acrobatics/project/rob-campbell-ai-prospect-engine-onboarding-and-build-871e4057929b",
     icon: "tasks",
     description: "Agent-ready project board and subtasks",
     category: "primary",
@@ -117,6 +132,16 @@ export const driveResources = {
       label: "Drive Folder README",
       url: "https://drive.google.com/file/d/17ZUkcTQgp0a_3xcS_8MEcgn5ftne9gD8/view?usp=drivesdk",
       description: "Folder structure and compliance-safe usage rules.",
+    },
+    {
+      label: "HubSpot Inspection Plan",
+      url: "https://drive.google.com/file/d/1SPdXFlkOFMpNzAlxeWXd-xfe_39e0G6g/view?usp=drivesdk",
+      description: "Read-only CRM inspection checklist for the agents before any HubSpot write scope is considered.",
+    },
+    {
+      label: "Meeting Notes Source Index",
+      url: "https://drive.google.com/file/d/1wtb9UaRQpgh0zACDAXPQ2E9yAT0FXBud/view?usp=drivesdk",
+      description: "Fireflies and Drive source map for onboarding notes, call summaries, and meeting-derived decisions.",
     },
   ],
   folders: [
@@ -182,12 +207,12 @@ export const snapshotReport = {
   agentsConfigured: 8,
   milestonesOnTrack: "4 of 7",
   nextMonthFocus: [
-    "Begin post-deposit onboarding and implementation setup.",
-    "Confirm HubSpot access and read-only scope.",
-    "Run compliance-boundary regression tests.",
+    "Confirm HubSpot invite delivery and read-only scope.",
+    "Run the new HubSpot inspection checklist once access is available.",
+    "Move reviewed onboarding notes into the Drive meeting notes folder.",
     "Prepare the first public-signal radar and target employer map.",
   ],
-  lastUpdated: "2026-05-30",
+  lastUpdated: "2026-06-06",
 };
 
 export const paymentStatus = {

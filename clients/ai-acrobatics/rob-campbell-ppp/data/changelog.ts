@@ -1,4 +1,7 @@
 export const changelog = [
+  { date: "2026-06-06", title: "HubSpot inspection plan added", description: "PPP now links the read-only HubSpot inspection checklist agents should use before entering Rob's CRM workflow.", type: "operations" },
+  { date: "2026-06-06", title: "Meeting notes source index added", description: "Drive now has a source index explaining that Fireflies has not exposed the June 3 transcript and that onboarding notes live in Drive.", type: "source" },
+  { date: "2026-06-06", title: "HubSpot invite follow-up sent", description: "Rob was asked to resend or confirm the HubSpot invite to julian@aiacrobatics.com after the workspace inbox showed meeting notes but no HubSpot invite.", type: "blocker" },
   { date: "2026-05-30", title: "$5,500 deposit received", description: "Deposit received and the project moved into post-deposit onboarding and implementation mode.", type: "payment" },
   { date: "2026-05-30", title: "Client send review gate set", description: "PPP link and future outbound client messages are held for Julian review before sending to Rob.", type: "operations" },
   { date: "2026-05-30", title: "Convex integration resumed", description: "Orphaned Convex work was reconciled back into the canonical AI Acrobatics client repo.", type: "infrastructure" },

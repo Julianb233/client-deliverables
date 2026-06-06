@@ -555,7 +555,7 @@ export function GamePlansPage() {
         <p className="eyebrow">Strategy to execution</p>
         <h1>Game Plans + Meeting Notes</h1>
         <p className="lead">
-          This page turns the May 27 Fireflies meeting into the working plan for Rob's AI Prospect Engine: what we decided, what is next, and what proof should appear as the system gets built.
+          This page turns the May 27 Fireflies meeting, the June onboarding source index, and the HubSpot inspection plan into the working plan for Rob's AI Prospect Engine: what we decided, what is next, and what proof should appear as the system gets built.
         </p>
       </div>
       <section className="section grid source-grid">
@@ -981,6 +981,7 @@ export async function ActionItemsPage() {
                 <li key={step}>{step}</li>
               ))}
             </ul>
+            {item.url ? <a className="button secondary" href={item.url} target="_blank" rel="noreferrer">Open linked resource</a> : null}
           </article>
         ))}
       </section>

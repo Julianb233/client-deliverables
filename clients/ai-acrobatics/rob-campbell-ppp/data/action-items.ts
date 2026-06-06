@@ -11,6 +11,39 @@ export const actionItems = [
     instructions: ["Confirm HubSpot portal/account.", "Approve read-only audit scope first.", "Hold write access until Julian confirms exact workflow."],
   },
   {
+    id: "rob-action-005",
+    title: "Review the HubSpot inspection plan",
+    description: "Use the new checklist to confirm what the agents should inspect once HubSpot access is available.",
+    status: "pending" as const,
+    type: "content-review" as const,
+    priority: "high" as const,
+    createdAt: "2026-06-06",
+    dueDate: "2026-06-10",
+    instructions: [
+      "Open the HubSpot Inspection Plan in Drive.",
+      "Confirm whether HubSpot contains prospect-only data, mixed prospect/client records, or anything that must stay out of AI tools.",
+      "Mark any fields, lists, workflows, or integrations that agents should not touch.",
+      "Approve read-only inspection before any cleanup recommendations become active work.",
+    ],
+    url: "https://drive.google.com/file/d/1SPdXFlkOFMpNzAlxeWXd-xfe_39e0G6g/view?usp=drivesdk",
+  },
+  {
+    id: "rob-action-006",
+    title: "Confirm where the June onboarding notes should live",
+    description: "Fireflies has not exposed the June 3 transcript, so the portal now points agents to the Drive onboarding brief and source index.",
+    status: "pending" as const,
+    type: "information" as const,
+    priority: "medium" as const,
+    createdAt: "2026-06-06",
+    dueDate: "2026-06-10",
+    instructions: [
+      "Open the Meeting Notes Source Index in Drive.",
+      "Confirm the onboarding brief is an acceptable source until Fireflies exposes the transcript.",
+      "Add or request any missing decisions from the onboarding call.",
+    ],
+    url: "https://drive.google.com/file/d/1wtb9UaRQpgh0zACDAXPQ2E9yAT0FXBud/view?usp=drivesdk",
+  },
+  {
     id: "rob-action-002",
     title: "Confirm target employer priority list",
     description: "Review the initial San Diego tech-equity employer list and flag must-have companies.",
@@ -44,4 +77,3 @@ export const actionItems = [
     instructions: ["Review monthly tier differences.", "Choose desired support level.", "Use the matching FanBasis link after Julian confirms timing."],
   },
 ];
-
