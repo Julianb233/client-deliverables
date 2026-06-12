@@ -33,3 +33,7 @@ Thumbs.db
 playwright-report/
 test-results/
 *.tsbuildinfo
+
+# Agent workspace artifacts
+.codex/
+.hermes/
