@@ -31,10 +31,12 @@ if (!clientSlug) {
 }
 
 const checks = [
-  ["portalClients:getBySlug", { slug: clientSlug }],
-  ["portalFeed:listForClient", { clientSlug, limit: 1 }],
-  ["portalActionItems:listAllForClient", { clientSlug }],
-  ["portalChangelog:listForClient", { clientSlug, limit: 1 }],
+  // New-style aa-portals function names (quick-beagle-88)
+  ["tenants:getBySlug", { slug: clientSlug }],
+  ["feedEntries:listForTenant", { tenantSlug: clientSlug, limit: 1 }],
+  ["actionItems:listForTenant", { tenantSlug: clientSlug }],
+  ["changelog:listForTenant", { tenantSlug: clientSlug, limit: 1 }],
+  // Legacy conventions — still present on quick-beagle-88 for backwards compat
   ["portalMessages:listForClient", { clientSlug, limit: 1 }],
   ["portalUpsellOffers:listForClient", { clientSlug }],
   ["portalUpsellIntents:listForClient", { clientSlug, limit: 1 }],
