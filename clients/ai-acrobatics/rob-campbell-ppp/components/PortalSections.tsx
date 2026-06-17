@@ -21,6 +21,12 @@ function gamePlanStatusClass(status: string) {
   return "status-upcoming";
 }
 
+function operationalStatusClass(status: string) {
+  if (["live", "active"].includes(status)) return "status-active";
+  if (["blocked", "blocked-by-backend", "blocked-by-review", "partial", "review-gated", "active_decision_needed"].includes(status)) return "status-pending";
+  return "status-upcoming";
+}
+
 export async function HomePage() {
   const runtime = await getPortalRuntimeData();
   const liveGuardrails = runtime.client?.metadata?.complianceGuardrails ?? complianceGuardrails;
@@ -511,7 +517,7 @@ export async function RequestCenterPage() {
         <p className="eyebrow">Client input zone</p>
         <h1>Request Center</h1>
         <p className="lead">
-          Rob can send project questions, screenshots, voice notes, blockers, and new AI system ideas here. Submissions save to Convex, create a Linear task when credentials are available, and stay behind Julian's review gate.
+          Rob can send project questions, screenshots, voice notes, blockers, and new AI system ideas here. The interface is ready, but production request routing stays marked partial until the Convex portal backend repair in AI-10564 is verified.
         </p>
       </div>
       <section className="section grid request-layout">
@@ -521,13 +527,13 @@ export async function RequestCenterPage() {
           <h2>Review-gated routing</h2>
           <ol className="number-list">
             <li>Message and attachment metadata are submitted through the server route.</li>
-            <li>Convex stores the request in portalMessages and posts an in-app feed event.</li>
-            <li>Linear gets a follow-up task for AI Acrobatics review.</li>
+            <li>After AI-10564 is fixed, Convex stores the request in portalMessages and posts an in-app feed event.</li>
+            <li>Linear gets a follow-up task for AI Acrobatics review after the backend smoke test passes.</li>
             <li>Julian approves any external reply, scope change, payment link, or client-facing recommendation.</li>
           </ol>
           <div className="source-card compact-source-card">
             <strong>Recent submitted items</strong>
-            <span>{visibleMessages.length > 0 ? `${visibleMessages.length} visible from Convex` : "No visible requests yet"}</span>
+            <span>{visibleMessages.length > 0 ? `${visibleMessages.length} visible from Convex` : "Backend repair pending"}</span>
           </div>
           {visibleMessages.length > 0 ? (
             <ul className="list">
@@ -540,7 +546,7 @@ export async function RequestCenterPage() {
               ))}
             </ul>
           ) : (
-            <p className="muted">Once Rob submits a question, idea, screenshot, or voice note, it appears here after Convex sync.</p>
+            <p className="muted">Requests should be sent by text or reviewed directly with Julian until the Convex portal backend passes verification.</p>
           )}
         </aside>
       </section>
@@ -708,7 +714,7 @@ export function OperationsPage() {
               <li key={item.label}>
                 <strong>{item.label}</strong>
                 <p>{item.detail}</p>
-                <span className={`badge ${item.status === "live" ? "status-active" : item.status === "blocked-by-review" ? "status-pending" : "status-upcoming"}`}>{item.status}</span>
+                <span className={`badge ${operationalStatusClass(item.status)}`}>{item.status}</span>
               </li>
             ))}
           </ul>
@@ -734,7 +740,7 @@ export function OperationsPage() {
           {agentRunStatuses.map((agent) => (
             <article className="panel" key={agent.name}>
               <div className="panel-heading-row">
-                <span className={`badge ${agent.status === "active" ? "status-active" : agent.status === "blocked" ? "status-pending" : "status-upcoming"}`}>{agent.status}</span>
+                <span className={`badge ${operationalStatusClass(agent.status)}`}>{agent.status}</span>
                 <span className="muted">{agent.lastRun}</span>
               </div>
               <h3>{agent.name}</h3>
@@ -811,7 +817,42 @@ export async function AgentsPage() {
   return (
     <main className="page">
       <h1>AI Agents</h1>
-      <p className="lead">Wizard of AI agent systems mapped to Rob's current build and possible next steps.</p>
+      <p className="lead">Rob's active Hermes execution agents plus the Wizard of AI systems that may become add-on work.</p>
+      <section className="section">
+        <div className="section-title-row">
+          <div>
+            <p className="eyebrow">Hermes profile</p>
+            <h2>Configured execution agents</h2>
+          </div>
+          <Link className="button secondary compact-button" href="/operations">Operations status</Link>
+        </div>
+        <div className="agent-status-grid">
+          {agentRunStatuses.map((agent) => (
+            <article className="panel" key={agent.name}>
+              <div className="panel-heading-row">
+                <span className={operationalStatusClass(agent.status)}>{agent.status}</span>
+                <span className="muted">{agent.lastRun}</span>
+              </div>
+              <h3>{agent.name}</h3>
+              <p>{agent.role}</p>
+              <table className="ops-table">
+                <tbody>
+                  <tr><th>Next</th><td>{agent.nextRun}</td></tr>
+                  <tr><th>Proof</th><td>{agent.evidence}</td></tr>
+                </tbody>
+              </table>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="section">
+        <div className="section-title-row">
+          <div>
+            <p className="eyebrow">Wizard services</p>
+            <h2>Available agent systems</h2>
+          </div>
+        </div>
+      </section>
       <section className="section grid cols-3">
         {offers.map((offer) => (
           <article className="panel" key={offer.offerSlug}>
@@ -1122,7 +1163,7 @@ export async function BillingPage() {
             ))}
           </ul>
         ) : (
-          <p className="muted">Upsell clicks and requests will appear here after Convex sync.</p>
+          <p className="muted">Retainer choice should be confirmed directly with Julian until Convex-backed upsell tracking passes verification.</p>
         )}
       </section>
     </main>

@@ -127,5 +127,16 @@ export const wizardServiceOffers: WizardServiceOffer[] = [
     status: "available",
     sortOrder: 60,
   },
+  {
+    offerSlug: "build-partner-retainer",
+    title: "Build Partner Retainer",
+    category: "retainer",
+    outcome: "Priority build capacity for deeper experiments, strategy, and workflow iteration.",
+    whyItFits: "Use this when Rob wants the AI Prospect Engine treated as a core operating system instead of light monthly support.",
+    setupEstimate: "Starts after initial build",
+    priceLabel: "$4,500/mo",
+    checkoutUrl: "https://www.fanbasis.com/agency-checkout/Aiacrobatics/qALQ3",
+    status: "available",
+    sortOrder: 70,
+  },
 ];
-

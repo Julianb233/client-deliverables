@@ -1,4 +1,8 @@
 export const changelog = [
+  { date: "2026-06-09", title: "Tomorrow working-call ask added", description: "PPP now asks Rob to pick a June 10 working call time after his new-baby window opens up.", type: "operations" },
+  { date: "2026-06-09", title: "Retainer selection promoted", description: "Operator, Growth, and Build Partner choices are now a high-priority action item before recurring operations begin.", type: "billing" },
+  { date: "2026-06-09", title: "Convex backend status corrected", description: "PPP now marks Convex-backed request/feed operations as blocked by AI-10564 instead of showing them as live.", type: "blocker" },
+  { date: "2026-06-09", title: "Hermes agent profile routing configured", description: "Rob's workspace now has first-sprint routing for chief-of-staff, compliance, signal, HubSpot, brief, Hearsay, retainer, and reporting agents.", type: "agents" },
   { date: "2026-06-06", title: "HubSpot inspection plan added", description: "PPP now links the read-only HubSpot inspection checklist agents should use before entering Rob's CRM workflow.", type: "operations" },
   { date: "2026-06-06", title: "Meeting notes source index added", description: "Drive now has a source index explaining that Fireflies has not exposed the June 3 transcript and that onboarding notes live in Drive.", type: "source" },
   { date: "2026-06-06", title: "HubSpot invite follow-up sent", description: "Rob was asked to resend or confirm the HubSpot invite to julian@aiacrobatics.com after the workspace inbox showed meeting notes but no HubSpot invite.", type: "blocker" },

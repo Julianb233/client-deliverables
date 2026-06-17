@@ -1,8 +1,8 @@
 export const portalStandardStatus = [
   {
     label: "Portal assistant",
-    status: "live",
-    detail: "Text, image metadata, and short voice notes route through /api/client-message into Convex portalMessages, Linear, and portalFeed.",
+    status: "blocked-by-backend",
+    detail: "UI is present, but live Convex request/feed behavior remains blocked by AI-10564 until the configured deployment exposes the PPP portal functions.",
   },
   {
     label: "Meeting notes",
@@ -16,18 +16,18 @@ export const portalStandardStatus = [
   },
   {
     label: "Linear routing",
-    status: "live",
-    detail: "Client ideas, blockers, questions, and custom upsell requests create Linear issues in the Rob project when LINEAR_API_KEY and LINEAR_PROJECT_ID are configured.",
+    status: "partial",
+    detail: "Linear project routing is configured, but production request flow is not considered live until the Convex portal backend passes verification.",
   },
   {
     label: "Internal notifications",
-    status: "live",
-    detail: "Client messages and upsell intent events send Julian an internal Telegram alert when PORTAL_NOTIFY_TELEGRAM_BOT_TOKEN and PORTAL_NOTIFY_TELEGRAM_CHAT_ID are configured.",
+    status: "partial",
+    detail: "Notification env is part of the required stack, but request/upsell notification proof waits on the Convex backend repair and production smoke test.",
   },
   {
     label: "Convex portal data",
-    status: "live",
-    detail: "The portal reads portalClients, portalFeed, portalActionItems, portalChangelog, portalMessages, portalUpsellOffers, and portalUpsellIntents.",
+    status: "blocked",
+    detail: "AI-10564: the configured Convex URL does not expose portalClients, portalFeed, portalActionItems, portalChangelog, portalMessages, portalUpsellOffers, or portalUpsellIntents functions.",
   },
   {
     label: "Outbound client sends",
@@ -41,8 +41,8 @@ export const agentRunStatuses = [
     name: "rob-chief-of-staff",
     role: "Orchestrates Rob's workspace, keeps source map current, and decides which swarm should run next.",
     status: "active",
-    lastRun: "2026-05-30",
-    nextRun: "After HubSpot access or new meeting notes",
+    lastRun: "2026-06-09",
+    nextRun: "Coordinate June 10 call prep, HubSpot access, and retainer choice",
     evidence: "Hermes workspace, PPP source map, Linear AI-10321",
   },
   {
@@ -52,6 +52,14 @@ export const agentRunStatuses = [
     lastRun: "Dry-run scope prepared",
     nextRun: "After target employer list review",
     evidence: "Game plan: Public signal radar",
+  },
+  {
+    name: "compliance-boundary-agent",
+    role: "Reviews all Rob-facing outputs before external use and blocks regulated advice or client-data handling.",
+    status: "active",
+    lastRun: "Boundary applied to PPP and follow-up copy",
+    nextRun: "Before June 10 call summary, retainer recommendation, or outbound client reply",
+    evidence: "Compliance boundary docs and financial-services copy rules",
   },
   {
     name: "hubspot-hygiene-agent",
@@ -80,10 +88,18 @@ export const agentRunStatuses = [
   {
     name: "retainer-ops-agent",
     role: "Tracks monthly deliverables, credits, dev hours, consulting hours, blockers, and recommendations.",
-    status: "ready",
+    status: "active",
     lastRun: "Retainer ladder defined",
-    nextRun: "At first active retainer month",
+    nextRun: "After Rob chooses Operator, Growth, or Build Partner",
     evidence: "Billing page and retainer operations table",
+  },
+  {
+    name: "reporting-agent",
+    role: "Produces daily, weekly, and monthly proof reports with blockers, usage, and next recommendations.",
+    status: "ready",
+    lastRun: "Report templates prepared",
+    nextRun: "After June 10 working call or first HubSpot/signal run",
+    evidence: "Daily, weekly, and monthly report templates",
   },
 ];
 

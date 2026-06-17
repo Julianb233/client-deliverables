@@ -173,10 +173,10 @@ export async function getPortalRuntimeData(): Promise<PortalRuntimeData> {
   try {
     const client = new ConvexHttpClient(convexUrl);
     const [portalClient, feed, actions, changelog, messages, offers, intents] = await Promise.all([
-      client.query(makeFunctionReference<"query">("portalClients:getBySlug"), { slug: PORTAL_CLIENT_SLUG }) as Promise<ConvexClient | null>,
-      client.query(makeFunctionReference<"query">("portalFeed:listForClient"), { clientSlug: PORTAL_CLIENT_SLUG, limit: 50 }) as Promise<ConvexFeedItem[]>,
-      client.query(makeFunctionReference<"query">("portalActionItems:listAllForClient"), { clientSlug: PORTAL_CLIENT_SLUG }) as Promise<ConvexActionItem[]>,
-      client.query(makeFunctionReference<"query">("portalChangelog:listForClient"), { clientSlug: PORTAL_CLIENT_SLUG, limit: 50 }) as Promise<ConvexChangelogItem[]>,
+      client.query(makeFunctionReference<"query">("tenants:getBySlug"), { slug: PORTAL_CLIENT_SLUG }) as Promise<ConvexClient | null>,
+      client.query(makeFunctionReference<"query">("feedEntries:listForTenant"), { tenantSlug: PORTAL_CLIENT_SLUG, limit: 50 }) as Promise<ConvexFeedItem[]>,
+      client.query(makeFunctionReference<"query">("actionItems:listForTenant"), { tenantSlug: PORTAL_CLIENT_SLUG }) as Promise<ConvexActionItem[]>,
+      client.query(makeFunctionReference<"query">("changelog:listForTenant"), { tenantSlug: PORTAL_CLIENT_SLUG, limit: 50 }) as Promise<ConvexChangelogItem[]>,
       client.query(makeFunctionReference<"query">("portalMessages:listForClient"), { clientSlug: PORTAL_CLIENT_SLUG, limit: 25 }) as Promise<ConvexMessage[]>,
       client.query(makeFunctionReference<"query">("portalUpsellOffers:listForClient"), { clientSlug: PORTAL_CLIENT_SLUG }) as Promise<ConvexUpsellOffer[]>,
       client.query(makeFunctionReference<"query">("portalUpsellIntents:listForClient"), { clientSlug: PORTAL_CLIENT_SLUG, limit: 25 }) as Promise<ConvexUpsellIntent[]>,

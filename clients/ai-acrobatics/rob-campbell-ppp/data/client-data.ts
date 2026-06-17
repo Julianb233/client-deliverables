@@ -19,8 +19,8 @@ export const brand = {
 };
 
 export const health = {
-  status: "green" as "green" | "yellow" | "red",
-  summary: "Deposit is received and the build is active; the HubSpot inspection plan is ready while access confirmation remains the next gate.",
+  status: "yellow" as "green" | "yellow" | "red",
+  summary: "Deposit is received and the build is active; next gates are tomorrow's working call, HubSpot access, retainer selection, and the Convex portal backend repair.",
 };
 
 export const stats = [
@@ -29,6 +29,7 @@ export const stats = [
   { label: "Local skills enabled", value: 7, previousValue: 0, format: "number", trend: "up" },
   { label: "Deposit received", value: 5500, previousValue: 0, format: "currency", trend: "up" },
   { label: "HubSpot audit plan", value: 12, previousValue: 0, format: "number", trend: "up" },
+  { label: "Retainer options", value: 3, previousValue: 0, format: "number", trend: "up" },
 ] as const;
 
 export const hubLinks = [
@@ -107,6 +108,13 @@ export const hubLinks = [
     url: "https://www.fanbasis.com/agency-checkout/Aiacrobatics/rgV2w",
     icon: "retainer",
     description: "$2,500/mo signal and workflow growth tier",
+    category: "secondary",
+  },
+  {
+    label: "Build Partner Retainer",
+    url: "https://www.fanbasis.com/agency-checkout/Aiacrobatics/qALQ3",
+    icon: "retainer",
+    description: "$4,500/mo priority build and optimization tier",
     category: "secondary",
   },
 ] as const;
@@ -200,19 +208,20 @@ export const onboardingBooking = {
 };
 
 export const snapshotReport = {
-  month: "May 2026",
+  month: "June 2026",
   overallHealth: 4 as 1 | 2 | 3 | 4 | 5,
   completedDeliverables: 10,
   pagesDeployed: 7,
   agentsConfigured: 8,
   milestonesOnTrack: "4 of 7",
   nextMonthFocus: [
+    "Get Rob on a working call on June 10 after his new-baby window opens up.",
+    "Have Rob choose Operator, Growth, or Build Partner retainer so operating cadence is clear.",
     "Confirm HubSpot invite delivery and read-only scope.",
     "Run the new HubSpot inspection checklist once access is available.",
-    "Move reviewed onboarding notes into the Drive meeting notes folder.",
-    "Prepare the first public-signal radar and target employer map.",
+    "Repair Convex PPP backend binding before calling request/feed operations fully live.",
   ],
-  lastUpdated: "2026-06-06",
+  lastUpdated: "2026-06-09",
 };
 
 export const paymentStatus = {
@@ -220,7 +229,7 @@ export const paymentStatus = {
   depositAmount: "$5,500",
   initialBuildTotal: "$7,500",
   statusLabel: "Deposit received",
-  note: "Initial build is active. Remaining balance and monthly retainer timing should be confirmed by Julian before any client-facing send.",
+  note: "Initial build is active. Rob needs to choose the monthly retainer tier before the operating cadence starts.",
 };
 
 export const complianceGuardrails = [

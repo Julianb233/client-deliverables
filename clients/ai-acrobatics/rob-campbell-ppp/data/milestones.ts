@@ -27,9 +27,9 @@ export const milestones = [
     id: 4,
     name: "Post-Deposit Onboarding",
     status: "active" as const,
-    dateRange: "Now",
-    description: "Move from proposal follow-up into implementation setup while holding client-facing sends for Julian review.",
-    deliverables: ["Review-gated PPP", "Convex-backed portal data", "HubSpot inspection plan", "Meeting notes source index"],
+    dateRange: "June 9-10, 2026",
+    description: "Move from proposal follow-up into a June 10 working call, retainer decision, and first implementation setup while holding sensitive sends for Julian review.",
+    deliverables: ["Review-gated PPP", "June 10 working-call ask", "Retainer selection", "HubSpot inspection plan", "Meeting notes source index"],
   },
   {
     id: 5,
@@ -50,9 +50,9 @@ export const milestones = [
   {
     id: 7,
     name: "Retainer Operating Cadence",
-    status: "upcoming" as const,
-    dateRange: "After kickoff",
-    description: "Begin recurring signal reviews, usage tracking, reports, and next-step recommendations.",
+    status: "active" as const,
+    dateRange: "Decision needed",
+    description: "Rob needs to choose Operator, Growth, or Build Partner so recurring signal reviews, usage tracking, reports, and next-step recommendations match the purchased cadence.",
     deliverables: ["Daily signal report", "Monthly retainer report", "Client update rhythm"],
   },
 ];

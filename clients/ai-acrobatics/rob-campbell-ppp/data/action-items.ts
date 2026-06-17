@@ -1,5 +1,38 @@
 export const actionItems = [
   {
+    id: "rob-action-007",
+    title: "Book tomorrow's working call",
+    description: "Rob just had his baby on June 8, and the next step is to pick a June 10 working call time so AI Acrobatics can unblock access, scope, and the first sprint.",
+    status: "pending" as const,
+    type: "information" as const,
+    priority: "high" as const,
+    createdAt: "2026-06-09",
+    dueDate: "2026-06-10",
+    instructions: [
+      "Choose a time on June 10 that works with the new-baby schedule.",
+      "Use the 1-hour onboarding call when possible; use the 30-minute support call only if time is tight.",
+      "Bring HubSpot access status, retainer preference, and first-priority prospecting workflow questions.",
+    ],
+    url: "/book-onboarding",
+  },
+  {
+    id: "rob-action-008",
+    title: "Choose the starting retainer package",
+    description: "Pick the monthly operating tier so the agents know the reporting cadence, review rhythm, and amount of dev/consulting capacity to plan around.",
+    status: "pending" as const,
+    type: "payment" as const,
+    priority: "high" as const,
+    createdAt: "2026-06-09",
+    dueDate: "2026-06-10",
+    instructions: [
+      "Operator: $1,500/mo for monitoring, light HubSpot hygiene, AI credit allowance, and monthly reporting.",
+      "Growth: $2,500/mo for weekly signal reviews, more dev/consulting time, and content/template refreshes.",
+      "Build Partner: $4,500/mo for priority response, advanced experiments, quarterly strategy, and deeper workflow iteration.",
+      "Confirm the tier with Julian before starting recurring billing.",
+    ],
+    url: "/billing",
+  },
+  {
     id: "rob-action-001",
     title: "Confirm HubSpot access and scope",
     description: "Provide approved access or confirm the person who will authorize HubSpot read-only audit access.",
@@ -68,7 +101,7 @@ export const actionItems = [
   {
     id: "rob-action-004",
     title: "Choose retainer tier after initial build",
-    description: "Pick Operator, Growth, or Build Partner once the initial implementation is ready to transition into monthly operation.",
+    description: "Pick Operator, Growth, or Build Partner so the first operating month has a clear cadence.",
     status: "pending" as const,
     type: "payment" as const,
     priority: "medium" as const,
