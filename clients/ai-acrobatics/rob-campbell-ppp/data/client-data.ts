@@ -20,7 +20,7 @@ export const brand = {
 
 export const health = {
   status: "yellow" as "green" | "yellow" | "red",
-  summary: "Deposit is received and the build is active; next gates are tomorrow's working call, HubSpot access, retainer selection, and the Convex portal backend repair.",
+  summary: "Deposit is received and the build is active; current gates are HubSpot read-only scope, tool access, retainer selection, and the Convex portal backend repair.",
 };
 
 export const stats = [
@@ -33,6 +33,13 @@ export const stats = [
 ] as const;
 
 export const hubLinks = [
+  {
+    label: "Client Workspace",
+    url: "/workspace",
+    icon: "workspace",
+    description: "Rob-facing profile, Hermes agent review board, roadmap, boundaries, and workspace design questions",
+    category: "primary",
+  },
   {
     label: "Onboarding Presentation",
     url: "/onboarding",
@@ -215,13 +222,13 @@ export const snapshotReport = {
   agentsConfigured: 8,
   milestonesOnTrack: "4 of 7",
   nextMonthFocus: [
-    "Get Rob on a working call on June 10 after his new-baby window opens up.",
+    "Use the client workspace page to review and shape the Hermes agent roster.",
     "Have Rob choose Operator, Growth, or Build Partner retainer so operating cadence is clear.",
-    "Confirm HubSpot invite delivery and read-only scope.",
-    "Run the new HubSpot inspection checklist once access is available.",
+    "Confirm HubSpot read-only scope and any missing tool access for Apollo, LinkedIn, Meet Alfred, Slack, and Notion.",
+    "Run the HubSpot inspection checklist against approved read-only data.",
     "Repair Convex PPP backend binding before calling request/feed operations fully live.",
   ],
-  lastUpdated: "2026-06-09",
+  lastUpdated: "2026-06-21",
 };
 
 export const paymentStatus = {

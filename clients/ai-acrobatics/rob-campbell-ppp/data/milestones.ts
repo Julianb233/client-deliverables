@@ -27,9 +27,9 @@ export const milestones = [
     id: 4,
     name: "Post-Deposit Onboarding",
     status: "active" as const,
-    dateRange: "June 9-10, 2026",
-    description: "Move from proposal follow-up into a June 10 working call, retainer decision, and first implementation setup while holding sensitive sends for Julian review.",
-    deliverables: ["Review-gated PPP", "June 10 working-call ask", "Retainer selection", "HubSpot inspection plan", "Meeting notes source index"],
+    dateRange: "June 9-24, 2026",
+    description: "Move from proposal follow-up into workspace review, retainer decision, and first implementation setup while holding sensitive sends for Julian review.",
+    deliverables: ["Review-gated PPP", "Client workspace review page", "Retainer selection", "HubSpot inspection plan", "Meeting notes source index"],
   },
   {
     id: 5,

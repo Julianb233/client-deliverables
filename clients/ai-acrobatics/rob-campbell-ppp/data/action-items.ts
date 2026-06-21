@@ -1,19 +1,19 @@
 export const actionItems = [
   {
     id: "rob-action-007",
-    title: "Book tomorrow's working call",
-    description: "Rob just had his baby on June 8, and the next step is to pick a June 10 working call time so AI Acrobatics can unblock access, scope, and the first sprint.",
+    title: "Review the client workspace and agent roster",
+    description: "Rob can now open the workspace page, review the proposed Hermes agents, and send edits on the roles, wording, and priority order.",
     status: "pending" as const,
     type: "information" as const,
     priority: "high" as const,
-    createdAt: "2026-06-09",
-    dueDate: "2026-06-10",
+    createdAt: "2026-06-21",
+    dueDate: "2026-06-24",
     instructions: [
-      "Choose a time on June 10 that works with the new-baby schedule.",
-      "Use the 1-hour onboarding call when possible; use the 30-minute support call only if time is tight.",
-      "Bring HubSpot access status, retainer preference, and first-priority prospecting workflow questions.",
+      "Open the Client Workspace page.",
+      "Review the profile, workspace architecture, and agent design board.",
+      "Send edits or questions through the Request Center so AI Acrobatics can update the build plan.",
     ],
-    url: "/book-onboarding",
+    url: "/workspace",
   },
   {
     id: "rob-action-008",
@@ -23,7 +23,7 @@ export const actionItems = [
     type: "payment" as const,
     priority: "high" as const,
     createdAt: "2026-06-09",
-    dueDate: "2026-06-10",
+    dueDate: "2026-06-24",
     instructions: [
       "Operator: $1,500/mo for monitoring, light HubSpot hygiene, AI credit allowance, and monthly reporting.",
       "Growth: $2,500/mo for weekly signal reviews, more dev/consulting time, and content/template refreshes.",
@@ -40,7 +40,7 @@ export const actionItems = [
     type: "credentials" as const,
     priority: "high" as const,
     createdAt: "2026-05-27",
-    dueDate: "2026-05-30",
+    dueDate: "2026-06-24",
     instructions: ["Confirm HubSpot portal/account.", "Approve read-only audit scope first.", "Hold write access until Julian confirms exact workflow."],
   },
   {
@@ -51,7 +51,7 @@ export const actionItems = [
     type: "content-review" as const,
     priority: "high" as const,
     createdAt: "2026-06-06",
-    dueDate: "2026-06-10",
+    dueDate: "2026-06-24",
     instructions: [
       "Open the HubSpot Inspection Plan in Drive.",
       "Confirm whether HubSpot contains prospect-only data, mixed prospect/client records, or anything that must stay out of AI tools.",
@@ -68,7 +68,7 @@ export const actionItems = [
     type: "information" as const,
     priority: "medium" as const,
     createdAt: "2026-06-06",
-    dueDate: "2026-06-10",
+    dueDate: "2026-06-24",
     instructions: [
       "Open the Meeting Notes Source Index in Drive.",
       "Confirm the onboarding brief is an acceptable source until Fireflies exposes the transcript.",
@@ -84,7 +84,7 @@ export const actionItems = [
     type: "information" as const,
     priority: "medium" as const,
     createdAt: "2026-05-27",
-    dueDate: "2026-06-03",
+    dueDate: "2026-06-24",
     instructions: ["Review seeded targets like Qualcomm, Intuit, ServiceNow, and Illumina.", "Add your preferred employer niches.", "Mark any employers to exclude."],
   },
   {
@@ -95,7 +95,7 @@ export const actionItems = [
     type: "content-review" as const,
     priority: "high" as const,
     createdAt: "2026-05-27",
-    dueDate: "2026-05-31",
+    dueDate: "2026-06-24",
     instructions: ["Review the boundary summary.", "Confirm any Northwestern Mutual or Hearsay constraints.", "Send updates before live workflows begin."],
   },
   {
@@ -106,7 +106,7 @@ export const actionItems = [
     type: "payment" as const,
     priority: "medium" as const,
     createdAt: "2026-05-27",
-    dueDate: "2026-06-10",
+    dueDate: "2026-06-24",
     instructions: ["Review monthly tier differences.", "Choose desired support level.", "Use the matching FanBasis link after Julian confirms timing."],
   },
 ];

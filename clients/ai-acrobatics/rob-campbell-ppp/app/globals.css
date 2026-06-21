@@ -1642,6 +1642,132 @@ code {
   margin-top: 12px;
 }
 
+.access-page {
+  display: grid;
+  min-height: calc(100vh - 120px);
+  place-items: center;
+}
+
+.access-shell {
+  display: grid;
+  width: min(980px, 100%);
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.access-intro,
+.access-form {
+  min-height: 100%;
+}
+
+.access-form {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+}
+
+.access-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.access-form input {
+  min-height: 48px;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+  padding: 0 14px;
+}
+
+.workspace-header {
+  display: grid;
+  gap: 10px;
+}
+
+.workspace-system-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.workspace-agent-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.workspace-agent-group {
+  display: grid;
+  gap: 16px;
+}
+
+.agent-mini-list,
+.roadmap-stack,
+.retainer-mini-stack {
+  display: grid;
+  gap: 12px;
+}
+
+.agent-mini-row {
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px;
+}
+
+.agent-mini-row strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.agent-mini-row p,
+.roadmap-row p,
+.workspace-link-card span {
+  margin: 0;
+  color: var(--muted);
+}
+
+.roadmap-row,
+.retainer-mini-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 14px;
+}
+
+.workspace-link-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.workspace-link-card {
+  display: grid;
+  min-height: 112px;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.035);
+  padding: 14px;
+}
+
+.workspace-link-card:hover {
+  border-color: rgba(0, 145, 213, 0.42);
+  background: rgba(0, 145, 213, 0.08);
+}
+
 @keyframes slideInUp {
   from {
     opacity: 0;
@@ -1703,6 +1829,10 @@ code {
   .request-form-grid,
   .game-plan-grid,
   .agent-status-grid,
+  .access-shell,
+  .workspace-system-grid,
+  .workspace-agent-groups,
+  .workspace-link-grid,
   .meeting-note-block,
   .grid.cols-2,
   .grid.cols-3,
@@ -1711,6 +1841,10 @@ code {
   }
 
   .timeline-row {
+    grid-template-columns: 1fr;
+  }
+
+  .agent-mini-row {
     grid-template-columns: 1fr;
   }
 
@@ -1749,6 +1883,15 @@ code {
 
   .question-row {
     grid-template-columns: 1fr;
+  }
+
+  .roadmap-row,
+  .retainer-mini-row {
+    flex-direction: column;
+  }
+
+  .workspace-link-card {
+    min-height: auto;
   }
 
   .source-facts dt,

@@ -1,5 +1,6 @@
 export const changelog = [
-  { date: "2026-06-09", title: "Tomorrow working-call ask added", description: "PPP now asks Rob to pick a June 10 working call time after his new-baby window opens up.", type: "operations" },
+  { date: "2026-06-21", title: "Client workspace review URL added", description: "PPP now includes a review-gated workspace page where Rob can see his profile, Hermes-first architecture, proposed agents, roadmap, design questions, and operating links.", type: "portal" },
+  { date: "2026-06-21", title: "Agent roster review promoted", description: "The next action is for Rob to review the agent design board and send edits before AI Acrobatics finalizes the first operating cadence.", type: "agents" },
   { date: "2026-06-09", title: "Retainer selection promoted", description: "Operator, Growth, and Build Partner choices are now a high-priority action item before recurring operations begin.", type: "billing" },
   { date: "2026-06-09", title: "Convex backend status corrected", description: "PPP now marks Convex-backed request/feed operations as blocked by AI-10564 instead of showing them as live.", type: "blocker" },
   { date: "2026-06-09", title: "Hermes agent profile routing configured", description: "Rob's workspace now has first-sprint routing for chief-of-staff, compliance, signal, HubSpot, brief, Hearsay, retainer, and reporting agents.", type: "agents" },

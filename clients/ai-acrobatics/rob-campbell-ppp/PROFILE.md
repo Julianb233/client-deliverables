@@ -20,6 +20,7 @@ Rob's AI Prospect Engine has an implemented Hermes workspace and Linear project.
 
 - Proposal: https://rob-campbell-proposal.vercel.app/
 - PPP portal: https://rob-campbell-ppp.vercel.app/
+- Client workspace: https://rob-campbell-ppp.vercel.app/workspace
 - Onboarding booking: https://rob-campbell-ppp.vercel.app/book-onboarding
 - Linear project: https://linear.app/ai-acrobatics/project/rob-campbell-hermes-ai-prospect-engine-871e4057929b
 - Hermes workspace: `/Users/julianbradley/.hermes/workspaces/rob-campbell-ai-prospect-engine`
@@ -37,6 +38,7 @@ Rob's AI Prospect Engine has an implemented Hermes workspace and Linear project.
 - Public-data dry run.
 - Linear project and subtasks.
 - PPP portal.
+- Rob-facing client workspace review page.
 - $5,500 deposit received.
 
 ## Milestones

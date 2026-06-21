@@ -7,6 +7,7 @@ import "./globals.css";
 
 const nav = [
   ["Dashboard", "/", "D"],
+  ["Workspace", "/workspace", "W"],
   ["AI Roadmap", "/progress", "R"],
   ["Game Plans", "/game-plans", "P"],
   ["Onboarding", "/onboarding", "K"],
@@ -24,9 +25,9 @@ const nav = [
 
 const mobileNav = [
   ["Dashboard", "/"],
+  ["Workspace", "/workspace"],
   ["Roadmap", "/progress"],
   ["Plans", "/game-plans"],
-  ["Onboard", "/onboarding"],
   ["Request", "/request"],
 ] as const;
 
@@ -99,6 +100,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
               </div>
               <div className="topbar-actions">
                 <a className="topbar-icon" href="/book-onboarding" aria-label="Book onboarding call">◷</a>
+                <a className="topbar-icon" href="/workspace" aria-label="Client workspace">◆</a>
                 <a className="topbar-icon" href="/request" aria-label="Request center">✉</a>
                 <a className="topbar-icon has-alert" href="/action-items" aria-label="Action items">●</a>
                 <div className="profile-pill" aria-label="Client profile">

@@ -59,6 +59,7 @@ export async function HomePage() {
             For your Northwestern Mutual practice, the boundary stays tight: public prospect signals and HubSpot-side workflow support only. No Dynamics writes, no NMIS/client-record data in AI tools, and no AI-generated investment advice.
           </p>
           <div className="button-row">
+            <a className="button" href="/workspace">Open client workspace</a>
             <a className="button" href="/book-onboarding">Book onboarding call</a>
             <a className="button" href="/action-items">Review next actions</a>
             <a className="button secondary" href="/request">Send request</a>
@@ -204,7 +205,7 @@ export async function HomePage() {
           </ul>
         </div>
         <div className="panel">
-          <h2>May focus</h2>
+          <h2>Current focus</h2>
           <ul className="list">
             {snapshotReport.nextMonthFocus.map((item) => (
               <li key={item}>{item}</li>
