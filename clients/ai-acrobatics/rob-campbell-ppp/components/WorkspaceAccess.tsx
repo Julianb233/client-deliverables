@@ -5,10 +5,11 @@ import { FormEvent, useEffect, useState } from "react";
 import { workspaceAccess } from "../data/workspace";
 
 const STORAGE_KEY = "rob-workspace-access";
-const FALLBACK_CODE = "rob-preview";
+const PRIMARY_CODE = "password1$";
+const LEGACY_CODE = "rob-preview";
 
-function expectedCode() {
-  return process.env.NEXT_PUBLIC_ROB_WORKSPACE_ACCESS_CODE || FALLBACK_CODE;
+function expectedCodes() {
+  return new Set([PRIMARY_CODE, LEGACY_CODE, process.env.NEXT_PUBLIC_ROB_WORKSPACE_ACCESS_CODE].filter(Boolean));
 }
 
 export function WorkspaceAccessGate({ children }: { children: React.ReactNode }) {
@@ -22,16 +23,14 @@ export function WorkspaceAccessGate({ children }: { children: React.ReactNode })
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
-    const email = String(form.get("email") || "").trim().toLowerCase();
     const code = String(form.get("code") || "").trim();
-    const emailOk = email === "robert.t.campbell5@gmail.com" || email === "robert.campbell@nm.com";
-    if (emailOk && code === expectedCode()) {
+    if (expectedCodes().has(code)) {
       window.localStorage.setItem(STORAGE_KEY, "granted");
       setUnlocked(true);
       setMessage("");
       return;
     }
-    setMessage("That did not match the review access details. Ask Julian for the current workspace review code.");
+    setMessage("That did not match the current workspace review code. Ask Julian for the latest access details.");
   }
 
   if (unlocked) return <>{children}</>;
@@ -41,9 +40,9 @@ export function WorkspaceAccessGate({ children }: { children: React.ReactNode })
       <section className="access-shell">
         <div className="panel accent-panel access-intro">
           <p className="eyebrow">Rob Campbell workspace</p>
-          <h1>Log in to review your AI Prospect Engine.</h1>
+          <h1>Log in to review your AI Prospect Engine agency workspace.</h1>
           <p className="lead">
-            This opens the profile, proposed agents, operating plan, current access status, and design questions for Rob's AI Prospect Engine workspace.
+            This opens the Hermes profile, proposed agents, swarms, operating plan, current access status, and design questions for Rob's AI Prospect Engine workspace.
           </p>
           <ul className="list">
             <li>Review the agents Rob wanted to create.</li>
@@ -56,12 +55,12 @@ export function WorkspaceAccessGate({ children }: { children: React.ReactNode })
           <p className="eyebrow">{workspaceAccess.reviewCodeLabel}</p>
           <h2>Client access</h2>
           <label>
-            Email
-            <input name="email" type="email" required placeholder="Robert.t.campbell5@gmail.com" />
+            Email optional
+            <input name="email" type="email" placeholder="Robert.t.campbell5@gmail.com" />
           </label>
           <label>
             Access code
-            <input name="code" required placeholder="Ask Julian for the review code" />
+            <input name="code" required placeholder="Enter workspace code" />
           </label>
           <button className="button" type="submit">Open workspace</button>
           {message ? <p className="form-notice error">{message}</p> : null}

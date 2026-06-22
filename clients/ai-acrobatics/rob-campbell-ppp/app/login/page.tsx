@@ -1,5 +1,5 @@
-import WorkspacePage from "../workspace/page";
+import AgencyWorkspacePage from "../agency-workspace/page";
 
 export const dynamic = "force-dynamic";
 
-export default WorkspacePage;
+export default AgencyWorkspacePage;
