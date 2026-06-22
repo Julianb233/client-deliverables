@@ -8,6 +8,7 @@ import "./globals.css";
 const nav = [
   ["Dashboard", "/", "D"],
   ["Workspace", "/workspace", "W"],
+  ["Hermes Agency", "/agency-workspace", "H"],
   ["AI Roadmap", "/progress", "R"],
   ["Game Plans", "/game-plans", "P"],
   ["Onboarding", "/onboarding", "K"],
@@ -26,8 +27,8 @@ const nav = [
 const mobileNav = [
   ["Dashboard", "/"],
   ["Workspace", "/workspace"],
+  ["Hermes", "/agency-workspace"],
   ["Roadmap", "/progress"],
-  ["Plans", "/game-plans"],
   ["Request", "/request"],
 ] as const;
 
@@ -95,12 +96,12 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
             <div className="portal-topbar" aria-label="Portal utility bar">
               <div className="search-shell">
                 <span className="search-icon" aria-hidden="true">⌕</span>
-                <input aria-label="Search portal" placeholder="Find roadmap, requests, agents, notes" />
+                <input aria-label="Search portal" placeholder="Find roadmap, Hermes agents, swarms, notes" />
                 <kbd>⌘F</kbd>
               </div>
               <div className="topbar-actions">
                 <a className="topbar-icon" href="/book-onboarding" aria-label="Book onboarding call">◷</a>
-                <a className="topbar-icon" href="/workspace" aria-label="Client workspace">◆</a>
+                <a className="topbar-icon" href="/agency-workspace" aria-label="Hermes agency workspace">◆</a>
                 <a className="topbar-icon" href="/request" aria-label="Request center">✉</a>
                 <a className="topbar-icon has-alert" href="/action-items" aria-label="Action items">●</a>
                 <div className="profile-pill" aria-label="Client profile">

@@ -41,6 +41,13 @@ export const hubLinks = [
     category: "primary",
   },
   {
+    label: "Hermes Agency Workspace",
+    url: "/agency-workspace",
+    icon: "hermes",
+    description: "Rob-facing map of the Hermes profile, workspace, agents, swarms, skills, search plan, runtime proof, and approval gates",
+    category: "primary",
+  },
+  {
     label: "Onboarding Presentation",
     url: "/onboarding",
     icon: "presentation",

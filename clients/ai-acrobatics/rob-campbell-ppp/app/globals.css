@@ -309,6 +309,135 @@ p {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.metric-pill {
+  min-height: 118px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(25, 25, 47, 0.72);
+  padding: 14px;
+}
+
+.metric-pill span,
+.metric-pill small {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.metric-pill strong {
+  display: block;
+  margin: 9px 0 5px;
+  color: var(--ink);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.topology-grid,
+.agency-lane-grid,
+.swarm-dispatch-grid,
+.search-plan-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.topology-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.agency-lane-grid,
+.swarm-dispatch-grid,
+.search-plan-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.topology-node,
+.agency-lane-card,
+.swarm-card {
+  min-height: 100%;
+}
+
+.topology-node strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--blue);
+  font-size: 14px;
+}
+
+.mini-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mini-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(0, 145, 213, 0.1);
+  padding: 6px 10px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.skill-matrix {
+  display: grid;
+  gap: 10px;
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.skill-row:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.skill-row p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.source-matrix {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.source-matrix span {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  border: 1px solid rgba(52, 211, 153, 0.28);
+  border-radius: 10px;
+  background: rgba(52, 211, 153, 0.08);
+  padding: 7px 10px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.source-matrix.blocked span {
+  border-color: rgba(251, 191, 36, 0.28);
+  background: rgba(251, 191, 36, 0.08);
+}
+
 .section {
   margin-top: 18px;
 }
@@ -1901,6 +2030,11 @@ code {
   .game-plan-grid,
   .agent-status-grid,
   .agent-profile-grid,
+  .metric-strip,
+  .topology-grid,
+  .agency-lane-grid,
+  .swarm-dispatch-grid,
+  .search-plan-grid,
   .access-shell,
   .workspace-system-grid,
   .workspace-agent-groups,
@@ -1917,6 +2051,10 @@ code {
   }
 
   .agent-mini-row {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-row {
     grid-template-columns: 1fr;
   }
 

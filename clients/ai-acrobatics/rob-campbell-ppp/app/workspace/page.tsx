@@ -14,6 +14,7 @@ export default function WorkspacePage() {
           <h1>{robProfile.title}</h1>
           <p className="lead">{robProfile.statusSummary}</p>
           <div className="button-row">
+            <Link className="button" href="/agency-workspace">Open Hermes agency workspace</Link>
             <a className="button" href={onboardingBooking.url} target="_blank" rel="noreferrer">Book onboarding call</a>
             <Link className="button secondary" href="/request">Send design feedback</Link>
             <Link className="button secondary" href="/agents">Open agent catalog</Link>
@@ -42,6 +43,19 @@ export default function WorkspacePage() {
                 <li key={source}>{source}</li>
               ))}
             </ul>
+          </div>
+        </section>
+
+        <section className="section panel accent-panel">
+          <div className="section-title-row">
+            <div>
+              <p className="eyebrow">Hermes command center</p>
+              <h2>Agency workspace, swarms, skills, and search plan</h2>
+              <p>
+                The standard PPP shows progress. The Hermes agency workspace shows the actual operating system: profile, source map, agent lanes, swarm dispatch, workspace skills, public-signal prospect search plan, and proof gates.
+              </p>
+            </div>
+            <Link className="button compact-button" href="/agency-workspace">Open</Link>
           </div>
         </section>
 
