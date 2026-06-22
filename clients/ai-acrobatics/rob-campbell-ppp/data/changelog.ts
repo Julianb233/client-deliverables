@@ -1,4 +1,5 @@
 export const changelog = [
+  { date: "2026-06-21", title: "Full Hermes agent catalog added", description: "Rob can now open the client workspace URL and review all 22 configured Hermes agent profiles grouped by operating lane, including active, ready, staged, and compliance-held roles.", type: "agents" },
   { date: "2026-06-21", title: "Client workspace review URL added", description: "PPP now includes a review-gated workspace page where Rob can see his profile, Hermes-first architecture, proposed agents, roadmap, design questions, and operating links.", type: "portal" },
   { date: "2026-06-21", title: "Agent roster review promoted", description: "The next action is for Rob to review the agent design board and send edits before AI Acrobatics finalizes the first operating cadence.", type: "agents" },
   { date: "2026-06-09", title: "Retainer selection promoted", description: "Operator, Growth, and Build Partner choices are now a high-priority action item before recurring operations begin.", type: "billing" },
@@ -19,7 +20,7 @@ export const changelog = [
   { date: "2026-05-27", title: "Retainer ladder published", description: "Operator, Growth, and Build Partner tiers added to the proposal.", type: "proposal" },
   { date: "2026-05-27", title: "Payment links verified", description: "Deposit, paid-in-full, and subscription links were added to the proposal source map.", type: "payment" },
   { date: "2026-05-27", title: "Source map created", description: "Fireflies, Linear, proposal, payment, and Rob contact references centralized.", type: "source" },
-  { date: "2026-05-27", title: "Agent and swarm specs created", description: "Eight agents and five swarms were defined for the AI Prospect Engine.", type: "agents" },
+  { date: "2026-05-27", title: "Agent and swarm specs created", description: "Initial agents and five swarms were defined for the AI Prospect Engine before the later Optimus-expanded 22-agent roster.", type: "agents" },
   { date: "2026-05-27", title: "Preferred email captured", description: "Rob's preferred follow-up email was set to Robert.t.campbell5@gmail.com.", type: "client" },
   { date: "2026-05-27", title: "HubSpot blocker named", description: "HubSpot remains staged/read-only until access and scope are confirmed.", type: "blocker" },
 ];

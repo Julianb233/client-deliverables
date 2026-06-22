@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { WorkspaceAccessGate } from "../../components/WorkspaceAccess";
 import { complianceGuardrails, hubLinks, onboardingBooking, retainerTiers } from "../../data/client-data";
-import { workspaceAgentGroups, workspaceDesignQuestions, robProfile, workspaceRoadmap, workspaceSystems } from "../../data/workspace";
+import { workspaceAgentGroups, workspaceAgentProfiles, workspaceDesignQuestions, robProfile, workspaceRoadmap, workspaceSystems } from "../../data/workspace";
 
 export const dynamic = "force-dynamic";
 
@@ -30,6 +30,7 @@ export default function WorkspacePage() {
                 <tr><th>Email</th><td>{robProfile.preferredEmail}</td></tr>
                 <tr><th>Stage</th><td>{robProfile.currentStage}</td></tr>
                 <tr><th>Workspace</th><td>AI Prospect Engine</td></tr>
+                <tr><th>Agent profiles</th><td>{workspaceAgentProfiles.length} configured</td></tr>
               </tbody>
             </table>
           </div>
@@ -82,8 +83,10 @@ export default function WorkspacePage() {
                     <div className="agent-mini-row" key={agent.name}>
                       <span className={`badge ${agent.status.includes("active") || agent.status.includes("ready") ? "status-active" : "status-pending"}`}>{agent.status}</span>
                       <div>
-                        <strong>{agent.name}</strong>
+                        <strong>{agent.displayName}</strong>
+                        <code>{agent.name}</code>
                         <p>{agent.summary}</p>
+                        <p className="muted">{agent.profile}</p>
                       </div>
                     </div>
                   ))}

@@ -1,3 +1,5 @@
+import { workspaceAgentProfiles } from "./workspace";
+
 export const portalStandardStatus = [
   {
     label: "Portal assistant",
@@ -36,72 +38,14 @@ export const portalStandardStatus = [
   },
 ];
 
-export const agentRunStatuses = [
-  {
-    name: "rob-chief-of-staff",
-    role: "Orchestrates Rob's workspace, keeps source map current, and decides which swarm should run next.",
-    status: "active",
-    lastRun: "2026-06-21",
-    nextRun: "Coordinate workspace review, HubSpot access, retainer choice, and next swarm selection",
-    evidence: "Hermes workspace, PPP source map, Linear AI-10321 and AI-10493",
-  },
-  {
-    name: "signal-radar-agent",
-    role: "Tracks public employer, liquidity, and equity-event signals for prospecting context.",
-    status: "ready",
-    lastRun: "Dry-run scope prepared",
-    nextRun: "After target employer list review",
-    evidence: "Game plan: Public signal radar",
-  },
-  {
-    name: "compliance-boundary-agent",
-    role: "Reviews all Rob-facing outputs before external use and blocks regulated advice or client-data handling.",
-    status: "active",
-    lastRun: "Boundary applied to PPP and follow-up copy",
-    nextRun: "Before any workspace recommendation, retainer recommendation, or outbound client reply",
-    evidence: "Compliance boundary docs and financial-services copy rules",
-  },
-  {
-    name: "hubspot-hygiene-agent",
-    role: "Audits HubSpot stages, stale contacts, duplicate patterns, and manual handoff points.",
-    status: "active",
-    lastRun: "Read-only aggregate audit started",
-    nextRun: "Map Rob's June 17 pipeline rundown against approved read-only HubSpot data",
-    evidence: "Drive HubSpot inspection plan, June 17 pipeline rundown, and Linear AI-10493",
-  },
-  {
-    name: "prospect-brief-agent",
-    role: "Turns public information into short prep briefs and recommended first-meeting questions.",
-    status: "ready",
-    lastRun: "Template prepared",
-    nextRun: "After first public signal queue item",
-    evidence: "Prospect brief template and compliance boundary",
-  },
-  {
-    name: "hearsay-content-agent",
-    role: "Drafts Hearsay-ready content for manual approval, not direct publishing.",
-    status: "review-gated",
-    lastRun: "Scope mapped",
-    nextRun: "After compliance language confirmation",
-    evidence: "No external sends without approval",
-  },
-  {
-    name: "retainer-ops-agent",
-    role: "Tracks monthly deliverables, credits, dev hours, consulting hours, blockers, and recommendations.",
-    status: "active",
-    lastRun: "Retainer ladder defined",
-    nextRun: "After Rob chooses Operator, Growth, or Build Partner",
-    evidence: "Billing page and retainer operations table",
-  },
-  {
-    name: "reporting-agent",
-    role: "Produces daily, weekly, and monthly proof reports with blockers, usage, and next recommendations.",
-    status: "ready",
-    lastRun: "Report templates prepared",
-    nextRun: "After first workspace review, HubSpot read-only update, or signal run",
-    evidence: "Daily, weekly, and monthly report templates",
-  },
-];
+export const agentRunStatuses = workspaceAgentProfiles.map((agent) => ({
+  name: agent.name,
+  role: agent.profile,
+  status: agent.status,
+  lastRun: agent.status.includes("active") ? "2026-06-21" : agent.status.includes("ready") ? "Ready after review" : "Staged",
+  nextRun: agent.next,
+  evidence: agent.evidence,
+}));
 
 export const retainerOperations = [
   {

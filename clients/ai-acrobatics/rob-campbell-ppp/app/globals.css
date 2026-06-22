@@ -1642,6 +1642,77 @@ code {
   margin-top: 12px;
 }
 
+.agent-profile-groups {
+  display: grid;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.agent-profile-group {
+  display: grid;
+  gap: 16px;
+}
+
+.agent-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.agent-profile-card {
+  display: grid;
+  gap: 10px;
+  min-height: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.035);
+  padding: 14px;
+}
+
+.agent-profile-card h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.agent-profile-card code,
+.agent-mini-row code {
+  width: fit-content;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--green);
+  padding: 3px 7px;
+  font-size: 12px;
+}
+
+.agent-detail-list {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+}
+
+.agent-detail-list div {
+  display: grid;
+  gap: 3px;
+}
+
+.agent-detail-list dt {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.agent-detail-list dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 .access-page {
   display: grid;
   min-height: calc(100vh - 120px);
@@ -1829,6 +1900,7 @@ code {
   .request-form-grid,
   .game-plan-grid,
   .agent-status-grid,
+  .agent-profile-grid,
   .access-shell,
   .workspace-system-grid,
   .workspace-agent-groups,

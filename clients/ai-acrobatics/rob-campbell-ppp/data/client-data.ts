@@ -20,11 +20,11 @@ export const brand = {
 
 export const health = {
   status: "yellow" as "green" | "yellow" | "red",
-  summary: "Deposit is received and the build is active; current gates are HubSpot read-only scope, tool access, retainer selection, and the Convex portal backend repair.",
+  summary: "Deposit is received, the Hermes agency is deployed internally, and the current gates are Rob's agent roster review, retainer selection, HubSpot read-only scope, and the Convex portal backend repair.",
 };
 
 export const stats = [
-  { label: "Hermes agents configured", value: 8, previousValue: 0, format: "number", trend: "up" },
+  { label: "Hermes agents configured", value: 22, previousValue: 8, format: "number", trend: "up" },
   { label: "Swarms mapped", value: 5, previousValue: 0, format: "number", trend: "up" },
   { label: "Local skills enabled", value: 7, previousValue: 0, format: "number", trend: "up" },
   { label: "Deposit received", value: 5500, previousValue: 0, format: "currency", trend: "up" },
@@ -217,12 +217,12 @@ export const onboardingBooking = {
 export const snapshotReport = {
   month: "June 2026",
   overallHealth: 4 as 1 | 2 | 3 | 4 | 5,
-  completedDeliverables: 10,
+  completedDeliverables: 11,
   pagesDeployed: 7,
-  agentsConfigured: 8,
+  agentsConfigured: 22,
   milestonesOnTrack: "4 of 7",
   nextMonthFocus: [
-    "Use the client workspace page to review and shape the Hermes agent roster.",
+    "Use the client workspace page to review and shape the full 22-agent Hermes roster.",
     "Have Rob choose Operator, Growth, or Build Partner retainer so operating cadence is clear.",
     "Confirm HubSpot read-only scope and any missing tool access for Apollo, LinkedIn, Meet Alfred, Slack, and Notion.",
     "Run the HubSpot inspection checklist against approved read-only data.",

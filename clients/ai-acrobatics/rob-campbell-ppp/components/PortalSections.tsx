@@ -7,6 +7,7 @@ import { agentRunStatuses, meetingSyncPipeline, portalStandardStatus, retainerOp
 import { getPortalRuntimeData } from "../lib/convex";
 import { isClientVisiblePortalRecord } from "../lib/portal-visibility";
 import { RequestCenterPanel, UpsellActionButton } from "./ClientPortalActions";
+import { workspaceAgentGroups, workspaceAgentProfiles } from "../data/workspace";
 
 function formatStatValue(stat: (typeof stats)[number]) {
   if (stat.format === "currency") {
@@ -22,8 +23,8 @@ function gamePlanStatusClass(status: string) {
 }
 
 function operationalStatusClass(status: string) {
-  if (["live", "active"].includes(status)) return "status-active";
-  if (["blocked", "blocked-by-backend", "blocked-by-review", "partial", "review-gated", "active_decision_needed"].includes(status)) return "status-pending";
+  if (["live", "active"].includes(status) || status.includes("active") || status.includes("ready") || status.includes("aggregate")) return "status-active";
+  if (status.includes("blocked") || status.includes("partial") || status.includes("review") || status.includes("staged") || status.includes("decision")) return "status-pending";
   return "status-upcoming";
 }
 
@@ -818,31 +819,53 @@ export async function AgentsPage() {
   return (
     <main className="page">
       <h1>AI Agents</h1>
-      <p className="lead">Rob's active Hermes execution agents plus the Wizard of AI systems that may become add-on work.</p>
+      <p className="lead">Rob's full Hermes agency roster: {workspaceAgentProfiles.length} configured agent profiles, grouped by operating lane, with active, ready, staged, and compliance-held roles separated clearly.</p>
       <section className="section">
         <div className="section-title-row">
           <div>
             <p className="eyebrow">Hermes profile</p>
-            <h2>Configured execution agents</h2>
+            <h2>Configured workspace agents</h2>
           </div>
           <Link className="button secondary compact-button" href="/operations">Operations status</Link>
         </div>
-        <div className="agent-status-grid">
-          {agentRunStatuses.map((agent) => (
-            <article className="panel" key={agent.name}>
+        <div className="agent-profile-groups">
+          {workspaceAgentGroups.map((group) => (
+            <section className="panel agent-profile-group" key={group.group}>
               <div className="panel-heading-row">
-                <span className={operationalStatusClass(agent.status)}>{agent.status}</span>
-                <span className="muted">{agent.lastRun}</span>
+                <div>
+                  <p className="eyebrow">{group.group}</p>
+                  <h3>{group.purpose}</h3>
+                </div>
+                <span className="badge">{group.agents.length} agents</span>
               </div>
-              <h3>{agent.name}</h3>
-              <p>{agent.role}</p>
-              <table className="ops-table">
-                <tbody>
-                  <tr><th>Next</th><td>{agent.nextRun}</td></tr>
-                  <tr><th>Proof</th><td>{agent.evidence}</td></tr>
-                </tbody>
-              </table>
-            </article>
+              <div className="agent-profile-grid">
+                {group.agents.map((agent) => (
+                  <article className="agent-profile-card" key={agent.name}>
+                    <div className="panel-heading-row">
+                      <span className={`badge ${operationalStatusClass(agent.status)}`}>{agent.status}</span>
+                      <span className="muted">{agent.department}</span>
+                    </div>
+                    <h4>{agent.displayName}</h4>
+                    <code>{agent.name}</code>
+                    <p>{agent.summary}</p>
+                    <dl className="agent-detail-list">
+                      <div>
+                        <dt>Profile</dt>
+                        <dd>{agent.profile}</dd>
+                      </div>
+                      <div>
+                        <dt>Next</dt>
+                        <dd>{agent.next}</dd>
+                      </div>
+                      <div>
+                        <dt>Proof</dt>
+                        <dd>{agent.evidence}</dd>
+                      </div>
+                    </dl>
+                  </article>
+                ))}
+              </div>
+            </section>
           ))}
         </div>
       </section>
