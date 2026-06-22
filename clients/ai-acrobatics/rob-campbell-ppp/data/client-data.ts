@@ -24,7 +24,7 @@ export const health = {
 };
 
 export const stats = [
-  { label: "Hermes agents configured", value: 22, previousValue: 8, format: "number", trend: "up" },
+  { label: "Hermes agents configured", value: 8, previousValue: 0, format: "number", trend: "up" },
   { label: "Swarms mapped", value: 5, previousValue: 0, format: "number", trend: "up" },
   { label: "Local skills enabled", value: 7, previousValue: 0, format: "number", trend: "up" },
   { label: "Deposit received", value: 5500, previousValue: 0, format: "currency", trend: "up" },
@@ -226,10 +226,10 @@ export const snapshotReport = {
   overallHealth: 4 as 1 | 2 | 3 | 4 | 5,
   completedDeliverables: 11,
   pagesDeployed: 7,
-  agentsConfigured: 22,
+  agentsConfigured: 8,
   milestonesOnTrack: "4 of 7",
   nextMonthFocus: [
-    "Use the client workspace page to review and shape the full 22-agent Hermes roster.",
+    "Use the client workspace page to review and shape the focused eight-agent Hermes roster.",
     "Have Rob choose Operator, Growth, or Build Partner retainer so operating cadence is clear.",
     "Confirm HubSpot read-only scope and any missing tool access for Apollo, LinkedIn, Meet Alfred, Slack, and Notion.",
     "Run the HubSpot inspection checklist against approved read-only data.",

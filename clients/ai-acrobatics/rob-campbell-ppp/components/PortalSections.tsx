@@ -820,7 +820,7 @@ export async function AgentsPage() {
   return (
     <main className="page">
       <h1>AI Agents</h1>
-      <p className="lead">Rob's full Hermes agency roster: {workspaceAgentProfiles.length} configured agent profiles, grouped by operating lane, with active, ready, staged, and compliance-held roles separated clearly.</p>
+      <p className="lead">Rob's focused Hermes agency roster: {workspaceAgentProfiles.length} requested agent profiles, grouped by operating lane with active/ready status and clear next actions.</p>
       <section className="section">
         <div className="section-title-row">
           <div>

@@ -7,14 +7,14 @@ export const hermesWorkspaceOverview = {
   mode: "AI Acrobatics operated",
   clientSurface: "review gated",
   summary:
-    "This is the Rob-facing map of the actual Hermes agency: profile, workspace, agents, swarms, skills, public-signal search plan, runtime proof, and approval gates.",
+    "This is the Rob-facing map of the focused Hermes agency: profile, workspace, eight requested agents, swarms, skills, public-signal search plan, runtime proof, and approval gates.",
   proof:
-    "Agency canary passed with 22 agents, 5 operating swarms, 7 core skills, compliance smoke, and Agent OS HTTP 200.",
+    "Focused agency canary passed with 8 requested agents, 5 operating swarms, 7 core skills, compliance smoke, and Agent OS HTTP 200.",
 };
 
 export const hermesWorkspaceStats = [
   { label: "Hermes profile", value: "rob-campbell", detail: "Client-specific profile" },
-  { label: "Agents", value: "22", detail: "Optimus-adapted roster" },
+  { label: "Agents", value: "8", detail: "Requested focused roster" },
   { label: "Swarms", value: "5", detail: "Operating dispatch lanes" },
   { label: "Skills", value: "7", detail: "Workspace-local instructions" },
   { label: "Runtime", value: "ready", detail: "Internal agency canary passed" },
@@ -58,7 +58,7 @@ export const hermesSwarmDispatch = [
     status: "ready",
     trigger: "New Rob meeting, new availability, or fresh Fireflies/Fathom recap.",
     purpose: "Prepare Rob for prospect or project meetings from approved public context.",
-    agents: ["rob-chief-of-staff", "compliance-boundary-agent", "retainer-ops-agent", "reporting-agent", "meeting-intelligence-agent"],
+    agents: ["rob-chief-of-staff", "compliance-boundary-agent", "retainer-ops-agent", "reporting-agent"],
     flow: ["Confirm meeting context", "Draft concise brief", "Add non-advice questions", "Mark manual review status"],
     output: "Meeting prep brief and reviewed next-action list",
   },
@@ -67,7 +67,7 @@ export const hermesSwarmDispatch = [
     status: "active read-only",
     trigger: "HubSpot access and read-only scope are confirmed.",
     purpose: "Audit HubSpot hygiene and identify safe next actions.",
-    agents: ["hubspot-hygiene-agent", "compliance-boundary-agent", "reporting-agent", "access-security-agent"],
+    agents: ["hubspot-hygiene-agent", "compliance-boundary-agent", "reporting-agent"],
     flow: ["Confirm access mode", "Run aggregate checks", "Review stages and stale fields", "Produce manual next-action list"],
     output: "Weekly pipeline report and HubSpot hygiene map",
   },
@@ -165,7 +165,7 @@ export const publicSignalSearchPlan = {
 
 export const hermesRuntimeProof = [
   "config/hermes-agency.yaml records status deployed_ready_internal.",
-  "scripts/agency-canary.sh passed for required agents, swarms, skills, compliance smoke, profile cwd, and Agent OS root route.",
+  "scripts/agency-canary.sh passed for the eight requested agents, swarms, skills, compliance smoke, profile cwd, and Agent OS root route.",
   "reports/hermes-agency-deploy-report-2026-06-21.md documents deployment evidence.",
   "HubSpot is read-only audit mode; workflow endpoint requires more scope before workflow inspection.",
   "PPP Convex request/chat/upsell remains partial until AI-10564 repairs the aa-portals function surface.",

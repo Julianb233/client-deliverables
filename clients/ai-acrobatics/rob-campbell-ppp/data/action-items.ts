@@ -2,7 +2,7 @@ export const actionItems = [
   {
     id: "rob-action-007",
     title: "Review the client workspace and agent roster",
-    description: "Rob can now open the workspace page, review the full 22-agent Hermes roster, and send edits on the roles, wording, and priority order.",
+    description: "Rob can now open the workspace page, review the focused eight-agent Hermes roster, and send edits on the roles, wording, and priority order.",
     status: "pending" as const,
     type: "information" as const,
     priority: "high" as const,
@@ -10,7 +10,7 @@ export const actionItems = [
     dueDate: "2026-06-24",
     instructions: [
       "Open the Client Workspace page.",
-      "Review the profile, workspace architecture, and full 22-agent design board.",
+      "Review the profile, workspace architecture, and focused eight-agent design board.",
       "Send edits or questions through the Request Center so AI Acrobatics can update the build plan.",
     ],
     url: "/workspace",
