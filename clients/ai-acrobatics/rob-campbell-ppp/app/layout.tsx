@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { MessageMeWidget } from "../components/ClientPortalActions";
+import { SidebarNav, MobileNav } from "../components/NavClient";
 import { getPortalRuntimeData } from "../lib/convex";
 import { isClientVisiblePortalRecord } from "../lib/portal-visibility";
 import "./globals.css";
@@ -70,14 +71,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
               <strong>Deposit received</strong>
               <span>$5,500 paid. Build is active.</span>
             </div>
-            <nav className="desktop-nav" aria-label="Main navigation">
-              {nav.map(([label, href, icon]) => (
-                <Link className="nav-link" href={href} key={href}>
-                  <span className="nav-token" aria-hidden="true">{icon}</span>
-                  {label}
-                </Link>
-              ))}
-            </nav>
+            <SidebarNav />
             <div className="sidebar-footer">
               <p>No Dynamics or NMIS writes.</p>
               <p>Human approval before external sends.</p>
@@ -119,15 +113,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
             <div className="footer-inner">Powered by AI Acrobatics</div>
           </footer>
           <MessageMeWidget notifications={notifications} />
-          <nav className="bottom-nav" aria-label="Mobile navigation">
-            <div className="bottom-nav-inner">
-              {mobileNav.map(([label, href]) => (
-                <Link href={href} key={href}>
-                  {label}
-                </Link>
-              ))}
-            </div>
-          </nav>
+          <MobileNav />
         </div>
       </body>
     </html>

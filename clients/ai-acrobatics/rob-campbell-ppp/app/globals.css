@@ -159,6 +159,17 @@ textarea {
   transform: translateX(2px);
 }
 
+.nav-link.active {
+  border-color: var(--line);
+  background: var(--panel);
+  color: var(--ink);
+}
+
+.nav-link.active .nav-token {
+  background: var(--accent);
+  color: #fff;
+}
+
 .nav-token {
   display: grid;
   width: 26px;
