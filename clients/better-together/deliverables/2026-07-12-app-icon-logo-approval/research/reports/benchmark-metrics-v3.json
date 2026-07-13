@@ -1,0 +1,610 @@
+{
+  "icons": [
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/research/app-store-icons/agape.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 8,
+      "dominantColors": [
+        {
+          "hex": "#2D2E4A",
+          "share": 0.2012
+        },
+        {
+          "hex": "#F3F7F8",
+          "share": 0.1938
+        },
+        {
+          "hex": "#F3F6FB",
+          "share": 0.1897
+        },
+        {
+          "hex": "#F5F5FF",
+          "share": 0.1893
+        },
+        {
+          "hex": "#F2F5F9",
+          "share": 0.0679
+        }
+      ],
+      "contrast": 0.7608,
+      "edgeDensity": 0.0968,
+      "centerBalance": 0.9967,
+      "visualMass": 0.2794,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.8392,
+          "edgeDensity": 0.3042,
+          "luminanceSpread": 0.5796
+        },
+        "40": {
+          "contrast": 0.7686,
+          "edgeDensity": 0.3681,
+          "luminanceSpread": 0.5347
+        },
+        "29": {
+          "contrast": 0.6824,
+          "edgeDensity": 0.409,
+          "luminanceSpread": 0.4964
+        },
+        "20": {
+          "contrast": 0.6039,
+          "edgeDensity": 0.4825,
+          "luminanceSpread": 0.441
+        }
+      },
+      "gate": {
+        "passed": false,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": false,
+          "smallContrast": true,
+          "smallComplexity": false,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/research/app-store-icons/calm.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 8,
+      "dominantColors": [
+        {
+          "hex": "#3AB3EA",
+          "share": 0.2345
+        },
+        {
+          "hex": "#486EE3",
+          "share": 0.1656
+        },
+        {
+          "hex": "#38A2E6",
+          "share": 0.1517
+        },
+        {
+          "hex": "#3C87E3",
+          "share": 0.1142
+        },
+        {
+          "hex": "#5162E3",
+          "share": 0.1086
+        }
+      ],
+      "contrast": 0.5725,
+      "edgeDensity": 0.0403,
+      "centerBalance": 0.9287,
+      "visualMass": 0.4271,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.4,
+          "edgeDensity": 0.1294,
+          "luminanceSpread": 0.2394
+        },
+        "40": {
+          "contrast": 0.4078,
+          "edgeDensity": 0.1731,
+          "luminanceSpread": 0.233
+        },
+        "29": {
+          "contrast": 0.3843,
+          "edgeDensity": 0.2212,
+          "luminanceSpread": 0.2228
+        },
+        "20": {
+          "contrast": 0.3569,
+          "edgeDensity": 0.3025,
+          "luminanceSpread": 0.2038
+        }
+      },
+      "gate": {
+        "passed": false,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": false,
+          "smallContrast": true,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/research/app-store-icons/finch.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 4,
+      "dominantColors": [
+        {
+          "hex": "#BFC2D1",
+          "share": 0.4846
+        },
+        {
+          "hex": "#ABAEB7",
+          "share": 0.3113
+        },
+        {
+          "hex": "#E9D53D",
+          "share": 0.1043
+        },
+        {
+          "hex": "#895C3C",
+          "share": 0.0709
+        }
+      ],
+      "contrast": 0.6745,
+      "edgeDensity": 0.0354,
+      "centerBalance": 0.9317,
+      "visualMass": 0.1911,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.6706,
+          "edgeDensity": 0.1531,
+          "luminanceSpread": 0.3255
+        },
+        "40": {
+          "contrast": 0.651,
+          "edgeDensity": 0.2256,
+          "luminanceSpread": 0.3216
+        },
+        "29": {
+          "contrast": 0.6235,
+          "edgeDensity": 0.2901,
+          "luminanceSpread": 0.3173
+        },
+        "20": {
+          "contrast": 0.549,
+          "edgeDensity": 0.4175,
+          "luminanceSpread": 0.3097
+        }
+      },
+      "gate": {
+        "passed": true,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": true,
+          "smallContrast": true,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/research/app-store-icons/grug.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 1,
+      "dominantColors": [
+        {
+          "hex": "#FFFFFF",
+          "share": 0.9318
+        }
+      ],
+      "contrast": 0.0,
+      "edgeDensity": 0.0396,
+      "centerBalance": 0.9938,
+      "visualMass": 0.0462,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.1569,
+          "edgeDensity": 0.1389,
+          "luminanceSpread": 0.273
+        },
+        "40": {
+          "contrast": 0.298,
+          "edgeDensity": 0.1881,
+          "luminanceSpread": 0.2412
+        },
+        "29": {
+          "contrast": 0.3098,
+          "edgeDensity": 0.2354,
+          "luminanceSpread": 0.2085
+        },
+        "20": {
+          "contrast": 0.2824,
+          "edgeDensity": 0.3175,
+          "luminanceSpread": 0.184
+        }
+      },
+      "gate": {
+        "passed": false,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": false,
+          "smallContrast": false,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": false
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/research/app-store-icons/headspace.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 2,
+      "dominantColors": [
+        {
+          "hex": "#FFFFFF",
+          "share": 0.5393
+        },
+        {
+          "hex": "#FF7300",
+          "share": 0.3564
+        }
+      ],
+      "contrast": 0.4353,
+      "edgeDensity": 0.038,
+      "centerBalance": 0.9704,
+      "visualMass": 0.4376,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.4471,
+          "edgeDensity": 0.1592,
+          "luminanceSpread": 0.4588
+        },
+        "40": {
+          "contrast": 0.4588,
+          "edgeDensity": 0.2288,
+          "luminanceSpread": 0.4543
+        },
+        "29": {
+          "contrast": 0.4627,
+          "edgeDensity": 0.3127,
+          "luminanceSpread": 0.4497
+        },
+        "20": {
+          "contrast": 0.5176,
+          "edgeDensity": 0.455,
+          "luminanceSpread": 0.4403
+        }
+      },
+      "gate": {
+        "passed": true,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": true,
+          "smallContrast": true,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/research/app-store-icons/locket.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 7,
+      "dominantColors": [
+        {
+          "hex": "#FFB500",
+          "share": 0.2307
+        },
+        {
+          "hex": "#FFB700",
+          "share": 0.2078
+        },
+        {
+          "hex": "#BD7C00",
+          "share": 0.1938
+        },
+        {
+          "hex": "#FFB900",
+          "share": 0.1451
+        },
+        {
+          "hex": "#FFB600",
+          "share": 0.0907
+        }
+      ],
+      "contrast": 0.2824,
+      "edgeDensity": 0.0292,
+      "centerBalance": 0.9902,
+      "visualMass": 0.2444,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.2824,
+          "edgeDensity": 0.1128,
+          "luminanceSpread": 0.1905
+        },
+        "40": {
+          "contrast": 0.2745,
+          "edgeDensity": 0.1631,
+          "luminanceSpread": 0.1868
+        },
+        "29": {
+          "contrast": 0.2667,
+          "edgeDensity": 0.2224,
+          "luminanceSpread": 0.1834
+        },
+        "20": {
+          "contrast": 0.2627,
+          "edgeDensity": 0.3,
+          "luminanceSpread": 0.1782
+        }
+      },
+      "gate": {
+        "passed": false,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": false,
+          "smallContrast": false,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/research/app-store-icons/moonlitt.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 8,
+      "dominantColors": [
+        {
+          "hex": "#1D1C54",
+          "share": 0.1833
+        },
+        {
+          "hex": "#101246",
+          "share": 0.1569
+        },
+        {
+          "hex": "#131549",
+          "share": 0.1535
+        },
+        {
+          "hex": "#D0D5ED",
+          "share": 0.1516
+        },
+        {
+          "hex": "#21245B",
+          "share": 0.1209
+        }
+      ],
+      "contrast": 0.8902,
+      "edgeDensity": 0.0387,
+      "centerBalance": 0.915,
+      "visualMass": 0.3009,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.8824,
+          "edgeDensity": 0.1472,
+          "luminanceSpread": 0.5155
+        },
+        "40": {
+          "contrast": 0.8627,
+          "edgeDensity": 0.2037,
+          "luminanceSpread": 0.5086
+        },
+        "29": {
+          "contrast": 0.8471,
+          "edgeDensity": 0.2521,
+          "luminanceSpread": 0.5013
+        },
+        "20": {
+          "contrast": 0.8157,
+          "edgeDensity": 0.3425,
+          "luminanceSpread": 0.4892
+        }
+      },
+      "gate": {
+        "passed": false,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": false,
+          "smallContrast": true,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/research/app-store-icons/paired.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 2,
+      "dominantColors": [
+        {
+          "hex": "#8B50FA",
+          "share": 0.7994
+        },
+        {
+          "hex": "#FFFFFF",
+          "share": 0.1445
+        }
+      ],
+      "contrast": 0.5412,
+      "edgeDensity": 0.0278,
+      "centerBalance": 0.9971,
+      "visualMass": 0.1698,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.5412,
+          "edgeDensity": 0.1211,
+          "luminanceSpread": 0.3859
+        },
+        "40": {
+          "contrast": 0.5412,
+          "edgeDensity": 0.1675,
+          "luminanceSpread": 0.3829
+        },
+        "29": {
+          "contrast": 0.5451,
+          "edgeDensity": 0.2247,
+          "luminanceSpread": 0.3767
+        },
+        "20": {
+          "contrast": 0.5608,
+          "edgeDensity": 0.3175,
+          "luminanceSpread": 0.3622
+        }
+      },
+      "gate": {
+        "passed": true,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": true,
+          "smallContrast": true,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/research/app-store-icons/structured.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 8,
+      "dominantColors": [
+        {
+          "hex": "#FFC3C0",
+          "share": 0.1565
+        },
+        {
+          "hex": "#FEAEAA",
+          "share": 0.1303
+        },
+        {
+          "hex": "#FE9995",
+          "share": 0.129
+        },
+        {
+          "hex": "#FFF3F3",
+          "share": 0.1282
+        },
+        {
+          "hex": "#FFDDDC",
+          "share": 0.126
+        }
+      ],
+      "contrast": 0.2471,
+      "edgeDensity": 0.0391,
+      "centerBalance": 0.9832,
+      "visualMass": 0.29,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.2471,
+          "edgeDensity": 0.1658,
+          "luminanceSpread": 0.1641
+        },
+        "40": {
+          "contrast": 0.2471,
+          "edgeDensity": 0.2256,
+          "luminanceSpread": 0.1603
+        },
+        "29": {
+          "contrast": 0.2431,
+          "edgeDensity": 0.3103,
+          "luminanceSpread": 0.1559
+        },
+        "20": {
+          "contrast": 0.2392,
+          "edgeDensity": 0.39,
+          "luminanceSpread": 0.1507
+        }
+      },
+      "gate": {
+        "passed": false,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": false,
+          "smallContrast": false,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/research/app-store-icons/tide-guide.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 8,
+      "dominantColors": [
+        {
+          "hex": "#FDFAEE",
+          "share": 0.2162
+        },
+        {
+          "hex": "#F4EACC",
+          "share": 0.1766
+        },
+        {
+          "hex": "#0D6EDB",
+          "share": 0.1611
+        },
+        {
+          "hex": "#263D5F",
+          "share": 0.1489
+        },
+        {
+          "hex": "#5CA9E9",
+          "share": 0.0824
+        }
+      ],
+      "contrast": 0.8078,
+      "edgeDensity": 0.0622,
+      "centerBalance": 0.9933,
+      "visualMass": 0.5228,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.8078,
+          "edgeDensity": 0.2239,
+          "luminanceSpread": 0.6383
+        },
+        "40": {
+          "contrast": 0.8078,
+          "edgeDensity": 0.3125,
+          "luminanceSpread": 0.6316
+        },
+        "29": {
+          "contrast": 0.8,
+          "edgeDensity": 0.4031,
+          "luminanceSpread": 0.6239
+        },
+        "20": {
+          "contrast": 0.8039,
+          "edgeDensity": 0.505,
+          "luminanceSpread": 0.6124
+        }
+      },
+      "gate": {
+        "passed": false,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": false,
+          "smallContrast": true,
+          "smallComplexity": false,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    }
+  ]
+}

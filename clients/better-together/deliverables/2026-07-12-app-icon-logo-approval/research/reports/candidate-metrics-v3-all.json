@@ -1,0 +1,691 @@
+{
+  "icons": [
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/01-garden-seal-studio.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 5,
+      "dominantColors": [
+        {
+          "hex": "#143D35",
+          "share": 0.3091
+        },
+        {
+          "hex": "#153E36",
+          "share": 0.2623
+        },
+        {
+          "hex": "#143D36",
+          "share": 0.1779
+        },
+        {
+          "hex": "#BFAA9F",
+          "share": 0.1666
+        },
+        {
+          "hex": "#173D35",
+          "share": 0.0365
+        }
+      ],
+      "contrast": 0.7765,
+      "edgeDensity": 0.0509,
+      "centerBalance": 0.9994,
+      "visualMass": 0.1931,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.7961,
+          "edgeDensity": 0.2103,
+          "luminanceSpread": 0.4884
+        },
+        "40": {
+          "contrast": 0.8275,
+          "edgeDensity": 0.2794,
+          "luminanceSpread": 0.4799
+        },
+        "29": {
+          "contrast": 0.8157,
+          "edgeDensity": 0.3234,
+          "luminanceSpread": 0.4662
+        },
+        "20": {
+          "contrast": 0.7882,
+          "edgeDensity": 0.405,
+          "luminanceSpread": 0.4497
+        }
+      },
+      "gate": {
+        "passed": true,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": true,
+          "smallContrast": true,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/02-shared-soil.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 4,
+      "dominantColors": [
+        {
+          "hex": "#F7F8F3",
+          "share": 0.276
+        },
+        {
+          "hex": "#F6F7F1",
+          "share": 0.255
+        },
+        {
+          "hex": "#F7F7F2",
+          "share": 0.2377
+        },
+        {
+          "hex": "#895F3C",
+          "share": 0.1811
+        }
+      ],
+      "contrast": 0.7725,
+      "edgeDensity": 0.0386,
+      "centerBalance": 0.9408,
+      "visualMass": 0.1991,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.7647,
+          "edgeDensity": 0.1636,
+          "luminanceSpread": 0.4382
+        },
+        "40": {
+          "contrast": 0.749,
+          "edgeDensity": 0.2369,
+          "luminanceSpread": 0.4327
+        },
+        "29": {
+          "contrast": 0.6902,
+          "edgeDensity": 0.3068,
+          "luminanceSpread": 0.4265
+        },
+        "20": {
+          "contrast": 0.6196,
+          "edgeDensity": 0.4325,
+          "luminanceSpread": 0.4166
+        }
+      },
+      "gate": {
+        "passed": true,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": true,
+          "smallContrast": true,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/03-paired-canopy.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 5,
+      "dominantColors": [
+        {
+          "hex": "#E25237",
+          "share": 0.3516
+        },
+        {
+          "hex": "#E05337",
+          "share": 0.3347
+        },
+        {
+          "hex": "#2C4035",
+          "share": 0.1226
+        },
+        {
+          "hex": "#E05237",
+          "share": 0.1099
+        },
+        {
+          "hex": "#E25236",
+          "share": 0.0361
+        }
+      ],
+      "contrast": 0.2902,
+      "edgeDensity": 0.0293,
+      "centerBalance": 0.9965,
+      "visualMass": 0.1474,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.2941,
+          "edgeDensity": 0.1242,
+          "luminanceSpread": 0.2223
+        },
+        "40": {
+          "contrast": 0.302,
+          "edgeDensity": 0.1762,
+          "luminanceSpread": 0.2197
+        },
+        "29": {
+          "contrast": 0.302,
+          "edgeDensity": 0.2402,
+          "luminanceSpread": 0.2167
+        },
+        "20": {
+          "contrast": 0.302,
+          "edgeDensity": 0.33,
+          "luminanceSpread": 0.212
+        }
+      },
+      "gate": {
+        "passed": false,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": true,
+          "smallContrast": false,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": false
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/04-rooted-duo.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 4,
+      "dominantColors": [
+        {
+          "hex": "#104236",
+          "share": 0.6807
+        },
+        {
+          "hex": "#82543C",
+          "share": 0.0782
+        },
+        {
+          "hex": "#EADDC3",
+          "share": 0.0771
+        },
+        {
+          "hex": "#104237",
+          "share": 0.0717
+        }
+      ],
+      "contrast": 0.7686,
+      "edgeDensity": 0.0405,
+      "centerBalance": 0.999,
+      "visualMass": 0.1648,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.7647,
+          "edgeDensity": 0.1683,
+          "luminanceSpread": 0.4151
+        },
+        "40": {
+          "contrast": 0.7176,
+          "edgeDensity": 0.2194,
+          "luminanceSpread": 0.4077
+        },
+        "29": {
+          "contrast": 0.6549,
+          "edgeDensity": 0.2889,
+          "luminanceSpread": 0.398
+        },
+        "20": {
+          "contrast": 0.6431,
+          "edgeDensity": 0.35,
+          "luminanceSpread": 0.3808
+        }
+      },
+      "gate": {
+        "passed": true,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": true,
+          "smallContrast": true,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/05-promise-seed-refined.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 5,
+      "dominantColors": [
+        {
+          "hex": "#F4F5EF",
+          "share": 0.4758
+        },
+        {
+          "hex": "#F6F5F0",
+          "share": 0.1747
+        },
+        {
+          "hex": "#F5F5F0",
+          "share": 0.1229
+        },
+        {
+          "hex": "#DE947A",
+          "share": 0.096
+        },
+        {
+          "hex": "#364034",
+          "share": 0.0919
+        }
+      ],
+      "contrast": 0.7804,
+      "edgeDensity": 0.0347,
+      "centerBalance": 0.984,
+      "visualMass": 0.1951,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.7804,
+          "edgeDensity": 0.1422,
+          "luminanceSpread": 0.4863
+        },
+        "40": {
+          "contrast": 0.7804,
+          "edgeDensity": 0.2,
+          "luminanceSpread": 0.4819
+        },
+        "29": {
+          "contrast": 0.7765,
+          "edgeDensity": 0.2723,
+          "luminanceSpread": 0.4752
+        },
+        "20": {
+          "contrast": 0.7765,
+          "edgeDensity": 0.375,
+          "luminanceSpread": 0.4641
+        }
+      },
+      "gate": {
+        "passed": true,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": true,
+          "smallContrast": true,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/05-promise-seed.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 4,
+      "dominantColors": [
+        {
+          "hex": "#F6F5F1",
+          "share": 0.7003
+        },
+        {
+          "hex": "#DE8D6E",
+          "share": 0.1021
+        },
+        {
+          "hex": "#283F35",
+          "share": 0.0916
+        },
+        {
+          "hex": "#F6F5F0",
+          "share": 0.0351
+        }
+      ],
+      "contrast": 0.7725,
+      "edgeDensity": 0.0349,
+      "centerBalance": 0.9772,
+      "visualMass": 0.2041,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.7765,
+          "edgeDensity": 0.145,
+          "luminanceSpread": 0.4875
+        },
+        "40": {
+          "contrast": 0.7765,
+          "edgeDensity": 0.2094,
+          "luminanceSpread": 0.483
+        },
+        "29": {
+          "contrast": 0.7765,
+          "edgeDensity": 0.2854,
+          "luminanceSpread": 0.4777
+        },
+        "20": {
+          "contrast": 0.7765,
+          "edgeDensity": 0.385,
+          "luminanceSpread": 0.4684
+        }
+      },
+      "gate": {
+        "passed": true,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": true,
+          "smallContrast": true,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/06-living-weave.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 5,
+      "dominantColors": [
+        {
+          "hex": "#E25237",
+          "share": 0.4083
+        },
+        {
+          "hex": "#E05337",
+          "share": 0.2904
+        },
+        {
+          "hex": "#E68C6D",
+          "share": 0.1021
+        },
+        {
+          "hex": "#E15237",
+          "share": 0.0852
+        },
+        {
+          "hex": "#534234",
+          "share": 0.0722
+        }
+      ],
+      "contrast": 0.7804,
+      "edgeDensity": 0.0399,
+      "centerBalance": 0.9799,
+      "visualMass": 0.1837,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.7647,
+          "edgeDensity": 0.1642,
+          "luminanceSpread": 0.2928
+        },
+        "40": {
+          "contrast": 0.7255,
+          "edgeDensity": 0.2306,
+          "luminanceSpread": 0.289
+        },
+        "29": {
+          "contrast": 0.5922,
+          "edgeDensity": 0.2889,
+          "luminanceSpread": 0.2834
+        },
+        "20": {
+          "contrast": 0.5529,
+          "edgeDensity": 0.355,
+          "luminanceSpread": 0.277
+        }
+      },
+      "gate": {
+        "passed": true,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": true,
+          "smallContrast": true,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/07-confluence-sprout-refined.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 3,
+      "dominantColors": [
+        {
+          "hex": "#F6F5F1",
+          "share": 0.6597
+        },
+        {
+          "hex": "#F7F6F1",
+          "share": 0.1755
+        },
+        {
+          "hex": "#B48661",
+          "share": 0.0986
+        }
+      ],
+      "contrast": 0.4824,
+      "edgeDensity": 0.0343,
+      "centerBalance": 0.983,
+      "visualMass": 0.11,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.4627,
+          "edgeDensity": 0.1417,
+          "luminanceSpread": 0.3104
+        },
+        "40": {
+          "contrast": 0.4431,
+          "edgeDensity": 0.1944,
+          "luminanceSpread": 0.3053
+        },
+        "29": {
+          "contrast": 0.4392,
+          "edgeDensity": 0.2568,
+          "luminanceSpread": 0.2998
+        },
+        "20": {
+          "contrast": 0.3843,
+          "edgeDensity": 0.345,
+          "luminanceSpread": 0.2811
+        }
+      },
+      "gate": {
+        "passed": false,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": true,
+          "smallContrast": true,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": false
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/07-confluence-sprout.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 3,
+      "dominantColors": [
+        {
+          "hex": "#F6F7F1",
+          "share": 0.66
+        },
+        {
+          "hex": "#8C503B",
+          "share": 0.1544
+        },
+        {
+          "hex": "#F8F7F2",
+          "share": 0.1046
+        }
+      ],
+      "contrast": 0.4941,
+      "edgeDensity": 0.0388,
+      "centerBalance": 0.9424,
+      "visualMass": 0.1758,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.5059,
+          "edgeDensity": 0.1586,
+          "luminanceSpread": 0.3987
+        },
+        "40": {
+          "contrast": 0.5137,
+          "edgeDensity": 0.2313,
+          "luminanceSpread": 0.3919
+        },
+        "29": {
+          "contrast": 0.5294,
+          "edgeDensity": 0.3234,
+          "luminanceSpread": 0.3851
+        },
+        "20": {
+          "contrast": 0.5176,
+          "edgeDensity": 0.4125,
+          "luminanceSpread": 0.3747
+        }
+      },
+      "gate": {
+        "passed": true,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": true,
+          "smallContrast": true,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/08-shared-crown.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 5,
+      "dominantColors": [
+        {
+          "hex": "#0F3930",
+          "share": 0.3038
+        },
+        {
+          "hex": "#104639",
+          "share": 0.28
+        },
+        {
+          "hex": "#F8F6F0",
+          "share": 0.1872
+        },
+        {
+          "hex": "#CFA06E",
+          "share": 0.1243
+        },
+        {
+          "hex": "#0B362E",
+          "share": 0.0432
+        }
+      ],
+      "contrast": 0.7961,
+      "edgeDensity": 0.0482,
+      "centerBalance": 0.9354,
+      "visualMass": 0.6809,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.8,
+          "edgeDensity": 0.1875,
+          "luminanceSpread": 0.6002
+        },
+        "40": {
+          "contrast": 0.8118,
+          "edgeDensity": 0.28,
+          "luminanceSpread": 0.5922
+        },
+        "29": {
+          "contrast": 0.8235,
+          "edgeDensity": 0.3353,
+          "luminanceSpread": 0.5835
+        },
+        "20": {
+          "contrast": 0.8353,
+          "edgeDensity": 0.4025,
+          "luminanceSpread": 0.5715
+        }
+      },
+      "gate": {
+        "passed": true,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": true,
+          "smallContrast": true,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/09-seed-exchange.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 5,
+      "dominantColors": [
+        {
+          "hex": "#E4543A",
+          "share": 0.3834
+        },
+        {
+          "hex": "#E45439",
+          "share": 0.2686
+        },
+        {
+          "hex": "#E9AC8D",
+          "share": 0.1033
+        },
+        {
+          "hex": "#5F4639",
+          "share": 0.0989
+        },
+        {
+          "hex": "#E0543A",
+          "share": 0.0733
+        }
+      ],
+      "contrast": 0.7725,
+      "edgeDensity": 0.049,
+      "centerBalance": 0.9581,
+      "visualMass": 0.2594,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.7686,
+          "edgeDensity": 0.1997,
+          "luminanceSpread": 0.3406
+        },
+        "40": {
+          "contrast": 0.7686,
+          "edgeDensity": 0.28,
+          "luminanceSpread": 0.3354
+        },
+        "29": {
+          "contrast": 0.7529,
+          "edgeDensity": 0.352,
+          "luminanceSpread": 0.3283
+        },
+        "20": {
+          "contrast": 0.6039,
+          "edgeDensity": 0.46,
+          "luminanceSpread": 0.317
+        }
+      },
+      "gate": {
+        "passed": true,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": true,
+          "smallContrast": true,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "version": 3,
+  "researchedAt": "2026-07-12",
+  "method": "Official Apple sources and App Store artwork are used for structural measurement only. Third-party artwork is never supplied to the image model and is not republished on the approval board.",
+  "sources": [
+    {
+      "label": "Apple HIG: App icons",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/app-icons/",
+      "why": "Current June 2026 guidance for layered icons, simplicity, masks, appearances, and Icon Composer."
+    },
+    {
+      "label": "Apple HIG: Motion",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/motion/",
+      "why": "Purposeful, optional motion and reduced-motion expectations."
+    },
+    {
+      "label": "2026 Apple Design Awards",
+      "url": "https://www.apple.com/newsroom/2026/06/apple-reveals-winners-of-the-2026-apple-design-awards/",
+      "why": "Current Apple-recognized design cohort. Recognition applies to the complete product, not the icon alone."
+    }
+  ],
+  "apps": [
+    {
+      "id": 6751649802,
+      "slug": "grug",
+      "cohort": "2026 Apple Design Award",
+      "rationale": "Delight and Fun winner; tests whether a singular character can remain recognizable with very little geometry.",
+      "appStoreUrl": "https://apps.apple.com/us/app/grug/id6751649802"
+    },
+    {
+      "id": 6444718902,
+      "slug": "moonlitt",
+      "cohort": "2026 Apple Design Award",
+      "rationale": "Interaction winner; useful for studying a centered symbol, dark appearance, and dimensional separation.",
+      "appStoreUrl": "https://apps.apple.com/us/app/moonlitt-moon-phase-tracker/id6444718902"
+    },
+    {
+      "id": 1406371071,
+      "slug": "tide-guide",
+      "cohort": "2026 Apple Design Award",
+      "rationale": "Visuals and Graphics winner; useful for studying a strong central motif and controlled depth.",
+      "appStoreUrl": "https://apps.apple.com/us/app/tide-guide-charts-tables/id1406371071"
+    },
+    {
+      "id": 1499198946,
+      "slug": "structured",
+      "cohort": "2026 Apple Design Award finalist",
+      "rationale": "Inclusivity finalist; tests a very simple silhouette across masks and small sizes.",
+      "appStoreUrl": "https://apps.apple.com/us/app/structured-daily-planner-todo/id1499198946"
+    },
+    {
+      "id": 493145008,
+      "slug": "headspace",
+      "cohort": "Editors Choice and category leader",
+      "rationale": "A high-recognition wellness icon built from one oversized subject and a minimal number of marks.",
+      "appStoreUrl": "https://apps.apple.com/us/app/headspace-sleep-meditation/id493145008"
+    },
+    {
+      "id": 1469609343,
+      "slug": "paired",
+      "cohort": "Direct category benchmark",
+      "rationale": "Relationship category reference built from two large forms becoming one symbol.",
+      "appStoreUrl": "https://apps.apple.com/us/app/paired-couples-relationship/id1469609343"
+    },
+    {
+      "id": 571800810,
+      "slug": "calm",
+      "cohort": "Wellness category leader",
+      "rationale": "Tests a distinctive central mark on a simple field, while showing why Better Together should avoid tiny text.",
+      "appStoreUrl": "https://apps.apple.com/us/app/calm/id571800810"
+    },
+    {
+      "id": 1528595748,
+      "slug": "finch",
+      "cohort": "Self-care category leader",
+      "rationale": "Tests a tightly cropped, personality-led subject with high shelf recognition.",
+      "appStoreUrl": "https://apps.apple.com/us/app/finch-self-care-pet/id1528595748"
+    },
+    {
+      "id": 1507907556,
+      "slug": "agape",
+      "cohort": "Direct category benchmark",
+      "rationale": "A relationship product using bold repeated geometry and a singular seal-like silhouette.",
+      "appStoreUrl": "https://apps.apple.com/us/app/agap%C3%A9-feel-close-when-apart/id1507907556"
+    },
+    {
+      "id": 1600525061,
+      "slug": "locket",
+      "cohort": "Social connection category leader",
+      "rationale": "Tests one recessed object, a restrained palette, and immediate small-size recognition.",
+      "appStoreUrl": "https://apps.apple.com/us/app/locket-widget/id1600525061"
+    }
+  ]
+}

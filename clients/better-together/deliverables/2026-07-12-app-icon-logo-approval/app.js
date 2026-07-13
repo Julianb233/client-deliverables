@@ -1,11 +1,11 @@
-const STORAGE_KEY = "better-together-garden-seal-review-v2";
+const STORAGE_KEY = "better-together-app-icon-review-v3";
 
 let concepts = [];
 let familyFilter = "all";
 let statusFilter = "all";
 let toastTimer;
 let state = {
-  version: 2,
+  version: 3,
   reviewer: "",
   overallNotes: "",
   decisions: {},
@@ -45,7 +45,7 @@ function loadState() {
   if (hash) {
     try {
       const shared = decodeReview(hash);
-      if (shared?.version === 2) {
+      if (shared?.version === 3) {
         state = { ...state, ...shared };
         saveState("Shared review loaded");
         return;
@@ -57,7 +57,7 @@ function loadState() {
 
   try {
     const stored = JSON.parse(localStorage.getItem(STORAGE_KEY));
-    if (stored?.version === 2) state = { ...state, ...stored };
+    if (stored?.version === 3) state = { ...state, ...stored };
   } catch (error) {
     localStorage.removeItem(STORAGE_KEY);
   }
@@ -76,7 +76,7 @@ function sizeSample(file, size, label) {
 function conceptCard(concept) {
   const review = reviewFor(concept.id);
   const status = review.status || "undecided";
-  const file = `${concept.file}?v=round2`;
+  const file = `${concept.file}?v=round3`;
   const layers = concept.layers.map((item) => `<span>${escapeHtml(item)}</span>`).join("");
   const statusButton = (value, label) => `
     <button type="button" data-action="decision" data-id="${concept.id}" data-status="${value}" class="${review.status === value ? "active" : ""}" aria-pressed="${review.status === value}">${label}</button>`;
@@ -92,6 +92,12 @@ function conceptCard(concept) {
         <p class="family-label">${escapeHtml(concept.family)}</p>
         <h3>${escapeHtml(concept.name)}</h3>
         <p class="concept-idea">${escapeHtml(concept.idea)}</p>
+
+        <div class="metric-row" aria-label="Measured icon signals">
+          <span><strong>${concept.metrics.small20Contrast.toFixed(2)}</strong>20 px contrast</span>
+          <span><strong>${Math.round(concept.metrics.centerBalance * 100)}%</strong>center balance</span>
+          <span><strong>${concept.metrics.edgeDensity.toFixed(2)}</strong>edge density</span>
+        </div>
 
         <div class="proof-panel" aria-label="Scale and mask tests">
           <div class="proof-group">
@@ -212,7 +218,7 @@ function reviewSummary() {
   });
 
   return [
-    "Better Together Garden Seal app icon review - Round 2",
+    "Better Together app icon review - Research Round 3",
     state.reviewer ? `Reviewer: ${state.reviewer}` : "",
     `Approved: ${groups.approve.join("; ") || "None"}`,
     `Needs changes: ${groups.revise.join("; ") || "None"}`,
@@ -241,7 +247,7 @@ async function shareReview() {
   const url = new URL(location.href);
   url.hash = new URLSearchParams({ review: encodeReview(state) }).toString();
   history.replaceState(null, "", url);
-  const shareData = { title: "Better Together Garden Seal review", text: "My Better Together app icon feedback", url: url.toString() };
+  const shareData = { title: "Better Together app icon review", text: "My Better Together app icon feedback", url: url.toString() };
   if (navigator.share) {
     try {
       await navigator.share(shareData);
@@ -256,11 +262,11 @@ async function shareReview() {
 
 function downloadReview() {
   saveState();
-  const payload = { project: "Better Together", board: "Garden Seal App Icon Approval - Round 2", exportedAt: new Date().toISOString(), ...state };
+  const payload = { project: "Better Together", board: "Research-led App Icon Approval - Round 3", exportedAt: new Date().toISOString(), ...state };
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
   const anchor = document.createElement("a");
   anchor.href = URL.createObjectURL(blob);
-  anchor.download = "better-together-garden-seal-review.json";
+  anchor.download = "better-together-app-icon-round3-review.json";
   anchor.click();
   URL.revokeObjectURL(anchor.href);
   showToast("Review downloaded.");
@@ -321,7 +327,7 @@ document.getElementById("copySummary").addEventListener("click", () => copyText(
 document.getElementById("downloadReview").addEventListener("click", downloadReview);
 document.getElementById("resetReview").addEventListener("click", () => {
   if (!confirm("Clear all decisions and notes on this device?")) return;
-  state = { version: 2, reviewer: "", overallNotes: "", decisions: {} };
+  state = { version: 3, reviewer: "", overallNotes: "", decisions: {} };
   localStorage.removeItem(STORAGE_KEY);
   history.replaceState(null, "", location.pathname + location.search);
   document.getElementById("reviewerName").value = "";
@@ -330,7 +336,7 @@ document.getElementById("resetReview").addEventListener("click", () => {
   showToast("Review reset.");
 });
 
-fetch("concepts-v2.json?v=2")
+fetch("concepts-v3.json?v=3")
   .then((response) => {
     if (!response.ok) throw new Error(`Concept manifest failed: ${response.status}`);
     return response.json();

@@ -1,0 +1,75 @@
+{
+  "version": 3,
+  "generated": 11,
+  "rejected": 7,
+  "concepts": [
+    {
+      "id": "garden-seal-studio",
+      "number": "01",
+      "name": "Garden Seal Studio",
+      "family": "Core Seal",
+      "file": "assets/icons-v3/01-garden-seal-studio.png",
+      "idea": "Two protective arcs gather around two stems and one growth node. This is the clearest evolution of the Garden Seal you liked, with less scenery and a stronger shelf silhouette.",
+      "motion": "gather-grow",
+      "motionLabel": "Arcs gather, stems rise, leaves settle",
+      "layers": ["Forest field", "Two paper arcs", "Coral stems", "Saffron growth node"],
+      "watchout": "Keep the left-side openings and botanical center distinct during vector refinement so it never becomes a loading ring or a person icon.",
+      "metrics": {
+        "small20Contrast": 0.79,
+        "centerBalance": 1.00,
+        "edgeDensity": 0.05
+      }
+    },
+    {
+      "id": "shared-soil",
+      "number": "02",
+      "name": "Shared Soil",
+      "family": "Negative Space",
+      "file": "assets/icons-v3/02-shared-soil.png",
+      "idea": "Two different grounded forms make room for one new shoot. It carries the relationship metaphor without a ring, heart, people, or literal bonsai.",
+      "motion": "meet-rise",
+      "motionLabel": "Grounds meet, shoot rises, leaf turns",
+      "layers": ["Paper field", "Forest ground", "Coral ground", "Saffron shoot"],
+      "watchout": "Refine the left notch and center join as exact geometry so the mark reads as shared support rather than a letterform.",
+      "metrics": {
+        "small20Contrast": 0.62,
+        "centerBalance": 0.94,
+        "edgeDensity": 0.04
+      }
+    },
+    {
+      "id": "living-weave",
+      "number": "03",
+      "name": "Living Weave",
+      "family": "Motion First",
+      "file": "assets/icons-v3/06-living-weave.png",
+      "idea": "Two paths cross once, exchange support, and continue as separate growing forms. The diagonal construction gives this direction the strongest launch-animation energy.",
+      "motion": "cross-sprout",
+      "motionLabel": "Paths cross, nodes pass, tips open",
+      "layers": ["Coral field", "Paper path", "Forest path", "Saffron growth nodes"],
+      "watchout": "Keep one crossing only and simplify the two saffron nodes during vector refinement so it never becomes a sports, celebration, or generic link mark.",
+      "metrics": {
+        "small20Contrast": 0.55,
+        "centerBalance": 0.98,
+        "edgeDensity": 0.04
+      }
+    },
+    {
+      "id": "seed-exchange",
+      "number": "04",
+      "name": "Seed Exchange",
+      "family": "Reciprocity",
+      "file": "assets/icons-v3/09-seed-exchange.png",
+      "idea": "Two open growth forms pass a seed through the center. It turns reciprocity into a compact symbol and avoids the closed-loop language used by many relationship apps.",
+      "motion": "pass-turn",
+      "motionLabel": "Forms turn, seed passes, pair rests",
+      "layers": ["Coral field", "Paper growth form", "Forest growth form", "Saffron seed"],
+      "watchout": "Preserve the diagonal opening and asymmetric tips in the vector master so the mark cannot collapse into a refresh, yin-yang, or orbit icon.",
+      "metrics": {
+        "small20Contrast": 0.60,
+        "centerBalance": 0.96,
+        "edgeDensity": 0.05
+      }
+    }
+  ]
+}

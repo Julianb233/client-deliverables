@@ -1,0 +1,157 @@
+{
+  "version": 3,
+  "model": "gemini-3-pro-image-preview",
+  "reference": "assets/icons-v2/01-garden-seal-2.png",
+  "referenceRule": "Use the attached Better Together Garden Seal only to preserve brand warmth, palette, and crisp organic edge character. Do not duplicate its ring geometry, center symbol, proportions, or layout.",
+  "globalPrompt": "## Better Together app icon concept - research-led Round 3\n- Deliverable: ONE finished square app icon concept, shown straight-on and filling the square canvas.\n- Brand meaning: two people actively tending one living relationship. Connection becomes growth.\n- Brand style: premium editorial wellness brand; confident, warm, emotionally intelligent; crisp organic geometry with slight human irregularity; flat vector-master appearance suitable for later rebuilding as exact SVG and Apple Icon Composer layers.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition target: one dominant centered silhouette; 16 to 20 percent optical safe margin; two to four dominant foreground shapes; strong figure-ground separation; visually balanced at 20 px.\n- Layer target: opaque full-bleed background plus two or three clearly separable foreground groups with hard, defined edges.\n- MUST: use a true unmasked square source; keep every important feature inside the optical safe area; make the symbol recognizable as a one-color silhouette; create an original Better Together mark.\n- NO text, letters, monograms, numbers, slogans, UI screenshots, app screenshots, photography, stock icon look, Apple hardware, trademarked marks, copied competitor geometry, pre-rounded app-icon mask, rounded-square border, bevel, glow, drop shadow, glass border, scenery, pot, literal tree, literal people, faces, hands, infinity symbol, chain link, butterfly, wings, yin-yang, loading spinner, or generic heart symbol.\n- Do not imitate Headspace, Paired, Calm, Finch, Agape, Locket, Structured, Moonlitt, Tide Guide, or grug. Their artwork was not provided; only general measurements informed the simplicity targets.",
+  "acceptance": {
+    "technical": [
+      "PNG opens successfully",
+      "1024 by 1024 square",
+      "at least 10 KB",
+      "no alpha holes in the full-bleed background"
+    ],
+    "measured": {
+      "dominantColorCount": "2 through 5",
+      "centerBalance": "at least 0.90",
+      "small20Contrast": "at least 0.35",
+      "small20EdgeDensity": "no more than 0.48",
+      "visualMass": "0.16 through 0.88"
+    },
+    "human": [
+      "Reads as one clear symbol at 20 and 29 px",
+      "Does not resolve into a heart, face, letter, ring-only logo, or competitor lookalike",
+      "Contains separable parts for a 1.2 to 1.8 second connect-and-grow motion",
+      "Feels like the same Better Together family without repeating another finalist",
+      "Can be rebuilt as exact vector geometry without relying on raster texture"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "garden-seal-studio",
+      "number": "01",
+      "status": "finalist",
+      "name": "Garden Seal Studio",
+      "family": "Core Seal",
+      "output": "assets/icons-v3/01-garden-seal-studio.png",
+      "idea": "Two asymmetrical protective arcs gather around a single living center without becoming a closed ring.",
+      "motion": "gather-grow",
+      "motionLabel": "Arcs gather, center rises, form settles",
+      "layers": ["Forest field", "Two paper arcs", "Coral-saffron living center"],
+      "watchout": "Keep the opening unmistakable and the center botanical, never heart-shaped.",
+      "variation": "- Background: full-bleed deep forest #113B36.\n- Symbol: two thick warm-paper #FAF8F5 arc segments with different lengths and different opening positions. Together they suggest shelter but do NOT form a complete circle or loading ring.\n- Living center: two separate coral #E5533A stems converge at one saffron #D99A3D seed node, then rise into two small offset leaves.\n- Geometry: arcs occupy most of the frame; living center is large enough to remain legible at 20 px; exactly four dominant foreground pieces."
+    },
+    {
+      "id": "shared-soil",
+      "number": "02",
+      "status": "finalist",
+      "name": "Shared Soil",
+      "family": "Negative Space",
+      "output": "assets/icons-v3/02-shared-soil.png",
+      "idea": "Two grounded forms meet below a sprout, making partnership feel active rather than decorative.",
+      "motion": "meet-rise",
+      "motionLabel": "Grounds meet, seed lifts, leaf opens",
+      "layers": ["Paper field", "Forest and coral grounds", "Saffron seed"],
+      "watchout": "The lower forms must read as abstract support, not hands, hills, or a landscape scene.",
+      "variation": "- Background: full-bleed warm paper #FAF8F5.\n- Symbol: one deep-forest #113B36 grounded ribbon rises from the lower left and one coral #E5533A grounded ribbon rises from the lower right. The two broad forms meet beneath center without crossing.\n- Negative space: the narrow space between the forms creates the vertical stem of a sprout.\n- Accent: one substantial saffron #D99A3D seed-leaf shape sits above the meeting point.\n- Geometry: no enclosing circle, no horizon, no scenery; three dominant foreground groups."
+    },
+    {
+      "id": "paired-canopy",
+      "number": "03",
+      "status": "rejected",
+      "name": "Paired Canopy",
+      "family": "Living Mark",
+      "output": "assets/icons-v3/03-paired-canopy.png",
+      "idea": "Two bold canopy forms create a protected seed through the space they share.",
+      "motion": "open-reveal",
+      "motionLabel": "Canopies open, seed appears, pair breathes",
+      "layers": ["Coral field", "Two forest canopies", "Paper-saffron seed"],
+      "watchout": "Keep the canopies grounded and botanical; reject anything that reads as wings or a butterfly.",
+      "variation": "- Background: a perfectly flat, fully opaque, full-bleed coral #E5533A square extending into every corner. ABSOLUTELY NO rounded corners, inset field, border, mask, or white corner areas.\n- Symbol: two compact, blunt deep-forest #113B36 canopy forms sit entirely inside a 20 percent safe margin in the upper-middle of the canvas. They are separated by a clear vertical gap and are intentionally different in height and contour. They are botanical shelter forms, not trees, broccoli, wings, or mirrored lobes.\n- Center: one compact warm-paper #FAF8F5 seed silhouette sits below the gap without touching either canopy.\n- Accent: one small saffron #D99A3D rectangular growth notch is cut into the top of the seed.\n- Geometry: all foreground pieces occupy the central 60 percent of the canvas; no foreground shape touches any canvas edge; no heart-shaped gap."
+    },
+    {
+      "id": "rooted-duo",
+      "number": "04",
+      "status": "rejected",
+      "name": "Rooted Duo",
+      "family": "Growth Glyph",
+      "output": "assets/icons-v3/04-rooted-duo.png",
+      "idea": "Two independent stems share one foundation and lean toward growth without losing their identity.",
+      "motion": "root-lean",
+      "motionLabel": "Roots anchor, stems lean, leaves turn",
+      "layers": ["Forest field", "Two paper stems", "Coral leaves and saffron node"],
+      "watchout": "The stems must remain clearly separate and must not meet in a heart-shaped crown.",
+      "variation": "- Background: full-bleed deep forest #113B36.\n- Symbol: two short, thick warm-paper #FAF8F5 stems begin from two separate rounded anchor shapes near the lower-left and lower-right. There is NO shared base and NO horizontal bar. Each stem curves gently inward and stops near the middle of the canvas, leaving a generous gap between the two endpoints.\n- Endings: one blunt coral #E5533A leaf grows from the outer side of each stem, angled outward; the leaves do not touch.\n- Accent: one substantial saffron #D99A3D seed floats in the center gap between the two stem endpoints.\n- Geometry: compact cradle-like symbol occupying the central 62 percent, with no long posts, door, goalpost, tuning fork, letter H, letter U, hands, ring, pot, or heart."
+    },
+    {
+      "id": "promise-seed",
+      "number": "05",
+      "status": "rejected",
+      "name": "Promise Seed",
+      "family": "Living Mark",
+      "output": "assets/icons-v3/05-promise-seed.png",
+      "idea": "Two different halves protect one seed while a new shoot appears in the space between them.",
+      "motion": "split-sprout",
+      "motionLabel": "Halves part, shoot rises, seed closes",
+      "layers": ["Paper field", "Forest and coral seed halves", "Saffron shoot"],
+      "watchout": "Keep the outer silhouette seed-like and asymmetric; reject a coffee bean, avocado, flame, heart, or letterform.",
+      "variation": "- Background: full-bleed warm paper #FAF8F5.\n- Symbol: one large vertical seed silhouette in the center, built from TWO separate asymmetrical halves. The left half is deep forest #113B36 and broader at the bottom. The right half is coral #E5533A and broader at the top. The halves never touch and their outer contours do not mirror each other.\n- Negative space: the gap between the halves is a clean, gently rising stem shape.\n- Accent: one substantial saffron #D99A3D shoot emerges from the top of the gap and bends slightly left.\n- Geometry: one dominant compact silhouette occupying about 58 percent of the canvas; no circle, ring, border, letter U, letter H, coffee bean, avocado, flame, heart, yin-yang, or closed badge."
+    },
+    {
+      "id": "living-weave",
+      "number": "06",
+      "status": "finalist",
+      "name": "Living Weave",
+      "family": "Motion First",
+      "output": "assets/icons-v3/06-living-weave.png",
+      "idea": "Two paths cross once, exchange support, and continue as a new growth pattern.",
+      "motion": "cross-sprout",
+      "motionLabel": "Paths approach, cross once, tips sprout",
+      "layers": ["Coral field", "Paper and forest paths", "Saffron growth nodes"],
+      "watchout": "One crossing only; reject any infinity, chain, Celtic knot, or generic link reading.",
+      "variation": "- Background: full-bleed coral #E5533A.\n- Symbol: one thick warm-paper #FAF8F5 path rises diagonally from lower left and one thick deep-forest #113B36 path rises diagonally from lower right. They overlap exactly once near center, then separate and terminate in blunt leaf-like ends.\n- Accents: two small saffron #D99A3D growth nodes sit near the separated upper tips.\n- Geometry: one crossing only, strong diagonal energy, four dominant foreground pieces; no ring, loop, knot, chain, or infinity shape."
+    },
+    {
+      "id": "confluence-sprout",
+      "number": "07",
+      "status": "rejected",
+      "name": "Confluence Sprout",
+      "family": "Growth Glyph",
+      "output": "assets/icons-v3/07-confluence-sprout.png",
+      "idea": "Two independent paths join once and become a new upward growth.",
+      "motion": "join-rise",
+      "motionLabel": "Paths arrive, node joins, shoot rises",
+      "layers": ["Paper field", "Forest and coral paths", "Saffron shoot"],
+      "watchout": "The joining point must read as growth, not a road junction, martini glass, or letter Y.",
+      "variation": "- Background: full-bleed warm paper #FAF8F5.\n- Symbol: one very broad coral #E5533A path enters from the lower-left and one equally broad deep-forest #113B36 path enters from the lower-right. They curve toward center and terminate against opposite sides of one substantial saffron #D99A3D joining node. They do not overlap.\n- Growth: from the top of the saffron node rises one short deep-forest #113B36 shoot ending in one blunt coral #E5533A leaf angled slightly left.\n- Geometry: one compact, bold, asymmetrical confluence symbol inside a 19 percent safe margin; no ring, road markings, arrows, letter Y, cocktail glass, person, heart, or tree canopy."
+    },
+    {
+      "id": "shared-crown",
+      "number": "08",
+      "status": "rejected",
+      "name": "Shared Crown",
+      "family": "Living Mark",
+      "output": "assets/icons-v3/08-shared-crown.png",
+      "idea": "Two separate trunks sustain one confident canopy, with the joining point visible rather than hidden.",
+      "motion": "root-fill",
+      "motionLabel": "Trunks rise, crown fills, center warms",
+      "layers": ["Forest field", "Paper crown", "Coral trunks and saffron node"],
+      "watchout": "Keep the crown one graphic mass and avoid a cloud, mushroom, broccoli, or scenic tree illustration.",
+      "variation": "- Background: full-bleed deep forest #113B36.\n- Main silhouette: one oversized warm-paper #FAF8F5 crown occupies the upper-middle. Its top is one broad asymmetric arch; its bottom edge has exactly two shallow inward cuts. It is a graphic crown-canopy, not a fluffy cloud or cluster of circles.\n- Support: two separate thick coral #E5533A trunks rise from the lower-left and lower-right into the two inward cuts. They never touch each other.\n- Accent: one substantial saffron #D99A3D joining node floats in the negative space between the trunks just below the crown.\n- Geometry: three dominant foreground groups inside a 17 percent safe margin; no pot, ground, scenery, fruit, face, mushroom, broccoli, cloud, or generic tree clip art."
+    },
+    {
+      "id": "seed-exchange",
+      "number": "09",
+      "status": "finalist",
+      "name": "Seed Exchange",
+      "family": "Motion First",
+      "output": "assets/icons-v3/09-seed-exchange.png",
+      "idea": "Two directional growth forms pass one seed through the center, turning reciprocity into the icon story.",
+      "motion": "pass-turn",
+      "motionLabel": "Forms turn, seed passes, tips open",
+      "layers": ["Coral field", "Paper and forest growth forms", "Saffron seed"],
+      "watchout": "Keep the opposing forms open and diagonal; reject a circle, yin-yang, refresh icon, or chase symbol.",
+      "variation": "- Background: full-bleed coral #E5533A.\n- Symbol: one thick warm-paper #FAF8F5 growth form starts near lower-left, bends once toward upper-center, and ends in a blunt leaf tip. A separate deep-forest #113B36 growth form starts near upper-right, bends once toward lower-center, and ends in a different blunt leaf tip. The forms remain open, never close into a circle, and never mirror each other.\n- Center: one substantial saffron #D99A3D seed sits in the clear gap between their bends without touching either form.\n- Geometry: diagonal, open, asymmetrical composition inside an 18 percent safe margin; no arrows, circle, ring, yin-yang, refresh icon, chasing loop, letter S, heart, or infinity symbol."
+    }
+  ]
+}
