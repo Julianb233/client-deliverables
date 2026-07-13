@@ -76,6 +76,7 @@ function sizeSample(file, size, label) {
 function conceptCard(concept) {
   const review = reviewFor(concept.id);
   const status = review.status || "undecided";
+  const file = `${concept.file}?v=round2`;
   const layers = concept.layers.map((item) => `<span>${escapeHtml(item)}</span>`).join("");
   const statusButton = (value, label) => `
     <button type="button" data-action="decision" data-id="${concept.id}" data-status="${value}" class="${review.status === value ? "active" : ""}" aria-pressed="${review.status === value}">${label}</button>`;
@@ -83,7 +84,7 @@ function conceptCard(concept) {
   return `
     <article class="concept-card" data-status="${status}" data-concept="${concept.id}">
       <div class="concept-image-stage">
-        <img src="${concept.file}" alt="${escapeHtml(concept.name)} app icon concept" width="1024" height="1024">
+        <img src="${file}" alt="${escapeHtml(concept.name)} app icon concept" width="1024" height="1024">
         <span class="concept-number">${concept.number}</span>
         <button class="favorite-button ${review.favorite ? "active" : ""}" type="button" data-action="favorite" data-id="${concept.id}" aria-label="${review.favorite ? "Remove" : "Add"} ${escapeHtml(concept.name)} as a favorite" aria-pressed="${review.favorite}"><i data-lucide="heart"></i></button>
       </div>
@@ -96,30 +97,30 @@ function conceptCard(concept) {
           <div class="proof-group">
             <span>Actual iOS sizes</span>
             <div class="size-row">
-              ${sizeSample(concept.file, 60, "60")}
-              ${sizeSample(concept.file, 40, "40")}
-              ${sizeSample(concept.file, 29, "29")}
-              ${sizeSample(concept.file, 20, "20")}
+              ${sizeSample(file, 60, "60")}
+              ${sizeSample(file, 40, "40")}
+              ${sizeSample(file, 29, "29")}
+              ${sizeSample(file, 20, "20")}
             </div>
           </div>
           <div class="proof-group">
             <span>Platform masks</span>
             <div class="mask-row">
-              <img class="mask-squircle" src="${concept.file}" alt="" aria-hidden="true">
-              <img class="mask-circle" src="${concept.file}" alt="" aria-hidden="true">
+              <img class="mask-squircle" src="${file}" alt="" aria-hidden="true">
+              <img class="mask-circle" src="${file}" alt="" aria-hidden="true">
             </div>
           </div>
         </div>
 
         <div class="appearance-row" aria-label="Appearance checks">
-          <span class="appearance"><span class="appearance-frame"><img src="${concept.file}" alt="" aria-hidden="true"></span>Default</span>
-          <span class="appearance appearance-dark"><span class="appearance-frame"><img src="${concept.file}" alt="" aria-hidden="true"></span>Dark check</span>
-          <span class="appearance appearance-tinted"><span class="appearance-frame"><img src="${concept.file}" alt="" aria-hidden="true"></span>Tinted check</span>
+          <span class="appearance"><span class="appearance-frame"><img src="${file}" alt="" aria-hidden="true"></span>Default</span>
+          <span class="appearance appearance-dark"><span class="appearance-frame"><img src="${file}" alt="" aria-hidden="true"></span>Dark check</span>
+          <span class="appearance appearance-tinted"><span class="appearance-frame"><img src="${file}" alt="" aria-hidden="true"></span>Tinted check</span>
         </div>
 
         <div class="motion-panel">
           <div class="motion-stage" data-motion="${concept.motion}">
-            <img class="motion-icon" src="${concept.file}" alt="" aria-hidden="true">
+            <img class="motion-icon" src="${file}" alt="" aria-hidden="true">
             <button class="motion-play" type="button" data-action="motion" title="Play motion preview" aria-label="Play ${escapeHtml(concept.name)} motion preview"><i data-lucide="play"></i></button>
           </div>
           <div class="motion-copy">
@@ -130,7 +131,7 @@ function conceptCard(concept) {
         </div>
 
         <div class="wordmark-preview" aria-label="Better Together wordmark lockup preview">
-          <img src="${concept.file}" alt="" aria-hidden="true">
+          <img src="${file}" alt="" aria-hidden="true">
           <div><strong>Better Together</strong><span>Love is a living thing</span></div>
         </div>
 
