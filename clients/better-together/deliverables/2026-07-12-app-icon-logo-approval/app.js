@@ -77,7 +77,7 @@ function conceptCard(concept) {
   return `
     <article class="concept-card" data-status="${status}" data-concept="${concept.id}">
       <div class="concept-image-stage${darkClass}">
-        <img src="${concept.file}" alt="${escapeHtml(concept.name)} app icon concept" width="1024" height="1024" loading="lazy">
+        <img src="${concept.file}" alt="${escapeHtml(concept.name)} app icon concept" width="1024" height="1024">
         <span class="concept-number">${concept.number}</span>
         <button class="favorite-button ${review.favorite ? "active" : ""}" type="button" data-action="favorite" data-id="${concept.id}" aria-label="${review.favorite ? "Remove" : "Add"} ${escapeHtml(concept.name)} as a favorite" aria-pressed="${review.favorite}"><i data-lucide="heart"></i></button>
       </div>
