@@ -1,0 +1,174 @@
+{
+  "version": 4,
+  "model": "gemini-3-pro-image-preview",
+  "startedAt": "2026-07-13T16:18:48.390141+00:00",
+  "phases": [
+    {
+      "phase": "icons",
+      "assets": [
+        {
+          "id": "bt-living-ligature",
+          "name": "BT Living Ligature",
+          "output": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/01-bt-living-ligature.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity exploration - Round 4 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic or wedding product.\n- Style: premium editorial wellness identity; confident, memorable, warm, and modern; crisp flat vector-master geometry with a slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to five foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, stock-icon finish, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, butterfly, wings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached Better Together reference only to preserve the warm palette, confident organic edge character, and visual simplicity. Do not duplicate its ring, plant, person-like stems, proportions, or composition.\n\n## Direction - BT Living Ligature\n- Background: full-bleed deep forest #113B36.\n- Main mark: an unmistakable custom uppercase \"BT\" monogram occupying the central 62 percent. The B sits to the left and the T sits to the right. They share exactly one vertical structural stroke without overlapping into an unreadable knot.\n- B construction: warm-paper #FAF8F5, with two large open counters and slightly organic outer curves.\n- T construction: coral #E5533A, with one broad horizontal cap and one sturdy vertical stem.\n- Connection: the B spine and T stem meet at one clean junction. Place one substantial saffron #D99A3D circular seed node at that junction.\n- MUST read as the exact letters \"BT\" at first glance and at 20 px.\n- NO other letters, leaf clip art, tree, heart, ring, badge, script lettering, lowercase letters, or flourishes.\n\n## Required correction\n\nThe previous render was rejected because: The letters look like an ordinary block B placed beside an ordinary block T, and the saffron node became a bullseye with a dark ring. Redraw the exact BT as one truly custom, compact ligature with a clean shared structural junction. Use one solid saffron node with no outline or ring. Keep BT immediately legible.\n\nCorrect that failure while preserving the named direction, palette, and app-icon composition. Produce a materially cleaner replacement.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/01-bt-living-ligature.png\", \"size_bytes\": 254827, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/01-garden-seal-studio.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 254827,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/01-bt-living-ligature.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 4,
+                "dominantColors": [
+                  {
+                    "hex": "#113C35",
+                    "share": 0.677
+                  },
+                  {
+                    "hex": "#EAE5D9",
+                    "share": 0.0991
+                  },
+                  {
+                    "hex": "#704A38",
+                    "share": 0.0713
+                  },
+                  {
+                    "hex": "#133C35",
+                    "share": 0.0571
+                  }
+                ],
+                "contrast": 0.7843,
+                "edgeDensity": 0.0401,
+                "centerBalance": 0.9221,
+                "visualMass": 0.1799,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.7882,
+                    "edgeDensity": 0.1839,
+                    "luminanceSpread": 0.4683
+                  },
+                  "40": {
+                    "contrast": 0.8,
+                    "edgeDensity": 0.2469,
+                    "luminanceSpread": 0.4596
+                  },
+                  "29": {
+                    "contrast": 0.8118,
+                    "edgeDensity": 0.3115,
+                    "luminanceSpread": 0.446
+                  },
+                  "20": {
+                    "contrast": 0.7608,
+                    "edgeDensity": 0.3475,
+                    "luminanceSpread": 0.4397
+                  }
+                },
+                "gate": {
+                  "passed": true,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": true,
+                    "smallContrast": true,
+                    "smallComplexity": true,
+                    "centered": true,
+                    "visualWeight": true
+                  }
+                }
+              }
+            }
+          ],
+          "status": "generated",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 254827,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/01-bt-living-ligature.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 4,
+            "dominantColors": [
+              {
+                "hex": "#113C35",
+                "share": 0.677
+              },
+              {
+                "hex": "#EAE5D9",
+                "share": 0.0991
+              },
+              {
+                "hex": "#704A38",
+                "share": 0.0713
+              },
+              {
+                "hex": "#133C35",
+                "share": 0.0571
+              }
+            ],
+            "contrast": 0.7843,
+            "edgeDensity": 0.0401,
+            "centerBalance": 0.9221,
+            "visualMass": 0.1799,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.7882,
+                "edgeDensity": 0.1839,
+                "luminanceSpread": 0.4683
+              },
+              "40": {
+                "contrast": 0.8,
+                "edgeDensity": 0.2469,
+                "luminanceSpread": 0.4596
+              },
+              "29": {
+                "contrast": 0.8118,
+                "edgeDensity": 0.3115,
+                "luminanceSpread": 0.446
+              },
+              "20": {
+                "contrast": 0.7608,
+                "edgeDensity": 0.3475,
+                "luminanceSpread": 0.4397
+              }
+            },
+            "gate": {
+              "passed": true,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": true,
+                "smallContrast": true,
+                "smallComplexity": true,
+                "centered": true,
+                "visualWeight": true
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "completedAt": "2026-07-13T16:19:16.100411+00:00"
+}

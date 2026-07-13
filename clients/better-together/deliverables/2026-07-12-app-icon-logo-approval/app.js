@@ -1,11 +1,11 @@
-const STORAGE_KEY = "better-together-app-icon-review-v3";
+const STORAGE_KEY = "better-together-identity-review-v4";
 
 let concepts = [];
 let familyFilter = "all";
 let statusFilter = "all";
 let toastTimer;
 let state = {
-  version: 3,
+  version: 4,
   reviewer: "",
   overallNotes: "",
   decisions: {},
@@ -45,7 +45,7 @@ function loadState() {
   if (hash) {
     try {
       const shared = decodeReview(hash);
-      if (shared?.version === 3) {
+      if (shared?.version === 4) {
         state = { ...state, ...shared };
         saveState("Shared review loaded");
         return;
@@ -57,7 +57,7 @@ function loadState() {
 
   try {
     const stored = JSON.parse(localStorage.getItem(STORAGE_KEY));
-    if (stored?.version === 3) state = { ...state, ...stored };
+    if (stored?.version === 4) state = { ...state, ...stored };
   } catch (error) {
     localStorage.removeItem(STORAGE_KEY);
   }
@@ -76,7 +76,8 @@ function sizeSample(file, size, label) {
 function conceptCard(concept) {
   const review = reviewFor(concept.id);
   const status = review.status || "undecided";
-  const file = `${concept.file}?v=round3`;
+  const file = `${concept.file}?v=round4`;
+  const lockup = `${concept.lockup}?v=round4`;
   const layers = concept.layers.map((item) => `<span>${escapeHtml(item)}</span>`).join("");
   const statusButton = (value, label) => `
     <button type="button" data-action="decision" data-id="${concept.id}" data-status="${value}" class="${review.status === value ? "active" : ""}" aria-pressed="${review.status === value}">${label}</button>`;
@@ -136,12 +137,18 @@ function conceptCard(concept) {
           </div>
         </div>
 
-        <div class="wordmark-preview" aria-label="Better Together wordmark lockup preview">
-          <img src="${file}" alt="" aria-hidden="true">
-          <div><strong>Better Together</strong><span>Love is a living thing</span></div>
+        <div class="identity-lockup" aria-label="Generated Better Together wordmark lockup">
+          <span>Full-name lockup</span>
+          <div class="identity-lockup-frame">
+            <img src="${lockup}" alt="${escapeHtml(concept.name)} Better Together wordmark lockup" width="1024" height="1024">
+          </div>
         </div>
 
         <div class="layer-list" aria-label="Production layers">${layers}</div>
+        <div class="identity-advice">
+          <p><span>Best for</span>${escapeHtml(concept.bestFor)}</p>
+          <p><span>Next production step</span>${escapeHtml(concept.nextStep)}</p>
+        </div>
         <p class="watchout"><strong>Refinement watch:</strong> ${escapeHtml(concept.watchout)}</p>
 
         <div class="decision-control" role="group" aria-label="Decision for ${escapeHtml(concept.name)}">
@@ -218,7 +225,7 @@ function reviewSummary() {
   });
 
   return [
-    "Better Together app icon review - Research Round 3",
+    "Better Together identity review - Round 4",
     state.reviewer ? `Reviewer: ${state.reviewer}` : "",
     `Approved: ${groups.approve.join("; ") || "None"}`,
     `Needs changes: ${groups.revise.join("; ") || "None"}`,
@@ -247,7 +254,7 @@ async function shareReview() {
   const url = new URL(location.href);
   url.hash = new URLSearchParams({ review: encodeReview(state) }).toString();
   history.replaceState(null, "", url);
-  const shareData = { title: "Better Together app icon review", text: "My Better Together app icon feedback", url: url.toString() };
+  const shareData = { title: "Better Together identity review", text: "My Better Together identity feedback", url: url.toString() };
   if (navigator.share) {
     try {
       await navigator.share(shareData);
@@ -262,11 +269,11 @@ async function shareReview() {
 
 function downloadReview() {
   saveState();
-  const payload = { project: "Better Together", board: "Research-led App Icon Approval - Round 3", exportedAt: new Date().toISOString(), ...state };
+  const payload = { project: "Better Together", board: "BT, Heart, and Bonsai Identity Approval - Round 4", exportedAt: new Date().toISOString(), ...state };
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
   const anchor = document.createElement("a");
   anchor.href = URL.createObjectURL(blob);
-  anchor.download = "better-together-app-icon-round3-review.json";
+  anchor.download = "better-together-identity-round4-review.json";
   anchor.click();
   URL.revokeObjectURL(anchor.href);
   showToast("Review downloaded.");
@@ -327,7 +334,7 @@ document.getElementById("copySummary").addEventListener("click", () => copyText(
 document.getElementById("downloadReview").addEventListener("click", downloadReview);
 document.getElementById("resetReview").addEventListener("click", () => {
   if (!confirm("Clear all decisions and notes on this device?")) return;
-  state = { version: 3, reviewer: "", overallNotes: "", decisions: {} };
+  state = { version: 4, reviewer: "", overallNotes: "", decisions: {} };
   localStorage.removeItem(STORAGE_KEY);
   history.replaceState(null, "", location.pathname + location.search);
   document.getElementById("reviewerName").value = "";
@@ -336,7 +343,7 @@ document.getElementById("resetReview").addEventListener("click", () => {
   showToast("Review reset.");
 });
 
-fetch("concepts-v3.json?v=3")
+fetch("concepts-v4.json?v=4")
   .then((response) => {
     if (!response.ok) throw new Error(`Concept manifest failed: ${response.status}`);
     return response.json();

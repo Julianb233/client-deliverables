@@ -1,0 +1,174 @@
+{
+  "version": 4,
+  "model": "gemini-3-pro-image-preview",
+  "startedAt": "2026-07-13T16:21:19.454136+00:00",
+  "phases": [
+    {
+      "phase": "icons",
+      "assets": [
+        {
+          "id": "bt-editorial-signature",
+          "name": "BT Editorial Signature",
+          "output": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/05-bt-editorial-signature.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity exploration - Round 4 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic or wedding product.\n- Style: premium editorial wellness identity; confident, memorable, warm, and modern; crisp flat vector-master geometry with a slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to five foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, stock-icon finish, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, butterfly, wings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached Better Together reference only to preserve the warm palette, confident organic edge character, and visual simplicity. Do not duplicate its ring, plant, person-like stems, proportions, or composition.\n\n## Direction - BT Editorial Signature\n- Background: full-bleed warm paper #FAF8F5.\n- Main mark: the exact uppercase letters \"BT\" as a compact, custom high-contrast editorial serif signature occupying the central 58 percent.\n- B: deep forest #113B36 with one strong vertical stem, two generous counters, and softly tapered bowl terminals.\n- T: deep forest #113B36 with a broad top cap and a tapered central stem. It sits slightly higher and overlaps the B only at one short coral #E5533A shared crossbar.\n- Accent: one substantial saffron #D99A3D period-like seed sits below and to the right of the T stem.\n- The letters MUST be perfectly readable as \"BT\" with no script, swash, or ambiguity.\n- NO other text, leaves, tree, heart, badge, ring, frame, lowercase letters, calligraphy, or decorative ornament.\n\n## Required correction\n\nThe previous render was rejected because: The coral connection reads as a floating minus sign rather than an intentional letter junction, and the two letters feel merely placed together. Make the B and T touch elegantly at one small shared coral joint that clearly belongs to both letterforms. Reduce the saffron period and keep the exact BT perfectly readable.\n\nCorrect that failure while preserving the named direction, palette, and app-icon composition. Produce a materially cleaner replacement.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/05-bt-editorial-signature.png\", \"size_bytes\": 284491, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/01-garden-seal-studio.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 284491,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/05-bt-editorial-signature.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 4,
+                "dominantColors": [
+                  {
+                    "hex": "#F7F6F1",
+                    "share": 0.509
+                  },
+                  {
+                    "hex": "#F6F7F1",
+                    "share": 0.1675
+                  },
+                  {
+                    "hex": "#576D61",
+                    "share": 0.1519
+                  },
+                  {
+                    "hex": "#F6F6F1",
+                    "share": 0.074
+                  }
+                ],
+                "contrast": 0.7961,
+                "edgeDensity": 0.0491,
+                "centerBalance": 0.9735,
+                "visualMass": 0.1664,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.8235,
+                    "edgeDensity": 0.2078,
+                    "luminanceSpread": 0.5179
+                  },
+                  "40": {
+                    "contrast": 0.8549,
+                    "edgeDensity": 0.2637,
+                    "luminanceSpread": 0.5034
+                  },
+                  "29": {
+                    "contrast": 0.8471,
+                    "edgeDensity": 0.3686,
+                    "luminanceSpread": 0.4904
+                  },
+                  "20": {
+                    "contrast": 0.8706,
+                    "edgeDensity": 0.51,
+                    "luminanceSpread": 0.4656
+                  }
+                },
+                "gate": {
+                  "passed": false,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": true,
+                    "smallContrast": true,
+                    "smallComplexity": false,
+                    "centered": true,
+                    "visualWeight": true
+                  }
+                }
+              }
+            }
+          ],
+          "status": "needs-human-review",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 284491,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/05-bt-editorial-signature.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 4,
+            "dominantColors": [
+              {
+                "hex": "#F7F6F1",
+                "share": 0.509
+              },
+              {
+                "hex": "#F6F7F1",
+                "share": 0.1675
+              },
+              {
+                "hex": "#576D61",
+                "share": 0.1519
+              },
+              {
+                "hex": "#F6F6F1",
+                "share": 0.074
+              }
+            ],
+            "contrast": 0.7961,
+            "edgeDensity": 0.0491,
+            "centerBalance": 0.9735,
+            "visualMass": 0.1664,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.8235,
+                "edgeDensity": 0.2078,
+                "luminanceSpread": 0.5179
+              },
+              "40": {
+                "contrast": 0.8549,
+                "edgeDensity": 0.2637,
+                "luminanceSpread": 0.5034
+              },
+              "29": {
+                "contrast": 0.8471,
+                "edgeDensity": 0.3686,
+                "luminanceSpread": 0.4904
+              },
+              "20": {
+                "contrast": 0.8706,
+                "edgeDensity": 0.51,
+                "luminanceSpread": 0.4656
+              }
+            },
+            "gate": {
+              "passed": false,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": true,
+                "smallContrast": true,
+                "smallComplexity": false,
+                "centered": true,
+                "visualWeight": true
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "completedAt": "2026-07-13T16:21:41.307012+00:00"
+}

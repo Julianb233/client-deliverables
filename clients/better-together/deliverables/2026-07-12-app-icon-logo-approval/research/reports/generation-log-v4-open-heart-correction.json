@@ -1,0 +1,182 @@
+{
+  "version": 4,
+  "model": "gemini-3-pro-image-preview",
+  "startedAt": "2026-07-13T16:20:47.511612+00:00",
+  "phases": [
+    {
+      "phase": "icons",
+      "assets": [
+        {
+          "id": "open-heart-pair",
+          "name": "Open Heart Pair",
+          "output": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/04-open-heart-pair.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity exploration - Round 4 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic or wedding product.\n- Style: premium editorial wellness identity; confident, memorable, warm, and modern; crisp flat vector-master geometry with a slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to five foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, stock-icon finish, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, butterfly, wings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached Better Together reference only to preserve the warm palette, confident organic edge character, and visual simplicity. Do not duplicate its ring, plant, person-like stems, proportions, or composition.\n\n## Direction - Open Heart Pair\n- Background: full-bleed coral #E5533A.\n- Main mark: one unmistakable upright heart built from TWO separate, very thick organic strokes inside the central 62 percent.\n- Left half: warm paper #FAF8F5, beginning near the lower center, curving outward left, then inward toward the upper center.\n- Right half: deep forest #113B36, beginning separately near the lower center, curving outward right, then inward toward the upper center.\n- Open construction: leave a deliberate gap at the top center and a smaller deliberate gap at the bottom point. The two halves never touch.\n- Accent: one substantial saffron #D99A3D seed sits in the central negative space, slightly below center.\n- The silhouette MUST read as a heart immediately, while the separate strokes communicate two people.\n- NO letters, arrowheads, infinity loop, yin-yang, chain, ring, pulse line, tiny hearts, hands, faces, or enclosing border.\n\n## Required correction\n\nThe previous render was rejected because: The composition is strong, but the palette drifted into too many near-colors and the saffron seed reads like a flame. Preserve the open two-stroke heart, but use perfectly flat color fields with no grain, texture, shading, or color variation. Make the saffron center a compact circular seed, not a flame or leaf.\n\nCorrect that failure while preserving the named direction, palette, and app-icon composition. Produce a materially cleaner replacement.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/04-open-heart-pair.png\", \"size_bytes\": 332544, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/01-garden-seal-studio.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 332544,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/04-open-heart-pair.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 5,
+                "dominantColors": [
+                  {
+                    "hex": "#E25237",
+                    "share": 0.3449
+                  },
+                  {
+                    "hex": "#E15438",
+                    "share": 0.2238
+                  },
+                  {
+                    "hex": "#E05337",
+                    "share": 0.2021
+                  },
+                  {
+                    "hex": "#774635",
+                    "share": 0.1
+                  },
+                  {
+                    "hex": "#EAB79E",
+                    "share": 0.0967
+                  }
+                ],
+                "contrast": 0.7725,
+                "edgeDensity": 0.0426,
+                "centerBalance": 0.9423,
+                "visualMass": 0.2298,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.7725,
+                    "edgeDensity": 0.1733,
+                    "luminanceSpread": 0.3381
+                  },
+                  "40": {
+                    "contrast": 0.7647,
+                    "edgeDensity": 0.2625,
+                    "luminanceSpread": 0.3346
+                  },
+                  "29": {
+                    "contrast": 0.7686,
+                    "edgeDensity": 0.3341,
+                    "luminanceSpread": 0.3305
+                  },
+                  "20": {
+                    "contrast": 0.698,
+                    "edgeDensity": 0.445,
+                    "luminanceSpread": 0.3208
+                  }
+                },
+                "gate": {
+                  "passed": true,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": true,
+                    "smallContrast": true,
+                    "smallComplexity": true,
+                    "centered": true,
+                    "visualWeight": true
+                  }
+                }
+              }
+            }
+          ],
+          "status": "generated",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 332544,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/04-open-heart-pair.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 5,
+            "dominantColors": [
+              {
+                "hex": "#E25237",
+                "share": 0.3449
+              },
+              {
+                "hex": "#E15438",
+                "share": 0.2238
+              },
+              {
+                "hex": "#E05337",
+                "share": 0.2021
+              },
+              {
+                "hex": "#774635",
+                "share": 0.1
+              },
+              {
+                "hex": "#EAB79E",
+                "share": 0.0967
+              }
+            ],
+            "contrast": 0.7725,
+            "edgeDensity": 0.0426,
+            "centerBalance": 0.9423,
+            "visualMass": 0.2298,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.7725,
+                "edgeDensity": 0.1733,
+                "luminanceSpread": 0.3381
+              },
+              "40": {
+                "contrast": 0.7647,
+                "edgeDensity": 0.2625,
+                "luminanceSpread": 0.3346
+              },
+              "29": {
+                "contrast": 0.7686,
+                "edgeDensity": 0.3341,
+                "luminanceSpread": 0.3305
+              },
+              "20": {
+                "contrast": 0.698,
+                "edgeDensity": 0.445,
+                "luminanceSpread": 0.3208
+              }
+            },
+            "gate": {
+              "passed": true,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": true,
+                "smallContrast": true,
+                "smallComplexity": true,
+                "centered": true,
+                "visualWeight": true
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "completedAt": "2026-07-13T16:21:06.646463+00:00"
+}

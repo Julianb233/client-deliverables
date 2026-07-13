@@ -1,0 +1,112 @@
+{
+  "version": 4,
+  "generated": 18,
+  "finalAssets": 10,
+  "concepts": [
+    {
+      "id": "bt-living-ligature",
+      "number": "01",
+      "name": "BT Living Ligature",
+      "family": "BT Monogram",
+      "file": "assets/icons-v4/01-bt-living-ligature.png",
+      "lockup": "assets/lockups-v4/01-bt-living-ligature-lockup.png",
+      "idea": "A bold BT monogram makes the product name immediate, while one living node gives the initials a warm point of connection.",
+      "motion": "ligature-join",
+      "motionLabel": "B draws, T joins, living node wakes",
+      "layers": ["Forest field", "Paper B", "Coral T", "Saffron living node"],
+      "bestFor": "Strongest app icon, favicon, and social-avatar route.",
+      "watchout": "The letters must keep reading BT immediately when the mark is redrawn as a production vector.",
+      "nextStep": "Redraw the selected ligature on a strict grid and tune its counters at 16 px.",
+      "metrics": {
+        "small20Contrast": 0.7608,
+        "centerBalance": 0.9221,
+        "edgeDensity": 0.0401,
+        "gate": "pass"
+      }
+    },
+    {
+      "id": "rooted-bt",
+      "number": "02",
+      "name": "Rooted BT",
+      "family": "BT + Bonsai",
+      "file": "assets/icons-v4/02-rooted-bt.png",
+      "lockup": "assets/lockups-v4/02-rooted-bt-lockup.png",
+      "idea": "The initials become the living structure: a clear coral B, a grounded forest T, and a compact bonsai crown growing from the letterform.",
+      "motion": "rooted-letter-grow",
+      "motionLabel": "BT rises, leaves open, crown settles",
+      "layers": ["Paper field", "Coral B", "Forest T", "Saffron bonsai leaves"],
+      "bestFor": "Best balance of recognizable initials and the existing garden story.",
+      "watchout": "Keep the leaves structural and restrained so the mark never looks like letters with decoration pasted on.",
+      "nextStep": "Separate the B, T, and leaf tips into reusable animation layers.",
+      "metrics": {
+        "small20Contrast": 0.5333,
+        "centerBalance": 0.9885,
+        "edgeDensity": 0.0492,
+        "gate": "pass"
+      }
+    },
+    {
+      "id": "heartwood-bonsai",
+      "number": "03",
+      "name": "Heartwood Bonsai",
+      "family": "Heart + Bonsai",
+      "file": "assets/icons-v4/03-heartwood-bonsai.png",
+      "lockup": "assets/lockups-v4/03-heartwood-bonsai-lockup.png",
+      "idea": "Two independent trunks shape a clear heart between them, then carry one shared bonsai canopy.",
+      "motion": "heartwood-grow",
+      "motionLabel": "Trunks lean, heart appears, canopy blooms",
+      "layers": ["Forest field", "Coral and paper trunks", "Paper canopy", "Saffron heartwood node"],
+      "bestFor": "Most emotionally direct route while preserving the bonsai brand world.",
+      "watchout": "The heart should continue to emerge from the trunk structure instead of becoming a separate Valentine symbol.",
+      "nextStep": "Tune the heart-shaped negative space and canopy silhouette for monochrome use.",
+      "metrics": {
+        "small20Contrast": 0.7373,
+        "centerBalance": 0.9405,
+        "edgeDensity": 0.0657,
+        "gate": "human-reviewed"
+      }
+    },
+    {
+      "id": "open-heart-pair",
+      "number": "04",
+      "name": "Open Heart Pair",
+      "family": "Heart Mark",
+      "file": "assets/icons-v4/04-open-heart-pair.png",
+      "lockup": "assets/lockups-v4/04-open-heart-pair-lockup.png",
+      "idea": "Two independent relationship strokes form one recognizable heart without closing or losing their individuality.",
+      "motion": "heart-pair-meet",
+      "motionLabel": "Halves approach, heart holds, seed pulses",
+      "layers": ["Coral field", "Paper heart half", "Forest heart half", "Saffron center seed"],
+      "bestFor": "Most universal and emotionally immediate social-sharing mark.",
+      "watchout": "Keep the open terminals and asymmetry distinctive enough to avoid generic dating-app territory.",
+      "nextStep": "Refine the open terminals as exact motion endpoints and run a formal trademark screen.",
+      "metrics": {
+        "small20Contrast": 0.698,
+        "centerBalance": 0.9423,
+        "edgeDensity": 0.0426,
+        "gate": "pass"
+      }
+    },
+    {
+      "id": "bt-editorial-signature",
+      "number": "05",
+      "name": "BT Editorial Signature",
+      "family": "Wordmark First",
+      "file": "assets/icons-v4/05-bt-editorial-signature.png",
+      "lockup": "assets/lockups-v4/05-bt-editorial-signature-lockup.png",
+      "idea": "A restrained BT signature gives the complete Better Together name a mature identity that can scale across app, editorial, and merchandise use.",
+      "motion": "signature-reveal",
+      "motionLabel": "Serifs draw, bridge lands, signature settles",
+      "layers": ["Paper field", "Forest BT letterforms", "Coral bridge", "Saffron period"],
+      "bestFor": "Strongest website, editorial, merchandise, and premium identity route.",
+      "watchout": "The final typography must be custom-drawn and warm rather than reading as stock serif lettering.",
+      "nextStep": "Draw a complete production wordmark family around the selected BT signature.",
+      "metrics": {
+        "small20Contrast": 0.8275,
+        "centerBalance": 0.967,
+        "edgeDensity": 0.0482,
+        "gate": "human-reviewed"
+      }
+    }
+  ]
+}

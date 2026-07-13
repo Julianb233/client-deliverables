@@ -1,0 +1,182 @@
+{
+  "version": 4,
+  "model": "gemini-3-pro-image-preview",
+  "startedAt": "2026-07-13T16:22:49.250727+00:00",
+  "phases": [
+    {
+      "phase": "icons",
+      "assets": [
+        {
+          "id": "heartwood-bonsai",
+          "name": "Heartwood Bonsai",
+          "output": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/03-heartwood-bonsai.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity exploration - Round 4 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic or wedding product.\n- Style: premium editorial wellness identity; confident, memorable, warm, and modern; crisp flat vector-master geometry with a slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to five foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, stock-icon finish, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, butterfly, wings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached Better Together reference only to preserve the warm palette, confident organic edge character, and visual simplicity. Do not duplicate its ring, plant, person-like stems, proportions, or composition.\n\n## Direction - Heartwood Bonsai\n- Background: full-bleed deep forest #113B36.\n- Main silhouette: a compact, unmistakable bonsai symbol occupying the central 64 percent, with NO pot and NO ground line.\n- Trunks: one thick coral #E5533A trunk rises from the lower left and one thick warm-paper #FAF8F5 trunk rises from the lower right. They remain separate, curve inward once, and then lean outward into the canopy.\n- Heart: the clean negative space between the two inward trunk curves forms one unmistakable upright heart, about 24 percent of the symbol height. The heart is negative space, not an outlined sticker.\n- Canopy: one broad warm-paper #FAF8F5 asymmetric bonsai crown spans the upper half as a single graphic mass with exactly three blunt lobes.\n- Accent: one saffron #D99A3D heartwood node sits where the lower heart point meets the open trunk gap.\n- NO letters, pot, scenery, roots crossing, fluffy cloud, broccoli, wedding icon, extra hearts, ring, or badge.\n\n## Required correction\n\nThe previous render was rejected because: The second render added a forbidden rounded app-icon mask and the canopy still reads as a rigid cloud or umbrella. Use a true full-bleed deep forest square with sharp canvas corners. Keep two smooth trunks forming the large negative-space heart. Replace the solid canopy mass with exactly seven large warm-paper leaf tiles arranged as one compact asymmetrical bonsai crown. Leaves must be separated by narrow forest gaps and remain bold at 20 px. Use one solid saffron circle at the lower meeting point. No pot, border, rounded mask, cloud, umbrella, roof, or second heart.\n\nCorrect that failure while preserving the named direction, palette, and app-icon composition. Produce a materially cleaner replacement.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/03-heartwood-bonsai.png\", \"size_bytes\": 328696, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/01-garden-seal-studio.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 328696,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/03-heartwood-bonsai.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 6,
+                "dominantColors": [
+                  {
+                    "hex": "#133E35",
+                    "share": 0.4156
+                  },
+                  {
+                    "hex": "#133E36",
+                    "share": 0.231
+                  },
+                  {
+                    "hex": "#DFC8BC",
+                    "share": 0.2125
+                  },
+                  {
+                    "hex": "#153E35",
+                    "share": 0.0457
+                  },
+                  {
+                    "hex": "#1F4137",
+                    "share": 0.0413
+                  }
+                ],
+                "contrast": 0.7765,
+                "edgeDensity": 0.0657,
+                "centerBalance": 0.9405,
+                "visualMass": 0.2535,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.8078,
+                    "edgeDensity": 0.2364,
+                    "luminanceSpread": 0.5375
+                  },
+                  "40": {
+                    "contrast": 0.8235,
+                    "edgeDensity": 0.2981,
+                    "luminanceSpread": 0.5174
+                  },
+                  "29": {
+                    "contrast": 0.7804,
+                    "edgeDensity": 0.3484,
+                    "luminanceSpread": 0.4982
+                  },
+                  "20": {
+                    "contrast": 0.7373,
+                    "edgeDensity": 0.38,
+                    "luminanceSpread": 0.4711
+                  }
+                },
+                "gate": {
+                  "passed": false,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": false,
+                    "smallContrast": true,
+                    "smallComplexity": true,
+                    "centered": true,
+                    "visualWeight": true
+                  }
+                }
+              }
+            }
+          ],
+          "status": "needs-human-review",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 328696,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/03-heartwood-bonsai.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 6,
+            "dominantColors": [
+              {
+                "hex": "#133E35",
+                "share": 0.4156
+              },
+              {
+                "hex": "#133E36",
+                "share": 0.231
+              },
+              {
+                "hex": "#DFC8BC",
+                "share": 0.2125
+              },
+              {
+                "hex": "#153E35",
+                "share": 0.0457
+              },
+              {
+                "hex": "#1F4137",
+                "share": 0.0413
+              }
+            ],
+            "contrast": 0.7765,
+            "edgeDensity": 0.0657,
+            "centerBalance": 0.9405,
+            "visualMass": 0.2535,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.8078,
+                "edgeDensity": 0.2364,
+                "luminanceSpread": 0.5375
+              },
+              "40": {
+                "contrast": 0.8235,
+                "edgeDensity": 0.2981,
+                "luminanceSpread": 0.5174
+              },
+              "29": {
+                "contrast": 0.7804,
+                "edgeDensity": 0.3484,
+                "luminanceSpread": 0.4982
+              },
+              "20": {
+                "contrast": 0.7373,
+                "edgeDensity": 0.38,
+                "luminanceSpread": 0.4711
+              }
+            },
+            "gate": {
+              "passed": false,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": false,
+                "smallContrast": true,
+                "smallComplexity": true,
+                "centered": true,
+                "visualWeight": true
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "completedAt": "2026-07-13T16:23:09.649581+00:00"
+}

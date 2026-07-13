@@ -1,0 +1,842 @@
+{
+  "version": 4,
+  "model": "gemini-3-pro-image-preview",
+  "startedAt": "2026-07-13T16:15:51.669438+00:00",
+  "phases": [
+    {
+      "phase": "icons",
+      "assets": [
+        {
+          "id": "bt-living-ligature",
+          "name": "BT Living Ligature",
+          "output": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/01-bt-living-ligature.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity exploration - Round 4 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic or wedding product.\n- Style: premium editorial wellness identity; confident, memorable, warm, and modern; crisp flat vector-master geometry with a slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to five foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, stock-icon finish, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, butterfly, wings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached Better Together reference only to preserve the warm palette, confident organic edge character, and visual simplicity. Do not duplicate its ring, plant, person-like stems, proportions, or composition.\n\n## Direction - BT Living Ligature\n- Background: full-bleed deep forest #113B36.\n- Main mark: an unmistakable custom uppercase \"BT\" monogram occupying the central 62 percent. The B sits to the left and the T sits to the right. They share exactly one vertical structural stroke without overlapping into an unreadable knot.\n- B construction: warm-paper #FAF8F5, with two large open counters and slightly organic outer curves.\n- T construction: coral #E5533A, with one broad horizontal cap and one sturdy vertical stem.\n- Connection: the B spine and T stem meet at one clean junction. Place one substantial saffron #D99A3D circular seed node at that junction.\n- MUST read as the exact letters \"BT\" at first glance and at 20 px.\n- NO other letters, leaf clip art, tree, heart, ring, badge, script lettering, lowercase letters, or flourishes.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/01-bt-living-ligature.png\", \"size_bytes\": 258529, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/01-garden-seal-studio.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 258529,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/01-bt-living-ligature.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 4,
+                "dominantColors": [
+                  {
+                    "hex": "#133E35",
+                    "share": 0.3427
+                  },
+                  {
+                    "hex": "#143D35",
+                    "share": 0.2773
+                  },
+                  {
+                    "hex": "#CFA594",
+                    "share": 0.2315
+                  },
+                  {
+                    "hex": "#153E35",
+                    "share": 0.0958
+                  }
+                ],
+                "contrast": 0.7765,
+                "edgeDensity": 0.0429,
+                "centerBalance": 0.9152,
+                "visualMass": 0.2534,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.7804,
+                    "edgeDensity": 0.2033,
+                    "luminanceSpread": 0.5177
+                  },
+                  "40": {
+                    "contrast": 0.7961,
+                    "edgeDensity": 0.2756,
+                    "luminanceSpread": 0.51
+                  },
+                  "29": {
+                    "contrast": 0.8,
+                    "edgeDensity": 0.3317,
+                    "luminanceSpread": 0.502
+                  },
+                  "20": {
+                    "contrast": 0.8235,
+                    "edgeDensity": 0.43,
+                    "luminanceSpread": 0.4832
+                  }
+                },
+                "gate": {
+                  "passed": true,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": true,
+                    "smallContrast": true,
+                    "smallComplexity": true,
+                    "centered": true,
+                    "visualWeight": true
+                  }
+                }
+              }
+            }
+          ],
+          "status": "generated",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 258529,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/01-bt-living-ligature.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 4,
+            "dominantColors": [
+              {
+                "hex": "#133E35",
+                "share": 0.3427
+              },
+              {
+                "hex": "#143D35",
+                "share": 0.2773
+              },
+              {
+                "hex": "#CFA594",
+                "share": 0.2315
+              },
+              {
+                "hex": "#153E35",
+                "share": 0.0958
+              }
+            ],
+            "contrast": 0.7765,
+            "edgeDensity": 0.0429,
+            "centerBalance": 0.9152,
+            "visualMass": 0.2534,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.7804,
+                "edgeDensity": 0.2033,
+                "luminanceSpread": 0.5177
+              },
+              "40": {
+                "contrast": 0.7961,
+                "edgeDensity": 0.2756,
+                "luminanceSpread": 0.51
+              },
+              "29": {
+                "contrast": 0.8,
+                "edgeDensity": 0.3317,
+                "luminanceSpread": 0.502
+              },
+              "20": {
+                "contrast": 0.8235,
+                "edgeDensity": 0.43,
+                "luminanceSpread": 0.4832
+              }
+            },
+            "gate": {
+              "passed": true,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": true,
+                "smallContrast": true,
+                "smallComplexity": true,
+                "centered": true,
+                "visualWeight": true
+              }
+            }
+          }
+        },
+        {
+          "id": "rooted-bt",
+          "name": "Rooted BT",
+          "output": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/02-rooted-bt.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity exploration - Round 4 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic or wedding product.\n- Style: premium editorial wellness identity; confident, memorable, warm, and modern; crisp flat vector-master geometry with a slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to five foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, stock-icon finish, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, butterfly, wings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached Better Together reference only to preserve the warm palette, confident organic edge character, and visual simplicity. Do not duplicate its ring, plant, person-like stems, proportions, or composition.\n\n## Direction - Rooted BT\n- Background: full-bleed warm paper #FAF8F5.\n- Main mark: two unmistakable uppercase letters \"BT\" built as one compact bonsai-like structure inside the central 64 percent.\n- Letter B: coral #E5533A at left, bold and clearly readable, with two blunt rounded counters. Its lower terminal extends into one short root.\n- Letter T: deep forest #113B36 at right, bold and clearly readable. Its vertical stem extends downward into a second separate root.\n- Growth detail: exactly three compact saffron #D99A3D leaf shapes grow directly from the upper T cap, arranged as one asymmetrical bonsai crown.\n- Connection: one small deep-forest joining notch links the letters at mid-height; roots remain separate.\n- MUST read as exact \"BT\" first and bonsai second.\n- NO pot, soil line, landscape, generic tree silhouette, text beyond BT, heart, ring, crest, or decorative frame.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/02-rooted-bt.png\", \"size_bytes\": 294199, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/01-garden-seal-studio.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 294199,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/02-rooted-bt.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 4,
+                "dominantColors": [
+                  {
+                    "hex": "#F6F7F1",
+                    "share": 0.3552
+                  },
+                  {
+                    "hex": "#F7F6F1",
+                    "share": 0.34
+                  },
+                  {
+                    "hex": "#A9775E",
+                    "share": 0.1578
+                  },
+                  {
+                    "hex": "#F7F7F2",
+                    "share": 0.076
+                  }
+                ],
+                "contrast": 0.7765,
+                "edgeDensity": 0.0459,
+                "centerBalance": 0.9741,
+                "visualMass": 0.1746,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.5529,
+                    "edgeDensity": 0.1772,
+                    "luminanceSpread": 0.4165
+                  },
+                  "40": {
+                    "contrast": 0.5569,
+                    "edgeDensity": 0.2381,
+                    "luminanceSpread": 0.4088
+                  },
+                  "29": {
+                    "contrast": 0.5373,
+                    "edgeDensity": 0.3092,
+                    "luminanceSpread": 0.399
+                  },
+                  "20": {
+                    "contrast": 0.5412,
+                    "edgeDensity": 0.42,
+                    "luminanceSpread": 0.3819
+                  }
+                },
+                "gate": {
+                  "passed": true,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": true,
+                    "smallContrast": true,
+                    "smallComplexity": true,
+                    "centered": true,
+                    "visualWeight": true
+                  }
+                }
+              }
+            }
+          ],
+          "status": "generated",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 294199,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/02-rooted-bt.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 4,
+            "dominantColors": [
+              {
+                "hex": "#F6F7F1",
+                "share": 0.3552
+              },
+              {
+                "hex": "#F7F6F1",
+                "share": 0.34
+              },
+              {
+                "hex": "#A9775E",
+                "share": 0.1578
+              },
+              {
+                "hex": "#F7F7F2",
+                "share": 0.076
+              }
+            ],
+            "contrast": 0.7765,
+            "edgeDensity": 0.0459,
+            "centerBalance": 0.9741,
+            "visualMass": 0.1746,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.5529,
+                "edgeDensity": 0.1772,
+                "luminanceSpread": 0.4165
+              },
+              "40": {
+                "contrast": 0.5569,
+                "edgeDensity": 0.2381,
+                "luminanceSpread": 0.4088
+              },
+              "29": {
+                "contrast": 0.5373,
+                "edgeDensity": 0.3092,
+                "luminanceSpread": 0.399
+              },
+              "20": {
+                "contrast": 0.5412,
+                "edgeDensity": 0.42,
+                "luminanceSpread": 0.3819
+              }
+            },
+            "gate": {
+              "passed": true,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": true,
+                "smallContrast": true,
+                "smallComplexity": true,
+                "centered": true,
+                "visualWeight": true
+              }
+            }
+          }
+        },
+        {
+          "id": "heartwood-bonsai",
+          "name": "Heartwood Bonsai",
+          "output": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/03-heartwood-bonsai.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity exploration - Round 4 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic or wedding product.\n- Style: premium editorial wellness identity; confident, memorable, warm, and modern; crisp flat vector-master geometry with a slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to five foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, stock-icon finish, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, butterfly, wings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached Better Together reference only to preserve the warm palette, confident organic edge character, and visual simplicity. Do not duplicate its ring, plant, person-like stems, proportions, or composition.\n\n## Direction - Heartwood Bonsai\n- Background: full-bleed deep forest #113B36.\n- Main silhouette: a compact, unmistakable bonsai symbol occupying the central 64 percent, with NO pot and NO ground line.\n- Trunks: one thick coral #E5533A trunk rises from the lower left and one thick warm-paper #FAF8F5 trunk rises from the lower right. They remain separate, curve inward once, and then lean outward into the canopy.\n- Heart: the clean negative space between the two inward trunk curves forms one unmistakable upright heart, about 24 percent of the symbol height. The heart is negative space, not an outlined sticker.\n- Canopy: one broad warm-paper #FAF8F5 asymmetric bonsai crown spans the upper half as a single graphic mass with exactly three blunt lobes.\n- Accent: one saffron #D99A3D heartwood node sits where the lower heart point meets the open trunk gap.\n- NO letters, pot, scenery, roots crossing, fluffy cloud, broccoli, wedding icon, extra hearts, ring, or badge.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/03-heartwood-bonsai.png\", \"size_bytes\": 305493, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/01-garden-seal-studio.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 305493,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/03-heartwood-bonsai.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 5,
+                "dominantColors": [
+                  {
+                    "hex": "#123D36",
+                    "share": 0.3591
+                  },
+                  {
+                    "hex": "#103D36",
+                    "share": 0.2619
+                  },
+                  {
+                    "hex": "#F9F7F2",
+                    "share": 0.1635
+                  },
+                  {
+                    "hex": "#99614E",
+                    "share": 0.0897
+                  },
+                  {
+                    "hex": "#123D35",
+                    "share": 0.0519
+                  }
+                ],
+                "contrast": 0.7843,
+                "edgeDensity": 0.0502,
+                "centerBalance": 0.9492,
+                "visualMass": 0.2673,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.7961,
+                    "edgeDensity": 0.2103,
+                    "luminanceSpread": 0.5639
+                  },
+                  "40": {
+                    "contrast": 0.8157,
+                    "edgeDensity": 0.2769,
+                    "luminanceSpread": 0.5544
+                  },
+                  "29": {
+                    "contrast": 0.8353,
+                    "edgeDensity": 0.3532,
+                    "luminanceSpread": 0.5451
+                  },
+                  "20": {
+                    "contrast": 0.8431,
+                    "edgeDensity": 0.4275,
+                    "luminanceSpread": 0.5273
+                  }
+                },
+                "gate": {
+                  "passed": true,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": true,
+                    "smallContrast": true,
+                    "smallComplexity": true,
+                    "centered": true,
+                    "visualWeight": true
+                  }
+                }
+              }
+            }
+          ],
+          "status": "generated",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 305493,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/03-heartwood-bonsai.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 5,
+            "dominantColors": [
+              {
+                "hex": "#123D36",
+                "share": 0.3591
+              },
+              {
+                "hex": "#103D36",
+                "share": 0.2619
+              },
+              {
+                "hex": "#F9F7F2",
+                "share": 0.1635
+              },
+              {
+                "hex": "#99614E",
+                "share": 0.0897
+              },
+              {
+                "hex": "#123D35",
+                "share": 0.0519
+              }
+            ],
+            "contrast": 0.7843,
+            "edgeDensity": 0.0502,
+            "centerBalance": 0.9492,
+            "visualMass": 0.2673,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.7961,
+                "edgeDensity": 0.2103,
+                "luminanceSpread": 0.5639
+              },
+              "40": {
+                "contrast": 0.8157,
+                "edgeDensity": 0.2769,
+                "luminanceSpread": 0.5544
+              },
+              "29": {
+                "contrast": 0.8353,
+                "edgeDensity": 0.3532,
+                "luminanceSpread": 0.5451
+              },
+              "20": {
+                "contrast": 0.8431,
+                "edgeDensity": 0.4275,
+                "luminanceSpread": 0.5273
+              }
+            },
+            "gate": {
+              "passed": true,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": true,
+                "smallContrast": true,
+                "smallComplexity": true,
+                "centered": true,
+                "visualWeight": true
+              }
+            }
+          }
+        },
+        {
+          "id": "open-heart-pair",
+          "name": "Open Heart Pair",
+          "output": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/04-open-heart-pair.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity exploration - Round 4 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic or wedding product.\n- Style: premium editorial wellness identity; confident, memorable, warm, and modern; crisp flat vector-master geometry with a slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to five foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, stock-icon finish, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, butterfly, wings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached Better Together reference only to preserve the warm palette, confident organic edge character, and visual simplicity. Do not duplicate its ring, plant, person-like stems, proportions, or composition.\n\n## Direction - Open Heart Pair\n- Background: full-bleed coral #E5533A.\n- Main mark: one unmistakable upright heart built from TWO separate, very thick organic strokes inside the central 62 percent.\n- Left half: warm paper #FAF8F5, beginning near the lower center, curving outward left, then inward toward the upper center.\n- Right half: deep forest #113B36, beginning separately near the lower center, curving outward right, then inward toward the upper center.\n- Open construction: leave a deliberate gap at the top center and a smaller deliberate gap at the bottom point. The two halves never touch.\n- Accent: one substantial saffron #D99A3D seed sits in the central negative space, slightly below center.\n- The silhouette MUST read as a heart immediately, while the separate strokes communicate two people.\n- NO letters, arrowheads, infinity loop, yin-yang, chain, ring, pulse line, tiny hearts, hands, faces, or enclosing border.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/04-open-heart-pair.png\", \"size_bytes\": 331768, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/01-garden-seal-studio.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 331768,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/04-open-heart-pair.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 7,
+                "dominantColors": [
+                  {
+                    "hex": "#E25237",
+                    "share": 0.2198
+                  },
+                  {
+                    "hex": "#E15438",
+                    "share": 0.2158
+                  },
+                  {
+                    "hex": "#E05337",
+                    "share": 0.1489
+                  },
+                  {
+                    "hex": "#E15337",
+                    "share": 0.1359
+                  },
+                  {
+                    "hex": "#E9B295",
+                    "share": 0.1015
+                  }
+                ],
+                "contrast": 0.7765,
+                "edgeDensity": 0.0436,
+                "centerBalance": 0.948,
+                "visualMass": 0.2406,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.7725,
+                    "edgeDensity": 0.1794,
+                    "luminanceSpread": 0.3403
+                  },
+                  "40": {
+                    "contrast": 0.7686,
+                    "edgeDensity": 0.2562,
+                    "luminanceSpread": 0.3365
+                  },
+                  "29": {
+                    "contrast": 0.7647,
+                    "edgeDensity": 0.346,
+                    "luminanceSpread": 0.3327
+                  },
+                  "20": {
+                    "contrast": 0.6824,
+                    "edgeDensity": 0.4575,
+                    "luminanceSpread": 0.3231
+                  }
+                },
+                "gate": {
+                  "passed": false,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": false,
+                    "smallContrast": true,
+                    "smallComplexity": true,
+                    "centered": true,
+                    "visualWeight": true
+                  }
+                }
+              }
+            }
+          ],
+          "status": "needs-human-review",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 331768,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/04-open-heart-pair.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 7,
+            "dominantColors": [
+              {
+                "hex": "#E25237",
+                "share": 0.2198
+              },
+              {
+                "hex": "#E15438",
+                "share": 0.2158
+              },
+              {
+                "hex": "#E05337",
+                "share": 0.1489
+              },
+              {
+                "hex": "#E15337",
+                "share": 0.1359
+              },
+              {
+                "hex": "#E9B295",
+                "share": 0.1015
+              }
+            ],
+            "contrast": 0.7765,
+            "edgeDensity": 0.0436,
+            "centerBalance": 0.948,
+            "visualMass": 0.2406,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.7725,
+                "edgeDensity": 0.1794,
+                "luminanceSpread": 0.3403
+              },
+              "40": {
+                "contrast": 0.7686,
+                "edgeDensity": 0.2562,
+                "luminanceSpread": 0.3365
+              },
+              "29": {
+                "contrast": 0.7647,
+                "edgeDensity": 0.346,
+                "luminanceSpread": 0.3327
+              },
+              "20": {
+                "contrast": 0.6824,
+                "edgeDensity": 0.4575,
+                "luminanceSpread": 0.3231
+              }
+            },
+            "gate": {
+              "passed": false,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": false,
+                "smallContrast": true,
+                "smallComplexity": true,
+                "centered": true,
+                "visualWeight": true
+              }
+            }
+          }
+        },
+        {
+          "id": "bt-editorial-signature",
+          "name": "BT Editorial Signature",
+          "output": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/05-bt-editorial-signature.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity exploration - Round 4 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic or wedding product.\n- Style: premium editorial wellness identity; confident, memorable, warm, and modern; crisp flat vector-master geometry with a slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to five foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, stock-icon finish, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, butterfly, wings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached Better Together reference only to preserve the warm palette, confident organic edge character, and visual simplicity. Do not duplicate its ring, plant, person-like stems, proportions, or composition.\n\n## Direction - BT Editorial Signature\n- Background: full-bleed warm paper #FAF8F5.\n- Main mark: the exact uppercase letters \"BT\" as a compact, custom high-contrast editorial serif signature occupying the central 58 percent.\n- B: deep forest #113B36 with one strong vertical stem, two generous counters, and softly tapered bowl terminals.\n- T: deep forest #113B36 with a broad top cap and a tapered central stem. It sits slightly higher and overlaps the B only at one short coral #E5533A shared crossbar.\n- Accent: one substantial saffron #D99A3D period-like seed sits below and to the right of the T stem.\n- The letters MUST be perfectly readable as \"BT\" with no script, swash, or ambiguity.\n- NO other text, leaves, tree, heart, badge, ring, frame, lowercase letters, calligraphy, or decorative ornament.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/05-bt-editorial-signature.png\", \"size_bytes\": 290397, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/01-garden-seal-studio.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 290397,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/05-bt-editorial-signature.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 5,
+                "dominantColors": [
+                  {
+                    "hex": "#F6F7F1",
+                    "share": 0.3717
+                  },
+                  {
+                    "hex": "#F7F6F1",
+                    "share": 0.3352
+                  },
+                  {
+                    "hex": "#576B5D",
+                    "share": 0.1537
+                  },
+                  {
+                    "hex": "#F7F7F2",
+                    "share": 0.0546
+                  },
+                  {
+                    "hex": "#F5F7F1",
+                    "share": 0.0355
+                  }
+                ],
+                "contrast": 0.7922,
+                "edgeDensity": 0.0443,
+                "centerBalance": 0.9759,
+                "visualMass": 0.1687,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.8039,
+                    "edgeDensity": 0.1961,
+                    "luminanceSpread": 0.515
+                  },
+                  "40": {
+                    "contrast": 0.8078,
+                    "edgeDensity": 0.2537,
+                    "luminanceSpread": 0.504
+                  },
+                  "29": {
+                    "contrast": 0.8235,
+                    "edgeDensity": 0.3448,
+                    "luminanceSpread": 0.4914
+                  },
+                  "20": {
+                    "contrast": 0.7647,
+                    "edgeDensity": 0.4575,
+                    "luminanceSpread": 0.4694
+                  }
+                },
+                "gate": {
+                  "passed": true,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": true,
+                    "smallContrast": true,
+                    "smallComplexity": true,
+                    "centered": true,
+                    "visualWeight": true
+                  }
+                }
+              }
+            }
+          ],
+          "status": "generated",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 290397,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/05-bt-editorial-signature.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 5,
+            "dominantColors": [
+              {
+                "hex": "#F6F7F1",
+                "share": 0.3717
+              },
+              {
+                "hex": "#F7F6F1",
+                "share": 0.3352
+              },
+              {
+                "hex": "#576B5D",
+                "share": 0.1537
+              },
+              {
+                "hex": "#F7F7F2",
+                "share": 0.0546
+              },
+              {
+                "hex": "#F5F7F1",
+                "share": 0.0355
+              }
+            ],
+            "contrast": 0.7922,
+            "edgeDensity": 0.0443,
+            "centerBalance": 0.9759,
+            "visualMass": 0.1687,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.8039,
+                "edgeDensity": 0.1961,
+                "luminanceSpread": 0.515
+              },
+              "40": {
+                "contrast": 0.8078,
+                "edgeDensity": 0.2537,
+                "luminanceSpread": 0.504
+              },
+              "29": {
+                "contrast": 0.8235,
+                "edgeDensity": 0.3448,
+                "luminanceSpread": 0.4914
+              },
+              "20": {
+                "contrast": 0.7647,
+                "edgeDensity": 0.4575,
+                "luminanceSpread": 0.4694
+              }
+            },
+            "gate": {
+              "passed": true,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": true,
+                "smallContrast": true,
+                "smallComplexity": true,
+                "centered": true,
+                "visualWeight": true
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "completedAt": "2026-07-13T16:17:35.808446+00:00"
+}
