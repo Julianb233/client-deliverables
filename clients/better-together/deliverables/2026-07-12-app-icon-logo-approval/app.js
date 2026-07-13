@@ -13,6 +13,7 @@ let state = {
 
 const grid = document.getElementById("conceptGrid");
 const variationGrid = document.getElementById("variationGrid");
+const communityGrid = document.getElementById("communityGrid");
 
 function escapeHtml(value = "") {
   return String(value)
@@ -77,17 +78,19 @@ function sizeSample(file, size, label) {
 function conceptCard(concept) {
   const review = reviewFor(concept.id);
   const status = review.status || "undecided";
-  const file = `${concept.file}?v=round4-1`;
-  const lockup = `${concept.lockup}?v=round4-1`;
+  const file = `${concept.file}?v=round5`;
+  const lockup = `${concept.lockup}?v=round5`;
   const layers = concept.layers.map((item) => `<span>${escapeHtml(item)}</span>`).join("");
   const variantLabel = concept.variantOf
     ? `<p class="variant-of"><i data-lucide="git-branch"></i>Variation of ${escapeHtml(concept.variantOf)}</p>`
+    : concept.round === "family-feedback"
+      ? '<p class="variant-of community-label"><i data-lucide="users"></i>Added for family feedback</p>'
     : "";
   const statusButton = (value, label) => `
     <button type="button" data-action="decision" data-id="${concept.id}" data-status="${value}" class="${review.status === value ? "active" : ""}" aria-pressed="${review.status === value}">${label}</button>`;
 
   return `
-    <article class="concept-card ${concept.variantOf ? "is-variation" : ""}" data-status="${status}" data-concept="${concept.id}">
+    <article class="concept-card ${concept.variantOf ? "is-variation" : ""} ${concept.round === "family-feedback" ? "is-community" : ""}" data-status="${status}" data-concept="${concept.id}">
       <div class="concept-image-stage">
         <img src="${file}" alt="${escapeHtml(concept.name)} app icon concept" width="1024" height="1024">
         <span class="concept-number">${concept.number}</span>
@@ -171,14 +174,18 @@ function conceptCard(concept) {
 
 function render() {
   const visible = concepts.filter(matchesFilters);
-  const primaryVisible = visible.filter((concept) => !concept.variantOf);
+  const primaryVisible = visible.filter((concept) => !concept.variantOf && concept.round !== "family-feedback");
   const variationVisible = visible.filter((concept) => concept.variantOf);
+  const communityVisible = visible.filter((concept) => concept.round === "family-feedback");
   grid.innerHTML = primaryVisible.length
     ? primaryVisible.map(conceptCard).join("")
     : '<p class="empty-state">No concepts match these filters.</p>';
   variationGrid.innerHTML = variationVisible.length
     ? variationVisible.map(conceptCard).join("")
     : '<p class="empty-state">No variations match these filters.</p>';
+  communityGrid.innerHTML = communityVisible.length
+    ? communityVisible.map(conceptCard).join("")
+    : '<p class="empty-state">No family-feedback options match these filters.</p>';
   document.getElementById("visibleCount").textContent = `${visible.length} choice${visible.length === 1 ? "" : "s"}`;
   document.querySelector(".decision-total span").textContent = `of ${concepts.length} decided`;
   if (window.lucide) lucide.createIcons();
@@ -235,7 +242,7 @@ function reviewSummary() {
   });
 
   return [
-    "Better Together identity review - Round 4.1",
+    "Better Together identity review - Round 5",
     state.reviewer ? `Reviewer: ${state.reviewer}` : "",
     `Approved: ${groups.approve.join("; ") || "None"}`,
     `Needs changes: ${groups.revise.join("; ") || "None"}`,
@@ -279,11 +286,11 @@ async function shareReview() {
 
 function downloadReview() {
   saveState();
-  const payload = { project: "Better Together", board: "BT, Heart, and Bonsai Identity Approval - Round 4.1", exportedAt: new Date().toISOString(), ...state };
+  const payload = { project: "Better Together", board: "BT, Heart, and Bonsai Identity Approval - Round 5", exportedAt: new Date().toISOString(), ...state };
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
   const anchor = document.createElement("a");
   anchor.href = URL.createObjectURL(blob);
-  anchor.download = "better-together-identity-round4-1-review.json";
+  anchor.download = "better-together-identity-round5-review.json";
   anchor.click();
   URL.revokeObjectURL(anchor.href);
   showToast("Review downloaded.");
@@ -312,7 +319,7 @@ function handleGridInput(event) {
   saveState();
 }
 
-[grid, variationGrid].forEach((targetGrid) => {
+[grid, variationGrid, communityGrid].forEach((targetGrid) => {
   targetGrid.addEventListener("click", handleGridClick);
   targetGrid.addEventListener("input", handleGridInput);
 });
@@ -358,7 +365,7 @@ document.getElementById("resetReview").addEventListener("click", () => {
   showToast("Review reset.");
 });
 
-fetch("concepts-v4.json?v=4.1")
+fetch("concepts-v4.json?v=5")
   .then((response) => {
     if (!response.ok) throw new Error(`Concept manifest failed: ${response.status}`);
     return response.json();
@@ -374,6 +381,7 @@ fetch("concepts-v4.json?v=4.1")
     const message = `<p class="empty-state">The concept list could not load. ${escapeHtml(error.message)}</p>`;
     grid.innerHTML = message;
     variationGrid.innerHTML = message;
+    communityGrid.innerHTML = message;
   });
 
 decorateButtons();

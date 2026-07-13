@@ -1,0 +1,182 @@
+{
+  "version": "5.0",
+  "model": "gemini-3-pro-image-preview",
+  "startedAt": "2026-07-13T17:45:50.845085+00:00",
+  "phases": [
+    {
+      "phase": "icons",
+      "assets": [
+        {
+          "id": "shared-seed",
+          "name": "Shared Seed",
+          "output": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v5-candidates/17-shared-seed.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together family-feedback exploration - Round 5 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic, wedding product, or dating app.\n- Style: premium editorial wellness identity; confident, memorable, warm, modern; crisp flat vector-master geometry with slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to seven foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached Better Together source only to preserve the warm editorial wellness quality, human-cut edge character, and approved coral, forest, paper, and saffron palette. Create materially different geometry. Do not trace, duplicate, or merely recolor the attached mark.\n\n## Direction - Shared Seed\n- Background: full-bleed coral #E5533A.\n- Main mark: one upright seed silhouette in the central 58 percent, constructed from TWO separate broad asymmetrical halves.\n- Left half: warm paper #FAF8F5, curving from upper-left to the lower point.\n- Right half: deep forest #113B36, curving from upper-right to the lower point.\n- Keep a wide vertical negative-space channel between the halves so they never touch.\n- Center: one solid saffron #D99A3D circle floats in the channel just below mid-height.\n- Growth: the upper tip of the forest half ends in one small integrated leaf, not a separate floating shape.\n- NO coffee bean, quotation marks, lips, eye, heart, letters, extra leaves, pot, ring, border, or badge.\n\n## Required correction\n\nThe previous render was rejected because: The prior seed read as a horizontal eye. Make the total silhouette tall and vertical with sharply pointed top and bottom, keep a broad vertical channel, make the saffron center much smaller and lower than center, and make the integrated top leaf unmistakable. NO almond or eye silhouette.\n\nCorrect that failure while preserving the named direction, palette, and app-icon composition. Produce a materially cleaner replacement.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v5-candidates/17-shared-seed.png\", \"size_bytes\": 293661, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v3/09-seed-exchange.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 293661,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v5-candidates/17-shared-seed.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 7,
+                "dominantColors": [
+                  {
+                    "hex": "#E35235",
+                    "share": 0.5704
+                  },
+                  {
+                    "hex": "#E35335",
+                    "share": 0.1028
+                  },
+                  {
+                    "hex": "#F0BDAC",
+                    "share": 0.084
+                  },
+                  {
+                    "hex": "#E35237",
+                    "share": 0.0801
+                  },
+                  {
+                    "hex": "#6F4533",
+                    "share": 0.0724
+                  }
+                ],
+                "contrast": 0.7765,
+                "edgeDensity": 0.0406,
+                "centerBalance": 0.9957,
+                "visualMass": 0.9304,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.7686,
+                    "edgeDensity": 0.1542,
+                    "luminanceSpread": 0.307
+                  },
+                  "40": {
+                    "contrast": 0.7412,
+                    "edgeDensity": 0.2144,
+                    "luminanceSpread": 0.301
+                  },
+                  "29": {
+                    "contrast": 0.6431,
+                    "edgeDensity": 0.2568,
+                    "luminanceSpread": 0.2939
+                  },
+                  "20": {
+                    "contrast": 0.5451,
+                    "edgeDensity": 0.3575,
+                    "luminanceSpread": 0.2821
+                  }
+                },
+                "gate": {
+                  "passed": false,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": false,
+                    "smallContrast": true,
+                    "smallComplexity": true,
+                    "centered": true,
+                    "visualWeight": false
+                  }
+                }
+              }
+            }
+          ],
+          "status": "needs-human-review",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 293661,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v5-candidates/17-shared-seed.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 7,
+            "dominantColors": [
+              {
+                "hex": "#E35235",
+                "share": 0.5704
+              },
+              {
+                "hex": "#E35335",
+                "share": 0.1028
+              },
+              {
+                "hex": "#F0BDAC",
+                "share": 0.084
+              },
+              {
+                "hex": "#E35237",
+                "share": 0.0801
+              },
+              {
+                "hex": "#6F4533",
+                "share": 0.0724
+              }
+            ],
+            "contrast": 0.7765,
+            "edgeDensity": 0.0406,
+            "centerBalance": 0.9957,
+            "visualMass": 0.9304,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.7686,
+                "edgeDensity": 0.1542,
+                "luminanceSpread": 0.307
+              },
+              "40": {
+                "contrast": 0.7412,
+                "edgeDensity": 0.2144,
+                "luminanceSpread": 0.301
+              },
+              "29": {
+                "contrast": 0.6431,
+                "edgeDensity": 0.2568,
+                "luminanceSpread": 0.2939
+              },
+              "20": {
+                "contrast": 0.5451,
+                "edgeDensity": 0.3575,
+                "luminanceSpread": 0.2821
+              }
+            },
+            "gate": {
+              "passed": false,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": false,
+                "smallContrast": true,
+                "smallComplexity": true,
+                "centered": true,
+                "visualWeight": false
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "completedAt": "2026-07-13T17:46:11.625443+00:00"
+}

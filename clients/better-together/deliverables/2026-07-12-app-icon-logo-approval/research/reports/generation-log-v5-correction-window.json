@@ -1,0 +1,182 @@
+{
+  "version": "5.0",
+  "model": "gemini-3-pro-image-preview",
+  "startedAt": "2026-07-13T17:46:25.855483+00:00",
+  "phases": [
+    {
+      "phase": "icons",
+      "assets": [
+        {
+          "id": "canopy-window",
+          "name": "Canopy Window",
+          "output": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v5-candidates/18-canopy-window.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together family-feedback exploration - Round 5 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic, wedding product, or dating app.\n- Style: premium editorial wellness identity; confident, memorable, warm, modern; crisp flat vector-master geometry with slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to seven foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached Better Together source only to preserve the warm editorial wellness quality, human-cut edge character, and approved coral, forest, paper, and saffron palette. Create materially different geometry. Do not trace, duplicate, or merely recolor the attached mark.\n\n## Direction - Canopy Window\n- Background: full-bleed warm paper #FAF8F5.\n- Main mark: two broad upright organic trunks in the central 58 percent create one tall rounded open window between them.\n- Left trunk: coral #E5533A, rising from lower-left and curving inward near the top.\n- Right trunk: deep forest #113B36, rising from lower-right and curving inward near the top.\n- The trunks remain separate and their inner edges form the open window; they never become a house, door, or heart.\n- Canopy: exactly THREE large saffron #D99A3D leaf masses sit across the top, one left, one center, one right, with clear gaps between them.\n- NO letters, roof, house, door, heart, pot, roots, ground line, extra leaves, cloud, circle, border, or badge.\n\n## Required correction\n\nThe previous render was rejected because: The prior render looked like two walls and a roofed doorway. Make both trunks strongly organic, curved, and asymmetrical, with tapered tops. Make the center opening an irregular vertical oval, not a rectangle or door. Keep exactly three separated pointed leaf masses above, with no continuous roof line.\n\nCorrect that failure while preserving the named direction, palette, and app-icon composition. Produce a materially cleaner replacement.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v5-candidates/18-canopy-window.png\", \"size_bytes\": 341043, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4-variations/07-canopy-bt.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 341043,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v5-candidates/18-canopy-window.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 5,
+                "dominantColors": [
+                  {
+                    "hex": "#F6F5F1",
+                    "share": 0.5153
+                  },
+                  {
+                    "hex": "#945539",
+                    "share": 0.1783
+                  },
+                  {
+                    "hex": "#DDB570",
+                    "share": 0.1734
+                  },
+                  {
+                    "hex": "#F5F5F0",
+                    "share": 0.0558
+                  },
+                  {
+                    "hex": "#F8F8F4",
+                    "share": 0.0417
+                  }
+                ],
+                "contrast": 0.7804,
+                "edgeDensity": 0.0561,
+                "centerBalance": 0.9905,
+                "visualMass": 0.3724,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.7843,
+                    "edgeDensity": 0.2289,
+                    "luminanceSpread": 0.4754
+                  },
+                  "40": {
+                    "contrast": 0.7647,
+                    "edgeDensity": 0.3231,
+                    "luminanceSpread": 0.4696
+                  },
+                  "29": {
+                    "contrast": 0.7765,
+                    "edgeDensity": 0.4281,
+                    "luminanceSpread": 0.4616
+                  },
+                  "20": {
+                    "contrast": 0.6549,
+                    "edgeDensity": 0.5325,
+                    "luminanceSpread": 0.4466
+                  }
+                },
+                "gate": {
+                  "passed": false,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": true,
+                    "smallContrast": true,
+                    "smallComplexity": false,
+                    "centered": true,
+                    "visualWeight": true
+                  }
+                }
+              }
+            }
+          ],
+          "status": "needs-human-review",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 341043,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v5-candidates/18-canopy-window.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 5,
+            "dominantColors": [
+              {
+                "hex": "#F6F5F1",
+                "share": 0.5153
+              },
+              {
+                "hex": "#945539",
+                "share": 0.1783
+              },
+              {
+                "hex": "#DDB570",
+                "share": 0.1734
+              },
+              {
+                "hex": "#F5F5F0",
+                "share": 0.0558
+              },
+              {
+                "hex": "#F8F8F4",
+                "share": 0.0417
+              }
+            ],
+            "contrast": 0.7804,
+            "edgeDensity": 0.0561,
+            "centerBalance": 0.9905,
+            "visualMass": 0.3724,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.7843,
+                "edgeDensity": 0.2289,
+                "luminanceSpread": 0.4754
+              },
+              "40": {
+                "contrast": 0.7647,
+                "edgeDensity": 0.3231,
+                "luminanceSpread": 0.4696
+              },
+              "29": {
+                "contrast": 0.7765,
+                "edgeDensity": 0.4281,
+                "luminanceSpread": 0.4616
+              },
+              "20": {
+                "contrast": 0.6549,
+                "edgeDensity": 0.5325,
+                "luminanceSpread": 0.4466
+              }
+            },
+            "gate": {
+              "passed": false,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": true,
+                "smallContrast": true,
+                "smallComplexity": false,
+                "centered": true,
+                "visualWeight": true
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "completedAt": "2026-07-13T17:46:50.072980+00:00"
+}

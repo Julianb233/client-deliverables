@@ -1,0 +1,386 @@
+{
+  "icons": [
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v5/12-bt-cornerstone.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 5,
+      "dominantColors": [
+        {
+          "hex": "#F6F5F1",
+          "share": 0.7096
+        },
+        {
+          "hex": "#423F32",
+          "share": 0.0897
+        },
+        {
+          "hex": "#D2B1A4",
+          "share": 0.0651
+        },
+        {
+          "hex": "#F9F9F5",
+          "share": 0.0379
+        },
+        {
+          "hex": "#F6F5F0",
+          "share": 0.0376
+        }
+      ],
+      "contrast": 0.7882,
+      "edgeDensity": 0.0516,
+      "centerBalance": 0.9645,
+      "visualMass": 0.1643,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.8039,
+          "edgeDensity": 0.1969,
+          "luminanceSpread": 0.4507
+        },
+        "40": {
+          "contrast": 0.7922,
+          "edgeDensity": 0.2831,
+          "luminanceSpread": 0.4369
+        },
+        "29": {
+          "contrast": 0.7529,
+          "edgeDensity": 0.3222,
+          "luminanceSpread": 0.4259
+        },
+        "20": {
+          "contrast": 0.6,
+          "edgeDensity": 0.4625,
+          "luminanceSpread": 0.4096
+        }
+      },
+      "gate": {
+        "passed": true,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": true,
+          "smallContrast": true,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v5/13-heart-aperture.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 4,
+      "dominantColors": [
+        {
+          "hex": "#133E35",
+          "share": 0.478
+        },
+        {
+          "hex": "#FBFBF9",
+          "share": 0.2527
+        },
+        {
+          "hex": "#A5614C",
+          "share": 0.1417
+        },
+        {
+          "hex": "#153E35",
+          "share": 0.0705
+        }
+      ],
+      "contrast": 0.8118,
+      "edgeDensity": 0.0505,
+      "centerBalance": 0.9367,
+      "visualMass": 0.4116,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.8314,
+          "edgeDensity": 0.2156,
+          "luminanceSpread": 0.6561
+        },
+        "40": {
+          "contrast": 0.8392,
+          "edgeDensity": 0.2994,
+          "luminanceSpread": 0.6484
+        },
+        "29": {
+          "contrast": 0.851,
+          "edgeDensity": 0.4031,
+          "luminanceSpread": 0.6414
+        },
+        "20": {
+          "contrast": 0.8314,
+          "edgeDensity": 0.5075,
+          "luminanceSpread": 0.6198
+        }
+      },
+      "gate": {
+        "passed": false,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": true,
+          "smallContrast": true,
+          "smallComplexity": false,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v5/14-twin-petal-heart.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 4,
+      "dominantColors": [
+        {
+          "hex": "#F6F5F1",
+          "share": 0.582
+        },
+        {
+          "hex": "#E08264",
+          "share": 0.1729
+        },
+        {
+          "hex": "#293E34",
+          "share": 0.1438
+        },
+        {
+          "hex": "#F6F5F0",
+          "share": 0.0409
+        }
+      ],
+      "contrast": 0.7765,
+      "edgeDensity": 0.0383,
+      "centerBalance": 0.9766,
+      "visualMass": 0.3281,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.7804,
+          "edgeDensity": 0.16,
+          "luminanceSpread": 0.5779
+        },
+        "40": {
+          "contrast": 0.7922,
+          "edgeDensity": 0.2525,
+          "luminanceSpread": 0.573
+        },
+        "29": {
+          "contrast": 0.8039,
+          "edgeDensity": 0.3056,
+          "luminanceSpread": 0.5675
+        },
+        "20": {
+          "contrast": 0.8196,
+          "edgeDensity": 0.4525,
+          "luminanceSpread": 0.5587
+        }
+      },
+      "gate": {
+        "passed": true,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": true,
+          "smallContrast": true,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v5/15-bonsai-duet.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 6,
+      "dominantColors": [
+        {
+          "hex": "#D99935",
+          "share": 0.6462
+        },
+        {
+          "hex": "#ECD0A3",
+          "share": 0.0859
+        },
+        {
+          "hex": "#D89934",
+          "share": 0.0809
+        },
+        {
+          "hex": "#D99934",
+          "share": 0.0514
+        },
+        {
+          "hex": "#DA8334",
+          "share": 0.0487
+        }
+      ],
+      "contrast": 0.4902,
+      "edgeDensity": 0.0435,
+      "centerBalance": 0.976,
+      "visualMass": 0.1744,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.4863,
+          "edgeDensity": 0.1661,
+          "luminanceSpread": 0.2531
+        },
+        "40": {
+          "contrast": 0.4863,
+          "edgeDensity": 0.235,
+          "luminanceSpread": 0.2483
+        },
+        "29": {
+          "contrast": 0.4824,
+          "edgeDensity": 0.2889,
+          "luminanceSpread": 0.243
+        },
+        "20": {
+          "contrast": 0.4392,
+          "edgeDensity": 0.385,
+          "luminanceSpread": 0.2331
+        }
+      },
+      "gate": {
+        "passed": false,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": false,
+          "smallContrast": true,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v5/16-modern-garden-seal.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 5,
+      "dominantColors": [
+        {
+          "hex": "#143F36",
+          "share": 0.3421
+        },
+        {
+          "hex": "#123F38",
+          "share": 0.1876
+        },
+        {
+          "hex": "#133F37",
+          "share": 0.1787
+        },
+        {
+          "hex": "#E7E1D1",
+          "share": 0.1349
+        },
+        {
+          "hex": "#534839",
+          "share": 0.0848
+        }
+      ],
+      "contrast": 0.7765,
+      "edgeDensity": 0.0505,
+      "centerBalance": 0.9837,
+      "visualMass": 0.2267,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.7961,
+          "edgeDensity": 0.2172,
+          "luminanceSpread": 0.5147
+        },
+        "40": {
+          "contrast": 0.8392,
+          "edgeDensity": 0.315,
+          "luminanceSpread": 0.5066
+        },
+        "29": {
+          "contrast": 0.8314,
+          "edgeDensity": 0.3496,
+          "luminanceSpread": 0.4939
+        },
+        "20": {
+          "contrast": 0.8549,
+          "edgeDensity": 0.4075,
+          "luminanceSpread": 0.4763
+        }
+      },
+      "gate": {
+        "passed": true,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": true,
+          "smallContrast": true,
+          "smallComplexity": true,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    },
+    {
+      "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v5/18-canopy-window.png",
+      "width": 1024,
+      "height": 1024,
+      "dominantColorCount": 5,
+      "dominantColors": [
+        {
+          "hex": "#F6F5F1",
+          "share": 0.5153
+        },
+        {
+          "hex": "#945539",
+          "share": 0.1783
+        },
+        {
+          "hex": "#DDB570",
+          "share": 0.1734
+        },
+        {
+          "hex": "#F5F5F0",
+          "share": 0.0558
+        },
+        {
+          "hex": "#F8F8F4",
+          "share": 0.0417
+        }
+      ],
+      "contrast": 0.7804,
+      "edgeDensity": 0.0561,
+      "centerBalance": 0.9905,
+      "visualMass": 0.3724,
+      "smallSizes": {
+        "60": {
+          "contrast": 0.7843,
+          "edgeDensity": 0.2289,
+          "luminanceSpread": 0.4754
+        },
+        "40": {
+          "contrast": 0.7647,
+          "edgeDensity": 0.3231,
+          "luminanceSpread": 0.4696
+        },
+        "29": {
+          "contrast": 0.7765,
+          "edgeDensity": 0.4281,
+          "luminanceSpread": 0.4616
+        },
+        "20": {
+          "contrast": 0.6549,
+          "edgeDensity": 0.5325,
+          "luminanceSpread": 0.4466
+        }
+      },
+      "gate": {
+        "passed": false,
+        "checks": {
+          "square1024": true,
+          "paletteDiscipline": true,
+          "smallContrast": true,
+          "smallComplexity": false,
+          "centered": true,
+          "visualWeight": true
+        }
+      }
+    }
+  ]
+}

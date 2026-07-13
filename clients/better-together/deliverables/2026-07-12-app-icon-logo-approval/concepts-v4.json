@@ -1,7 +1,7 @@
 {
-  "version": 4.1,
-  "generated": 34,
-  "finalAssets": 20,
+  "version": 5.0,
+  "generated": 52,
+  "finalAssets": 32,
   "concepts": [
     {
       "id": "bt-living-ligature",
@@ -216,6 +216,138 @@
         "centerBalance": 0.9362,
         "edgeDensity": 0.046,
         "gate": "pass"
+      }
+    },
+    {
+      "id": "bt-cornerstone",
+      "number": "12",
+      "name": "BT Cornerstone",
+      "family": "Wordmark First",
+      "round": "family-feedback",
+      "file": "assets/icons-v5/12-bt-cornerstone.png",
+      "lockup": "assets/lockups-v5/12-bt-cornerstone-lockup.png",
+      "idea": "A compact editorial BT sits on one shared baseline, using a single corner block to symbolize commitment without becoming a badge.",
+      "motion": "cornerstone-set",
+      "motionLabel": "Letters draw, baseline settles, stone locks",
+      "layers": ["Paper field", "Forest B", "Coral T", "Saffron cornerstone"],
+      "bestFor": "A mature editorial identity that can lead with the full brand name.",
+      "watchout": "The shared baseline must stay light enough to avoid a construction-company feel.",
+      "nextStep": "Draw a complete custom wordmark alphabet from the icon's serif proportions.",
+      "metrics": {
+        "small20Contrast": 0.6,
+        "centerBalance": 0.9645,
+        "edgeDensity": 0.0516,
+        "gate": "pass"
+      }
+    },
+    {
+      "id": "heart-aperture",
+      "number": "13",
+      "name": "Heart Aperture",
+      "family": "Heart Mark",
+      "round": "family-feedback",
+      "file": "assets/icons-v5/13-heart-aperture.png",
+      "lockup": "assets/lockups-v5/13-heart-aperture-lockup.png",
+      "idea": "Two protective arcs create a heart only in the space between them, turning connection into an opening rather than a filled symbol.",
+      "motion": "aperture-open",
+      "motionLabel": "Arcs rotate, heart opens, seed rises",
+      "layers": ["Forest field", "Paper left arc", "Coral right arc", "Saffron seed"],
+      "bestFor": "A contemporary relationship symbol that avoids a conventional filled heart.",
+      "watchout": "The negative-space heart must remain obvious at notification size.",
+      "nextStep": "Tune the arc curvature against 20 px and one-color silhouette tests.",
+      "metrics": {
+        "small20Contrast": 0.8314,
+        "centerBalance": 0.9367,
+        "edgeDensity": 0.0505,
+        "gate": "human-reviewed"
+      }
+    },
+    {
+      "id": "twin-petal-heart",
+      "number": "14",
+      "name": "Twin Petal Heart",
+      "family": "Heart + Bonsai",
+      "round": "family-feedback",
+      "file": "assets/icons-v5/14-twin-petal-heart.png",
+      "lockup": "assets/lockups-v5/14-twin-petal-heart-lockup.png",
+      "idea": "Two oversized petals lean together to create a heart silhouette, joining the emotional and garden territories with only three shapes.",
+      "motion": "petals-lean",
+      "motionLabel": "Petals rise, lean inward, seed settles",
+      "layers": ["Paper field", "Coral petal", "Forest petal", "Saffron seed"],
+      "bestFor": "A soft garden-heart icon with exceptionally simple production geometry.",
+      "watchout": "The petals need to read as a heart before they read as a floral logo.",
+      "nextStep": "Refine the shared outer silhouette and test the petals as separate motion layers.",
+      "metrics": {
+        "small20Contrast": 0.8196,
+        "centerBalance": 0.9766,
+        "edgeDensity": 0.0383,
+        "gate": "pass"
+      }
+    },
+    {
+      "id": "bonsai-duet",
+      "number": "15",
+      "name": "Bonsai Duet",
+      "family": "Heart + Bonsai",
+      "round": "family-feedback",
+      "file": "assets/icons-v5/15-bonsai-duet.png",
+      "lockup": "assets/lockups-v5/15-bonsai-duet-lockup.png",
+      "idea": "Two trunks remain visibly independent while supporting one sparse shared canopy, giving the bonsai a more equal partnership structure.",
+      "motion": "duet-grow",
+      "motionLabel": "Trunks rise, branches cross, canopy opens",
+      "layers": ["Saffron field", "Coral trunk", "Forest trunk", "Paper canopy"],
+      "bestFor": "A warm bonsai direction that makes partnership visible without relying on initials.",
+      "watchout": "The crossing branches must feel cooperative rather than tangled.",
+      "nextStep": "Reduce the crossing junction to two clean vector overlaps and build a four-beat growth loop.",
+      "metrics": {
+        "small20Contrast": 0.4392,
+        "centerBalance": 0.976,
+        "edgeDensity": 0.0435,
+        "gate": "human-reviewed"
+      }
+    },
+    {
+      "id": "modern-garden-seal",
+      "number": "16",
+      "name": "Modern Garden Seal",
+      "family": "BT + Bonsai",
+      "round": "family-feedback",
+      "file": "assets/icons-v5/16-modern-garden-seal.png",
+      "lockup": "assets/lockups-v5/16-modern-garden-seal-lockup.png",
+      "idea": "The approved Garden Seal seed is reduced to an open arc, two living stems, and one sun, preserving the emblem without scenic detail.",
+      "motion": "seal-tend",
+      "motionLabel": "Arc draws, stems meet, sun lifts",
+      "layers": ["Forest field", "Paper open arc", "Coral stems", "Saffron sun"],
+      "bestFor": "The closest modern production evolution of the Garden Seal direction Julian already liked.",
+      "watchout": "The open arc must frame the growth without becoming a generic sustainability badge.",
+      "nextStep": "Vectorize the arc and stems as three independent Icon Composer layers.",
+      "metrics": {
+        "small20Contrast": 0.8549,
+        "centerBalance": 0.9837,
+        "edgeDensity": 0.0505,
+        "gate": "pass"
+      }
+    },
+    {
+      "id": "canopy-window",
+      "number": "18",
+      "name": "Canopy Window",
+      "family": "BT + Bonsai",
+      "round": "family-feedback",
+      "file": "assets/icons-v5/18-canopy-window.png",
+      "lockup": "assets/lockups-v5/18-canopy-window-lockup.png",
+      "idea": "Two trunks create a calm open window beneath one canopy, emphasizing the shared space a relationship protects.",
+      "motion": "window-grow",
+      "motionLabel": "Trunks lift, window opens, canopy settles",
+      "layers": ["Paper field", "Coral left trunk", "Forest right trunk", "Saffron canopy"],
+      "bestFor": "A friendly bonsai symbol with a clear protected-space metaphor.",
+      "watchout": "The opening should stay organic and never become a house or doorway icon.",
+      "nextStep": "Tune the arch and canopy masses for a clean monochrome silhouette.",
+      "metrics": {
+        "small20Contrast": 0.6549,
+        "centerBalance": 0.9905,
+        "edgeDensity": 0.0561,
+        "gate": "human-reviewed"
       }
     }
   ]

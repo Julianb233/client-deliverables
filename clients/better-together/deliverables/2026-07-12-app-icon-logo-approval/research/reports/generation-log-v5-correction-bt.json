@@ -1,0 +1,182 @@
+{
+  "version": "5.0",
+  "model": "gemini-3-pro-image-preview",
+  "startedAt": "2026-07-13T17:44:29.184258+00:00",
+  "phases": [
+    {
+      "phase": "icons",
+      "assets": [
+        {
+          "id": "bt-ribbon-fold",
+          "name": "BT Ribbon Fold",
+          "output": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v5-candidates/11-bt-ribbon-fold.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together family-feedback exploration - Round 5 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic, wedding product, or dating app.\n- Style: premium editorial wellness identity; confident, memorable, warm, modern; crisp flat vector-master geometry with slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to seven foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached Better Together source only to preserve the warm editorial wellness quality, human-cut edge character, and approved coral, forest, paper, and saffron palette. Create materially different geometry. Do not trace, duplicate, or merely recolor the attached mark.\n\n## Direction - BT Ribbon Fold\n- Background: full-bleed coral #E5533A.\n- Main mark: the exact uppercase letters \"BT\" occupying the central 62 percent, each built from one broad flat ribbon with softly cut corners.\n- B: warm paper #FAF8F5 at left, with one sturdy vertical spine and two large unmistakable open counters.\n- T: deep forest #113B36 at right, with a broad top cap and centered vertical stem.\n- Shared fold: the lower-right end of the B and lower-left side of the T approach but do not overlap; one compact saffron #D99A3D triangular fold points upward between them.\n- MUST read exact BT before any ribbon metaphor.\n- NO lowercase, script, extra letters, circle, ring, tree, heart, leaf, outline, bridge, or badge.\n\n## Required correction\n\nThe previous render was rejected because: The saffron fold became a large third letter A and added darker shading. Make it a tiny flat saffron triangular notch confined entirely to the gap between B and T. Use one solid saffron color with NO shading. Preserve exact readable BT.\n\nCorrect that failure while preserving the named direction, palette, and app-icon composition. Produce a materially cleaner replacement.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v5-candidates/11-bt-ribbon-fold.png\", \"size_bytes\": 277149, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/01-bt-living-ligature.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 277149,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v5-candidates/11-bt-ribbon-fold.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 5,
+                "dominantColors": [
+                  {
+                    "hex": "#E15436",
+                    "share": 0.5342
+                  },
+                  {
+                    "hex": "#F9F7F0",
+                    "share": 0.1265
+                  },
+                  {
+                    "hex": "#E05436",
+                    "share": 0.1226
+                  },
+                  {
+                    "hex": "#904934",
+                    "share": 0.0782
+                  },
+                  {
+                    "hex": "#E15437",
+                    "share": 0.0646
+                  }
+                ],
+                "contrast": 0.7765,
+                "edgeDensity": 0.0439,
+                "centerBalance": 0.9305,
+                "visualMass": 0.2368,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.7765,
+                    "edgeDensity": 0.1956,
+                    "luminanceSpread": 0.3635
+                  },
+                  "40": {
+                    "contrast": 0.7725,
+                    "edgeDensity": 0.2662,
+                    "luminanceSpread": 0.3589
+                  },
+                  "29": {
+                    "contrast": 0.698,
+                    "edgeDensity": 0.3377,
+                    "luminanceSpread": 0.3553
+                  },
+                  "20": {
+                    "contrast": 0.7137,
+                    "edgeDensity": 0.42,
+                    "luminanceSpread": 0.3492
+                  }
+                },
+                "gate": {
+                  "passed": true,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": true,
+                    "smallContrast": true,
+                    "smallComplexity": true,
+                    "centered": true,
+                    "visualWeight": true
+                  }
+                }
+              }
+            }
+          ],
+          "status": "generated",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 277149,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v5-candidates/11-bt-ribbon-fold.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 5,
+            "dominantColors": [
+              {
+                "hex": "#E15436",
+                "share": 0.5342
+              },
+              {
+                "hex": "#F9F7F0",
+                "share": 0.1265
+              },
+              {
+                "hex": "#E05436",
+                "share": 0.1226
+              },
+              {
+                "hex": "#904934",
+                "share": 0.0782
+              },
+              {
+                "hex": "#E15437",
+                "share": 0.0646
+              }
+            ],
+            "contrast": 0.7765,
+            "edgeDensity": 0.0439,
+            "centerBalance": 0.9305,
+            "visualMass": 0.2368,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.7765,
+                "edgeDensity": 0.1956,
+                "luminanceSpread": 0.3635
+              },
+              "40": {
+                "contrast": 0.7725,
+                "edgeDensity": 0.2662,
+                "luminanceSpread": 0.3589
+              },
+              "29": {
+                "contrast": 0.698,
+                "edgeDensity": 0.3377,
+                "luminanceSpread": 0.3553
+              },
+              "20": {
+                "contrast": 0.7137,
+                "edgeDensity": 0.42,
+                "luminanceSpread": 0.3492
+              }
+            },
+            "gate": {
+              "passed": true,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": true,
+                "smallContrast": true,
+                "smallComplexity": true,
+                "centered": true,
+                "visualWeight": true
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "completedAt": "2026-07-13T17:44:48.770054+00:00"
+}

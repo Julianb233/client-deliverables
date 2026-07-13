@@ -57,7 +57,7 @@ a { color: inherit; }
 .brand-home { display: inline-flex; align-items: center; gap: 10px; color: var(--cream); text-decoration: none; font-family: "Fraunces", serif; font-size: 18px; font-weight: 700; }
 .brand-mark { position: relative; width: 24px; height: 24px; border-radius: 3px 12px 3px 12px; background: var(--coral); transform: rotate(-45deg); }
 .brand-mark::after { content: ""; position: absolute; right: -2px; bottom: -5px; width: 9px; height: 13px; border-radius: 50%; background: var(--gold); }
-.nav-links { display: flex; gap: 24px; }
+.nav-links { display: flex; gap: 18px; }
 .nav-links a { color: #d9e1dc; font-size: 13px; font-weight: 700; text-decoration: none; }
 .nav-links a:hover { color: #fff; }
 
@@ -142,10 +142,12 @@ section { scroll-margin-top: 18px; }
 
 .concept-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .variation-section { margin-top: 82px; padding-top: 44px; border-top: 1px solid var(--line); }
+.community-section { border-top-color: rgba(229, 83, 58, 0.42); }
 .variation-heading { align-items: end; margin-bottom: 24px; }
 .variation-heading > p { max-width: 390px; margin: 0; color: var(--muted); line-height: 1.55; text-align: right; }
 .concept-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); box-shadow: 0 7px 22px rgba(20, 17, 14, 0.055); transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease; }
 .concept-card.is-variation { border-top: 4px solid var(--gold); }
+.concept-card.is-community { border-top: 4px solid var(--coral); }
 .concept-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 .concept-card[data-status="approve"] { border-color: var(--teal); }
 .concept-card[data-status="revise"] { border-color: var(--coral); }
@@ -160,6 +162,7 @@ section { scroll-margin-top: 18px; }
 .concept-content { padding: 24px; }
 .family-label { margin: 0 0 7px; color: var(--coral-deep); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.14em; }
 .variant-of { display: flex; align-items: center; gap: 6px; margin: 8px 0 0; color: var(--teal); font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+.community-label { color: var(--coral-deep); }
 .variant-of svg { width: 13px; height: 13px; }
 .concept-idea { min-height: 76px; margin: 12px 0 22px; color: var(--muted); line-height: 1.6; }
 .metric-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-bottom: 18px; overflow: hidden; border: 1px solid var(--soft-line); border-radius: 6px; background: var(--soft-line); }
