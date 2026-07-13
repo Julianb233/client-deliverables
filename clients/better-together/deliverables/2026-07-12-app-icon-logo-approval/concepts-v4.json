@@ -1,7 +1,7 @@
 {
-  "version": 4,
-  "generated": 18,
-  "finalAssets": 10,
+  "version": 4.1,
+  "generated": 34,
+  "finalAssets": 20,
   "concepts": [
     {
       "id": "bt-living-ligature",
@@ -106,6 +106,116 @@
         "centerBalance": 0.967,
         "edgeDensity": 0.0482,
         "gate": "human-reviewed"
+      }
+    },
+    {
+      "id": "bt-sprout-cut",
+      "number": "06",
+      "name": "BT Sprout Cut",
+      "family": "BT Monogram",
+      "variantOf": "BT Living Ligature",
+      "file": "assets/icons-v4-variations/06-bt-sprout-cut.png",
+      "lockup": "assets/lockups-v4-variations/06-bt-sprout-cut-lockup.png",
+      "idea": "A more organic BT alternative cuts the initials from two broad growing forms and turns their shared junction into a single sprout.",
+      "motion": "sprout-cut-open",
+      "motionLabel": "Cuts open, letters resolve, sprout lifts",
+      "layers": ["Coral field", "Paper B cut", "Forest T cut", "Saffron sprout"],
+      "bestFor": "A softer, more handcrafted BT app-icon option.",
+      "watchout": "The cut geometry still has to read BT before it reads botanical.",
+      "nextStep": "Balance the negative-space counters and define the sprout as two animation layers.",
+      "metrics": {
+        "small20Contrast": 0.7569,
+        "centerBalance": 0.9215,
+        "edgeDensity": 0.0468,
+        "gate": "pass"
+      }
+    },
+    {
+      "id": "canopy-bt",
+      "number": "07",
+      "name": "Canopy BT",
+      "family": "BT + Bonsai",
+      "variantOf": "Rooted BT",
+      "file": "assets/icons-v4-variations/07-canopy-bt.png",
+      "lockup": "assets/lockups-v4-variations/07-canopy-bt-lockup.png",
+      "idea": "Instead of growing leaves from one letter, this version lets the B and T hold a shared three-part bonsai canopy above them.",
+      "motion": "canopy-settle",
+      "motionLabel": "Letters ground, canopy gathers, seed settles",
+      "layers": ["Forest field", "Paper B and seed", "Coral T", "Saffron canopy"],
+      "bestFor": "A compact initials-first bonsai with a darker shelf presence.",
+      "watchout": "The canopy must stay graphic and separate from the letter counters.",
+      "nextStep": "Refine the three canopy masses so they remain distinct at 20 px.",
+      "metrics": {
+        "small20Contrast": 0.6353,
+        "centerBalance": 0.9504,
+        "edgeDensity": 0.0484,
+        "gate": "pass"
+      }
+    },
+    {
+      "id": "heartwood-minimal",
+      "number": "08",
+      "name": "Heartwood Minimal",
+      "family": "Heart + Bonsai",
+      "variantOf": "Heartwood Bonsai",
+      "file": "assets/icons-v4-variations/08-heartwood-minimal.png",
+      "lockup": "assets/lockups-v4-variations/08-heartwood-minimal-lockup.png",
+      "idea": "A reduced heart-bonsai keeps two trunks, one heart-shaped opening, and a sparse leaf crown for a cleaner small-size mark.",
+      "motion": "minimal-heart-grow",
+      "motionLabel": "Trunks rise, heart clears, leaves open",
+      "layers": ["Paper field", "Coral trunk", "Forest trunk", "Saffron leaves"],
+      "bestFor": "The clearest small-size bonsai and heart combination.",
+      "watchout": "Keep the base open so the paired trunks never become one generic tree trunk.",
+      "nextStep": "Tune the heart opening as a single-color cutout and test monochrome silhouettes.",
+      "metrics": {
+        "small20Contrast": 0.5176,
+        "centerBalance": 0.9903,
+        "edgeDensity": 0.0505,
+        "gate": "human-reviewed"
+      }
+    },
+    {
+      "id": "offset-heart",
+      "number": "09",
+      "name": "Offset Heart",
+      "family": "Heart Mark",
+      "variantOf": "Open Heart Pair",
+      "file": "assets/icons-v4-variations/09-offset-heart.png",
+      "lockup": "assets/lockups-v4-variations/09-offset-heart-lockup.png",
+      "idea": "Two offset heart halves hold their individuality while one small diamond marks the intentional space they share.",
+      "motion": "offset-heart-align",
+      "motionLabel": "Halves align, diamond turns, heart settles",
+      "layers": ["Paper field", "Coral heart half", "Forest heart half", "Saffron diamond"],
+      "bestFor": "A more graphic and contemporary relationship-first mark.",
+      "watchout": "The offset should feel intentional while the full silhouette still reads as a heart instantly.",
+      "nextStep": "Tune the diagonal gap and diamond scale at notification-icon size.",
+      "metrics": {
+        "small20Contrast": 0.8039,
+        "centerBalance": 0.9727,
+        "edgeDensity": 0.0487,
+        "gate": "human-reviewed"
+      }
+    },
+    {
+      "id": "bt-garden-serif",
+      "number": "10",
+      "name": "BT Garden Serif",
+      "family": "Wordmark First",
+      "variantOf": "BT Editorial Signature",
+      "file": "assets/icons-v4-variations/10-bt-garden-serif.png",
+      "lockup": "assets/lockups-v4-variations/10-bt-garden-serif-lockup.png",
+      "idea": "A warmer serif BT turns the T crossbar into one controlled leaf terminal, tying the editorial system back to growth.",
+      "motion": "garden-serif-draw",
+      "motionLabel": "Serifs draw, leaf turns, period lands",
+      "layers": ["Coral field", "Paper B and period", "Forest T", "Saffron leaf"],
+      "bestFor": "A warmer editorial identity with more visible garden character.",
+      "watchout": "The leaf terminal must stay subtle enough that the T remains unmistakable.",
+      "nextStep": "Draw the complete wordmark alphabet and standardize the leaf terminal.",
+      "metrics": {
+        "small20Contrast": 0.5373,
+        "centerBalance": 0.9362,
+        "edgeDensity": 0.046,
+        "gate": "pass"
       }
     }
   ]

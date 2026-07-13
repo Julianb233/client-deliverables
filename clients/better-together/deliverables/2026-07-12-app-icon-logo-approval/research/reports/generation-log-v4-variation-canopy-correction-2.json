@@ -1,0 +1,174 @@
+{
+  "version": "4.1",
+  "model": "gemini-3-pro-image-preview",
+  "startedAt": "2026-07-13T17:04:33.059957+00:00",
+  "phases": [
+    {
+      "phase": "icons",
+      "assets": [
+        {
+          "id": "canopy-bt",
+          "name": "Canopy BT",
+          "output": "assets/icons-v4-variations/07-canopy-bt.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity variations - Round 4.1 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic, wedding product, or dating app.\n- Style: premium editorial wellness identity; confident, memorable, warm, modern; crisp flat vector-master geometry with slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to five foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached approved-family source only to preserve its Better Together identity territory, warm palette, optical weight, and human-cut edge character. Create materially different geometry. Do not trace, duplicate, or merely recolor the attached mark.\n\n## Direction - Canopy BT\n- Background: full-bleed deep forest #113B36.\n- Main mark: exact uppercase \"BT\" centered in the lower-middle of the canvas, occupying 58 percent width and clearly readable.\n- B: warm paper #FAF8F5, bold, compact, with two large counters.\n- T: coral #E5533A, bold, compact, with its vertical stem aligned beside the B and no overlap.\n- Canopy: exactly three substantial saffron #D99A3D blunt leaf masses form one low asymmetrical bonsai crown across the top of BOTH letters, with a visible gap above each letter so the canopy is not a hat or accent mark.\n- Seed: one small warm-paper circular seed sits in the negative gap between B and T near the baseline.\n- NO pot, roots, ground line, ring, badge, heart, text beyond BT, tiny leaf scatter, cloud, broccoli, or enclosing shape.\n\n## Required correction\n\nThe previous render was rejected because: The result has a forbidden white outer border/inset green tile and too many canopy pieces. Deep forest must fill every pixel and all four corners with no margin or frame. Use exactly three distinct large saffron pointed leaf shapes total above the readable BT, plus at most one saffron circular seed.\n\nCorrect that failure while preserving the named direction, palette, and app-icon composition. Produce a materially cleaner replacement.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4-variations/07-canopy-bt.png\", \"size_bytes\": 317892, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/02-rooted-bt.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 317892,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "assets/icons-v4-variations/07-canopy-bt.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 4,
+                "dominantColors": [
+                  {
+                    "hex": "#124036",
+                    "share": 0.3361
+                  },
+                  {
+                    "hex": "#134137",
+                    "share": 0.2844
+                  },
+                  {
+                    "hex": "#BC986F",
+                    "share": 0.2197
+                  },
+                  {
+                    "hex": "#144038",
+                    "share": 0.0825
+                  }
+                ],
+                "contrast": 0.7725,
+                "edgeDensity": 0.0484,
+                "centerBalance": 0.9504,
+                "visualMass": 0.2393,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.7725,
+                    "edgeDensity": 0.2025,
+                    "luminanceSpread": 0.4486
+                  },
+                  "40": {
+                    "contrast": 0.7686,
+                    "edgeDensity": 0.255,
+                    "luminanceSpread": 0.4411
+                  },
+                  "29": {
+                    "contrast": 0.7373,
+                    "edgeDensity": 0.3234,
+                    "luminanceSpread": 0.428
+                  },
+                  "20": {
+                    "contrast": 0.6353,
+                    "edgeDensity": 0.39,
+                    "luminanceSpread": 0.4119
+                  }
+                },
+                "gate": {
+                  "passed": true,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": true,
+                    "smallContrast": true,
+                    "smallComplexity": true,
+                    "centered": true,
+                    "visualWeight": true
+                  }
+                }
+              }
+            }
+          ],
+          "status": "generated",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 317892,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "assets/icons-v4-variations/07-canopy-bt.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 4,
+            "dominantColors": [
+              {
+                "hex": "#124036",
+                "share": 0.3361
+              },
+              {
+                "hex": "#134137",
+                "share": 0.2844
+              },
+              {
+                "hex": "#BC986F",
+                "share": 0.2197
+              },
+              {
+                "hex": "#144038",
+                "share": 0.0825
+              }
+            ],
+            "contrast": 0.7725,
+            "edgeDensity": 0.0484,
+            "centerBalance": 0.9504,
+            "visualMass": 0.2393,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.7725,
+                "edgeDensity": 0.2025,
+                "luminanceSpread": 0.4486
+              },
+              "40": {
+                "contrast": 0.7686,
+                "edgeDensity": 0.255,
+                "luminanceSpread": 0.4411
+              },
+              "29": {
+                "contrast": 0.7373,
+                "edgeDensity": 0.3234,
+                "luminanceSpread": 0.428
+              },
+              "20": {
+                "contrast": 0.6353,
+                "edgeDensity": 0.39,
+                "luminanceSpread": 0.4119
+              }
+            },
+            "gate": {
+              "passed": true,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": true,
+                "smallContrast": true,
+                "smallComplexity": true,
+                "centered": true,
+                "visualWeight": true
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "completedAt": "2026-07-13T17:04:54.614193+00:00"
+}

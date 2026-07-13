@@ -19,3 +19,14 @@ Thirteen icon renders were reviewed to curate the five icon sources on the appro
 - Three icons passed every automated small-size and palette signal.
 - Heartwood Bonsai and BT Editorial Signature passed human legibility review after the automated palette counter treated antialiasing and soft raster texture as extra colors. Both require vector simplification after approval.
 - No production or TestFlight icon has been changed in this exploration round.
+
+## Round 4.1 Targeted Variations
+
+Julian asked to see more range without losing the top five. Five family-level alternatives were generated as a separate comparison group: BT Sprout Cut, Canopy BT, Heartwood Minimal, Offset Heart, and BT Garden Serif.
+
+- A first Canopy BT render looked like loose rocks and a second introduced a forbidden inset field. Both were rejected before the selected full-bleed three-mass canopy.
+- A first heart variation and its correction looked like a medical bandage. The entire bridge concept was rejected and replaced with Offset Heart.
+- The first BT Garden Serif exposed rounded white corners. It was rejected and regenerated as a true full-bleed square source.
+- Offset Heart was regenerated at a larger optical scale after the first clean version felt too light on an app shelf.
+- Five matching lockups were generated after the final alternate icons were selected. All spell **Better Together** exactly.
+- The supplemental pass produced 16 renders and 10 final review assets. Across Round 4 and 4.1, 34 renders were reviewed to curate 10 complete identity systems and 20 final icon/lockup files.

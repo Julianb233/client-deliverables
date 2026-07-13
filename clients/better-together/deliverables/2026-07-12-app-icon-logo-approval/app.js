@@ -12,6 +12,7 @@ let state = {
 };
 
 const grid = document.getElementById("conceptGrid");
+const variationGrid = document.getElementById("variationGrid");
 
 function escapeHtml(value = "") {
   return String(value)
@@ -76,14 +77,17 @@ function sizeSample(file, size, label) {
 function conceptCard(concept) {
   const review = reviewFor(concept.id);
   const status = review.status || "undecided";
-  const file = `${concept.file}?v=round4`;
-  const lockup = `${concept.lockup}?v=round4`;
+  const file = `${concept.file}?v=round4-1`;
+  const lockup = `${concept.lockup}?v=round4-1`;
   const layers = concept.layers.map((item) => `<span>${escapeHtml(item)}</span>`).join("");
+  const variantLabel = concept.variantOf
+    ? `<p class="variant-of"><i data-lucide="git-branch"></i>Variation of ${escapeHtml(concept.variantOf)}</p>`
+    : "";
   const statusButton = (value, label) => `
     <button type="button" data-action="decision" data-id="${concept.id}" data-status="${value}" class="${review.status === value ? "active" : ""}" aria-pressed="${review.status === value}">${label}</button>`;
 
   return `
-    <article class="concept-card" data-status="${status}" data-concept="${concept.id}">
+    <article class="concept-card ${concept.variantOf ? "is-variation" : ""}" data-status="${status}" data-concept="${concept.id}">
       <div class="concept-image-stage">
         <img src="${file}" alt="${escapeHtml(concept.name)} app icon concept" width="1024" height="1024">
         <span class="concept-number">${concept.number}</span>
@@ -92,6 +96,7 @@ function conceptCard(concept) {
       <div class="concept-content">
         <p class="family-label">${escapeHtml(concept.family)}</p>
         <h3>${escapeHtml(concept.name)}</h3>
+        ${variantLabel}
         <p class="concept-idea">${escapeHtml(concept.idea)}</p>
 
         <div class="metric-row" aria-label="Measured icon signals">
@@ -166,10 +171,15 @@ function conceptCard(concept) {
 
 function render() {
   const visible = concepts.filter(matchesFilters);
-  grid.innerHTML = visible.length
-    ? visible.map(conceptCard).join("")
+  const primaryVisible = visible.filter((concept) => !concept.variantOf);
+  const variationVisible = visible.filter((concept) => concept.variantOf);
+  grid.innerHTML = primaryVisible.length
+    ? primaryVisible.map(conceptCard).join("")
     : '<p class="empty-state">No concepts match these filters.</p>';
-  document.getElementById("visibleCount").textContent = `${visible.length} concept${visible.length === 1 ? "" : "s"}`;
+  variationGrid.innerHTML = variationVisible.length
+    ? variationVisible.map(conceptCard).join("")
+    : '<p class="empty-state">No variations match these filters.</p>';
+  document.getElementById("visibleCount").textContent = `${visible.length} choice${visible.length === 1 ? "" : "s"}`;
   document.querySelector(".decision-total span").textContent = `of ${concepts.length} decided`;
   if (window.lucide) lucide.createIcons();
   decorateButtons();
@@ -225,7 +235,7 @@ function reviewSummary() {
   });
 
   return [
-    "Better Together identity review - Round 4",
+    "Better Together identity review - Round 4.1",
     state.reviewer ? `Reviewer: ${state.reviewer}` : "",
     `Approved: ${groups.approve.join("; ") || "None"}`,
     `Needs changes: ${groups.revise.join("; ") || "None"}`,
@@ -269,11 +279,11 @@ async function shareReview() {
 
 function downloadReview() {
   saveState();
-  const payload = { project: "Better Together", board: "BT, Heart, and Bonsai Identity Approval - Round 4", exportedAt: new Date().toISOString(), ...state };
+  const payload = { project: "Better Together", board: "BT, Heart, and Bonsai Identity Approval - Round 4.1", exportedAt: new Date().toISOString(), ...state };
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
   const anchor = document.createElement("a");
   anchor.href = URL.createObjectURL(blob);
-  anchor.download = "better-together-identity-round4-review.json";
+  anchor.download = "better-together-identity-round4-1-review.json";
   anchor.click();
   URL.revokeObjectURL(anchor.href);
   showToast("Review downloaded.");
@@ -287,19 +297,24 @@ function showToast(message) {
   toastTimer = setTimeout(() => toast.classList.remove("visible"), 2400);
 }
 
-grid.addEventListener("click", (event) => {
+function handleGridClick(event) {
   const button = event.target.closest("button[data-action]");
   if (!button) return;
   if (button.dataset.action === "decision") updateDecision(button.dataset.id, button.dataset.status);
   if (button.dataset.action === "favorite") updateFavorite(button.dataset.id);
   if (button.dataset.action === "motion") playMotion(button);
-});
+}
 
-grid.addEventListener("input", (event) => {
+function handleGridInput(event) {
   if (event.target.dataset.action !== "note") return;
   const current = reviewFor(event.target.dataset.id);
   state.decisions[event.target.dataset.id] = { ...current, note: event.target.value };
   saveState();
+}
+
+[grid, variationGrid].forEach((targetGrid) => {
+  targetGrid.addEventListener("click", handleGridClick);
+  targetGrid.addEventListener("input", handleGridInput);
 });
 
 document.getElementById("familyFilters").addEventListener("click", (event) => {
@@ -343,7 +358,7 @@ document.getElementById("resetReview").addEventListener("click", () => {
   showToast("Review reset.");
 });
 
-fetch("concepts-v4.json?v=4")
+fetch("concepts-v4.json?v=4.1")
   .then((response) => {
     if (!response.ok) throw new Error(`Concept manifest failed: ${response.status}`);
     return response.json();
@@ -356,7 +371,9 @@ fetch("concepts-v4.json?v=4")
     render();
   })
   .catch((error) => {
-    grid.innerHTML = `<p class="empty-state">The concept list could not load. ${escapeHtml(error.message)}</p>`;
+    const message = `<p class="empty-state">The concept list could not load. ${escapeHtml(error.message)}</p>`;
+    grid.innerHTML = message;
+    variationGrid.innerHTML = message;
   });
 
 decorateButtons();

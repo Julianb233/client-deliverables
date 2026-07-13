@@ -1,0 +1,174 @@
+{
+  "version": "4.1",
+  "model": "gemini-3-pro-image-preview",
+  "startedAt": "2026-07-13T17:07:34.992483+00:00",
+  "phases": [
+    {
+      "phase": "icons",
+      "assets": [
+        {
+          "id": "bt-garden-serif",
+          "name": "BT Garden Serif",
+          "output": "assets/icons-v4-variations/10-bt-garden-serif.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity variations - Round 4.1 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic, wedding product, or dating app.\n- Style: premium editorial wellness identity; confident, memorable, warm, modern; crisp flat vector-master geometry with slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to five foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached approved-family source only to preserve its Better Together identity territory, warm palette, optical weight, and human-cut edge character. Create materially different geometry. Do not trace, duplicate, or merely recolor the attached mark.\n\n## Direction - BT Garden Serif\n- Background: full-bleed coral #E5533A.\n- Main mark: exact uppercase \"BT\" as two separate custom high-contrast serif letters occupying the central 58 percent.\n- B: warm paper #FAF8F5, sturdy, with two generous counters and softly tapered bowls.\n- T: deep forest #113B36, slightly taller, with a broad horizontal cap and centered tapered stem.\n- Growth detail: ONLY the far-right terminal of the T cap becomes one restrained saffron #D99A3D leaf shape. It is part of the T crossbar, not floating decoration.\n- Accent: one small warm-paper period sits below and right of the T stem.\n- MUST read as exact BT first and editorial growth second.\n- NO overlap, bridge, other text, extra leaves, tree, heart, ring, badge, script, swashes, or border.\n\n## Required correction\n\nThe previous render was rejected because: The output was incorrectly pre-rounded and exposed white corners. Coral must fill every pixel and all four square corners with no mask, radius, margin, border, or inset tile. Keep the readable serif BT centered inside an 18 percent safe margin, with one small saffron leaf terminal and one paper period.\n\nCorrect that failure while preserving the named direction, palette, and app-icon composition. Produce a materially cleaner replacement.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4-variations/10-bt-garden-serif.png\", \"size_bytes\": 286050, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/05-bt-editorial-signature.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 286050,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "assets/icons-v4-variations/10-bt-garden-serif.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 4,
+                "dominantColors": [
+                  {
+                    "hex": "#E05035",
+                    "share": 0.704
+                  },
+                  {
+                    "hex": "#F6F4EF",
+                    "share": 0.0903
+                  },
+                  {
+                    "hex": "#734332",
+                    "share": 0.0558
+                  },
+                  {
+                    "hex": "#E05036",
+                    "share": 0.0352
+                  }
+                ],
+                "contrast": 0.7255,
+                "edgeDensity": 0.046,
+                "centerBalance": 0.9362,
+                "visualMass": 0.1738,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.6314,
+                    "edgeDensity": 0.1814,
+                    "luminanceSpread": 0.3088
+                  },
+                  "40": {
+                    "contrast": 0.6275,
+                    "edgeDensity": 0.2787,
+                    "luminanceSpread": 0.3021
+                  },
+                  "29": {
+                    "contrast": 0.6,
+                    "edgeDensity": 0.3008,
+                    "luminanceSpread": 0.293
+                  },
+                  "20": {
+                    "contrast": 0.5373,
+                    "edgeDensity": 0.3875,
+                    "luminanceSpread": 0.2862
+                  }
+                },
+                "gate": {
+                  "passed": true,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": true,
+                    "smallContrast": true,
+                    "smallComplexity": true,
+                    "centered": true,
+                    "visualWeight": true
+                  }
+                }
+              }
+            }
+          ],
+          "status": "generated",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 286050,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "assets/icons-v4-variations/10-bt-garden-serif.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 4,
+            "dominantColors": [
+              {
+                "hex": "#E05035",
+                "share": 0.704
+              },
+              {
+                "hex": "#F6F4EF",
+                "share": 0.0903
+              },
+              {
+                "hex": "#734332",
+                "share": 0.0558
+              },
+              {
+                "hex": "#E05036",
+                "share": 0.0352
+              }
+            ],
+            "contrast": 0.7255,
+            "edgeDensity": 0.046,
+            "centerBalance": 0.9362,
+            "visualMass": 0.1738,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.6314,
+                "edgeDensity": 0.1814,
+                "luminanceSpread": 0.3088
+              },
+              "40": {
+                "contrast": 0.6275,
+                "edgeDensity": 0.2787,
+                "luminanceSpread": 0.3021
+              },
+              "29": {
+                "contrast": 0.6,
+                "edgeDensity": 0.3008,
+                "luminanceSpread": 0.293
+              },
+              "20": {
+                "contrast": 0.5373,
+                "edgeDensity": 0.3875,
+                "luminanceSpread": 0.2862
+              }
+            },
+            "gate": {
+              "passed": true,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": true,
+                "smallContrast": true,
+                "smallComplexity": true,
+                "centered": true,
+                "visualWeight": true
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "completedAt": "2026-07-13T17:07:56.021381+00:00"
+}

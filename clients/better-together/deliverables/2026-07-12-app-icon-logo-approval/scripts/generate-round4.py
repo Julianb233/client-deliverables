@@ -156,7 +156,11 @@ def main() -> None:
         for concept in selected:
             is_icon = phase == "icons"
             output = args.project_dir / concept["iconOutput" if is_icon else "lockupOutput"]
-            reference = style_reference if is_icon else args.project_dir / concept["iconOutput"]
+            reference = (
+                args.project_dir / concept.get("styleReference", config["styleReference"])
+                if is_icon
+                else args.project_dir / concept["iconOutput"]
+            )
             if not reference.exists():
                 raise RuntimeError(f"Missing reference for {concept['id']}: {reference}")
             output.parent.mkdir(parents=True, exist_ok=True)

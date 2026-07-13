@@ -1,0 +1,182 @@
+{
+  "version": "4.1",
+  "model": "gemini-3-pro-image-preview",
+  "startedAt": "2026-07-13T17:06:43.425948+00:00",
+  "phases": [
+    {
+      "phase": "icons",
+      "assets": [
+        {
+          "id": "offset-heart",
+          "name": "Offset Heart",
+          "output": "assets/icons-v4-variations/09-offset-heart.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity variations - Round 4.1 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic, wedding product, or dating app.\n- Style: premium editorial wellness identity; confident, memorable, warm, modern; crisp flat vector-master geometry with slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to five foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached approved-family source only to preserve its Better Together identity territory, warm palette, optical weight, and human-cut edge character. Create materially different geometry. Do not trace, duplicate, or merely recolor the attached mark.\n\n## Direction - Offset Heart\n- Background: full-bleed warm paper #FAF8F5.\n- Main mark: one unmistakable upright heart constructed from TWO separate thick organic strokes in the central 60 percent.\n- Left stroke: coral #E5533A forms the left lobe and lower-left side, beginning slightly lower than the right stroke and ending before the bottom point.\n- Right stroke: deep forest #113B36 forms the right lobe and lower-right side, beginning slightly higher than the left stroke and ending before the bottom point.\n- Separation: leave one clean diagonal negative-space channel between the two halves from upper center toward lower center. The halves never touch and contain no horizontal connector.\n- Accent: one small solid saffron #D99A3D diamond floats in the diagonal channel just below center. It is a simple four-sided diamond, not a pill, bandage, dash, capsule, or outline.\n- The total outer silhouette MUST read as a heart immediately.\n- NO bridge, bar, capsule, pill, medical symbol, white outline, letters, pulse line, infinity, chain, arrow, ring, hands, faces, extra hearts, border, or badge.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4-variations/09-offset-heart.png\", \"size_bytes\": 315872, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/04-open-heart-pair.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 315872,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "assets/icons-v4-variations/09-offset-heart.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 5,
+                "dominantColors": [
+                  {
+                    "hex": "#F7F4EF",
+                    "share": 0.4881
+                  },
+                  {
+                    "hex": "#F7F5EF",
+                    "share": 0.2497
+                  },
+                  {
+                    "hex": "#856D5A",
+                    "share": 0.139
+                  },
+                  {
+                    "hex": "#F7F4ED",
+                    "share": 0.0468
+                  },
+                  {
+                    "hex": "#F6F4EF",
+                    "share": 0.0431
+                  }
+                ],
+                "contrast": 0.7765,
+                "edgeDensity": 0.0412,
+                "centerBalance": 0.9611,
+                "visualMass": 0.1538,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.7765,
+                    "edgeDensity": 0.1767,
+                    "luminanceSpread": 0.4391
+                  },
+                  "40": {
+                    "contrast": 0.7922,
+                    "edgeDensity": 0.2506,
+                    "luminanceSpread": 0.4319
+                  },
+                  "29": {
+                    "contrast": 0.6824,
+                    "edgeDensity": 0.3199,
+                    "luminanceSpread": 0.4246
+                  },
+                  "20": {
+                    "contrast": 0.6157,
+                    "edgeDensity": 0.455,
+                    "luminanceSpread": 0.4125
+                  }
+                },
+                "gate": {
+                  "passed": false,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": true,
+                    "smallContrast": true,
+                    "smallComplexity": true,
+                    "centered": true,
+                    "visualWeight": false
+                  }
+                }
+              }
+            }
+          ],
+          "status": "needs-human-review",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 315872,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "assets/icons-v4-variations/09-offset-heart.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 5,
+            "dominantColors": [
+              {
+                "hex": "#F7F4EF",
+                "share": 0.4881
+              },
+              {
+                "hex": "#F7F5EF",
+                "share": 0.2497
+              },
+              {
+                "hex": "#856D5A",
+                "share": 0.139
+              },
+              {
+                "hex": "#F7F4ED",
+                "share": 0.0468
+              },
+              {
+                "hex": "#F6F4EF",
+                "share": 0.0431
+              }
+            ],
+            "contrast": 0.7765,
+            "edgeDensity": 0.0412,
+            "centerBalance": 0.9611,
+            "visualMass": 0.1538,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.7765,
+                "edgeDensity": 0.1767,
+                "luminanceSpread": 0.4391
+              },
+              "40": {
+                "contrast": 0.7922,
+                "edgeDensity": 0.2506,
+                "luminanceSpread": 0.4319
+              },
+              "29": {
+                "contrast": 0.6824,
+                "edgeDensity": 0.3199,
+                "luminanceSpread": 0.4246
+              },
+              "20": {
+                "contrast": 0.6157,
+                "edgeDensity": 0.455,
+                "luminanceSpread": 0.4125
+              }
+            },
+            "gate": {
+              "passed": false,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": true,
+                "smallContrast": true,
+                "smallComplexity": true,
+                "centered": true,
+                "visualWeight": false
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "completedAt": "2026-07-13T17:07:05.810421+00:00"
+}

@@ -1,0 +1,218 @@
+{
+  "version": "4.1",
+  "model": "gemini-3-pro-image-preview",
+  "startedAt": "2026-07-13T17:09:58.037119+00:00",
+  "phases": [
+    {
+      "phase": "lockups",
+      "assets": [
+        {
+          "id": "bt-sprout-cut",
+          "name": "BT Sprout Cut",
+          "output": "assets/lockups-v4-variations/06-bt-sprout-cut-lockup.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity variation lockup - Round 4.1\n- Use the attached generated variation as the exact visual anchor. Preserve its mark, palette, proportions, and edge character.\n- Deliverable: ONE clean square identity presentation on a full-bleed warm-paper #FAF8F5 background.\n- Layout: a generous horizontal logo lockup centered in the canvas; icon at left occupies about 27 percent of the width; wordmark at right occupies about 52 percent; large clear margins.\n- Required text: render the exact title-case words \"Better Together\" once and only once. Spell both words perfectly.\n- Typography: custom editorial wordmark with confident human warmth, precise spacing, and no generic software-default appearance.\n- Colors: deep forest #113B36 wordmark with one restrained coral #E5533A or saffron #D99A3D detail only when specified.\n- NO tagline, slogan, extra initials, labels, captions, mockup devices, app-store badge, gradients, shadows, 3D, border, or additional copy.\n\n- Wordmark treatment: sturdy rounded serif with subtle organic terminals, arranged on two lines with Better above Together.\n- Keep the exact icon at left.\n- Use deep forest words with coral capital B and T.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/lockups-v4-variations/06-bt-sprout-cut-lockup.png\", \"size_bytes\": 320385, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4-variations/06-bt-sprout-cut.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 320385,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": null
+            }
+          ],
+          "status": "generated",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 320385,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": null
+        },
+        {
+          "id": "canopy-bt",
+          "name": "Canopy BT",
+          "output": "assets/lockups-v4-variations/07-canopy-bt-lockup.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity variation lockup - Round 4.1\n- Use the attached generated variation as the exact visual anchor. Preserve its mark, palette, proportions, and edge character.\n- Deliverable: ONE clean square identity presentation on a full-bleed warm-paper #FAF8F5 background.\n- Layout: a generous horizontal logo lockup centered in the canvas; icon at left occupies about 27 percent of the width; wordmark at right occupies about 52 percent; large clear margins.\n- Required text: render the exact title-case words \"Better Together\" once and only once. Spell both words perfectly.\n- Typography: custom editorial wordmark with confident human warmth, precise spacing, and no generic software-default appearance.\n- Colors: deep forest #113B36 wordmark with one restrained coral #E5533A or saffron #D99A3D detail only when specified.\n- NO tagline, slogan, extra initials, labels, captions, mockup devices, app-store badge, gradients, shadows, 3D, border, or additional copy.\n\n- Wordmark treatment: compact humanist sans with flared terminals and generous tracking.\n- Keep the exact icon at left. Set Better Together on one line.\n- Use deep forest words with one saffron seed dot after Together.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/lockups-v4-variations/07-canopy-bt-lockup.png\", \"size_bytes\": 352045, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4-variations/07-canopy-bt.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 352045,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": null
+            }
+          ],
+          "status": "generated",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 352045,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": null
+        },
+        {
+          "id": "heartwood-minimal",
+          "name": "Heartwood Minimal",
+          "output": "assets/lockups-v4-variations/08-heartwood-minimal-lockup.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity variation lockup - Round 4.1\n- Use the attached generated variation as the exact visual anchor. Preserve its mark, palette, proportions, and edge character.\n- Deliverable: ONE clean square identity presentation on a full-bleed warm-paper #FAF8F5 background.\n- Layout: a generous horizontal logo lockup centered in the canvas; icon at left occupies about 27 percent of the width; wordmark at right occupies about 52 percent; large clear margins.\n- Required text: render the exact title-case words \"Better Together\" once and only once. Spell both words perfectly.\n- Typography: custom editorial wordmark with confident human warmth, precise spacing, and no generic software-default appearance.\n- Colors: deep forest #113B36 wordmark with one restrained coral #E5533A or saffron #D99A3D detail only when specified.\n- NO tagline, slogan, extra initials, labels, captions, mockup devices, app-store badge, gradients, shadows, 3D, border, or additional copy.\n\n- Wordmark treatment: quiet warm serif with generous counters and restrained contrast.\n- Keep the exact icon at left. Set Better Together on two lines.\n- Use deep forest words and coral only for the capital B.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/lockups-v4-variations/08-heartwood-minimal-lockup.png\", \"size_bytes\": 195091, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4-variations/08-heartwood-minimal.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 195091,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": null
+            }
+          ],
+          "status": "generated",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 195091,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": null
+        },
+        {
+          "id": "offset-heart",
+          "name": "Offset Heart",
+          "output": "assets/lockups-v4-variations/09-offset-heart-lockup.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity variation lockup - Round 4.1\n- Use the attached generated variation as the exact visual anchor. Preserve its mark, palette, proportions, and edge character.\n- Deliverable: ONE clean square identity presentation on a full-bleed warm-paper #FAF8F5 background.\n- Layout: a generous horizontal logo lockup centered in the canvas; icon at left occupies about 27 percent of the width; wordmark at right occupies about 52 percent; large clear margins.\n- Required text: render the exact title-case words \"Better Together\" once and only once. Spell both words perfectly.\n- Typography: custom editorial wordmark with confident human warmth, precise spacing, and no generic software-default appearance.\n- Colors: deep forest #113B36 wordmark with one restrained coral #E5533A or saffron #D99A3D detail only when specified.\n- NO tagline, slogan, extra initials, labels, captions, mockup devices, app-store badge, gradients, shadows, 3D, border, or additional copy.\n\n- Wordmark treatment: modern humanist sans with slightly offset capital baselines.\n- Keep the exact icon at left. Set Better Together on one line.\n- Use deep forest for Better and coral for Together with one saffron diamond after the name.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/lockups-v4-variations/09-offset-heart-lockup.png\", \"size_bytes\": 221740, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4-variations/09-offset-heart.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 221740,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": null
+            }
+          ],
+          "status": "generated",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 221740,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": null
+        },
+        {
+          "id": "bt-garden-serif",
+          "name": "BT Garden Serif",
+          "output": "assets/lockups-v4-variations/10-bt-garden-serif-lockup.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity variation lockup - Round 4.1\n- Use the attached generated variation as the exact visual anchor. Preserve its mark, palette, proportions, and edge character.\n- Deliverable: ONE clean square identity presentation on a full-bleed warm-paper #FAF8F5 background.\n- Layout: a generous horizontal logo lockup centered in the canvas; icon at left occupies about 27 percent of the width; wordmark at right occupies about 52 percent; large clear margins.\n- Required text: render the exact title-case words \"Better Together\" once and only once. Spell both words perfectly.\n- Typography: custom editorial wordmark with confident human warmth, precise spacing, and no generic software-default appearance.\n- Colors: deep forest #113B36 wordmark with one restrained coral #E5533A or saffron #D99A3D detail only when specified.\n- NO tagline, slogan, extra initials, labels, captions, mockup devices, app-store badge, gradients, shadows, 3D, border, or additional copy.\n\n- Wordmark treatment: custom warm high-contrast serif derived from the attached BT, with the restrained leaf terminal repeated once on the final r.\n- Keep the exact icon at left. Set Better Together on one line.\n- Use deep forest words with coral capital B and T and one saffron period.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/lockups-v4-variations/10-bt-garden-serif-lockup.png\", \"size_bytes\": 569940, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4-variations/10-bt-garden-serif.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 569940,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": null
+            }
+          ],
+          "status": "generated",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 569940,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": null
+        }
+      ]
+    }
+  ],
+  "completedAt": "2026-07-13T17:11:39.941266+00:00"
+}

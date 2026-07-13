@@ -1,0 +1,850 @@
+{
+  "version": "4.1",
+  "model": "gemini-3-pro-image-preview",
+  "startedAt": "2026-07-13T17:01:23.511266+00:00",
+  "phases": [
+    {
+      "phase": "icons",
+      "assets": [
+        {
+          "id": "bt-sprout-cut",
+          "name": "BT Sprout Cut",
+          "output": "assets/icons-v4-variations/06-bt-sprout-cut.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity variations - Round 4.1 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic, wedding product, or dating app.\n- Style: premium editorial wellness identity; confident, memorable, warm, modern; crisp flat vector-master geometry with slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to five foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached approved-family source only to preserve its Better Together identity territory, warm palette, optical weight, and human-cut edge character. Create materially different geometry. Do not trace, duplicate, or merely recolor the attached mark.\n\n## Direction - BT Sprout Cut\n- Background: full-bleed coral #E5533A.\n- Main mark: the exact uppercase letters \"BT\" occupying the central 62 percent, built from TWO broad organic cut-paper shapes rather than conventional typed letters.\n- B: warm paper #FAF8F5 at left with one sturdy spine and two unmistakable open counters cut deeply into its right edge.\n- T: deep forest #113B36 at right with a broad top cap and a slightly curved growing stem. The T remains fully readable and does not overlap the B.\n- Shared detail: the B and T stop with a narrow deliberate gap between them. One compact saffron #D99A3D two-leaf sprout rises from that gap at mid-height.\n- MUST read as exact BT first.\n- NO ring, circle node, badge, tree, heart, lowercase, script, extra letters, flower, pot, roots, or outline.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4-variations/06-bt-sprout-cut.png\", \"size_bytes\": 319466, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/01-bt-living-ligature.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 319466,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "assets/icons-v4-variations/06-bt-sprout-cut.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 4,
+                "dominantColors": [
+                  {
+                    "hex": "#E45439",
+                    "share": 0.4608
+                  },
+                  {
+                    "hex": "#E25438",
+                    "share": 0.1827
+                  },
+                  {
+                    "hex": "#F9F6EF",
+                    "share": 0.148
+                  },
+                  {
+                    "hex": "#574334",
+                    "share": 0.0979
+                  }
+                ],
+                "contrast": 0.7725,
+                "edgeDensity": 0.0468,
+                "centerBalance": 0.9215,
+                "visualMass": 0.2822,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.7765,
+                    "edgeDensity": 0.1894,
+                    "luminanceSpread": 0.3941
+                  },
+                  "40": {
+                    "contrast": 0.7804,
+                    "edgeDensity": 0.2869,
+                    "luminanceSpread": 0.3899
+                  },
+                  "29": {
+                    "contrast": 0.7843,
+                    "edgeDensity": 0.3603,
+                    "luminanceSpread": 0.3854
+                  },
+                  "20": {
+                    "contrast": 0.7569,
+                    "edgeDensity": 0.4375,
+                    "luminanceSpread": 0.3756
+                  }
+                },
+                "gate": {
+                  "passed": true,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": true,
+                    "smallContrast": true,
+                    "smallComplexity": true,
+                    "centered": true,
+                    "visualWeight": true
+                  }
+                }
+              }
+            }
+          ],
+          "status": "generated",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 319466,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "assets/icons-v4-variations/06-bt-sprout-cut.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 4,
+            "dominantColors": [
+              {
+                "hex": "#E45439",
+                "share": 0.4608
+              },
+              {
+                "hex": "#E25438",
+                "share": 0.1827
+              },
+              {
+                "hex": "#F9F6EF",
+                "share": 0.148
+              },
+              {
+                "hex": "#574334",
+                "share": 0.0979
+              }
+            ],
+            "contrast": 0.7725,
+            "edgeDensity": 0.0468,
+            "centerBalance": 0.9215,
+            "visualMass": 0.2822,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.7765,
+                "edgeDensity": 0.1894,
+                "luminanceSpread": 0.3941
+              },
+              "40": {
+                "contrast": 0.7804,
+                "edgeDensity": 0.2869,
+                "luminanceSpread": 0.3899
+              },
+              "29": {
+                "contrast": 0.7843,
+                "edgeDensity": 0.3603,
+                "luminanceSpread": 0.3854
+              },
+              "20": {
+                "contrast": 0.7569,
+                "edgeDensity": 0.4375,
+                "luminanceSpread": 0.3756
+              }
+            },
+            "gate": {
+              "passed": true,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": true,
+                "smallContrast": true,
+                "smallComplexity": true,
+                "centered": true,
+                "visualWeight": true
+              }
+            }
+          }
+        },
+        {
+          "id": "canopy-bt",
+          "name": "Canopy BT",
+          "output": "assets/icons-v4-variations/07-canopy-bt.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity variations - Round 4.1 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic, wedding product, or dating app.\n- Style: premium editorial wellness identity; confident, memorable, warm, modern; crisp flat vector-master geometry with slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to five foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached approved-family source only to preserve its Better Together identity territory, warm palette, optical weight, and human-cut edge character. Create materially different geometry. Do not trace, duplicate, or merely recolor the attached mark.\n\n## Direction - Canopy BT\n- Background: full-bleed deep forest #113B36.\n- Main mark: exact uppercase \"BT\" centered in the lower-middle of the canvas, occupying 58 percent width and clearly readable.\n- B: warm paper #FAF8F5, bold, compact, with two large counters.\n- T: coral #E5533A, bold, compact, with its vertical stem aligned beside the B and no overlap.\n- Canopy: exactly three substantial saffron #D99A3D blunt leaf masses form one low asymmetrical bonsai crown across the top of BOTH letters, with a visible gap above each letter so the canopy is not a hat or accent mark.\n- Seed: one small warm-paper circular seed sits in the negative gap between B and T near the baseline.\n- NO pot, roots, ground line, ring, badge, heart, text beyond BT, tiny leaf scatter, cloud, broccoli, or enclosing shape.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4-variations/07-canopy-bt.png\", \"size_bytes\": 289396, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/02-rooted-bt.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 289396,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "assets/icons-v4-variations/07-canopy-bt.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 5,
+                "dominantColors": [
+                  {
+                    "hex": "#143D35",
+                    "share": 0.5338
+                  },
+                  {
+                    "hex": "#946239",
+                    "share": 0.1399
+                  },
+                  {
+                    "hex": "#143D36",
+                    "share": 0.1338
+                  },
+                  {
+                    "hex": "#E7D3AC",
+                    "share": 0.0876
+                  },
+                  {
+                    "hex": "#133D35",
+                    "share": 0.036
+                  }
+                ],
+                "contrast": 0.7765,
+                "edgeDensity": 0.0479,
+                "centerBalance": 0.942,
+                "visualMass": 0.2416,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.7765,
+                    "edgeDensity": 0.2056,
+                    "luminanceSpread": 0.4655
+                  },
+                  "40": {
+                    "contrast": 0.7882,
+                    "edgeDensity": 0.2694,
+                    "luminanceSpread": 0.4573
+                  },
+                  "29": {
+                    "contrast": 0.7333,
+                    "edgeDensity": 0.3401,
+                    "luminanceSpread": 0.4447
+                  },
+                  "20": {
+                    "contrast": 0.6902,
+                    "edgeDensity": 0.4025,
+                    "luminanceSpread": 0.4305
+                  }
+                },
+                "gate": {
+                  "passed": true,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": true,
+                    "smallContrast": true,
+                    "smallComplexity": true,
+                    "centered": true,
+                    "visualWeight": true
+                  }
+                }
+              }
+            }
+          ],
+          "status": "generated",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 289396,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "assets/icons-v4-variations/07-canopy-bt.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 5,
+            "dominantColors": [
+              {
+                "hex": "#143D35",
+                "share": 0.5338
+              },
+              {
+                "hex": "#946239",
+                "share": 0.1399
+              },
+              {
+                "hex": "#143D36",
+                "share": 0.1338
+              },
+              {
+                "hex": "#E7D3AC",
+                "share": 0.0876
+              },
+              {
+                "hex": "#133D35",
+                "share": 0.036
+              }
+            ],
+            "contrast": 0.7765,
+            "edgeDensity": 0.0479,
+            "centerBalance": 0.942,
+            "visualMass": 0.2416,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.7765,
+                "edgeDensity": 0.2056,
+                "luminanceSpread": 0.4655
+              },
+              "40": {
+                "contrast": 0.7882,
+                "edgeDensity": 0.2694,
+                "luminanceSpread": 0.4573
+              },
+              "29": {
+                "contrast": 0.7333,
+                "edgeDensity": 0.3401,
+                "luminanceSpread": 0.4447
+              },
+              "20": {
+                "contrast": 0.6902,
+                "edgeDensity": 0.4025,
+                "luminanceSpread": 0.4305
+              }
+            },
+            "gate": {
+              "passed": true,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": true,
+                "smallContrast": true,
+                "smallComplexity": true,
+                "centered": true,
+                "visualWeight": true
+              }
+            }
+          }
+        },
+        {
+          "id": "heartwood-minimal",
+          "name": "Heartwood Minimal",
+          "output": "assets/icons-v4-variations/08-heartwood-minimal.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity variations - Round 4.1 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic, wedding product, or dating app.\n- Style: premium editorial wellness identity; confident, memorable, warm, modern; crisp flat vector-master geometry with slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to five foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached approved-family source only to preserve its Better Together identity territory, warm palette, optical weight, and human-cut edge character. Create materially different geometry. Do not trace, duplicate, or merely recolor the attached mark.\n\n## Direction - Heartwood Minimal\n- Background: full-bleed warm paper #FAF8F5.\n- Main mark: an extremely reduced bonsai-heart symbol occupying the central 58 percent.\n- Trunks: one thick coral #E5533A stroke rises from the lower left and one thick deep-forest #113B36 stroke rises from the lower right. They remain separate at the base, curve inward once, and then open outward.\n- Heart: the negative space between the inward curves forms one large, perfectly legible upright heart. Do not draw or fill the heart separately.\n- Leaves: exactly three large saffron #D99A3D leaf shapes sit above the trunks as a sparse asymmetrical crown, one left, one high center, one right.\n- Use only five foreground shapes total: two trunks and three leaves.\n- NO letters, pot, ground line, roots, extra leaves, extra heart, circle, canopy cloud, ring, badge, or scenery.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4-variations/08-heartwood-minimal.png\", \"size_bytes\": 331617, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/03-heartwood-bonsai.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 331617,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "assets/icons-v4-variations/08-heartwood-minimal.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 6,
+                "dominantColors": [
+                  {
+                    "hex": "#F7F6F1",
+                    "share": 0.5479
+                  },
+                  {
+                    "hex": "#F6F6F1",
+                    "share": 0.1224
+                  },
+                  {
+                    "hex": "#E0BD84",
+                    "share": 0.108
+                  },
+                  {
+                    "hex": "#8C5C3B",
+                    "share": 0.0922
+                  },
+                  {
+                    "hex": "#F7F8F3",
+                    "share": 0.0477
+                  }
+                ],
+                "contrast": 0.4784,
+                "edgeDensity": 0.0505,
+                "centerBalance": 0.9903,
+                "visualMass": 0.2113,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.5176,
+                    "edgeDensity": 0.205,
+                    "luminanceSpread": 0.3832
+                  },
+                  "40": {
+                    "contrast": 0.5137,
+                    "edgeDensity": 0.2969,
+                    "luminanceSpread": 0.3745
+                  },
+                  "29": {
+                    "contrast": 0.4941,
+                    "edgeDensity": 0.3769,
+                    "luminanceSpread": 0.3646
+                  },
+                  "20": {
+                    "contrast": 0.5176,
+                    "edgeDensity": 0.4775,
+                    "luminanceSpread": 0.3376
+                  }
+                },
+                "gate": {
+                  "passed": false,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": false,
+                    "smallContrast": true,
+                    "smallComplexity": true,
+                    "centered": true,
+                    "visualWeight": true
+                  }
+                }
+              }
+            }
+          ],
+          "status": "needs-human-review",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 331617,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "assets/icons-v4-variations/08-heartwood-minimal.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 6,
+            "dominantColors": [
+              {
+                "hex": "#F7F6F1",
+                "share": 0.5479
+              },
+              {
+                "hex": "#F6F6F1",
+                "share": 0.1224
+              },
+              {
+                "hex": "#E0BD84",
+                "share": 0.108
+              },
+              {
+                "hex": "#8C5C3B",
+                "share": 0.0922
+              },
+              {
+                "hex": "#F7F8F3",
+                "share": 0.0477
+              }
+            ],
+            "contrast": 0.4784,
+            "edgeDensity": 0.0505,
+            "centerBalance": 0.9903,
+            "visualMass": 0.2113,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.5176,
+                "edgeDensity": 0.205,
+                "luminanceSpread": 0.3832
+              },
+              "40": {
+                "contrast": 0.5137,
+                "edgeDensity": 0.2969,
+                "luminanceSpread": 0.3745
+              },
+              "29": {
+                "contrast": 0.4941,
+                "edgeDensity": 0.3769,
+                "luminanceSpread": 0.3646
+              },
+              "20": {
+                "contrast": 0.5176,
+                "edgeDensity": 0.4775,
+                "luminanceSpread": 0.3376
+              }
+            },
+            "gate": {
+              "passed": false,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": false,
+                "smallContrast": true,
+                "smallComplexity": true,
+                "centered": true,
+                "visualWeight": true
+              }
+            }
+          }
+        },
+        {
+          "id": "heart-bridge",
+          "name": "Heart Bridge",
+          "output": "assets/icons-v4-variations/09-heart-bridge.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity variations - Round 4.1 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic, wedding product, or dating app.\n- Style: premium editorial wellness identity; confident, memorable, warm, modern; crisp flat vector-master geometry with slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to five foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached approved-family source only to preserve its Better Together identity territory, warm palette, optical weight, and human-cut edge character. Create materially different geometry. Do not trace, duplicate, or merely recolor the attached mark.\n\n## Direction - Heart Bridge\n- Background: full-bleed warm paper #FAF8F5.\n- Main mark: one unmistakable upright heart constructed from TWO separate thick shapes in the central 60 percent.\n- Left shape: coral #E5533A forms the full left lobe and descends toward the lower center, stopping before the point.\n- Right shape: deep forest #113B36 forms the full right lobe and descends toward the lower center, stopping before the point.\n- The halves do not touch at the top or bottom and remain visibly independent.\n- Connection: one short, thick saffron #D99A3D horizontal bridge spans the center gap at exactly mid-height. Give it softly rounded ends.\n- The total silhouette MUST read as a heart immediately.\n- NO circle seed, letters, pulse line, infinity, chain, arrow, ring, hands, faces, extra hearts, border, or badge.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4-variations/09-heart-bridge.png\", \"size_bytes\": 267820, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/04-open-heart-pair.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 267820,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "assets/icons-v4-variations/09-heart-bridge.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 5,
+                "dominantColors": [
+                  {
+                    "hex": "#F6F5F1",
+                    "share": 0.6068
+                  },
+                  {
+                    "hex": "#E08A6F",
+                    "share": 0.1389
+                  },
+                  {
+                    "hex": "#3F4235",
+                    "share": 0.1185
+                  },
+                  {
+                    "hex": "#F6F5F0",
+                    "share": 0.0587
+                  },
+                  {
+                    "hex": "#F5F5F0",
+                    "share": 0.0435
+                  }
+                ],
+                "contrast": 0.7765,
+                "edgeDensity": 0.038,
+                "centerBalance": 0.984,
+                "visualMass": 0.267,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.7765,
+                    "edgeDensity": 0.1486,
+                    "luminanceSpread": 0.5384
+                  },
+                  "40": {
+                    "contrast": 0.7765,
+                    "edgeDensity": 0.2275,
+                    "luminanceSpread": 0.5332
+                  },
+                  "29": {
+                    "contrast": 0.7843,
+                    "edgeDensity": 0.283,
+                    "luminanceSpread": 0.5276
+                  },
+                  "20": {
+                    "contrast": 0.8,
+                    "edgeDensity": 0.4175,
+                    "luminanceSpread": 0.5134
+                  }
+                },
+                "gate": {
+                  "passed": true,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": true,
+                    "smallContrast": true,
+                    "smallComplexity": true,
+                    "centered": true,
+                    "visualWeight": true
+                  }
+                }
+              }
+            }
+          ],
+          "status": "generated",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 267820,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "assets/icons-v4-variations/09-heart-bridge.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 5,
+            "dominantColors": [
+              {
+                "hex": "#F6F5F1",
+                "share": 0.6068
+              },
+              {
+                "hex": "#E08A6F",
+                "share": 0.1389
+              },
+              {
+                "hex": "#3F4235",
+                "share": 0.1185
+              },
+              {
+                "hex": "#F6F5F0",
+                "share": 0.0587
+              },
+              {
+                "hex": "#F5F5F0",
+                "share": 0.0435
+              }
+            ],
+            "contrast": 0.7765,
+            "edgeDensity": 0.038,
+            "centerBalance": 0.984,
+            "visualMass": 0.267,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.7765,
+                "edgeDensity": 0.1486,
+                "luminanceSpread": 0.5384
+              },
+              "40": {
+                "contrast": 0.7765,
+                "edgeDensity": 0.2275,
+                "luminanceSpread": 0.5332
+              },
+              "29": {
+                "contrast": 0.7843,
+                "edgeDensity": 0.283,
+                "luminanceSpread": 0.5276
+              },
+              "20": {
+                "contrast": 0.8,
+                "edgeDensity": 0.4175,
+                "luminanceSpread": 0.5134
+              }
+            },
+            "gate": {
+              "passed": true,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": true,
+                "smallContrast": true,
+                "smallComplexity": true,
+                "centered": true,
+                "visualWeight": true
+              }
+            }
+          }
+        },
+        {
+          "id": "bt-garden-serif",
+          "name": "BT Garden Serif",
+          "output": "assets/icons-v4-variations/10-bt-garden-serif.png",
+          "attempts": [
+            {
+              "attempt": 1,
+              "prompt": "## Better Together identity variations - Round 4.1 app icon\n- Deliverable: ONE finished square app-icon source, straight-on, centered, and filling the square canvas.\n- Brand meaning: two people intentionally tending one living relationship.\n- Audience: modern couples who want an emotionally intelligent relationship app, not a therapy clinic, wedding product, or dating app.\n- Style: premium editorial wellness identity; confident, memorable, warm, modern; crisp flat vector-master geometry with slight human-cut irregularity; no photorealism.\n- Palette: ONLY warm paper #FAF8F5, coral #E5533A, deep forest #113B36, and saffron #D99A3D.\n- Composition: one dominant centered silhouette; 18 percent optical safe margin; two to five foreground groups; strong contrast and readable geometry at 20 px.\n- Source requirements: TRUE full-bleed square background with every corner filled; NO pre-rounded app-icon mask, rounded-square border, inset tile, transparency, mockup, device, label, caption, or presentation board.\n- Originality: create an original Better Together identity. Do not imitate or reproduce any competitor, trademark, or existing app icon.\n- NO gradients, glow, bevel, 3D, shadows, scenery, landscape, literal people, faces, hands, infinity sign, chain link, puzzle pieces, wedding rings, yin-yang, or decorative border.\n- Text rule: when the direction requests letters, render ONLY the exact uppercase letters \"BT\". When the direction does not request letters, render NO text.\n\nUse the attached approved-family source only to preserve its Better Together identity territory, warm palette, optical weight, and human-cut edge character. Create materially different geometry. Do not trace, duplicate, or merely recolor the attached mark.\n\n## Direction - BT Garden Serif\n- Background: full-bleed coral #E5533A.\n- Main mark: exact uppercase \"BT\" as two separate custom high-contrast serif letters occupying the central 58 percent.\n- B: warm paper #FAF8F5, sturdy, with two generous counters and softly tapered bowls.\n- T: deep forest #113B36, slightly taller, with a broad horizontal cap and centered tapered stem.\n- Growth detail: ONLY the far-right terminal of the T cap becomes one restrained saffron #D99A3D leaf shape. It is part of the T crossbar, not floating decoration.\n- Accent: one small warm-paper period sits below and right of the T stem.\n- MUST read as exact BT first and editorial growth second.\n- NO overlap, bridge, other text, extra leaves, tree, heart, ring, badge, script, swashes, or border.",
+              "api": {
+                "returncode": 0,
+                "stdout": "{\"status\": \"success\", \"path\": \"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4-variations/10-bt-garden-serif.png\", \"size_bytes\": 329902, \"model\": \"gemini-3-pro-image-preview\", \"references\": [\"/opt/agency-workspace/client-repos/client-deliverables/clients/better-together/deliverables/2026-07-12-app-icon-logo-approval/assets/icons-v4/05-bt-editorial-signature.png\"]}",
+                "stderr": ""
+              },
+              "technical": {
+                "passed": true,
+                "checks": {
+                  "size": true,
+                  "square1024": true,
+                  "fullBleedCorners": true
+                },
+                "bytes": 329902,
+                "width": 1024,
+                "height": 1024
+              },
+              "metrics": {
+                "file": "assets/icons-v4-variations/10-bt-garden-serif.png",
+                "width": 1024,
+                "height": 1024,
+                "dominantColorCount": 6,
+                "dominantColors": [
+                  {
+                    "hex": "#E15035",
+                    "share": 0.4025
+                  },
+                  {
+                    "hex": "#E15136",
+                    "share": 0.2357
+                  },
+                  {
+                    "hex": "#E99F8A",
+                    "share": 0.1242
+                  },
+                  {
+                    "hex": "#E05035",
+                    "share": 0.0991
+                  },
+                  {
+                    "hex": "#5D4132",
+                    "share": 0.0606
+                  }
+                ],
+                "contrast": 0.7804,
+                "edgeDensity": 0.049,
+                "centerBalance": 0.9492,
+                "visualMass": 0.9018,
+                "smallSizes": {
+                  "60": {
+                    "contrast": 0.7255,
+                    "edgeDensity": 0.1806,
+                    "luminanceSpread": 0.339
+                  },
+                  "40": {
+                    "contrast": 0.698,
+                    "edgeDensity": 0.2456,
+                    "luminanceSpread": 0.3317
+                  },
+                  "29": {
+                    "contrast": 0.6549,
+                    "edgeDensity": 0.3139,
+                    "luminanceSpread": 0.3228
+                  },
+                  "20": {
+                    "contrast": 0.6039,
+                    "edgeDensity": 0.38,
+                    "luminanceSpread": 0.3084
+                  }
+                },
+                "gate": {
+                  "passed": false,
+                  "checks": {
+                    "square1024": true,
+                    "paletteDiscipline": false,
+                    "smallContrast": true,
+                    "smallComplexity": true,
+                    "centered": true,
+                    "visualWeight": false
+                  }
+                }
+              }
+            }
+          ],
+          "status": "needs-human-review",
+          "technical": {
+            "passed": true,
+            "checks": {
+              "size": true,
+              "square1024": true,
+              "fullBleedCorners": true
+            },
+            "bytes": 329902,
+            "width": 1024,
+            "height": 1024
+          },
+          "metrics": {
+            "file": "assets/icons-v4-variations/10-bt-garden-serif.png",
+            "width": 1024,
+            "height": 1024,
+            "dominantColorCount": 6,
+            "dominantColors": [
+              {
+                "hex": "#E15035",
+                "share": 0.4025
+              },
+              {
+                "hex": "#E15136",
+                "share": 0.2357
+              },
+              {
+                "hex": "#E99F8A",
+                "share": 0.1242
+              },
+              {
+                "hex": "#E05035",
+                "share": 0.0991
+              },
+              {
+                "hex": "#5D4132",
+                "share": 0.0606
+              }
+            ],
+            "contrast": 0.7804,
+            "edgeDensity": 0.049,
+            "centerBalance": 0.9492,
+            "visualMass": 0.9018,
+            "smallSizes": {
+              "60": {
+                "contrast": 0.7255,
+                "edgeDensity": 0.1806,
+                "luminanceSpread": 0.339
+              },
+              "40": {
+                "contrast": 0.698,
+                "edgeDensity": 0.2456,
+                "luminanceSpread": 0.3317
+              },
+              "29": {
+                "contrast": 0.6549,
+                "edgeDensity": 0.3139,
+                "luminanceSpread": 0.3228
+              },
+              "20": {
+                "contrast": 0.6039,
+                "edgeDensity": 0.38,
+                "luminanceSpread": 0.3084
+              }
+            },
+            "gate": {
+              "passed": false,
+              "checks": {
+                "square1024": true,
+                "paletteDiscipline": false,
+                "smallContrast": true,
+                "smallComplexity": true,
+                "centered": true,
+                "visualWeight": false
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "completedAt": "2026-07-13T17:03:20.173217+00:00"
+}
