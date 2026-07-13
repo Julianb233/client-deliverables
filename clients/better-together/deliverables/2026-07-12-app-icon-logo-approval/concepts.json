@@ -1,0 +1,163 @@
+{
+  "project": "Better Together",
+  "boardTitle": "App Icon & Logo Approval",
+  "generatedAt": "2026-07-12",
+  "brand": {
+    "primaryBackground": "#FAF8F5",
+    "surface": "#FFFFFF",
+    "coral": "#E5533A",
+    "coralDeep": "#C63F28",
+    "inkTeal": "#113B36",
+    "ink": "#14110E",
+    "muted": "#6E6659",
+    "cream": "#F5F0E8",
+    "illustrationTeal": "#2E7D74",
+    "gold": "#D99A3D"
+  },
+  "concepts": [
+    {
+      "id": "essential-twin-trunks",
+      "number": "01",
+      "family": "Essential Marks",
+      "name": "Twin Trunks",
+      "idea": "Two distinct trunks grow toward one coral heart canopy. The clearest expression of two people building one living relationship.",
+      "strengths": ["Immediate relationship meaning", "Strong at notification size", "Closest evolution of the current mark"],
+      "watchout": "Needs careful trunk spacing so the pair remains visible at 20px.",
+      "file": "assets/icons/01-essential-twin-trunks.png",
+      "background": "light",
+      "prompt": "## Better Together original app-icon mark — Twin Trunks\n- Create ONE centered, original, premium app-icon symbol only.\n- Concept: two separate gently curved ink-teal trunks rise from one understated root base and lean toward each other beneath one compact coral heart-shaped canopy. The two trunks MUST remain visibly distinct and balanced.\n- Style: highly refined minimal flat vector mark with a faint handmade gouache edge, mature relationship-wellness brand, quiet and editorial.\n- Background: solid warm white #FAF8F5.\n- Palette: coral #E5533A, deep coral #C63F28, ink teal #113B36, tiny optional honey-gold #D99A3D highlight.\n- Composition: bold simple silhouette, centered, generous 20 percent safe margin on every side, no element touches an edge, readable at 29 pixels.\n- Use the supplied Better Together references only for brand palette and warmth. Create a new composition; DO NOT copy the existing heart-on-single-trunk bonsai.\n- MUST NOT include: text, letters, initials, numbers, a wordmark, a pot, a phone, an app-store mockup, a rounded-square border, a badge outline, people, gradients, photorealism, stock-logo geometry, drop shadows, or background texture."
+    },
+    {
+      "id": "essential-root-weave",
+      "number": "02",
+      "family": "Essential Marks",
+      "name": "Root Weave",
+      "idea": "Two roots interlace around a small heart-shaped opening, making trust and shared history the hero instead of romance alone.",
+      "strengths": ["Distinctive negative space", "Less generic than a standalone heart", "Works in one-color production"],
+      "watchout": "The negative-space heart must remain open in monochrome.",
+      "file": "assets/icons/02-essential-root-weave.png",
+      "background": "light",
+      "prompt": "## Better Together original app-icon mark — Root Weave, corrected compact silhouette\n- Create ONE centered, original, premium app-icon symbol only.\n- Concept: exactly TWO thick organic ribbons total, one coral and one ink teal. Each ribbon has exactly one lower root end and one upper leaf end. They cross exactly once, curve around a clean heart-shaped negative space at center, then stop. NO extra roots, branches, ribbons, or loose ends.\n- Style: highly refined minimal flat vector mark with subtle handmade warmth, sophisticated and calm, no cartoon styling.\n- Background: solid warm white #FAF8F5.\n- Palette: coral #E5533A, deep coral #C63F28, ink teal #113B36.\n- Composition: compact almost-circular silhouette, centered, generous 24 percent safe margin, only two broad continuous forms, clear open center, readable at 20 pixels.\n- Use the supplied Better Together references only for palette and emotional warmth. Create a new original silhouette.\n- MUST NOT include: text, letters, initials, numbers, a wordmark, more than two ribbons, more than two lower ends, extra roots, a tree canopy, a pot, a phone, an app mockup, a rounded-square border, gradients, photorealism, thin hairlines, drop shadows, people, hands, or generic infinity-logo geometry."
+    },
+    {
+      "id": "essential-shared-vessel",
+      "number": "03",
+      "family": "Essential Marks",
+      "name": "Shared Vessel",
+      "idea": "Two curved forms create one vessel that holds a living sprout. It carries the daily watering idea without relying on the old bonsai pot.",
+      "strengths": ["Ownable watering metaphor", "Balanced silhouette", "Friendly without becoming childish"],
+      "watchout": "Keep the vessel abstract enough to avoid reading as tableware.",
+      "file": "assets/icons/03-essential-shared-vessel.png",
+      "background": "light",
+      "prompt": "## Better Together original app-icon mark — Shared Vessel\n- Create ONE centered, original, premium app-icon symbol only.\n- Concept: two opposing coral curved shapes meet to form one simple heart-like vessel; from its center grows a small ink-teal two-leaf sprout, with one restrained honey-gold water drop suspended above the sprout.\n- Style: minimal flat vector mark, softly organic contours, editorial relationship-wellness brand, refined and adult.\n- Background: solid warm white #FAF8F5.\n- Palette: coral #E5533A, deep coral #C63F28, ink teal #113B36, honey gold #D99A3D used only for the single drop.\n- Composition: strong compact silhouette, centered, 20 percent safe margin, readable at notification size. The vessel should feel symbolic, not like a bowl or coffee cup.\n- Use the supplied references only for Better Together palette and warmth. Create a new original composition.\n- MUST NOT include: text, letters, initials, numbers, wordmark, bonsai pot, phone, mockup, rounded-square border, gradients, realistic water, people, faces, drop shadows, or decorative background."
+    },
+    {
+      "id": "essential-watering-ribbons",
+      "number": "04",
+      "family": "Essential Marks",
+      "name": "Watering Ribbons",
+      "idea": "Two gestures arrive separately and become one living heart seed. The mark focuses on the daily action that makes the relationship grow.",
+      "strengths": ["Communicates participation from both partners", "Feels active and modern", "Natural motion-system potential"],
+      "watchout": "The ribbons must not resemble a generic infinity symbol.",
+      "file": "assets/icons/04-essential-watering-ribbons.png",
+      "background": "light",
+      "prompt": "## Better Together original app-icon mark — Watering Ribbons, corrected non-human silhouette\n- Create ONE centered, original, premium app-icon symbol only.\n- Concept: two SHORT downward-curving honey-gold water strokes sit close together above a compact coral heart seed. Each stroke ends in one rounded droplet touching the seed. From the bottom of the seed grows one short ink-teal root. The full mark must look like water nourishing a seed, NEVER like a person with raised arms, a letter Y, antlers, wings, or hands.\n- Style: minimal flat vector mark with soft hand-drawn confidence, premium editorial wellness identity.\n- Background: solid warm white #FAF8F5.\n- Palette: coral #E5533A, ink teal #113B36, honey gold #D99A3D.\n- Composition: compact vertical symbol, both water strokes remain inside the width of the heart seed, 25 percent safe margin, broad simple shapes, instantly readable at 29 pixels.\n- Use the references only for palette and brand warmth. Create a new original silhouette.\n- MUST NOT include: text, letters, initials, numbers, wordmark, human figure, raised arms, hands, Y shape, wings, tree canopy, pot, phone, mockup, rounded-square outline, infinity symbol, gradients, photorealism, splash effects, or background decoration."
+    },
+    {
+      "id": "storybook-garden-embrace",
+      "number": "05",
+      "family": "Storybook Garden",
+      "name": "Garden Embrace",
+      "idea": "Two trunks visibly support one another while the canopy stays loose and alive, giving the app a warmer handmade signature.",
+      "strengths": ["Most emotionally expressive", "Directly connects to Our Bonsai", "Rich brand storytelling"],
+      "watchout": "Texture must stay subtle enough for small sizes.",
+      "file": "assets/icons/05-storybook-garden-embrace.png",
+      "background": "light",
+      "prompt": "## Better Together original app-icon mark — Garden Embrace\n+- Create ONE centered original app-icon illustration only.\n+- Concept: two clearly separate hand-drawn trunks, one warm coral-brown and one ink teal, gently lean against and support each other as they rise into one small irregular heart canopy made of five broad coral and teal leaf shapes. A few visible shared roots anchor the base. No pot.\n+- Locked style: Hand-drawn flat illustration in the style of an award-winning luxury picture book for adults, warm gouache with subtle risograph grain texture, flat layered shapes, limited coral + cream + warm teal palette, soft golden light, cozy and tender.\n+- Background: solid warm white #FAF8F5 with only extremely subtle paper grain.\n+- Palette: coral #E5533A, deep coral #C63F28, ink teal #113B36, illustration teal #2E7D74, tiny honey-gold #D99A3D highlight.\n+- Composition: compact iconic silhouette, centered, generous 20 percent safe margin, simplified for app-icon readability, no thin twigs.\n+- Use the supplied references only for palette and warmth. Create a new two-trunk, pot-free composition.\n+- No text, words, letters, numbers, UI labels, phone frame, people, app mockup, rounded-square border, neon color, photorealism, or black shadow."
+    },
+    {
+      "id": "storybook-garden-seal",
+      "number": "06",
+      "family": "Storybook Garden",
+      "name": "Garden Seal",
+      "idea": "A compact, recognizable seal turns the living-tree idea into a mark that can work on gifts, milestones, and physical products.",
+      "strengths": ["Strong merchandise potential", "Clear one-color translation", "Feels established and trustworthy"],
+      "watchout": "The seal should feel modern, not institutional.",
+      "file": "assets/icons/06-storybook-garden-seal.png",
+      "background": "light",
+      "prompt": "## Better Together original app-icon mark — Garden Seal\n+- Create ONE centered original app-icon symbol only.\n+- Concept: a loose hand-painted circular garden seal made from two incomplete ink-teal stem arcs. Inside, two tiny trunks grow together into one compact coral heart leaf. Leave natural gaps in the outer circle so it feels alive rather than institutional.\n+- Locked style: Hand-drawn flat illustration in the style of an award-winning luxury picture book for adults, warm gouache with subtle risograph grain texture, flat layered shapes, limited coral + cream + warm teal palette, soft golden light, cozy and tender.\n+- Background: solid warm white #FAF8F5 with extremely subtle paper grain.\n+- Palette: coral #E5533A, deep coral #C63F28, ink teal #113B36, illustration teal #2E7D74.\n+- Composition: balanced circular silhouette, centered, 18 percent safe margin, thick hand-painted forms that remain clear at 29 pixels.\n+- Create a new original seal.\n+- No text, words, letters, numbers, monogram, badge text, pot, phone, mockup, perfect geometric circle, gradients, people, black shadow, or decorative scenery."
+    },
+    {
+      "id": "storybook-bloom-between-us",
+      "number": "07",
+      "family": "Storybook Garden",
+      "name": "Bloom Between Us",
+      "idea": "Two different leaves protect a shared coral bloom. This direction feels intimate and inclusive without using a literal couple or another standard heart logo.",
+      "strengths": ["Subtle relationship metaphor", "Soft premium character", "Excellent animation potential"],
+      "watchout": "The bloom needs a unique silhouette to avoid generic wellness branding.",
+      "file": "assets/icons/07-storybook-bloom-between-us.png",
+      "background": "light",
+      "prompt": "## Better Together original app-icon mark — Bloom Between Us\n+- Create ONE centered original app-icon illustration only.\n+- Concept: two distinct broad ink-teal leaves tilt inward from opposite sides and shelter one unusual coral four-petal bloom. The negative space between the inner petals subtly suggests a heart, while two short roots meet below. Avoid a literal standard heart outline.\n+- Locked style: Hand-drawn flat illustration in the style of an award-winning luxury picture book for adults, warm gouache with subtle risograph grain texture, flat layered shapes, limited coral + cream + warm teal palette, soft golden light, cozy and tender.\n+- Background: solid warm white #FAF8F5 with extremely subtle paper grain.\n+- Palette: coral #E5533A, deep coral #C63F28, ink teal #113B36, illustration teal #2E7D74, tiny honey-gold #D99A3D center.\n+- Composition: bold balanced silhouette, centered, 20 percent safe margin, broad shapes and no fine lines.\n+- Create a new original flower geometry.\n+- No text, words, letters, numbers, pot, phone, mockup, rounded-square border, generic lotus, generic wellness logo, gradients, people, or dark background."
+    },
+    {
+      "id": "storybook-path-home",
+      "number": "08",
+      "family": "Storybook Garden",
+      "name": "Path Home",
+      "idea": "Two separate paths meet at one living landmark, expressing return, repair, and choosing each other again.",
+      "strengths": ["Fresh narrative beyond growth alone", "Supports repair and reconnection positioning", "Memorable storybook silhouette"],
+      "watchout": "Keep the paths legible without becoming landscape art.",
+      "file": "assets/icons/08-storybook-path-home.png",
+      "background": "light",
+      "prompt": "## Better Together original app-icon mark — Path Home, final simplified emblem\n+- Create ONE centered original app-icon mark on an EMPTY solid background.\n+- Use exactly FIVE visible shapes: one small coral heart-leaf at top center, two short separate ink-teal stems directly beneath it, and two short honey-gold tapered curves beneath the stems. The gold curves begin separately near lower left and lower right, then point toward the same center without touching. Nothing surrounds or connects these five shapes.\n+- Locked style: simple hand-painted flat gouache shapes with subtle risograph grain, award-winning luxury picture-book warmth, adult and refined.\n+- Background: completely solid warm white #FAF8F5 to every edge.\n+- Palette: coral #E5533A, ink teal #113B36, honey gold #D99A3D.\n+- Composition: compact emblem occupying the central 45 percent of the image, 27 percent safe margin, broad forms, strong at 29 pixels.\n+- No translucent forms, no cream shape, no triangle, no enclosure, no envelope, no road, no scenery, no ground, no giant heart, no extra leaves, no branches, no text, no people, no hands, no phone, no mockup, no border, no gradient, no shadow, no tiny details."
+    },
+    {
+      "id": "clay-rooted-medallion",
+      "number": "09",
+      "family": "Soft Clay",
+      "name": "Rooted Medallion",
+      "idea": "A tactile two-trunk tree inside a deep ink-teal field gives the icon a premium shelf presence while keeping the living relationship idea central.",
+      "strengths": ["Premium App Store presence", "Strong light/dark contrast", "Emotionally warm and tactile"],
+      "watchout": "Dimensional detail requires a simplified monochrome companion mark.",
+      "file": "assets/icons/09-clay-rooted-medallion.png",
+      "background": "dark",
+      "prompt": "## Better Together original app-icon mark — Rooted Medallion\n+- Create ONE centered original premium app-icon object only.\n+- Concept: a compact tactile clay medallion of two distinct trunks growing from shared roots into one small heart-shaped canopy. The trunks are ink-teal and warm brown; the canopy is coral with three restrained teal leaf accents. No pot.\n+- Locked style: Rounded soft-clay 3D render, matte claymation finish, premium dimensional, gentle subsurface scattering, warm golden studio light, coral + cream + ink-teal palette, tactile handmade feel, soft warm shadows.\n+- Background: solid deep ink teal #113B36, perfectly even to the edges.\n+- Palette: coral #E5533A, coral highlight #F0684C, cream #F5F0E8, ink teal #113B36, illustration teal #2E7D74, warm brown roots.\n+- Composition: centered, bold, compact, 20 percent safe margin, no object touches the edge, readable at home-screen size, single warm light source.\n+- Use the supplied references only for brand palette and tenderness. Create a new pot-free two-trunk design.\n+- No text, words, letters, numbers, UI, phone frame, app mockup, rounded-square border, people, glossy plastic, metallic material, neon, black void, dramatic hard shadow, or busy scenery."
+    },
+    {
+      "id": "clay-two-seeds-one-bloom",
+      "number": "10",
+      "family": "Soft Clay",
+      "name": "Two Seeds, One Bloom",
+      "idea": "Two distinct seeds grow into one shared heart bloom, turning daily care into a simple partnership symbol.",
+      "strengths": ["Clear two-to-one relationship story", "Strong tactile App Store presence", "Simple growth animation potential"],
+      "watchout": "The seed colors need enough contrast when translated to monochrome.",
+      "file": "assets/icons/10-clay-two-seeds-one-bloom.png",
+      "background": "light",
+      "prompt": "Create a square 1:1 premium mobile app icon mark for Better Together. Depict exactly two small soft-clay seed forms at the bottom, one coral #E5533A and one warm ivory #FAF8F5, growing into exactly one simple heart-shaped bloom above them in deep evergreen #113B36. The two seeds and one bloom should form a calm symmetrical relationship symbol, not a face, not cups, not eyes, not a character. Soft handcrafted clay material, rounded dimensional forms, subtle warm studio lighting, centered with generous breathing room. Solid warm ivory #FAF8F5 background. No tile, no border, no container, no text, no letters, no shadows outside the symbol, no gradients, no photorealistic objects, no extra elements. The symbol must remain immediately recognizable at 29 pixels and feel suitable for an Apple App Store and Google Play icon."
+    },
+    {
+      "id": "clay-paired-leaves",
+      "number": "11",
+      "family": "Soft Clay",
+      "name": "Paired Leaves",
+      "idea": "Two leaves with visibly different forms overlap into a heart-like whole, a quieter and more contemporary interpretation of partnership.",
+      "strengths": ["Contemporary and calm", "Avoids a literal couple", "Scales cleanly into a flat companion mark"],
+      "watchout": "Needs enough asymmetry to avoid feeling like a generic eco logo.",
+      "file": "assets/icons/11-clay-paired-leaves.png",
+      "background": "dark",
+      "prompt": "## Better Together original app-icon mark — Paired Leaves, corrected without tile\n+- Create ONE centered original premium app-icon object floating directly on the background.\n+- Concept: exactly TWO recognizable asymmetrical matte-clay leaves, one coral and one warm teal. Each has a pointed leaf tip and a subtle central vein. They lean inward and overlap only at their lower edges, creating a small clean heart-shaped negative space between their inner curves. Their two short stems twist once below into one tiny cream root.\n+- Locked style: Rounded soft-clay 3D render, matte claymation finish, premium dimensional, gentle subsurface scattering, warm golden studio light, coral + cream + warm teal palette, tactile handmade feel, soft warm shadows.\n+- Background: completely flat solid deep ink teal #113B36 extending to every edge. The background is NOT an object.\n+- Palette: coral #E5533A, coral highlight #F0684C, illustration teal #2E7D74, cream #F5F0E8.\n+- Composition: centered compact floating silhouette, 25 percent safe margin, leaves clearly separate, broad edges and simple depth, readable at notification size.\n+- Create a new original asymmetrical leaf geometry.\n+- No text, words, letters, numbers, UI, phone, app mockup, backing tile, plate, square, rounded square, frame, badge, perfect symmetry, generic eco badge, abstract blobs, oak leaves, glossy plastic, neon, black void, people, or scenery."
+    },
+    {
+      "id": "clay-garden-portal",
+      "number": "12",
+      "family": "Soft Clay",
+      "name": "Garden Portal",
+      "idea": "Two stems form an inviting threshold around a warm shared light, positioning Better Together as a place couples return to together.",
+      "strengths": ["Distinctive and symbolic", "Supports return and ritual positioning", "Beautiful launch-animation potential"],
+      "watchout": "The arch must stay organic and avoid religious or architectural readings.",
+      "file": "assets/icons/12-clay-garden-portal.png",
+      "background": "dark",
+      "prompt": "## Better Together original app-icon mark — Garden Portal\n+- Create ONE centered original premium app-icon object only.\n+- Concept: two organic matte-clay stems rise separately from shared roots and curve inward to form a soft open arch. A small warm coral heart-seed glows gently in the center of the opening, with one tiny leaf on each stem. The arch must read as living stems, not architecture or a religious symbol.\n+- Locked style: Rounded soft-clay 3D render, matte claymation finish, premium dimensional, gentle subsurface scattering, warm golden studio light, coral + cream + ink-teal palette, tactile handmade feel, soft warm shadows.\n+- Background: solid deep ink teal #113B36, perfectly even to the edges.\n+- Palette: coral #E5533A, coral highlight #F0684C, cream #F5F0E8, illustration teal #2E7D74, honey-gold #D99A3D glow used sparingly.\n+- Composition: centered, balanced, 18 percent safe margin, bold simplified forms, visible open center, readable at 29 pixels.\n+- Create a new original living-portal mark.\n+- No text, words, letters, numbers, UI, phone frame, mockup, rounded-square border, doorway, building, religious icon, people, glossy plastic, neon, black background, or scenery."
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAF8F5">
+  <title>Better Together App Icon & Logo Approval</title>
+  <meta name="description" content="Review and annotate twelve new Better Together app icon and logo directions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand-home" href="../../index.html" aria-label="Better Together deliverables">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Better Together</span>
+      </a>
+      <p class="eyebrow">Design approval / July 2026</p>
+      <h1>Choose the mark we grow with.</h1>
+      <p class="intro">Twelve original directions, generated in the approved garden palette and tested as real iOS, Android, and wordmark applications.</p>
+      <div class="header-actions">
+        <button class="button button-primary" id="shareReview" type="button" data-lucide-button="share-2">Share feedback</button>
+        <button class="button button-secondary" id="copySummary" type="button" data-lucide-button="clipboard">Copy summary</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="baseline-section" aria-labelledby="baseline-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Current baseline</p>
+          <h2 id="baseline-title">What is in TestFlight now</h2>
+        </div>
+        <span class="status-pill">Current</span>
+      </div>
+      <div class="baseline-grid">
+        <figure class="current-icon-block">
+          <img src="assets/current/icon-1024.png" alt="Current Better Together app icon" width="1024" height="1024">
+          <figcaption>Single-trunk heart bonsai</figcaption>
+        </figure>
+        <div class="baseline-copy">
+          <img class="current-logo" src="assets/current/logo-full.png" alt="Current Better Together logo lockup">
+          <p>The current icon establishes the living-relationship idea. The new directions make the partnership clearer, improve small-size recognition, and give the product a more ownable visual system.</p>
+          <div class="palette" aria-label="Approved Better Together color palette">
+            <span style="--swatch:#E5533A" title="Coral #E5533A"></span>
+            <span style="--swatch:#113B36" title="Ink teal #113B36"></span>
+            <span style="--swatch:#D99A3D" title="Honey gold #D99A3D"></span>
+            <span style="--swatch:#FAF8F5" title="Warm white #FAF8F5"></span>
+            <span class="palette-label">Approved garden palette</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="review-section" aria-labelledby="review-title">
+      <div class="section-heading review-heading">
+        <div>
+          <p class="eyebrow">New directions</p>
+          <h2 id="review-title">Review all twelve concepts</h2>
+        </div>
+        <p class="review-count" id="visibleCount">12 concepts</p>
+      </div>
+
+      <div class="review-toolbar" aria-label="Concept filters">
+        <div class="segmented-control" id="familyFilters" role="group" aria-label="Filter by design family">
+          <button type="button" class="active" data-family="all" aria-pressed="true">All</button>
+          <button type="button" data-family="Essential Marks" aria-pressed="false">Essential</button>
+          <button type="button" data-family="Storybook Garden" aria-pressed="false">Storybook</button>
+          <button type="button" data-family="Soft Clay" aria-pressed="false">Soft clay</button>
+        </div>
+        <label class="status-filter">
+          <span>Status</span>
+          <select id="statusFilter">
+            <option value="all">All decisions</option>
+            <option value="approve">Approved</option>
+            <option value="revise">Needs changes</option>
+            <option value="hold">Hold</option>
+            <option value="undecided">Undecided</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="review-dock" aria-live="polite">
+        <div class="decision-total"><strong id="decisionCount">0</strong><span>of 12 decided</span></div>
+        <div class="dock-breakdown">
+          <span><i class="dot approve"></i><b id="approveCount">0</b> approve</span>
+          <span><i class="dot revise"></i><b id="reviseCount">0</b> change</span>
+          <span><i class="dot hold"></i><b id="holdCount">0</b> hold</span>
+        </div>
+        <p id="saveStatus">Saved on this device</p>
+      </div>
+
+      <div class="concept-grid" id="conceptGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="final-notes" aria-labelledby="final-notes-title">
+      <div>
+        <p class="eyebrow">Review handoff</p>
+        <h2 id="final-notes-title">Final notes</h2>
+      </div>
+      <label>
+        <span>Your name</span>
+        <input id="reviewerName" type="text" autocomplete="name" placeholder="Name">
+      </label>
+      <label class="wide-field">
+        <span>Overall direction</span>
+        <textarea id="overallNotes" rows="4" placeholder="What should we combine, remove, or refine?"></textarea>
+      </label>
+      <div class="final-actions">
+        <button class="button button-primary" id="downloadReview" type="button" data-lucide-button="download">Download review</button>
+        <button class="button button-secondary" id="resetReview" type="button" data-lucide-button="rotate-ccw">Reset</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
