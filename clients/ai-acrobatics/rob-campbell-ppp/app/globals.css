@@ -2121,11 +2121,13 @@ code {
   }
 
   .message-widget {
+    top: 9px;
     right: 12px;
-    bottom: 66px;
+    bottom: auto;
   }
 
   .message-launcher {
+    order: -1;
     width: 52px;
     min-height: 52px;
     padding: 0;
@@ -2139,5 +2141,10 @@ code {
     color: #fff;
     font-size: 22px;
     font-weight: 900;
+  }
+
+  .message-panel {
+    width: calc(100vw - 24px);
+    max-height: calc(100vh - 88px);
   }
 }

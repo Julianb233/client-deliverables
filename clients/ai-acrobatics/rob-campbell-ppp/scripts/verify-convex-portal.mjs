@@ -31,12 +31,11 @@ if (!clientSlug) {
 }
 
 const checks = [
-  // New-style aa-portals function names (quick-beagle-88)
-  ["tenants:getBySlug", { slug: clientSlug }],
-  ["feedEntries:listForTenant", { tenantSlug: clientSlug, limit: 1 }],
-  ["actionItems:listForTenant", { tenantSlug: clientSlug }],
-  ["changelog:listForTenant", { tenantSlug: clientSlug, limit: 1 }],
-  // Legacy conventions — still present on quick-beagle-88 for backwards compat
+  // Standard production portal interfaces on graceful-snake-473.
+  ["portalClients:getBySlug", { slug: clientSlug }],
+  ["portalFeed:listForClient", { clientSlug, limit: 1 }],
+  ["portalActionItems:listAllForClient", { clientSlug }],
+  ["portalChangelog:listForClient", { clientSlug, limit: 1 }],
   ["portalMessages:listForClient", { clientSlug, limit: 1 }],
   ["portalUpsellOffers:listForClient", { clientSlug }],
   ["portalUpsellIntents:listForClient", { clientSlug, limit: 1 }],
@@ -47,7 +46,7 @@ const failures = [];
 
 for (const [name, args] of checks) {
   try {
-    await client.query(makeFunctionReference("query", name), args);
+    await client.query(makeFunctionReference(name), args);
     console.log(`OK ${name}`);
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);

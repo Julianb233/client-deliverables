@@ -5,6 +5,7 @@ import Link from "next/link";
 
 const nav = [
   ["Dashboard", "/", "D"],
+  ["Live Command Center", "https://rob.aiacrobatics.com/rob-os", "L"],
   ["Workspace", "/workspace", "W"],
   ["Hermes Agency", "/agency-workspace", "H"],
   ["AI Roadmap", "/progress", "R"],
@@ -25,9 +26,9 @@ const nav = [
 
 const mobileNav = [
   ["Dashboard", "/"],
-  ["Workspace", "/workspace"],
-  ["Hermes", "/agency-workspace"],
-  ["Roadmap", "/progress"],
+  ["Command", "https://rob.aiacrobatics.com/rob-os"],
+  ["Plans", "/game-plans"],
+  ["Actions", "/action-items"],
   ["Request", "/request"],
 ] as const;
 
@@ -37,7 +38,7 @@ export function SidebarNav() {
   return (
     <nav className="desktop-nav" aria-label="Main navigation">
       {nav.map(([label, href, icon]) => {
-        const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
+        const isActive = href === "/" ? pathname === "/" : href.startsWith("/") && pathname.startsWith(href);
         return (
           <Link
             className={`nav-link${isActive ? " active" : ""}`}
@@ -61,7 +62,7 @@ export function MobileNav() {
     <nav className="bottom-nav" aria-label="Mobile navigation">
       <div className="bottom-nav-inner">
         {mobileNav.map(([label, href]) => {
-          const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
+          const isActive = href === "/" ? pathname === "/" : href.startsWith("/") && pathname.startsWith(href);
           return (
             <Link
               href={href}

@@ -95,7 +95,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
               </div>
               <div className="topbar-actions">
                 <a className="topbar-icon" href="/book-onboarding" aria-label="Book onboarding call">◷</a>
-                <a className="topbar-icon" href="/agency-workspace" aria-label="Hermes agency workspace">◆</a>
+                <a className="topbar-icon" href="https://rob.aiacrobatics.com/rob-os" aria-label="Live AI Practice Command Center">◆</a>
                 <a className="topbar-icon" href="/request" aria-label="Request center">✉</a>
                 <a className="topbar-icon has-alert" href="/action-items" aria-label="Action items">●</a>
                 <div className="profile-pill" aria-label="Client profile">

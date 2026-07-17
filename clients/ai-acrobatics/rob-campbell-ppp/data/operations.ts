@@ -3,33 +3,33 @@ import { workspaceAgentProfiles } from "./workspace";
 export const portalStandardStatus = [
   {
     label: "Portal assistant",
-    status: "blocked-by-backend",
-    detail: "UI is present, but live Convex request/feed behavior remains blocked by AI-10564 until the configured deployment exposes the PPP portal functions.",
+    status: "production-convex",
+    detail: "Requests, submitted ideas, feed records, and upsell intents route through server APIs to the production Convex deployment and then to Linear or checkout handling.",
   },
   {
     label: "Meeting notes",
     status: "review-gated",
-    detail: "May 27 Fireflies notes are visible now. June 3 Fireflies is still missing from the connector, so the portal links the Drive onboarding brief and source index after Julian review.",
+    detail: "The July 16 Fireflies meeting was reviewed and translated into the live game plan, workflows, blockers, task owners, and next actions.",
   },
   {
     label: "HubSpot inspection plan",
     status: "review-gated",
-    detail: "Agents have a read-only checklist for access proof, object inventory, data segmentation, field hygiene, duplicate/stale records, workflow risk, integrations, and reporting readiness.",
+    detail: "HubSpot is connected in aggregate read-only mode; the first visible workflow is the follow-up call queue, with record-level data and mutations blocked pending approval.",
   },
   {
     label: "Linear routing",
-    status: "partial",
-    detail: "Linear project routing is configured, but production request flow is not considered live until the Convex portal backend passes verification.",
+    status: "active",
+    detail: "The Rob project is the internal work router for implementation evidence, access blockers, and client-submitted portal requests.",
   },
   {
     label: "Internal notifications",
-    status: "partial",
-    detail: "Notification env is part of the required stack, but request/upsell notification proof waits on the Convex backend repair and production smoke test.",
+    status: "review-gated",
+    detail: "Portal requests and interest are stored and routed internally; no client-facing reply or outbound message is sent automatically.",
   },
   {
     label: "Convex portal data",
-    status: "blocked",
-    detail: "AI-10564: the configured Convex URL does not expose portalClients, portalFeed, portalActionItems, portalChangelog, portalMessages, portalUpsellOffers, or portalUpsellIntents functions.",
+    status: "production",
+    detail: "The PPP targets graceful-snake-473 and uses the standard portalClients, portalFeed, portalActionItems, portalChangelog, portalMessages, portalUpsellOffers, and portalUpsellIntents interfaces.",
   },
   {
     label: "Outbound client sends",
@@ -42,7 +42,7 @@ export const agentRunStatuses = workspaceAgentProfiles.map((agent) => ({
   name: agent.name,
   role: agent.profile,
   status: agent.status,
-  lastRun: agent.status.includes("active") ? "2026-06-21" : agent.status.includes("ready") ? "Ready after review" : "Staged",
+  lastRun: agent.status.includes("active") || agent.status.includes("live") ? "2026-07-16" : agent.status.includes("ready") ? "Ready after review" : "Staged",
   nextRun: agent.next,
   evidence: agent.evidence,
 }));

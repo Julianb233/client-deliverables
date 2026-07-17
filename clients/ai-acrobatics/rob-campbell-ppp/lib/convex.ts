@@ -173,10 +173,10 @@ export async function getPortalRuntimeData(): Promise<PortalRuntimeData> {
   try {
     const client = new ConvexHttpClient(convexUrl);
     const [portalClient, feed, actions, changelog, messages, offers, intents] = await Promise.all([
-      client.query(makeFunctionReference<"query">("tenants:getBySlug"), { slug: PORTAL_CLIENT_SLUG }) as Promise<ConvexClient | null>,
-      client.query(makeFunctionReference<"query">("feedEntries:listForTenant"), { tenantSlug: PORTAL_CLIENT_SLUG, limit: 50 }) as Promise<ConvexFeedItem[]>,
-      client.query(makeFunctionReference<"query">("actionItems:listForTenant"), { tenantSlug: PORTAL_CLIENT_SLUG }) as Promise<ConvexActionItem[]>,
-      client.query(makeFunctionReference<"query">("changelog:listForTenant"), { tenantSlug: PORTAL_CLIENT_SLUG, limit: 50 }) as Promise<ConvexChangelogItem[]>,
+      client.query(makeFunctionReference<"query">("portalClients:getBySlug"), { slug: PORTAL_CLIENT_SLUG }) as Promise<ConvexClient | null>,
+      client.query(makeFunctionReference<"query">("portalFeed:listForClient"), { clientSlug: PORTAL_CLIENT_SLUG, limit: 50 }) as Promise<ConvexFeedItem[]>,
+      client.query(makeFunctionReference<"query">("portalActionItems:listAllForClient"), { clientSlug: PORTAL_CLIENT_SLUG }) as Promise<ConvexActionItem[]>,
+      client.query(makeFunctionReference<"query">("portalChangelog:listForClient"), { clientSlug: PORTAL_CLIENT_SLUG, limit: 50 }) as Promise<ConvexChangelogItem[]>,
       client.query(makeFunctionReference<"query">("portalMessages:listForClient"), { clientSlug: PORTAL_CLIENT_SLUG, limit: 25 }) as Promise<ConvexMessage[]>,
       client.query(makeFunctionReference<"query">("portalUpsellOffers:listForClient"), { clientSlug: PORTAL_CLIENT_SLUG }) as Promise<ConvexUpsellOffer[]>,
       client.query(makeFunctionReference<"query">("portalUpsellIntents:listForClient"), { clientSlug: PORTAL_CLIENT_SLUG, limit: 25 }) as Promise<ConvexUpsellIntent[]>,
@@ -227,7 +227,13 @@ function mapConvexFeedItem(item: ConvexFeedItem): PortalRuntimeData["feed"][numb
 }
 
 function isVisiblePortalFeedItem(item: ConvexFeedItem) {
-  if (item.title.toLowerCase().startsWith("checkout opened:")) return false;
+  const normalizedTitle = item.title.toLowerCase();
+  if (normalizedTitle.startsWith("checkout opened:")) return false;
+  if (new Set([
+    "rob agent os tenant isolation completed",
+    "agent os role fleet and composio audit",
+    "rob hubspot read/write enabled",
+  ]).has(normalizedTitle)) return false;
   return isClientVisiblePortalRecord([item.title, item.body, item.url, item.agent]);
 }
 

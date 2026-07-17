@@ -50,7 +50,14 @@ grep -q "04U7cTXkd5D4man5dniU" "$DASH_DIR/data/client-data.ts" || { echo "Missin
 grep -q "booking-frame" "$DASH_DIR/components/PortalSections.tsx" || { echo "Missing embedded onboarding booking frame"; ERRORS=$((ERRORS + 1)); }
 grep -q "OnboardingPresentationPage" "$DASH_DIR/components/PortalSections.tsx" || { echo "Missing virtual onboarding presentation page"; ERRORS=$((ERRORS + 1)); }
 grep -q "1lQg38djGoWkdkoTSQgN0tN5vxAoNZxPJ" "$DASH_DIR/data/client-data.ts" || { echo "Missing Google Drive root folder link"; ERRORS=$((ERRORS + 1)); }
-grep -q "01KSNC02C1EBXF56962CH63MFR" "$DASH_DIR/data/meeting-notes.ts" || { echo "Missing Fireflies transcript source ID"; ERRORS=$((ERRORS + 1)); }
+grep -q "01KXPCGQT9SK323AG80MQT7M7T" "$DASH_DIR/data/meeting-notes.ts" || { echo "Missing current July 16 Fireflies transcript source ID"; ERRORS=$((ERRORS + 1)); }
+grep -q "https://rob.aiacrobatics.com/rob-os" "$DASH_DIR/data/client-data.ts" || { echo "Missing live Rob command center link"; ERRORS=$((ERRORS + 1)); }
+grep -q "displayName: \"CONCIERGE - Team Onboarding\"" "$DASH_DIR/data/workspace.ts" || { echo "Missing current 12-role agent roster"; ERRORS=$((ERRORS + 1)); }
+grep -q "https://graceful-snake-473.convex.cloud" "$DASH_DIR/lib/portal-config.ts" || { echo "Missing production Convex binding"; ERRORS=$((ERRORS + 1)); }
+if grep -q "backend repair\|AI-10564 is fixed\|Backend repair pending" "$DASH_DIR/components/PortalSections.tsx"; then
+  echo "Stale Convex blocker copy remains in client-facing portal sections"
+  ERRORS=$((ERRORS + 1))
+fi
 grep -q "portalMessages" "$DASH_DIR/app/api/client-message/route.ts" || { echo "Missing Convex portalMessages route"; ERRORS=$((ERRORS + 1)); }
 grep -q "createLinearIssue" "$DASH_DIR/app/api/client-message/route.ts" || { echo "Missing Linear routing for client messages"; ERRORS=$((ERRORS + 1)); }
 grep -rq "LINEAR_PROJECT_ID" "$DASH_DIR/lib" "$DASH_DIR/app/api" 2>/dev/null || { echo "Missing LINEAR_PROJECT_ID client-project routing"; ERRORS=$((ERRORS + 1)); }

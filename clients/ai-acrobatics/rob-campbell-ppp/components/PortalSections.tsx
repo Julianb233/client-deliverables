@@ -44,22 +44,24 @@ export async function HomePage() {
     <main className="page">
       <div className="page-header">
         <p className="eyebrow">Wizard of AI command center</p>
-        <h1>Rob, your AI Prospect Engine is moving.</h1>
+        <h1>Rob, your AI Practice Command Center is live.</h1>
         <p className="lead">
-          The deposit is in, the compliance boundary is set, and this portal now tracks both sides of the work: what AI Acrobatics is building and which AI systems make sense to install next.
+          This PPP tracks delivery, requests, billing, and proof. The live Hetzner workspace is where Rob and the team see the customizable CEO view, role agents, tasks, meetings, integrations, reports, activity, and current game plan.
         </p>
       </div>
       <section className="hero">
         <div className="panel glass-panel">
           <span className="badge status-active">Build active</span>
-          <h2>Next move: turn the proposal into the working prospect engine.</h2>
+          <h2>Next move: run the first HubSpot follow-up call queue.</h2>
           <p>
-            This is the same admin-style dashboard treatment Julian uses for backend operations: concise status, live source links, blockers, and the next actions that keep the work moving.
+            The July 16 Fireflies meeting is now the operating plan. HubSpot follow-up calls come first; LinkedIn and Meet Alfred response handling, private annual-review report assembly, team access, and CEO reporting follow behind clear approval gates.
           </p>
           <p>
             For your Northwestern Mutual practice, the boundary stays tight: public prospect signals and HubSpot-side workflow support only. No Dynamics writes, no NMIS/client-record data in AI tools, and no AI-generated investment advice.
           </p>
           <div className="button-row">
+            <a className="button" href="https://rob.aiacrobatics.com/rob-os">Open live command center</a>
+            <a className="button" href="https://rob.aiacrobatics.com/rob-os/team-guide">Open team guide</a>
             <a className="button" href="/agency-workspace">Open Hermes agency workspace</a>
             <a className="button" href="/workspace">Open client workspace</a>
             <a className="button" href="/book-onboarding">Book onboarding call</a>
@@ -520,7 +522,7 @@ export async function RequestCenterPage() {
         <p className="eyebrow">Client input zone</p>
         <h1>Request Center</h1>
         <p className="lead">
-          Rob can send project questions, screenshots, voice notes, blockers, and new AI system ideas here. The interface is ready, but production request routing stays marked partial until the Convex portal backend repair in AI-10564 is verified.
+          Rob can send project questions, screenshots, voice notes, blockers, and new AI system ideas here. The server route stores the request in production Convex, creates the internal Linear follow-up, and keeps any client-facing response behind Julian review.
         </p>
       </div>
       <section className="section grid request-layout">
@@ -530,13 +532,13 @@ export async function RequestCenterPage() {
           <h2>Review-gated routing</h2>
           <ol className="number-list">
             <li>Message and attachment metadata are submitted through the server route.</li>
-            <li>After AI-10564 is fixed, Convex stores the request in portalMessages and posts an in-app feed event.</li>
-            <li>Linear gets a follow-up task for AI Acrobatics review after the backend smoke test passes.</li>
+            <li>Production Convex stores the request in portalMessages and posts an in-app feed event.</li>
+            <li>Linear gets a follow-up task for AI Acrobatics review.</li>
             <li>Julian approves any external reply, scope change, payment link, or client-facing recommendation.</li>
           </ol>
           <div className="source-card compact-source-card">
             <strong>Recent submitted items</strong>
-            <span>{visibleMessages.length > 0 ? `${visibleMessages.length} visible from Convex` : "Backend repair pending"}</span>
+            <span>{visibleMessages.length > 0 ? `${visibleMessages.length} visible from Convex` : "Ready for the first request"}</span>
           </div>
           {visibleMessages.length > 0 ? (
             <ul className="list">
@@ -549,7 +551,7 @@ export async function RequestCenterPage() {
               ))}
             </ul>
           ) : (
-            <p className="muted">Requests should be sent by text or reviewed directly with Julian until the Convex portal backend passes verification.</p>
+          <p className="muted">Submitted requests remain internal until Julian reviews the task, response, scope change, or payment action.</p>
           )}
         </aside>
       </section>

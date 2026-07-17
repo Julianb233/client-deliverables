@@ -12,27 +12,41 @@ export const clientInfo = {
 };
 
 export const brand = {
-  primaryColor: "#38bdf8",
-  accentColor: "#a3e635",
+  primaryColor: "#238557",
+  accentColor: "#3478a2",
   logoText: "Rob Campbell",
   footerText: "Powered by AI Acrobatics",
 };
 
 export const health = {
-  status: "yellow" as "green" | "yellow" | "red",
-  summary: "Deposit is received, the Hermes agency is deployed internally, and the current gates are Rob's agent roster review, retainer selection, HubSpot read-only scope, and the Convex portal backend repair.",
+  status: "green" as "green" | "yellow" | "red",
+  summary: "The unified command center is live on Rob's Hetzner server, HubSpot is connected in aggregate read-only mode, and the remaining gates are LinkedIn, Meet Alfred, Rob's final report assets, and per-person passwords.",
 };
 
 export const stats = [
-  { label: "Hermes agents configured", value: 8, previousValue: 0, format: "number", trend: "up" },
-  { label: "Swarms mapped", value: 5, previousValue: 0, format: "number", trend: "up" },
-  { label: "Local skills enabled", value: 7, previousValue: 0, format: "number", trend: "up" },
+  { label: "Role agents configured", value: 12, previousValue: 8, format: "number", trend: "up" },
+  { label: "Swarms mapped", value: 7, previousValue: 5, format: "number", trend: "up" },
+  { label: "Active workspace skills", value: 12, previousValue: 7, format: "number", trend: "up" },
   { label: "Deposit received", value: 5500, previousValue: 0, format: "currency", trend: "up" },
   { label: "HubSpot audit plan", value: 12, previousValue: 0, format: "number", trend: "up" },
   { label: "Retainer options", value: 3, previousValue: 0, format: "number", trend: "up" },
 ] as const;
 
 export const hubLinks = [
+  {
+    label: "Live AI Practice Command Center",
+    url: "https://rob.aiacrobatics.com/rob-os",
+    icon: "hermes",
+    description: "Rob's unified CEO view, business-role agents, tasks, meetings, integrations, reporting intake, activity, settings, and team guide",
+    category: "primary",
+  },
+  {
+    label: "Team Access Guide",
+    url: "https://rob.aiacrobatics.com/rob-os/team-guide",
+    icon: "workspace",
+    description: "How Rob's seven assigned team usernames sign in, choose a view, find tasks, and use the correct role agent safely",
+    category: "primary",
+  },
   {
     label: "Client Workspace",
     url: "/workspace",
@@ -222,20 +236,20 @@ export const onboardingBooking = {
 };
 
 export const snapshotReport = {
-  month: "June 2026",
-  overallHealth: 4 as 1 | 2 | 3 | 4 | 5,
-  completedDeliverables: 11,
-  pagesDeployed: 7,
-  agentsConfigured: 8,
-  milestonesOnTrack: "4 of 7",
+  month: "July 2026",
+  overallHealth: 5 as 1 | 2 | 3 | 4 | 5,
+  completedDeliverables: 16,
+  pagesDeployed: 10,
+  agentsConfigured: 12,
+  milestonesOnTrack: "5 of 7",
   nextMonthFocus: [
-    "Use the client workspace page to review and shape the focused eight-agent Hermes roster.",
-    "Have Rob choose Operator, Growth, or Build Partner retainer so operating cadence is clear.",
-    "Confirm HubSpot read-only scope and any missing tool access for Apollo, LinkedIn, Meet Alfred, Slack, and Notion.",
-    "Run the HubSpot inspection checklist against approved read-only data.",
-    "Repair Convex PPP backend binding before calling request/feed operations fully live.",
+    "Review the first HubSpot follow-up call queue in aggregate read-only mode.",
+    "Connect LinkedIn and Meet Alfred through the approved integration path.",
+    "Receive Rob's final annual-review HTML, sample PDF, and Claude skill folder.",
+    "Confirm which teammates use each of the seven assigned workspace usernames.",
+    "Choose the Operator, Growth, or Build Partner retainer cadence.",
   ],
-  lastUpdated: "2026-06-21",
+  lastUpdated: "2026-07-16",
 };
 
 export const paymentStatus = {
@@ -252,7 +266,7 @@ export const complianceGuardrails = [
   "No client data in AI tools",
   "No AI investment advice",
   "No external sends without Julian approval",
-  "HubSpot remains read-only until access and scope are confirmed",
+  "HubSpot is aggregate read-only; record-level access and all writes require approval",
 ];
 
 export const retainerTiers = [

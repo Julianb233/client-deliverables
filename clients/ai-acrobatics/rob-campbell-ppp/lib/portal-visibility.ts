@@ -7,6 +7,8 @@ const INTERNAL_MARKERS = [
   "verification",
   "portal test idea",
   "please ignore",
+  "ai-13080",
+  "ai-13081",
   "ai-10475",
   "ai-10476",
 ];

@@ -1,12 +1,54 @@
 export const firefliesSource = {
-  label: "May 27 Fireflies meeting + June 3 Drive onboarding assets",
-  meetingDate: "2026-05-27",
-  transcriptId: "01KSNC02C1EBXF56962CH63MFR",
+  label: "July 16 Rob Agent OS Review + Final Setup Gaps",
+  meetingDate: "2026-07-16",
+  transcriptId: "01KXPCGQT9SK323AG80MQT7M7T",
   attendees: ["Rob Campbell", "Julian Bradley"],
-  syncStatus: "May 27 Fireflies source is live. June 3 Fireflies transcript is not exposed by the connector, so agents should use the Drive onboarding brief and meeting-notes source index.",
+  syncStatus: "The July 16 Fireflies transcript was reviewed and translated into the live command center, role-agent roster, workflows, task queue, integrations, and current blockers.",
 };
 
 export const meetingNotes = [
+  {
+    id: "july-16-agent-os-review",
+    title: "Rob Agent OS Review + Final Setup Gaps",
+    date: "2026-07-16",
+    source: "Fireflies 01KXPCGQT9SK323AG80MQT7M7T",
+    summary:
+      "Rob asked for one live, actionable CEO dashboard that consolidates QWM, time, role agents, tasks, meeting decisions, integrations, and the operating game plan. The first revenue workflow is the HubSpot follow-up call queue; the next build lanes are private annual-review report assembly and LinkedIn plus Meet Alfred response routing.",
+    decisions: [
+      "Use one live command center instead of separate or broken QWM, time, and agent links.",
+      "Show business-role agents such as OPTIMUS and ATLAS instead of generic model names.",
+      "Make HubSpot follow-up calls the first workflow and keep the initial queue aggregate read-only.",
+      "Keep planning files in private server intake and require human review before a report is released.",
+      "Use Apollo for sourcing, then connect LinkedIn and Meet Alfred for reviewed response handling.",
+      "Run the workspace on Rob's dedicated Hetzner server with CRM writes and outbound sends approval-gated.",
+    ],
+    nextActions: [
+      "Review the first HubSpot follow-up call queue with ATLAS and SHIELD.",
+      "Rob connects LinkedIn and Meet Alfred through the approved integration path.",
+      "Rob sends the final annual-review HTML, sample PDF, and Claude skill folder.",
+      "Confirm the team members assigned to the seven existing workspace usernames.",
+    ],
+  },
+  {
+    id: "july-16-command-center-deploy",
+    title: "Unified command center deployed",
+    date: "2026-07-16",
+    source: "Hetzner production deployment and public verification",
+    summary:
+      "The role-agent workspace now runs at rob.aiacrobatics.com/rob-os from Rob's dedicated Hetzner server. It includes customizable Executive, Team, and Operations views; 12 role agents; tasks; CEO metrics; Fireflies decisions; integrations; private report intake; activity tracking; settings; and a mobile team guide.",
+    decisions: [
+      "Keep the legacy VPS only as the authentication edge and proxy authenticated traffic to Hetzner.",
+      "Keep the direct Hetzner origin closed to public requests.",
+      "Use seven existing assigned usernames now and upgrade to per-person passwords and revocation next.",
+      "Keep dashboard preferences local to each browser while operational data remains server controlled.",
+    ],
+    nextActions: [
+      "Rob reviews the live Executive and Team views.",
+      "Map each teammate to an assigned username and role.",
+      "Complete LinkedIn, Meet Alfred, and report-template intake.",
+      "Confirm the preferred CEO brief delivery cadence.",
+    ],
+  },
   {
     id: "june-3-hubspot-inspection",
     title: "HubSpot inspection checklist",
@@ -106,6 +148,57 @@ export const meetingNotes = [
 ];
 
 export const gamePlans = [
+  {
+    id: "game-plan-july-1",
+    stage: "Build + Integrate",
+    title: "HubSpot follow-up call queue",
+    status: "active" as const,
+    objective:
+      "Give Rob and his team a prioritized call list with the reason for follow-up and the next question, while the first pass remains aggregate read-only.",
+    source: "July 16 Fireflies meeting",
+    owner: "ATLAS + SHIELD",
+    steps: [
+      "Confirm the approved prospect-side queue scope.",
+      "Rank stale and high-value follow-ups without changing records.",
+      "Review the first queue with Rob.",
+      "Approve record-level scope only after the canary is accepted.",
+    ],
+    proof: ["HubSpot connected", "12,320 aggregate contacts visible", "Read-only policy live", "Call-queue skill installed"],
+  },
+  {
+    id: "game-plan-july-2",
+    stage: "Build + Integrate",
+    title: "Private annual-review report builder",
+    status: "next" as const,
+    objective:
+      "Combine five or six approved planning inputs into a polished annual-review package on Rob's dedicated server, with a human review gate before release.",
+    source: "July 16 Fireflies meeting",
+    owner: "SCRIBE + SHIELD",
+    steps: [
+      "Receive Rob's final HTML template, sample PDF, and Claude skill folder.",
+      "Stage approved files in the private server intake.",
+      "Assemble the review package without automatic AI ingestion.",
+      "Release only after completeness and compliance review.",
+    ],
+    proof: ["Private upload API", "0700 job directories", "0600 source files", "PII and advice guardrails"],
+  },
+  {
+    id: "game-plan-july-3",
+    stage: "Build + Integrate",
+    title: "LinkedIn + Meet Alfred response desk",
+    status: "next" as const,
+    objective:
+      "Classify inbound prospect replies, prepare reviewed drafts, and hand approved responses into the pipeline while Stephanie remains in the loop.",
+    source: "July 16 Fireflies meeting",
+    owner: "SCOUT + ATLAS",
+    steps: [
+      "Connect LinkedIn and Meet Alfred through the approved path.",
+      "Map Stephanie's current manual response workflow.",
+      "Test classification and draft handoff with synthetic replies.",
+      "Enable live review only after Rob approves the handoff.",
+    ],
+    proof: ["Lead-response agent", "Response-intake skill", "Lead-response swarm", "Outbound review gate"],
+  },
   {
     id: "game-plan-1",
     stage: "Diagnose + Roadmap",
