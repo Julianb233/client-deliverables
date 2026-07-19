@@ -1,8 +1,3 @@
-const depositUrl = "https://www.fanbasis.com/agency-checkout/Aiacrobatics/A8KNB";
-const fullPayUrl = "https://www.fanbasis.com/agency-checkout/Aiacrobatics/B19Nx";
-const retainerUrl = "https://www.fanbasis.com/agency-checkout/Aiacrobatics/DwW1B";
-const growthRetainerUrl = "https://www.fanbasis.com/agency-checkout/Aiacrobatics/rgV2w";
-const partnerRetainerUrl = "https://www.fanbasis.com/agency-checkout/Aiacrobatics/qALQ3";
 const robEmail = "Robert.t.campbell5@gmail.com";
 
 const implementationItems = [
@@ -20,7 +15,6 @@ const retainerTiers = [
   {
     name: "Operator",
     price: "$1,500",
-    url: retainerUrl,
     badge: "Keep it running",
     summary:
       "For keeping the first AI Prospect Engine healthy, monitored, and improving after launch.",
@@ -36,7 +30,6 @@ const retainerTiers = [
   {
     name: "Growth",
     price: "$2,500",
-    url: growthRetainerUrl,
     badge: "Recommended",
     summary:
       "For expanding employer coverage, improving automations, and steadily adding useful prospecting capacity.",
@@ -52,7 +45,6 @@ const retainerTiers = [
   {
     name: "Build Partner",
     price: "$4,500",
-    url: partnerRetainerUrl,
     badge: "Priority build lane",
     summary:
       "For using the system as an active growth lab with priority build time and deeper advisory support.",
@@ -119,7 +111,7 @@ export default function Page() {
 
         <div className="wrap heroBody">
           <div className="heroCopy reveal">
-            <div className="eyebrow">Updated for Robert T. Campbell - May 27, 2026</div>
+            <div className="eyebrow">Implementation status updated - July 19, 2026</div>
             <h1>
               Rob, this is the build path for your <span className="gradientText">AI Prospect Engine.</span>
             </h1>
@@ -129,11 +121,10 @@ export default function Page() {
               client records. Dynamics stays untouched. Hearsay remains the review path. AI never gives investment advice.
             </p>
             <div className="actions">
-              <a className="button primary" href={depositUrl}>
-                Pay $5,500 deposit
-              </a>
-              <a className="button secondary" href={fullPayUrl}>
-                Pay $7,500 in full
+              <span className="button primary">$5,500 deposit paid</span>
+              <span className="button secondary">$2,500/mo Growth active</span>
+              <a className="button secondary" href="https://rob.aiacrobatics.com/rob-os">
+                Open Agent OS
               </a>
               <a className="button secondary" href={`mailto:${robEmail}`}>
                 Email route: {robEmail}
@@ -166,52 +157,46 @@ export default function Page() {
         <div className="wrap">
           <div className="sectionHead">
             <div className="eyebrow">Investment options</div>
-            <h2>Two clean ways to start.</h2>
+            <h2>The build and operating plan are active.</h2>
             <p>
-              The implementation is a $7,500 initial build. Rob can either start with a $5,500 deposit or pay the full
-              implementation upfront. The monthly retainer begins after kickoff so the agents keep improving instead of
-              becoming shelfware.
+              The $5,500 implementation deposit is paid and the Growth Retainer is signed at $2,500 per month. The setup
+              balance is being reconciled before a payment request is issued: the original $7,500 total leaves $2,000,
+              while the latest instruction states $2,500 remains.
             </p>
           </div>
           <div className="grid three stagger">
             <article className="card liftCard">
-              <span className="pill">Start option</span>
+              <span className="pill">Paid May 29</span>
               <div className="price">$5,500</div>
               <h3>Implementation deposit</h3>
               <p>
-                Starts the sprint, reserves development time, and begins HubSpot cleanup, target-employer mapping, and
+                Started the sprint, reserved development time, and began HubSpot cleanup, target-employer mapping, and
                 the first public-signal radar slice.
               </p>
-              <a className="button primary" href={depositUrl}>
-                Pay deposit
-              </a>
+              <span className="button primary">Payment received</span>
             </article>
 
             <article className="card liftCard featured">
-              <span className="pill">Best path</span>
+              <span className="pill">Original scope</span>
               <div className="price">$7,500</div>
               <h3>Implementation paid in full</h3>
               <p>
                 Covers the full initial build we discussed: CRM cleanup, agent workflows, signal radar, brief templates,
                 dashboards, and the launch handoff.
               </p>
-              <a className="button light" href={fullPayUrl}>
-                Pay in full
-              </a>
+              <span className="button light">Balance reconciliation in progress</span>
             </article>
 
             <article className="card liftCard">
-              <span className="pill">Retainer floor</span>
+              <span className="pill">Active plan</span>
               <div className="price">
-                $1,500 <small>/ month</small>
+                $2,500 <small>/ month</small>
               </div>
-              <h3>Operator retainer</h3>
+              <h3>Growth Retainer</h3>
               <p>
-                The baseline ongoing plan for agent monitoring, standard credit usage, light development time, and monthly review.
+                Includes agent monitoring, expanded AI usage, up to seven development or consulting hours, and monthly operating review.
               </p>
-              <a className="button light" href={retainerUrl}>
-                Start Operator
-              </a>
+              <span className="button light">Signed and current</span>
             </article>
           </div>
         </div>
@@ -241,11 +226,11 @@ export default function Page() {
         <div className="motionGrid soft" aria-hidden="true" />
         <div className="wrap">
           <div className="sectionHead">
-            <div className="eyebrow">Monthly retainer ladder</div>
-            <h2>Pick the pace of the machine after launch.</h2>
+            <div className="eyebrow">Monthly operating plan</div>
+            <h2>Growth is active at $2,500 per month.</h2>
             <p>
-              The monthly plan can stay lean or become a build lane. Each tier includes agent credit usage, monitoring,
-              and a defined development/consulting allocation so Rob knows exactly what he is buying.
+              The comparison remains visible for scope clarity, but Rob does not need to select a tier. Growth includes
+              expanded agent usage and a defined seven-hour development or consulting allocation.
             </p>
           </div>
           <div className="retainerGrid">
@@ -262,15 +247,17 @@ export default function Page() {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
-                <a className="button primary full" href={tier.url}>
-                  Select {tier.name}
-                </a>
+                {tier.name === "Growth" ? (
+                  <span className="button primary full">Current plan</span>
+                ) : (
+                  <span className="button primary full">Reference option</span>
+                )}
               </article>
             ))}
           </div>
           <p className="fine tierNote">
-            The retainer can be changed month to month before work starts. If a month needs heavier agent usage or
-            build hours, we pick the tier that matches the actual workload instead of burying scope in vague support.
+            Growth is the signed operating baseline. Any future plan change is reviewed separately so scope, hours, and
+            AI usage remain explicit.
           </p>
         </div>
       </section>
@@ -301,26 +288,16 @@ export default function Page() {
             <div className="eyebrow" style={{ color: "rgba(255,255,255,.78)" }}>
               Ready path
             </div>
-            <h2>Pay the deposit or full implementation, then we move directly into kickoff.</h2>
+            <h2>The implementation and Growth Retainer are underway.</h2>
             <p>
               First working session: confirm the compliance boundary in writing, map HubSpot-side fields, define the
               manual handoff point, and select the first target-employer slice for the signal radar.
             </p>
             <div className="actions">
-              <a className="button secondary" href={depositUrl}>
-                Pay $5,500 deposit
-              </a>
-              <a className="button secondary" href={fullPayUrl}>
-                Pay $7,500 in full
-              </a>
-              <a className="button secondary" href={retainerUrl}>
-                Start $1,500/mo Operator
-              </a>
-              <a className="button secondary" href={growthRetainerUrl}>
-                Start $2,500/mo Growth
-              </a>
-              <a className="button secondary" href={partnerRetainerUrl}>
-                Start $4,500/mo Build Partner
+              <span className="button secondary">Deposit paid</span>
+              <span className="button secondary">Growth Retainer active</span>
+              <a className="button secondary" href="https://rob.aiacrobatics.com/rob-os/command-room">
+                Open Command Room
               </a>
             </div>
           </div>
