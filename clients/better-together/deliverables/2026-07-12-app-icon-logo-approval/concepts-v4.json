@@ -1,7 +1,7 @@
 {
   "version": 5.0,
-  "generated": 52,
-  "finalAssets": 32,
+  "generated": 54,
+  "finalAssets": 34,
   "concepts": [
     {
       "id": "bt-living-ligature",
@@ -216,6 +216,28 @@
         "centerBalance": 0.9362,
         "edgeDensity": 0.046,
         "gate": "pass"
+      }
+    },
+    {
+      "id": "open-heart-seed",
+      "number": "11",
+      "name": "Open Heart Seed",
+      "family": "Heart Mark",
+      "variantOf": "Open Heart Pair",
+      "file": "assets/icons-v4-variations/11-open-heart-seed.png",
+      "lockup": "assets/lockups-v4-variations/11-open-heart-seed-lockup.png",
+      "idea": "The two independent heart strokes now protect a recognizable seed, turning connection into something both people intentionally nurture.",
+      "motion": "heart-pair-meet",
+      "motionLabel": "Halves approach, seed wakes, heart holds",
+      "layers": ["Coral field", "Paper heart half", "Forest heart half", "Saffron seed with coral crease"],
+      "bestFor": "A relationship-first app icon with a clearer link to Better Together's growth and garden story.",
+      "watchout": "Keep the seed compact and unmistakable at small sizes so it never reads as a flame or generic center dot.",
+      "nextStep": "Compare this seed-centered route with concept 04, then refine the approved silhouette as a production vector and motion asset.",
+      "metrics": {
+        "small20Contrast": 0.6784,
+        "centerBalance": 0.9345,
+        "edgeDensity": 0.0433,
+        "gate": "human-reviewed"
       }
     },
     {

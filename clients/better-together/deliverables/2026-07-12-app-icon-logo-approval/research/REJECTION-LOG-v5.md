@@ -3,8 +3,8 @@
 ## Scope
 
 - Request: add more identity options for Julian, Meatball, and the family group to compare.
-- Generated: eight initial icon candidates, four corrected icon renders, and six exact-name lockups.
-- Published: six new systems, bringing the public board to sixteen systems and thirty-two final icon/lockup assets.
+- Generated: eight initial icon candidates, four corrected icon renders, six exact-name lockups, and one annotation-led icon/lockup pair.
+- Published: seven new systems, bringing the public board to seventeen systems and thirty-four final icon/lockup assets.
 - Unchanged: all ten Round 4 and Round 4.1 systems, their approval state, and the current TestFlight icon.
 
 ## Published
@@ -15,6 +15,7 @@
 4. **Bonsai Duet** - two independent trunks crossing once beneath one sparse canopy.
 5. **Modern Garden Seal** - the approved Garden Seal territory reduced to an open arc, two stems, and one sun.
 6. **Canopy Window** - two organic trunks framing a protected shared space.
+7. **Open Heart Seed** - the Open Heart Pair with its center dot refined into a recognizable saffron seed after direct approval-board feedback.
 
 ## Rejected Or Corrected
 
@@ -29,8 +30,8 @@
 
 ## Validation
 
-- Six of six published icons: valid PNG, 1024x1024, more than 10 KB.
-- Six of six published lockups: valid PNG, 1024x1024, more than 10 KB.
+- Seven of seven published icons: valid PNG, 1024x1024, more than 10 KB.
+- Seven of seven published lockups: valid PNG, 1024x1024, more than 10 KB.
 - Every lockup was visually inspected and spells `Better Together` exactly.
-- Automated candidate gates: three pass; three retained by human review after direct 20 px inspection. The human-reviewed exceptions are palette quantization or complexity thresholds, not corruption or spelling failures.
+- Automated candidate gates: three pass; four retained by human review after direct 20 px inspection. The human-reviewed exceptions are palette quantization or complexity thresholds, not corruption or spelling failures.
 - No competitor artwork, geometry, palette, trademark, or source asset was copied into the generation workflow.

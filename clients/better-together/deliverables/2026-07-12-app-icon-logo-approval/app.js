@@ -78,8 +78,8 @@ function sizeSample(file, size, label) {
 function conceptCard(concept) {
   const review = reviewFor(concept.id);
   const status = review.status || "undecided";
-  const file = `${concept.file}?v=round5`;
-  const lockup = `${concept.lockup}?v=round5`;
+  const file = `${concept.file}?v=round5-seed1`;
+  const lockup = `${concept.lockup}?v=round5-seed1`;
   const layers = concept.layers.map((item) => `<span>${escapeHtml(item)}</span>`).join("");
   const variantLabel = concept.variantOf
     ? `<p class="variant-of"><i data-lucide="git-branch"></i>Variation of ${escapeHtml(concept.variantOf)}</p>`
@@ -365,7 +365,7 @@ document.getElementById("resetReview").addEventListener("click", () => {
   showToast("Review reset.");
 });
 
-fetch("concepts-v4.json?v=5")
+fetch("concepts-v4.json?v=5-seed1")
   .then((response) => {
     if (!response.ok) throw new Error(`Concept manifest failed: ${response.status}`);
     return response.json();
