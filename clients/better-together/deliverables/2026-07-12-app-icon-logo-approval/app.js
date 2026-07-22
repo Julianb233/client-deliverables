@@ -703,6 +703,7 @@ document.getElementById("downloadReview").addEventListener("click", downloadRevi
 document.getElementById("resetReview").addEventListener("click", () => {
   if (!confirm("Clear all decisions and notes on this device?")) return;
   state = { version: 4, reviewer: "", overallNotes: "", decisions: {}, lockups: {}, fontChoices: {}, canonicalDecisionRevision: "" };
+  applyCanonicalDecisions();
   localStorage.removeItem(STORAGE_KEY);
   history.replaceState(null, "", location.pathname + location.search);
   document.getElementById("reviewerName").value = "";
