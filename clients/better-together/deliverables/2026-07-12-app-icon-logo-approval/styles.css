@@ -145,7 +145,7 @@ section { scroll-margin-top: 18px; }
 .community-section { border-top-color: rgba(229, 83, 58, 0.42); }
 .variation-heading { align-items: end; margin-bottom: 24px; }
 .variation-heading > p { max-width: 390px; margin: 0; color: var(--muted); line-height: 1.55; text-align: right; }
-.concept-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); box-shadow: 0 7px 22px rgba(20, 17, 14, 0.055); transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease; }
+.concept-card { min-width: 0; scroll-margin-top: 18px; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); box-shadow: 0 7px 22px rgba(20, 17, 14, 0.055); transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease; }
 .concept-card.is-variation { border-top: 4px solid var(--gold); }
 .concept-card.is-community { border-top: 4px solid var(--coral); }
 .concept-card.is-approved { border: 2px solid var(--teal); box-shadow: 0 12px 34px rgba(17, 59, 54, 0.14); }

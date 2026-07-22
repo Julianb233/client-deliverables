@@ -236,6 +236,13 @@ function render() {
   updateSummary();
 }
 
+function scrollToLinkedConcept() {
+  if (!location.hash.startsWith("#concept-")) return;
+  const target = document.getElementById(location.hash.slice(1));
+  if (!target) return;
+  requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+}
+
 function decorateButtons() {
   if (!window.lucide) return;
   document.querySelectorAll("[data-lucide-button]").forEach((button) => {
@@ -420,6 +427,7 @@ fetch("concepts-v4.json?v=5-heartwood2")
     document.getElementById("reviewerName").value = state.reviewer || "";
     document.getElementById("overallNotes").value = state.overallNotes || "";
     render();
+    scrollToLinkedConcept();
   })
   .catch((error) => {
     const message = `<p class="empty-state">The concept list could not load. ${escapeHtml(error.message)}</p>`;
