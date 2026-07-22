@@ -1,5 +1,48 @@
 const STORAGE_KEY = "better-together-identity-review-v4";
 
+const lockupOptions = [
+  {
+    id: "canopy-whisper",
+    number: "W1",
+    name: "Canopy Whisper",
+    format: "Editorial horizontal",
+    idea: "The approved tree becomes a quiet background presence while the two-line name carries the identity.",
+    detail: "Warm paper, forest typography, coral branch accent, and a saffron heart seed on the baseline.",
+  },
+  {
+    id: "night-garden",
+    number: "W2",
+    name: "Night Garden",
+    format: "Premium dark field",
+    idea: "A low-contrast canopy grows behind the name instead of containing it inside a logo tile.",
+    detail: "Deep forest field, ivory type, a soft botanical watermark, and one restrained saffron seed.",
+  },
+  {
+    id: "shared-ground",
+    number: "W3",
+    name: "Shared Ground",
+    format: "Modern single line",
+    idea: "Better and Together share one baseline, with the heart seed acting as the relationship point between them.",
+    detail: "A compact horizontal system for navigation, email, web headers, and product surfaces.",
+  },
+  {
+    id: "living-seal",
+    number: "W4",
+    name: "Living Seal",
+    format: "Community emblem",
+    idea: "The name wraps the unboxed Heartwood mark in a soft garden seal without returning to a square app-icon block.",
+    detail: "Useful for community moments, merchandise, welcome kits, and social profile treatments.",
+  },
+  {
+    id: "quiet-monogram",
+    number: "W5",
+    name: "Quiet Monogram",
+    format: "Layered brand signature",
+    idea: "A tonal BT sits behind the full name, creating the background-on-background depth without competing with readability.",
+    detail: "The most flexible option for editorial covers, onboarding, and large-format brand moments.",
+  },
+];
+
 let concepts = [];
 let familyFilter = "all";
 let statusFilter = "all";
@@ -9,11 +52,13 @@ let state = {
   reviewer: "",
   overallNotes: "",
   decisions: {},
+  lockups: {},
 };
 
 const grid = document.getElementById("conceptGrid");
 const variationGrid = document.getElementById("variationGrid");
 const communityGrid = document.getElementById("communityGrid");
+const lockupGrid = document.getElementById("lockupGrid");
 
 function escapeHtml(value = "") {
   return String(value)
@@ -34,6 +79,10 @@ function decodeReview(value) {
 
 function reviewFor(id) {
   return state.decisions[id] || { status: "", favorite: false, note: "" };
+}
+
+function lockupReviewFor(id) {
+  return state.lockups?.[id] || { status: "", note: "" };
 }
 
 function decisionStatusFor(concept) {
@@ -111,6 +160,106 @@ function motionArtwork(concept, file) {
         </g>
       </svg>
     </div>`;
+}
+
+function heartwoodLockupMark(className = "") {
+  return `
+    <svg class="heartwood-lockup-mark ${className}" viewBox="0 0 120 120" focusable="false" aria-hidden="true">
+      <g class="mark-left-tree">
+        <path d="M55 101c-13-3-22-13-21-27 1-12 8-24 19-33-5 16-2 27 8 35 6 5 7 13 2 22-2 2-5 3-8 3Z"/>
+        <path d="M43 54c-10-1-17-7-18-15 9-1 18 4 22 13l-4 2Zm8-14c-6-6-7-14-3-20 8 4 11 12 8 20h-5Z"/>
+      </g>
+      <g class="mark-right-tree">
+        <path d="M65 101c13-3 22-13 21-27-1-12-8-24-19-33 5 16 2 27-8 35-6 5-7 13-2 22 2 2 5 3 8 3Z"/>
+        <path d="M77 54c10-1 17-7 18-15-9-1-18 4-22 13l4 2Zm-8-14c6-6 7-14 3-20-8 4-11 12-8 20h5Z"/>
+      </g>
+      <g class="mark-canopy">
+        <path d="M37 36c-9-2-14-8-14-15 9-1 17 4 20 12l-6 3Zm46 0c9-2 14-8 14-15-9-1-17 4-20 12l6 3ZM60 34c-7-7-8-17-1-25 8 7 9 17 2 25h-1Z"/>
+      </g>
+      <path class="mark-heart-cut" d="M60 70c-6-8-18-7-18 3 0 10 18 20 18 20s18-10 18-20c0-10-12-11-18-3Z"/>
+      <path class="mark-seed" d="M60 95c-5-7-15-6-15 3 0 8 15 15 15 15s15-7 15-15c0-9-10-10-15-3Z"/>
+    </svg>`;
+}
+
+function lockupArtwork(option) {
+  if (option.id === "canopy-whisper") {
+    return `
+      <div class="lockup-canvas canvas-canopy-whisper">
+        ${heartwoodLockupMark("lockup-watermark")}
+        <div class="canopy-wordmark"><span>Better</span><span>Together<i class="wordmark-heart" aria-hidden="true"></i></span></div>
+        <span class="lockup-rule" aria-hidden="true"></span>
+      </div>`;
+  }
+
+  if (option.id === "night-garden") {
+    return `
+      <div class="lockup-canvas canvas-night-garden">
+        ${heartwoodLockupMark("night-watermark")}
+        <div class="night-wordmark"><span>better</span><span>together</span></div>
+        <i class="wordmark-heart" aria-hidden="true"></i>
+      </div>`;
+  }
+
+  if (option.id === "shared-ground") {
+    return `
+      <div class="lockup-canvas canvas-shared-ground">
+        ${heartwoodLockupMark("shared-ground-mark")}
+        <div class="shared-ground-name"><span>Better</span><i class="wordmark-heart" aria-hidden="true"></i><span>Together</span></div>
+        <span class="shared-ground-line" aria-hidden="true"></span>
+      </div>`;
+  }
+
+  if (option.id === "living-seal") {
+    return `
+      <div class="lockup-canvas canvas-living-seal">
+        <div class="living-seal-mark">
+          <span class="seal-word seal-word-top">Better</span>
+          ${heartwoodLockupMark("seal-tree")}
+          <span class="seal-word seal-word-bottom">Together</span>
+        </div>
+        <div class="living-seal-name"><strong>Better Together</strong><span>Grow toward each other.</span></div>
+      </div>`;
+  }
+
+  return `
+    <div class="lockup-canvas canvas-quiet-monogram">
+      <span class="monogram-ghost" aria-hidden="true">BT</span>
+      ${heartwoodLockupMark("monogram-mark")}
+      <div class="monogram-name"><span>Better</span><span>Together<i class="wordmark-heart" aria-hidden="true"></i></span></div>
+    </div>`;
+}
+
+function lockupCard(option) {
+  const review = lockupReviewFor(option.id);
+  const status = review.status || "undecided";
+  const statusButton = (value, label) => `
+    <button type="button" data-action="lockup-decision" data-id="${option.id}" data-status="${value}" class="${status === value ? "active" : ""}" aria-pressed="${status === value}">${label}</button>`;
+
+  return `
+    <article id="lockup-${option.id}" class="lockup-card" data-status="${status}">
+      <div class="lockup-preview">${lockupArtwork(option)}</div>
+      <div class="lockup-card-copy">
+        <div class="lockup-card-title"><span>${option.number}</span><div><p>${escapeHtml(option.format)}</p><h3>${escapeHtml(option.name)}</h3></div></div>
+        <p class="lockup-idea">${escapeHtml(option.idea)}</p>
+        <p class="lockup-detail">${escapeHtml(option.detail)}</p>
+        <div class="decision-control" role="group" aria-label="Decision for ${escapeHtml(option.name)}">
+          ${statusButton("approve", "Approve")}
+          ${statusButton("revise", "Needs change")}
+          ${statusButton("hold", "Hold")}
+        </div>
+        <label class="note-label">
+          <span>Notes for this wordmark</span>
+          <textarea data-action="lockup-note" data-id="${option.id}" placeholder="What should change or stay?">${escapeHtml(review.note)}</textarea>
+        </label>
+      </div>
+    </article>`;
+}
+
+function renderLockups() {
+  lockupGrid.innerHTML = lockupOptions.map(lockupCard).join("");
+  const decided = lockupOptions.filter((option) => lockupReviewFor(option.id).status).length;
+  const status = document.getElementById("lockupStatus");
+  if (status) status.textContent = decided ? `${decided} of ${lockupOptions.length} decided` : `${lockupOptions.length} directions to review`;
 }
 
 function conceptCard(concept) {
@@ -216,6 +365,7 @@ function conceptCard(concept) {
 }
 
 function render() {
+  renderLockups();
   const visible = concepts.filter(matchesFilters);
   const primaryVisible = visible.filter((concept) => !concept.variantOf && concept.round !== "family-feedback");
   const variationVisible = visible.filter((concept) => concept.variantOf);
@@ -236,8 +386,8 @@ function render() {
   updateSummary();
 }
 
-function scrollToLinkedConcept() {
-  if (!location.hash.startsWith("#concept-")) return;
+function scrollToLinkedReview() {
+  if (!location.hash.startsWith("#concept-") && !location.hash.startsWith("#lockup-")) return;
   const target = document.getElementById(location.hash.slice(1));
   if (!target) return;
   requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
@@ -277,6 +427,14 @@ function updateFavorite(id) {
   render();
 }
 
+function updateLockupDecision(id, status) {
+  const current = lockupReviewFor(id);
+  state.lockups = state.lockups || {};
+  state.lockups[id] = { ...current, status: current.status === status ? "" : status };
+  saveState();
+  renderLockups();
+}
+
 function playMotion(button) {
   const stage = button.closest(".motion-stage");
   stage.classList.remove("is-playing");
@@ -286,10 +444,15 @@ function playMotion(button) {
 
 function reviewSummary() {
   const groups = { approve: [], revise: [], hold: [], undecided: [] };
+  const lockupGroups = { approve: [], revise: [], hold: [], undecided: [] };
   concepts.forEach((concept) => {
     const review = reviewFor(concept.id);
     const note = Object.hasOwn(state.decisions, concept.id) ? review.note : (concept.approvalNote || "");
     groups[decisionStatusFor(concept)].push(`${concept.number} ${concept.name}${review.favorite ? " [favorite]" : ""}${note ? ` - ${note}` : ""}`);
+  });
+  lockupOptions.forEach((option) => {
+    const review = lockupReviewFor(option.id);
+    lockupGroups[review.status || "undecided"].push(`${option.number} ${option.name}${review.note ? ` - ${review.note}` : ""}`);
   });
 
   return [
@@ -299,6 +462,12 @@ function reviewSummary() {
     `Needs changes: ${groups.revise.join("; ") || "None"}`,
     `Hold: ${groups.hold.join("; ") || "None"}`,
     `Undecided: ${groups.undecided.join("; ") || "None"}`,
+    "",
+    "Heartwood wordmark review - Round 5.1",
+    `Approved: ${lockupGroups.approve.join("; ") || "None"}`,
+    `Needs changes: ${lockupGroups.revise.join("; ") || "None"}`,
+    `Hold: ${lockupGroups.hold.join("; ") || "None"}`,
+    `Undecided: ${lockupGroups.undecided.join("; ") || "None"}`,
     state.overallNotes ? `Overall notes: ${state.overallNotes}` : "",
   ].filter(Boolean).join("\n");
 }
@@ -370,10 +539,27 @@ function handleGridInput(event) {
   saveState();
 }
 
+function handleLockupClick(event) {
+  const button = event.target.closest("button[data-action='lockup-decision']");
+  if (!button) return;
+  updateLockupDecision(button.dataset.id, button.dataset.status);
+}
+
+function handleLockupInput(event) {
+  if (event.target.dataset.action !== "lockup-note") return;
+  const current = lockupReviewFor(event.target.dataset.id);
+  state.lockups = state.lockups || {};
+  state.lockups[event.target.dataset.id] = { ...current, note: event.target.value };
+  saveState();
+}
+
 [grid, variationGrid, communityGrid].forEach((targetGrid) => {
   targetGrid.addEventListener("click", handleGridClick);
   targetGrid.addEventListener("input", handleGridInput);
 });
+
+lockupGrid.addEventListener("click", handleLockupClick);
+lockupGrid.addEventListener("input", handleLockupInput);
 
 document.getElementById("familyFilters").addEventListener("click", (event) => {
   const button = event.target.closest("button[data-family]");
@@ -407,7 +593,7 @@ document.getElementById("copySummary").addEventListener("click", () => copyText(
 document.getElementById("downloadReview").addEventListener("click", downloadReview);
 document.getElementById("resetReview").addEventListener("click", () => {
   if (!confirm("Clear all decisions and notes on this device?")) return;
-  state = { version: 4, reviewer: "", overallNotes: "", decisions: {} };
+  state = { version: 4, reviewer: "", overallNotes: "", decisions: {}, lockups: {} };
   localStorage.removeItem(STORAGE_KEY);
   history.replaceState(null, "", location.pathname + location.search);
   document.getElementById("reviewerName").value = "";
@@ -416,7 +602,7 @@ document.getElementById("resetReview").addEventListener("click", () => {
   showToast("Review reset.");
 });
 
-fetch("concepts-v4.json?v=5-heartwood2")
+fetch("concepts-v4.json?v=5-wordmarks1")
   .then((response) => {
     if (!response.ok) throw new Error(`Concept manifest failed: ${response.status}`);
     return response.json();
@@ -427,7 +613,7 @@ fetch("concepts-v4.json?v=5-heartwood2")
     document.getElementById("reviewerName").value = state.reviewer || "";
     document.getElementById("overallNotes").value = state.overallNotes || "";
     render();
-    scrollToLinkedConcept();
+    scrollToLinkedReview();
   })
   .catch((error) => {
     const message = `<p class="empty-state">The concept list could not load. ${escapeHtml(error.message)}</p>`;
