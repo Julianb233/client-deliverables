@@ -36,6 +36,10 @@ function reviewFor(id) {
   return state.decisions[id] || { status: "", favorite: false, note: "" };
 }
 
+function decisionStatusFor(concept) {
+  return reviewFor(concept.id).status || (concept.approved ? "approve" : "undecided");
+}
+
 function saveState(message = "Saved on this device") {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   document.getElementById("saveStatus").textContent = message;
@@ -67,7 +71,7 @@ function loadState() {
 
 function matchesFilters(concept) {
   if (familyFilter !== "all" && concept.family !== familyFilter) return false;
-  const status = reviewFor(concept.id).status || "undecided";
+  const status = decisionStatusFor(concept);
   return statusFilter === "all" || statusFilter === status;
 }
 
@@ -75,22 +79,60 @@ function sizeSample(file, size, label) {
   return `<span class="size-sample"><img class="size-${size}" src="${file}" alt="" aria-hidden="true"><b>${label}</b></span>`;
 }
 
+function motionSteps(concept) {
+  const steps = concept.motionSteps || ["Separate", "Connect", "Grow", "Settle"];
+  return steps.map((step, index) => `${index ? "<i></i>" : ""}<b>${escapeHtml(step)}</b>`).join("");
+}
+
+function motionArtwork(concept, file) {
+  if (concept.id !== "heartwood-bonsai") {
+    return `<img class="motion-icon" src="${file}" alt="" aria-hidden="true">`;
+  }
+
+  return `
+    <div class="heartwood-motion-art" aria-hidden="true">
+      <img class="motion-icon heartwood-final-icon" src="${file}" alt="">
+      <svg class="heartwood-motion-sequence" viewBox="0 0 120 120" focusable="false">
+        <rect x="8" y="8" width="104" height="104" rx="23" fill="#113b36"/>
+        <g class="heartwood-left-tree">
+          <path d="M55 101c-13-3-22-13-21-27 1-12 8-24 19-33-5 16-2 27 8 35 6 5 7 13 2 22-2 2-5 3-8 3Z" fill="#e5533a"/>
+          <path d="M43 54c-10-1-17-7-18-15 9-1 18 4 22 13l-4 2Zm8-14c-6-6-7-14-3-20 8 4 11 12 8 20h-5Z" fill="#faf8f5"/>
+        </g>
+        <g class="heartwood-right-tree">
+          <path d="M65 101c13-3 22-13 21-27-1-12-8-24-19-33 5 16 2 27-8 35-6 5-7 13-2 22 2 2 5 3 8 3Z" fill="#faf8f5"/>
+          <path d="M77 54c10-1 17-7 18-15-9-1-18 4-22 13l4 2Zm-8-14c6-6 7-14 3-20-8 4-11 12-8 20h5Z" fill="#faf8f5"/>
+        </g>
+        <g class="heartwood-canopy">
+          <path d="M37 36c-9-2-14-8-14-15 9-1 17 4 20 12l-6 3Zm46 0c9-2 14-8 14-15-9-1-17 4-20 12l6 3ZM60 34c-7-7-8-17-1-25 8 7 9 17 2 25h-1Z" fill="#faf8f5"/>
+        </g>
+        <path class="heartwood-heart-reveal" d="M60 70c-6-8-18-7-18 3 0 10 18 20 18 20s18-10 18-20c0-10-12-11-18-3Z" fill="#113b36"/>
+        <g class="heartwood-seed">
+          <path d="M60 95c-5-7-15-6-15 3 0 8 15 15 15 15s15-7 15-15c0-9-10-10-15-3Z" fill="#d99a3d" stroke="#113b36" stroke-width="2.5"/>
+        </g>
+      </svg>
+    </div>`;
+}
+
 function conceptCard(concept) {
   const review = reviewFor(concept.id);
-  const status = review.status || "undecided";
-  const file = `${concept.file}?v=round5-seed1`;
-  const lockup = `${concept.lockup}?v=round5-seed1`;
+  const status = decisionStatusFor(concept);
+  const file = `${concept.file}?v=round5-heartwood2`;
+  const lockup = `${concept.lockup}?v=round5-heartwood2`;
+  const note = Object.hasOwn(state.decisions, concept.id) ? review.note : (concept.approvalNote || "");
   const layers = concept.layers.map((item) => `<span>${escapeHtml(item)}</span>`).join("");
   const variantLabel = concept.variantOf
     ? `<p class="variant-of"><i data-lucide="git-branch"></i>Variation of ${escapeHtml(concept.variantOf)}</p>`
     : concept.round === "family-feedback"
       ? '<p class="variant-of community-label"><i data-lucide="users"></i>Added for family feedback</p>'
     : "";
+  const approvalBadge = concept.approved
+    ? `<div class="approval-banner"><i data-lucide="badge-check"></i><span><strong>Approved direction</strong>${escapeHtml(concept.approvalNote)}</span></div>`
+    : "";
   const statusButton = (value, label) => `
-    <button type="button" data-action="decision" data-id="${concept.id}" data-status="${value}" class="${review.status === value ? "active" : ""}" aria-pressed="${review.status === value}">${label}</button>`;
+    <button type="button" data-action="decision" data-id="${concept.id}" data-status="${value}" class="${status === value ? "active" : ""}" aria-pressed="${status === value}">${label}</button>`;
 
   return `
-    <article class="concept-card ${concept.variantOf ? "is-variation" : ""} ${concept.round === "family-feedback" ? "is-community" : ""}" data-status="${status}" data-concept="${concept.id}">
+    <article id="concept-${concept.id}" class="concept-card ${concept.approved ? "is-approved" : ""} ${concept.variantOf ? "is-variation" : ""} ${concept.round === "family-feedback" ? "is-community" : ""}" data-status="${status}" data-concept="${concept.id}">
       <div class="concept-image-stage">
         <img src="${file}" alt="${escapeHtml(concept.name)} app icon concept" width="1024" height="1024">
         <span class="concept-number">${concept.number}</span>
@@ -99,6 +141,7 @@ function conceptCard(concept) {
       <div class="concept-content">
         <p class="family-label">${escapeHtml(concept.family)}</p>
         <h3>${escapeHtml(concept.name)}</h3>
+        ${approvalBadge}
         ${variantLabel}
         <p class="concept-idea">${escapeHtml(concept.idea)}</p>
 
@@ -134,14 +177,14 @@ function conceptCard(concept) {
         </div>
 
         <div class="motion-panel">
-          <div class="motion-stage" data-motion="${concept.motion}">
-            <img class="motion-icon" src="${file}" alt="" aria-hidden="true">
+          <div class="motion-stage" data-motion="${concept.motion}" data-duration="${concept.motionDuration || 2100}">
+            ${motionArtwork(concept, file)}
             <button class="motion-play" type="button" data-action="motion" title="Play motion preview" aria-label="Play ${escapeHtml(concept.name)} motion preview"><i data-lucide="play"></i></button>
           </div>
           <div class="motion-copy">
             <span>Motion grammar</span>
             <strong>${escapeHtml(concept.motionLabel)}</strong>
-            <div class="motion-steps" aria-label="Motion sequence"><b>Separate</b><i></i><b>Connect</b><i></i><b>Grow</b><i></i><b>Settle</b></div>
+            <div class="motion-steps" aria-label="Motion sequence">${motionSteps(concept)}</div>
           </div>
         </div>
 
@@ -166,7 +209,7 @@ function conceptCard(concept) {
         </div>
         <label class="note-label">
           <span>Notes for this direction</span>
-          <textarea data-action="note" data-id="${concept.id}" placeholder="What should change or stay?">${escapeHtml(review.note)}</textarea>
+          <textarea data-action="note" data-id="${concept.id}" placeholder="What should change or stay?">${escapeHtml(note)}</textarea>
         </label>
       </div>
     </article>`;
@@ -205,7 +248,7 @@ function decorateButtons() {
 }
 
 function updateSummary() {
-  const values = concepts.map((concept) => reviewFor(concept.id).status).filter(Boolean);
+  const values = concepts.map(decisionStatusFor).filter((status) => status !== "undecided");
   const count = (status) => values.filter((value) => value === status).length;
   document.getElementById("decisionCount").textContent = values.length;
   document.getElementById("approveCount").textContent = count("approve");
@@ -231,14 +274,15 @@ function playMotion(button) {
   const stage = button.closest(".motion-stage");
   stage.classList.remove("is-playing");
   requestAnimationFrame(() => requestAnimationFrame(() => stage.classList.add("is-playing")));
-  window.setTimeout(() => stage.classList.remove("is-playing"), 2100);
+  window.setTimeout(() => stage.classList.remove("is-playing"), Number(stage.dataset.duration || 2100));
 }
 
 function reviewSummary() {
   const groups = { approve: [], revise: [], hold: [], undecided: [] };
   concepts.forEach((concept) => {
     const review = reviewFor(concept.id);
-    groups[review.status || "undecided"].push(`${concept.number} ${concept.name}${review.favorite ? " [favorite]" : ""}${review.note ? ` - ${review.note}` : ""}`);
+    const note = Object.hasOwn(state.decisions, concept.id) ? review.note : (concept.approvalNote || "");
+    groups[decisionStatusFor(concept)].push(`${concept.number} ${concept.name}${review.favorite ? " [favorite]" : ""}${note ? ` - ${note}` : ""}`);
   });
 
   return [
@@ -365,7 +409,7 @@ document.getElementById("resetReview").addEventListener("click", () => {
   showToast("Review reset.");
 });
 
-fetch("concepts-v4.json?v=5-seed1")
+fetch("concepts-v4.json?v=5-heartwood2")
   .then((response) => {
     if (!response.ok) throw new Error(`Concept manifest failed: ${response.status}`);
     return response.json();
