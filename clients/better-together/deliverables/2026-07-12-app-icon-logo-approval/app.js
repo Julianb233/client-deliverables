@@ -1,4 +1,5 @@
 const STORAGE_KEY = "better-together-identity-review-v4";
+const CANONICAL_DECISION_REVISION = "round5-two-approved-2026-07-22";
 
 const lockupOptions = [
   {
@@ -53,6 +54,8 @@ let state = {
   overallNotes: "",
   decisions: {},
   lockups: {},
+  fontChoices: {},
+  canonicalDecisionRevision: "",
 };
 
 const grid = document.getElementById("conceptGrid");
@@ -85,8 +88,21 @@ function lockupReviewFor(id) {
   return state.lockups?.[id] || { status: "", note: "" };
 }
 
+function fontChoiceFor(id) {
+  return state.fontChoices?.[id] || "";
+}
+
 function decisionStatusFor(concept) {
   return reviewFor(concept.id).status || (concept.approved ? "approve" : "undecided");
+}
+
+function applyCanonicalDecisions() {
+  if (state.canonicalDecisionRevision === CANONICAL_DECISION_REVISION) return;
+  state.decisions = state.decisions || {};
+  ["heartwood-bonsai", "open-heart-seed"].forEach((id) => {
+    state.decisions[id] = { ...reviewFor(id), status: "approve" };
+  });
+  state.canonicalDecisionRevision = CANONICAL_DECISION_REVISION;
 }
 
 function saveState(message = "Saved on this device") {
@@ -102,6 +118,7 @@ function loadState() {
       const shared = decodeReview(hash);
       if (shared?.version === 4) {
         state = { ...state, ...shared };
+        applyCanonicalDecisions();
         saveState("Shared review loaded");
         return;
       }
@@ -116,6 +133,7 @@ function loadState() {
   } catch (error) {
     localStorage.removeItem(STORAGE_KEY);
   }
+  applyCanonicalDecisions();
 }
 
 function matchesFilters(concept) {
@@ -134,32 +152,49 @@ function motionSteps(concept) {
 }
 
 function motionArtwork(concept, file) {
-  if (concept.id !== "heartwood-bonsai") {
-    return `<img class="motion-icon" src="${file}" alt="" aria-hidden="true">`;
+  if (concept.id === "heartwood-bonsai") {
+    return `
+      <div class="heartwood-motion-art" aria-hidden="true">
+        <img class="motion-icon heartwood-final-icon" src="${file}" alt="">
+        <svg class="heartwood-motion-sequence" viewBox="0 0 120 120" focusable="false">
+          <rect x="8" y="8" width="104" height="104" rx="23" fill="#113b36"/>
+          <g class="heartwood-left-tree">
+            <path d="M55 101c-13-3-22-13-21-27 1-12 8-24 19-33-5 16-2 27 8 35 6 5 7 13 2 22-2 2-5 3-8 3Z" fill="#e5533a"/>
+            <path d="M43 54c-10-1-17-7-18-15 9-1 18 4 22 13l-4 2Zm8-14c-6-6-7-14-3-20 8 4 11 12 8 20h-5Z" fill="#faf8f5"/>
+          </g>
+          <g class="heartwood-right-tree">
+            <path d="M65 101c13-3 22-13 21-27-1-12-8-24-19-33 5 16 2 27-8 35-6 5-7 13-2 22 2 2 5 3 8 3Z" fill="#faf8f5"/>
+            <path d="M77 54c10-1 17-7 18-15-9-1-18 4-22 13l4 2Zm-8-14c6-6 7-14 3-20-8 4-11 12-8 20h5Z" fill="#faf8f5"/>
+          </g>
+          <g class="heartwood-canopy">
+            <path d="M37 36c-9-2-14-8-14-15 9-1 17 4 20 12l-6 3Zm46 0c9-2 14-8 14-15-9-1-17 4-20 12l6 3ZM60 34c-7-7-8-17-1-25 8 7 9 17 2 25h-1Z" fill="#faf8f5"/>
+          </g>
+          <path class="heartwood-heart-reveal" d="M60 70c-6-8-18-7-18 3 0 10 18 20 18 20s18-10 18-20c0-10-12-11-18-3Z" fill="#113b36"/>
+          <g class="heartwood-seed">
+            <path d="M60 95c-5-7-15-6-15 3 0 8 15 15 15 15s15-7 15-15c0-9-10-10-15-3Z" fill="#d99a3d" stroke="#113b36" stroke-width="2.5"/>
+          </g>
+        </svg>
+      </div>`;
   }
 
-  return `
-    <div class="heartwood-motion-art" aria-hidden="true">
-      <img class="motion-icon heartwood-final-icon" src="${file}" alt="">
-      <svg class="heartwood-motion-sequence" viewBox="0 0 120 120" focusable="false">
-        <rect x="8" y="8" width="104" height="104" rx="23" fill="#113b36"/>
-        <g class="heartwood-left-tree">
-          <path d="M55 101c-13-3-22-13-21-27 1-12 8-24 19-33-5 16-2 27 8 35 6 5 7 13 2 22-2 2-5 3-8 3Z" fill="#e5533a"/>
-          <path d="M43 54c-10-1-17-7-18-15 9-1 18 4 22 13l-4 2Zm8-14c-6-6-7-14-3-20 8 4 11 12 8 20h-5Z" fill="#faf8f5"/>
-        </g>
-        <g class="heartwood-right-tree">
-          <path d="M65 101c13-3 22-13 21-27-1-12-8-24-19-33 5 16 2 27-8 35-6 5-7 13-2 22 2 2 5 3 8 3Z" fill="#faf8f5"/>
-          <path d="M77 54c10-1 17-7 18-15-9-1-18 4-22 13l4 2Zm-8-14c6-6 7-14 3-20-8 4-11 12-8 20h5Z" fill="#faf8f5"/>
-        </g>
-        <g class="heartwood-canopy">
-          <path d="M37 36c-9-2-14-8-14-15 9-1 17 4 20 12l-6 3Zm46 0c9-2 14-8 14-15-9-1-17 4-20 12l6 3ZM60 34c-7-7-8-17-1-25 8 7 9 17 2 25h-1Z" fill="#faf8f5"/>
-        </g>
-        <path class="heartwood-heart-reveal" d="M60 70c-6-8-18-7-18 3 0 10 18 20 18 20s18-10 18-20c0-10-12-11-18-3Z" fill="#113b36"/>
-        <g class="heartwood-seed">
-          <path d="M60 95c-5-7-15-6-15 3 0 8 15 15 15 15s15-7 15-15c0-9-10-10-15-3Z" fill="#d99a3d" stroke="#113b36" stroke-width="2.5"/>
-        </g>
-      </svg>
-    </div>`;
+  if (concept.id === "open-heart-seed") {
+    return `
+      <div class="open-heart-motion-art" aria-hidden="true">
+        <img class="motion-icon open-heart-final-icon" src="${file}" alt="">
+        <svg class="open-heart-motion-sequence" viewBox="0 0 120 120" focusable="false">
+          <rect x="8" y="8" width="104" height="104" rx="23" fill="#e5533a"/>
+          <circle class="open-heart-join-glow" cx="60" cy="70" r="19" fill="none" stroke="#f1c774" stroke-width="2"/>
+          <path class="open-heart-left-half" d="M55 36C44 20 25 23 21 41C16 64 34 86 55 104" fill="none" stroke="#faf8f5" stroke-width="14" stroke-linecap="round"/>
+          <path class="open-heart-right-half" d="M65 36C76 20 95 23 99 41C104 64 86 86 65 104" fill="none" stroke="#113b36" stroke-width="14" stroke-linecap="round"/>
+          <g class="open-heart-seed-drop">
+            <path d="M60 62C52 65 48 75 49 85C50 95 56 101 62 98C69 94 72 82 69 72C67 65 63 61 60 62Z" fill="#d99a3d"/>
+            <path d="M62 70C58 77 56 86 58 93" fill="none" stroke="#e5533a" stroke-width="2.5" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>`;
+  }
+
+  return `<img class="motion-icon" src="${file}" alt="" aria-hidden="true">`;
 }
 
 function heartwoodLockupMark(className = "") {
@@ -179,6 +214,48 @@ function heartwoodLockupMark(className = "") {
       <path class="mark-heart-cut" d="M60 70c-6-8-18-7-18 3 0 10 18 20 18 20s18-10 18-20c0-10-12-11-18-3Z"/>
       <path class="mark-seed" d="M60 95c-5-7-15-6-15 3 0 8 15 15 15 15s15-7 15-15c0-9-10-10-15-3Z"/>
     </svg>`;
+}
+
+function openHeartSeedMark(className = "") {
+  return `
+    <svg class="open-heart-seed-mark ${className}" viewBox="0 0 120 120" focusable="false" aria-hidden="true">
+      <path class="open-heart-mark-left" d="M55 36C44 20 25 23 21 41C16 64 34 86 55 104" fill="none" stroke-width="14" stroke-linecap="round"/>
+      <path class="open-heart-mark-right" d="M65 36C76 20 95 23 99 41C104 64 86 86 65 104" fill="none" stroke-width="14" stroke-linecap="round"/>
+      <path class="open-heart-mark-seed" d="M60 62C52 65 48 75 49 85C50 95 56 101 62 98C69 94 72 82 69 72C67 65 63 61 60 62Z"/>
+      <path class="open-heart-mark-crease" d="M62 70C58 77 56 86 58 93" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>`;
+}
+
+function openHeartFontPanel() {
+  const choice = fontChoiceFor("open-heart-seed");
+  const choiceButton = (value, label) => `
+    <button type="button" data-action="font-choice" data-id="open-heart-seed" data-choice="${value}" class="${choice === value ? "active" : ""}" aria-pressed="${choice === value}">${label}</button>`;
+
+  return `
+    <div class="identity-lockup open-heart-font-panel" aria-label="Open Heart Seed wordmark choice">
+      <span>Approved mark / choose the wordmark voice</span>
+      <div class="open-heart-type-grid">
+        <div class="open-heart-type-option ${choice === "rounded" ? "is-selected" : ""}">
+          <small>Rounded / current</small>
+          <div class="open-heart-lockup open-heart-rounded">
+            ${openHeartSeedMark()}
+            <strong><span>Better</span><span>Together</span></strong>
+          </div>
+        </div>
+        <div class="open-heart-type-option ${choice === "heartwood-serif" ? "is-selected" : ""}">
+          <small>Heartwood / editorial</small>
+          <div class="open-heart-lockup open-heart-serif">
+            ${openHeartSeedMark()}
+            <strong><span>Better</span><span>Together</span></strong>
+          </div>
+        </div>
+      </div>
+      <div class="font-choice-control" role="group" aria-label="Open Heart Seed wordmark preference">
+        ${choiceButton("rounded", "Rounded")}
+        ${choiceButton("heartwood-serif", "Heartwood serif")}
+        ${choiceButton("both", "Keep both")}
+      </div>
+    </div>`;
 }
 
 function lockupArtwork(option) {
@@ -265,8 +342,8 @@ function renderLockups() {
 function conceptCard(concept) {
   const review = reviewFor(concept.id);
   const status = decisionStatusFor(concept);
-  const file = `${concept.file}?v=round5-heartwood2`;
-  const lockup = `${concept.lockup}?v=round5-heartwood2`;
+  const file = `${concept.file}?v=round5-openheart1`;
+  const lockup = `${concept.lockup}?v=round5-openheart1`;
   const note = Object.hasOwn(state.decisions, concept.id) ? review.note : (concept.approvalNote || "");
   const layers = concept.layers.map((item) => `<span>${escapeHtml(item)}</span>`).join("");
   const variantLabel = concept.variantOf
@@ -286,6 +363,8 @@ function conceptCard(concept) {
             <span class="refined-lockup-link"><i data-lucide="arrow-up"></i>Compare all five wordmarks</span>
           </a>
         </div>`
+    : concept.id === "open-heart-seed"
+      ? openHeartFontPanel()
     : `
         <div class="identity-lockup" aria-label="Generated Better Together wordmark lockup">
           <span>Full-name lockup</span>
@@ -401,7 +480,17 @@ function scrollToLinkedReview() {
   if (!location.hash.startsWith("#concept-") && !location.hash.startsWith("#lockup-")) return;
   const target = document.getElementById(location.hash.slice(1));
   if (!target) return;
-  requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+  const alignTarget = () => {
+    const top = window.scrollY + target.getBoundingClientRect().top - 18;
+    const previousBehavior = document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = "auto";
+    window.scrollTo(0, top);
+    document.documentElement.style.scrollBehavior = previousBehavior;
+  };
+  requestAnimationFrame(() => requestAnimationFrame(alignTarget));
+  if (document.readyState === "complete") alignTarget();
+  else window.addEventListener("load", alignTarget, { once: true });
+  document.fonts?.ready.then(alignTarget);
 }
 
 function decorateButtons() {
@@ -446,6 +535,13 @@ function updateLockupDecision(id, status) {
   renderLockups();
 }
 
+function updateFontChoice(id, choice) {
+  state.fontChoices = state.fontChoices || {};
+  state.fontChoices[id] = state.fontChoices[id] === choice ? "" : choice;
+  saveState();
+  render();
+}
+
 function playMotion(button) {
   const stage = button.closest(".motion-stage");
   stage.classList.remove("is-playing");
@@ -479,6 +575,7 @@ function reviewSummary() {
     `Needs changes: ${lockupGroups.revise.join("; ") || "None"}`,
     `Hold: ${lockupGroups.hold.join("; ") || "None"}`,
     `Undecided: ${lockupGroups.undecided.join("; ") || "None"}`,
+    `Open Heart Seed wordmark: ${{ rounded: "Rounded current", "heartwood-serif": "Heartwood editorial serif", both: "Keep both" }[fontChoiceFor("open-heart-seed")] || "Undecided"}`,
     state.overallNotes ? `Overall notes: ${state.overallNotes}` : "",
   ].filter(Boolean).join("\n");
 }
@@ -541,6 +638,7 @@ function handleGridClick(event) {
   if (button.dataset.action === "decision") updateDecision(button.dataset.id, button.dataset.status);
   if (button.dataset.action === "favorite") updateFavorite(button.dataset.id);
   if (button.dataset.action === "motion") playMotion(button);
+  if (button.dataset.action === "font-choice") updateFontChoice(button.dataset.id, button.dataset.choice);
 }
 
 function handleGridInput(event) {
@@ -604,7 +702,7 @@ document.getElementById("copySummary").addEventListener("click", () => copyText(
 document.getElementById("downloadReview").addEventListener("click", downloadReview);
 document.getElementById("resetReview").addEventListener("click", () => {
   if (!confirm("Clear all decisions and notes on this device?")) return;
-  state = { version: 4, reviewer: "", overallNotes: "", decisions: {}, lockups: {} };
+  state = { version: 4, reviewer: "", overallNotes: "", decisions: {}, lockups: {}, fontChoices: {}, canonicalDecisionRevision: "" };
   localStorage.removeItem(STORAGE_KEY);
   history.replaceState(null, "", location.pathname + location.search);
   document.getElementById("reviewerName").value = "";
@@ -613,7 +711,7 @@ document.getElementById("resetReview").addEventListener("click", () => {
   showToast("Review reset.");
 });
 
-fetch("concepts-v4.json?v=5-wordmarks1")
+fetch("concepts-v4.json?v=5-open-heart-approved1")
   .then((response) => {
     if (!response.ok) throw new Error(`Concept manifest failed: ${response.status}`);
     return response.json();
