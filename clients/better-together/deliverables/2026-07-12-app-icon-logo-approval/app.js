@@ -277,6 +277,22 @@ function conceptCard(concept) {
   const approvalBadge = concept.approved
     ? `<div class="approval-banner"><i data-lucide="badge-check"></i><span><strong>Approved direction</strong>${escapeHtml(concept.approvalNote)}</span></div>`
     : "";
+  const lockupPanel = concept.id === "heartwood-bonsai"
+    ? `
+        <div class="identity-lockup" aria-label="Heartwood wordmark refinement">
+          <span>Wordmark refinement / selection open</span>
+          <a class="identity-lockup-frame identity-lockup-refined" href="#lockups" aria-label="Compare five Heartwood wordmark directions">
+            ${lockupArtwork(lockupOptions[0])}
+            <span class="refined-lockup-link"><i data-lucide="arrow-up"></i>Compare all five wordmarks</span>
+          </a>
+        </div>`
+    : `
+        <div class="identity-lockup" aria-label="Generated Better Together wordmark lockup">
+          <span>Full-name lockup</span>
+          <div class="identity-lockup-frame">
+            <img src="${lockup}" alt="${escapeHtml(concept.name)} Better Together wordmark lockup" width="1024" height="1024">
+          </div>
+        </div>`;
   const statusButton = (value, label) => `
     <button type="button" data-action="decision" data-id="${concept.id}" data-status="${value}" class="${status === value ? "active" : ""}" aria-pressed="${status === value}">${label}</button>`;
 
@@ -337,12 +353,7 @@ function conceptCard(concept) {
           </div>
         </div>
 
-        <div class="identity-lockup" aria-label="Generated Better Together wordmark lockup">
-          <span>Full-name lockup</span>
-          <div class="identity-lockup-frame">
-            <img src="${lockup}" alt="${escapeHtml(concept.name)} Better Together wordmark lockup" width="1024" height="1024">
-          </div>
-        </div>
+        ${lockupPanel}
 
         <div class="layer-list" aria-label="Production layers">${layers}</div>
         <div class="identity-advice">
