@@ -70,10 +70,13 @@ h2 { font-size: clamp(32px, 5vw, 52px); }
 
 .heartwood-mark { position: relative; width: min(278px, 78vw); aspect-ratio: 1; }
 .heartwood-layer, .mini-heartwood-layer { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; will-change: transform, opacity; }
-.tree-left { transform-origin: 50% 91%; animation: tree-left-grow 4400ms cubic-bezier(.16,1,.3,1) infinite; }
-.tree-right { transform-origin: 50% 91%; animation: tree-right-grow 4400ms cubic-bezier(.16,1,.3,1) infinite; }
-.tree-canopy { transform-origin: 50% 62%; animation: tree-canopy-bloom 4400ms cubic-bezier(.16,1,.3,1) infinite; }
-.tree-seed { z-index: 4; transform-origin: 50% 88%; animation: heart-seed-plant 4400ms cubic-bezier(.16,1,.3,1) infinite; }
+.tree-left { transform-origin: 50% 91%; animation: tree-left-grow 5200ms cubic-bezier(.16,1,.3,1) infinite; }
+.tree-right { transform-origin: 50% 91%; animation: tree-right-grow 5200ms cubic-bezier(.16,1,.3,1) infinite; }
+.tree-leaves-1 { transform-origin: 50% 54%; animation: tree-leaves-1 5200ms cubic-bezier(.16,1,.3,1) infinite; }
+.tree-leaves-2 { transform-origin: 50% 46%; animation: tree-leaves-2 5200ms cubic-bezier(.16,1,.3,1) infinite; }
+.tree-leaves-3 { transform-origin: 50% 38%; animation: tree-leaves-3 5200ms cubic-bezier(.16,1,.3,1) infinite; }
+.tree-leaves-4 { transform-origin: 50% 28%; animation: tree-leaves-4 5200ms cubic-bezier(.16,1,.3,1) infinite; }
+.tree-seed { z-index: 4; transform-origin: 50% 88%; animation: heart-seed-plant 5200ms cubic-bezier(.16,1,.3,1) infinite; }
 
 main { padding: 78px 0 130px; }
 section { scroll-margin-top: 18px; }
@@ -162,31 +165,44 @@ input { min-height: 46px; padding: 0 14px; }
 
 @keyframes heart-seed-plant {
   0% { opacity: 0; transform: translateY(-54%) scale(.58); }
-  8% { opacity: 1; }
-  20% { opacity: 1; transform: translateY(1.5%) scale(1.08); }
-  24% { opacity: 1; transform: translateY(0) scale(.92); }
-  29%, 91% { opacity: 1; transform: translateY(0) scale(1); }
+  5% { opacity: 1; }
+  11% { opacity: 1; transform: translateY(1.5%) scale(1.08); }
+  14% { opacity: 1; transform: translateY(0) scale(.92); }
+  17%, 94% { opacity: 1; transform: translateY(0) scale(1); }
   100% { opacity: 0; transform: translateY(0) scale(1); }
 }
 @keyframes tree-left-grow {
-  0%, 22% { opacity: 0; transform: translateX(8%) scaleY(.03); }
-  28% { opacity: 1; }
-  50% { opacity: 1; transform: translateX(-1%) scaleY(1.035); }
-  56%, 91% { opacity: 1; transform: translateX(0) scaleY(1); }
+  0%, 16% { opacity: 0; transform: translateX(8%) scaleY(.03); }
+  20% { opacity: 1; }
+  31% { opacity: 1; transform: translateX(-1%) scaleY(1.035); }
+  34%, 94% { opacity: 1; transform: translateX(0) scaleY(1); }
   100% { opacity: 0; transform: translateX(0) scaleY(1); }
 }
 @keyframes tree-right-grow {
-  0%, 26% { opacity: 0; transform: translateX(-8%) scaleY(.03); }
-  32% { opacity: 1; }
-  55% { opacity: 1; transform: translateX(1%) scaleY(1.035); }
-  61%, 91% { opacity: 1; transform: translateX(0) scaleY(1); }
+  0%, 35% { opacity: 0; transform: translateX(-8%) scaleY(.03); }
+  39% { opacity: 1; }
+  50% { opacity: 1; transform: translateX(1%) scaleY(1.035); }
+  53%, 94% { opacity: 1; transform: translateX(0) scaleY(1); }
   100% { opacity: 0; transform: translateX(0) scaleY(1); }
 }
-@keyframes tree-canopy-bloom {
-  0%, 42% { opacity: 0; transform: translateY(7%) scale(.72); }
-  55% { opacity: .7; }
-  69% { opacity: 1; transform: translateY(-1%) scale(1.035); }
-  75%, 91% { opacity: 1; transform: translateY(0) scale(1); }
+@keyframes tree-leaves-1 {
+  0%, 55% { opacity: 0; transform: translateY(4%) scale(.92); }
+  62%, 94% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(0) scale(1); }
+}
+@keyframes tree-leaves-2 {
+  0%, 61% { opacity: 0; transform: translateY(4%) scale(.92); }
+  68%, 94% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(0) scale(1); }
+}
+@keyframes tree-leaves-3 {
+  0%, 67% { opacity: 0; transform: translateY(4%) scale(.92); }
+  74%, 94% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(0) scale(1); }
+}
+@keyframes tree-leaves-4 {
+  0%, 73% { opacity: 0; transform: translateY(4%) scale(.92); }
+  80%, 94% { opacity: 1; transform: translateY(0) scale(1); }
   100% { opacity: 0; transform: translateY(0) scale(1); }
 }
 @keyframes mini-seed-drop {
