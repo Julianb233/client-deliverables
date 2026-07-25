@@ -8,7 +8,7 @@ const states = [
     title: "Heartwood App Launch",
     headline: "Growing your connection",
     body: "Use while auth, fonts, and session bootstrap resolve. Replaces blank startup with the approved Better Together bonsai mark.",
-    motion: "Heart seed drops, roots wake, two trunks grow inward, and the shared canopy settles.",
+    motion: "Heart seed drops, then the exact approved Heartwood logo resolves into focus.",
   },
   {
     id: "partner-sync",
@@ -118,12 +118,8 @@ function markPreview(kind) {
   return `
     <div class="mini-phone ${kind}">
       <div class="mini-screen">
-        <div class="mini-lock mini-bonsai" aria-hidden="true">
-          <span class="mini-left mini-left-trunk"></span>
-          <span class="mini-right mini-right-trunk"></span>
-          <span class="mini-leaf mini-leaf-a"></span>
-          <span class="mini-leaf mini-leaf-b"></span>
-          <span class="mini-leaf mini-leaf-c"></span>
+        <div class="mini-heartwood-mark" aria-hidden="true">
+          <img class="mini-logo-img" src="assets/heartwood-logo.png" alt="">
           <span class="mini-seed"></span>
         </div>
         <p>Better Together</p>
