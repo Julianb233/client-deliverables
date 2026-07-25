@@ -8,7 +8,7 @@ const states = [
     title: "Heartwood App Launch",
     headline: "Growing your connection",
     body: "Use while auth, fonts, and session bootstrap resolve. Replaces blank startup with the approved Better Together bonsai mark.",
-    motion: "Heart seed drops, then the exact approved Heartwood logo resolves into focus.",
+    motion: "Heart seed drops into the base first; after it plants, the tree resolves upward from the root into the exact approved Heartwood logo.",
   },
   {
     id: "partner-sync",
@@ -17,7 +17,7 @@ const states = [
     title: "Partner Sync",
     headline: "Syncing your latest moments",
     body: "Use when shared state is moving between partners: notes, memories, messages, shared moments, and invite-link updates.",
-    motion: "Two small leaf pulses travel from left and right into one warm center point.",
+    motion: "A root glow starts at the planted heart seed, then a small sprout rises from the base before the shared logo resolves.",
   },
   {
     id: "ai-thinking",
@@ -44,7 +44,7 @@ const states = [
     title: "Photo + Voice Upload",
     headline: "Saving this for both of you",
     body: "Use for photos, voice notes, GIFs, and shared moments. Must show progress and block duplicate taps.",
-    motion: "Progress bar advances while the heart seed stays planted in place.",
+    motion: "The planted heart grows into the center space between the two trees while upload progress advances.",
   },
   {
     id: "offline-retry",
@@ -53,7 +53,7 @@ const states = [
     title: "Offline Retry",
     headline: "Saved here, syncing soon",
     body: "Use when network drops during a save. It should preserve the user’s work and show a clear retry path.",
-    motion: "Muted bonsai, paused pulse, retry button appears without alarm language.",
+    motion: "The full logo stays framed and still; only the heart pulses inside the tree frame while retry remains available.",
   },
 ];
 
@@ -114,16 +114,29 @@ function loadState() {
   }
 }
 
-function markPreview(kind) {
+function previewKind(item) {
+  if (item.id.includes("skeleton")) return "skeleton";
+  if (item.id.includes("upload")) return "upload";
+  if (item.id.includes("offline")) return "offline";
+  if (item.id.includes("partner-sync")) return "sync";
+  if (item.id.includes("ai-thinking")) return "thinking";
+  return "launch";
+}
+
+function markPreview(item) {
+  const kind = previewKind(item);
   return `
     <div class="mini-phone ${kind}">
       <div class="mini-screen">
         <div class="mini-heartwood-mark" aria-hidden="true">
           <img class="mini-logo-img" src="assets/heartwood-logo.png" alt="">
           <span class="mini-seed"></span>
+          <span class="mini-root-sprout"></span>
+          <span class="mini-center-heart"></span>
+          <span class="mini-frame-heart"></span>
         </div>
         <p>Better Together</p>
-        <h3>${escapeHtml(kind === "skeleton" ? "Loading your latest moments" : kind === "upload" ? "Saving this for both of you" : "Growing your connection")}</h3>
+        <h3>${escapeHtml(item.headline)}</h3>
         ${kind === "skeleton" ? '<div class="skeleton-lines"><i></i><i></i><i></i></div>' : '<div class="mini-loader"><i></i></div>'}
       </div>
     </div>`;
@@ -132,7 +145,6 @@ function markPreview(kind) {
 function card(item) {
   const review = reviewFor(item.id);
   const status = review.status || "undecided";
-  const kind = item.id.includes("skeleton") ? "skeleton" : item.id.includes("upload") ? "upload" : item.id.includes("offline") ? "offline" : "launch";
   const statusButton = (value, label) => `
     <button type="button" data-action="decision" data-id="${item.id}" data-status="${value}" class="${review.status === value ? "active" : ""}" aria-pressed="${review.status === value}">${label}</button>`;
 
@@ -141,7 +153,7 @@ function card(item) {
       <div class="card-visual">
         <span class="state-number">${item.number}</span>
         <button class="favorite ${review.favorite ? "active" : ""}" type="button" data-action="favorite" data-id="${item.id}" aria-label="Favorite ${escapeHtml(item.title)}">♥</button>
-        ${markPreview(kind)}
+        ${markPreview(item)}
       </div>
       <div class="card-body">
         <p class="family">${escapeHtml(item.family)}</p>
