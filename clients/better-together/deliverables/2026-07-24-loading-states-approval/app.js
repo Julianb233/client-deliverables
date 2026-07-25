@@ -8,7 +8,7 @@ const states = [
     title: "Heartwood App Launch",
     headline: "Motion only — no loading copy",
     body: "Use while auth, fonts, and session bootstrap resolve. The opening screen is one continuous Heartwood-green field with no card, sentence, or progress bar.",
-    motion: "The heart seed settles first. The coral trunk and branches complete, then the paper trunk and branches complete, then four leaf waves sprout from the lower limbs to the crown.",
+    motion: "The heart seed settles first. Both trunk-and-branch structures grow together, four leaf waves sprout upward, then a saffron heart rises into the center and pulses inside the opening.",
   },
   {
     id: "partner-sync",
@@ -133,6 +133,7 @@ function markPreview(item) {
       <img class="mini-heartwood-layer tree-leaves-2" src="assets/heartwood-leaves-2.png" alt="">
       <img class="mini-heartwood-layer tree-leaves-3" src="assets/heartwood-leaves-3.png" alt="">
       <img class="mini-heartwood-layer tree-leaves-4" src="assets/heartwood-leaves-4.png" alt="">
+      <img class="mini-heartwood-layer tree-center-heart" src="assets/heartwood-rising-heart.png" alt="">
       <img class="mini-heartwood-layer tree-seed" src="assets/heartwood-seed.png" alt="">
     </div>`;
   const stateMark = `

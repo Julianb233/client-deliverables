@@ -76,6 +76,16 @@ h2 { font-size: clamp(32px, 5vw, 52px); }
 .tree-leaves-2 { transform-origin: 50% 46%; animation: tree-leaves-2 5200ms cubic-bezier(.16,1,.3,1) infinite; }
 .tree-leaves-3 { transform-origin: 50% 38%; animation: tree-leaves-3 5200ms cubic-bezier(.16,1,.3,1) infinite; }
 .tree-leaves-4 { transform-origin: 50% 28%; animation: tree-leaves-4 5200ms cubic-bezier(.16,1,.3,1) infinite; }
+.heartwood-layer.tree-center-heart, .mini-heartwood-layer.tree-center-heart {
+  inset: auto;
+  left: 36.5%;
+  top: 49%;
+  width: 27%;
+  height: 25%;
+  z-index: 3;
+  transform-origin: 50% 50%;
+  animation: tree-center-heart 5200ms cubic-bezier(.16,1,.3,1) infinite;
+}
 .tree-seed { z-index: 4; transform-origin: 50% 88%; animation: heart-seed-plant 5200ms cubic-bezier(.16,1,.3,1) infinite; }
 
 main { padding: 78px 0 130px; }
@@ -174,35 +184,45 @@ input { min-height: 46px; padding: 0 14px; }
 @keyframes tree-left-grow {
   0%, 16% { opacity: 0; transform: translateX(8%) scaleY(.03); }
   20% { opacity: 1; }
-  31% { opacity: 1; transform: translateX(-1%) scaleY(1.035); }
-  34%, 94% { opacity: 1; transform: translateX(0) scaleY(1); }
+  36% { opacity: 1; transform: translateX(-1%) scaleY(1.035); }
+  39%, 94% { opacity: 1; transform: translateX(0) scaleY(1); }
   100% { opacity: 0; transform: translateX(0) scaleY(1); }
 }
 @keyframes tree-right-grow {
-  0%, 35% { opacity: 0; transform: translateX(-8%) scaleY(.03); }
-  39% { opacity: 1; }
-  50% { opacity: 1; transform: translateX(1%) scaleY(1.035); }
-  53%, 94% { opacity: 1; transform: translateX(0) scaleY(1); }
+  0%, 16% { opacity: 0; transform: translateX(-8%) scaleY(.03); }
+  20% { opacity: 1; }
+  36% { opacity: 1; transform: translateX(1%) scaleY(1.035); }
+  39%, 94% { opacity: 1; transform: translateX(0) scaleY(1); }
   100% { opacity: 0; transform: translateX(0) scaleY(1); }
 }
 @keyframes tree-leaves-1 {
+  0%, 40% { opacity: 0; transform: translateY(4%) scale(.92); }
+  47%, 94% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(0) scale(1); }
+}
+@keyframes tree-leaves-2 {
+  0%, 45% { opacity: 0; transform: translateY(4%) scale(.92); }
+  52%, 94% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(0) scale(1); }
+}
+@keyframes tree-leaves-3 {
+  0%, 50% { opacity: 0; transform: translateY(4%) scale(.92); }
+  57%, 94% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(0) scale(1); }
+}
+@keyframes tree-leaves-4 {
   0%, 55% { opacity: 0; transform: translateY(4%) scale(.92); }
   62%, 94% { opacity: 1; transform: translateY(0) scale(1); }
   100% { opacity: 0; transform: translateY(0) scale(1); }
 }
-@keyframes tree-leaves-2 {
-  0%, 61% { opacity: 0; transform: translateY(4%) scale(.92); }
-  68%, 94% { opacity: 1; transform: translateY(0) scale(1); }
-  100% { opacity: 0; transform: translateY(0) scale(1); }
-}
-@keyframes tree-leaves-3 {
-  0%, 67% { opacity: 0; transform: translateY(4%) scale(.92); }
-  74%, 94% { opacity: 1; transform: translateY(0) scale(1); }
-  100% { opacity: 0; transform: translateY(0) scale(1); }
-}
-@keyframes tree-leaves-4 {
-  0%, 73% { opacity: 0; transform: translateY(4%) scale(.92); }
-  80%, 94% { opacity: 1; transform: translateY(0) scale(1); }
+@keyframes tree-center-heart {
+  0%, 62% { opacity: 0; transform: translateY(115%) scale(.28); }
+  65% { opacity: 1; }
+  76% { opacity: 1; transform: translateY(0) scale(1); }
+  81% { opacity: 1; transform: translateY(0) scale(1.025); }
+  85% { opacity: 1; transform: translateY(0) scale(.99); }
+  89% { opacity: 1; transform: translateY(0) scale(1.02); }
+  93%, 94% { opacity: 1; transform: translateY(0) scale(1); }
   100% { opacity: 0; transform: translateY(0) scale(1); }
 }
 @keyframes mini-seed-drop {
