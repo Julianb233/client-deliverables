@@ -2,22 +2,22 @@ const STORAGE_KEY = "better-together-loading-states-review-v1";
 
 const states = [
   {
-    id: "app-launch-ai-lock",
+    id: "app-launch-heartwood",
     number: "01",
     family: "Launch",
-    title: "AI Lock App Launch",
-    headline: "Securing your shared space",
-    body: "Use while auth, fonts, and session bootstrap resolve. Replaces blank startup with a private, branded signal.",
-    motion: "Seed drops into the heart aperture, two halves breathe inward, lock arc settles.",
+    title: "Heartwood App Launch",
+    headline: "Growing your connection",
+    body: "Use while auth, fonts, and session bootstrap resolve. Replaces blank startup with the approved Better Together bonsai mark.",
+    motion: "Heart seed drops, roots wake, two trunks grow inward, and the shared canopy settles.",
   },
   {
     id: "partner-sync",
     number: "02",
     family: "Realtime",
     title: "Partner Sync",
-    headline: "Syncing your connection",
+    headline: "Syncing your latest moments",
     body: "Use when shared state is moving between partners: notes, memories, messages, shared moments, and invite-link updates.",
-    motion: "Two small pulses travel from left and right into one warm center point.",
+    motion: "Two small leaf pulses travel from left and right into one warm center point.",
   },
   {
     id: "ai-thinking",
@@ -26,7 +26,7 @@ const states = [
     title: "AI Thinking",
     headline: "Preparing a better reply",
     body: "Use for coach responses, report generation, translation, suggestions, and other AI work that takes more than a tap.",
-    motion: "Three quiet seed dots gather into the protected center, then release.",
+    motion: "Three quiet seed dots gather into the bonsai base, then release.",
   },
   {
     id: "content-skeletons",
@@ -44,7 +44,7 @@ const states = [
     title: "Photo + Voice Upload",
     headline: "Saving this for both of you",
     body: "Use for photos, voice notes, GIFs, and shared moments. Must show progress and block duplicate taps.",
-    motion: "Progress bar advances while the heart seed stays locked in place.",
+    motion: "Progress bar advances while the heart seed stays planted in place.",
   },
   {
     id: "offline-retry",
@@ -53,7 +53,7 @@ const states = [
     title: "Offline Retry",
     headline: "Saved here, syncing soon",
     body: "Use when network drops during a save. It should preserve the user’s work and show a clear retry path.",
-    motion: "Muted lock, paused pulse, retry button appears without alarm language.",
+    motion: "Muted bonsai, paused pulse, retry button appears without alarm language.",
   },
 ];
 
@@ -118,13 +118,16 @@ function markPreview(kind) {
   return `
     <div class="mini-phone ${kind}">
       <div class="mini-screen">
-        <div class="mini-lock" aria-hidden="true">
-          <span class="mini-left"></span>
-          <span class="mini-right"></span>
+        <div class="mini-lock mini-bonsai" aria-hidden="true">
+          <span class="mini-left mini-left-trunk"></span>
+          <span class="mini-right mini-right-trunk"></span>
+          <span class="mini-leaf mini-leaf-a"></span>
+          <span class="mini-leaf mini-leaf-b"></span>
+          <span class="mini-leaf mini-leaf-c"></span>
           <span class="mini-seed"></span>
         </div>
-        <p>AI Lock</p>
-        <h3>${escapeHtml(kind === "skeleton" ? "Loading your latest moments" : kind === "upload" ? "Saving this for both of you" : "Securing your shared space")}</h3>
+        <p>Better Together</p>
+        <h3>${escapeHtml(kind === "skeleton" ? "Loading your latest moments" : kind === "upload" ? "Saving this for both of you" : "Growing your connection")}</h3>
         ${kind === "skeleton" ? '<div class="skeleton-lines"><i></i><i></i><i></i></div>' : '<div class="mini-loader"><i></i></div>'}
       </div>
     </div>`;
