@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=loading-states-1">
+  <link rel="stylesheet" href="styles.css?v=loading-states-2">
 </head>
 <body>
   <header class="hero">
@@ -29,7 +29,7 @@
       <section class="hero-copy">
         <p class="eyebrow">Loading system approval</p>
         <h1>Heartwood loading states</h1>
-        <p class="kicker">The approved logo opens the app exactly as-is: the heart seed plants first, then the trees grow into the Heartwood mark.</p>
+        <p class="kicker">One uninterrupted green field. The heart seed plants first, then the paired trees grow outward and the canopy blooms.</p>
         <div class="hero-actions">
           <a class="button primary" href="#states">Review states</a>
           <button class="button secondary" id="shareReview" type="button">Copy review link</button>
@@ -40,14 +40,11 @@
           <div class="statusbar"><span>9:41</span><i></i><b></b></div>
           <div class="app-screen">
             <div class="heartwood-mark" aria-hidden="true">
-              <div class="heart-shell logo-field">
-                <img class="heartwood-logo-img" src="assets/heartwood-logo.png" alt="">
-                <span class="seed-drop heartwood-seed"></span>
-              </div>
+              <img class="heartwood-layer tree-left" src="assets/heartwood-left.png" alt="">
+              <img class="heartwood-layer tree-right" src="assets/heartwood-right.png" alt="">
+              <img class="heartwood-layer tree-canopy" src="assets/heartwood-canopy.png" alt="">
+              <img class="heartwood-layer tree-seed" src="assets/heartwood-seed.png" alt="">
             </div>
-            <p class="screen-label">Better Together</p>
-            <h2 id="phoneTitle">Growing your connection</h2>
-            <div class="loader-bar"><span></span></div>
           </div>
         </div>
       </section>
@@ -58,12 +55,12 @@
     <section class="principles" aria-labelledby="principles-title">
       <div>
         <p class="eyebrow">Design rules</p>
-        <h2 id="principles-title">Short, calm, and visibly protected.</h2>
+        <h2 id="principles-title">The mark does the talking.</h2>
       </div>
       <div class="principle-grid">
-        <article><strong>No paragraphs</strong><span>Loading copy stays under one line whenever possible.</span></article>
+        <article><strong>No launch copy</strong><span>The opening state uses motion alone. No loading sentence and no progress bar.</span></article>
         <article><strong>Brand first</strong><span>The approved Heartwood Bonsai logo is the actual visual, not a redraw.</span></article>
-        <article><strong>Motion has purpose</strong><span>The heart seed plants first, then the tree growth, sprout, upload heart, or retry pulse happens inside the exact logo frame.</span></article>
+        <article><strong>Motion has purpose</strong><span>The seed plants, the coral tree grows left, the paper tree grows right, and the canopy blooms last.</span></article>
         <article><strong>Skeleton before spinner</strong><span>Content-heavy screens use shaped placeholders, not indefinite waiting.</span></article>
       </div>
     </section>
@@ -119,6 +116,6 @@
   </main>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="app.js?v=loading-states-1"></script>
+  <script src="app.js?v=loading-states-2"></script>
 </body>
 </html>

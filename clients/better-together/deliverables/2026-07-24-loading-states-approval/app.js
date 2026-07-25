@@ -6,9 +6,9 @@ const states = [
     number: "01",
     family: "Launch",
     title: "Heartwood App Launch",
-    headline: "Growing your connection",
-    body: "Use while auth, fonts, and session bootstrap resolve. Replaces blank startup with the approved Better Together bonsai mark.",
-    motion: "Heart seed drops into the base first; after it plants, the tree resolves upward from the root into the exact approved Heartwood logo.",
+    headline: "Motion only — no loading copy",
+    body: "Use while auth, fonts, and session bootstrap resolve. The opening screen is one continuous Heartwood-green field with no card, sentence, or progress bar.",
+    motion: "The saffron heart seed plants first. The coral tree grows left, the paper tree grows right, and the leaf canopy blooms last from the exact approved artwork.",
   },
   {
     id: "partner-sync",
@@ -125,19 +125,27 @@ function previewKind(item) {
 
 function markPreview(item) {
   const kind = previewKind(item);
+  const launchMark = `
+    <div class="mini-heartwood-mark layered-mark" aria-hidden="true">
+      <img class="mini-heartwood-layer tree-left" src="assets/heartwood-left.png" alt="">
+      <img class="mini-heartwood-layer tree-right" src="assets/heartwood-right.png" alt="">
+      <img class="mini-heartwood-layer tree-canopy" src="assets/heartwood-canopy.png" alt="">
+      <img class="mini-heartwood-layer tree-seed" src="assets/heartwood-seed.png" alt="">
+    </div>`;
+  const stateMark = `
+    <div class="mini-heartwood-mark" aria-hidden="true">
+      <img class="mini-logo-img" src="assets/heartwood-logo.png" alt="">
+      <span class="mini-seed"></span>
+      <span class="mini-root-sprout"></span>
+      <span class="mini-center-heart"></span>
+      <span class="mini-frame-heart"></span>
+    </div>`;
   return `
     <div class="mini-phone ${kind}">
       <div class="mini-screen">
-        <div class="mini-heartwood-mark" aria-hidden="true">
-          <img class="mini-logo-img" src="assets/heartwood-logo.png" alt="">
-          <span class="mini-seed"></span>
-          <span class="mini-root-sprout"></span>
-          <span class="mini-center-heart"></span>
-          <span class="mini-frame-heart"></span>
-        </div>
-        <p>Better Together</p>
-        <h3>${escapeHtml(item.headline)}</h3>
-        ${kind === "skeleton" ? '<div class="skeleton-lines"><i></i><i></i><i></i></div>' : '<div class="mini-loader"><i></i></div>'}
+        ${kind === "launch" ? launchMark : stateMark}
+        ${kind === "launch" ? "" : `<p>Better Together</p><h3>${escapeHtml(item.headline)}</h3>`}
+        ${kind === "launch" ? "" : kind === "skeleton" ? '<div class="skeleton-lines"><i></i><i></i><i></i></div>' : '<div class="mini-loader"><i></i></div>'}
       </div>
     </div>`;
 }
