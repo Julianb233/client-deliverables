@@ -8,7 +8,7 @@ const states = [
     title: "Heartwood App Launch",
     headline: "Motion only — no loading copy",
     body: "Use while auth, fonts, and session bootstrap resolve. The opening screen is one continuous Heartwood-green field with no card, sentence, or progress bar.",
-    motion: "The heart seed settles first. Both trunk-and-branch structures grow together, four leaf waves sprout upward, then a saffron heart rises into the center and pulses inside the opening.",
+    motion: "The heart seed settles first. The coral tree, paper tree, and foliage grow slowly together, then a saffron heart rises to fill the center and the Better Together wordmark resolves below.",
   },
   {
     id: "partner-sync",
@@ -126,16 +126,20 @@ function previewKind(item) {
 function markPreview(item) {
   const kind = previewKind(item);
   const launchMark = `
-    <div class="mini-heartwood-mark layered-mark" aria-hidden="true">
-      <img class="mini-heartwood-layer tree-left" src="assets/heartwood-left.png" alt="">
-      <img class="mini-heartwood-layer tree-right" src="assets/heartwood-right.png" alt="">
-      <img class="mini-heartwood-layer tree-leaves-1" src="assets/heartwood-leaves-1.png" alt="">
-      <img class="mini-heartwood-layer tree-leaves-2" src="assets/heartwood-leaves-2.png" alt="">
-      <img class="mini-heartwood-layer tree-leaves-3" src="assets/heartwood-leaves-3.png" alt="">
-      <img class="mini-heartwood-layer tree-leaves-4" src="assets/heartwood-leaves-4.png" alt="">
-      <img class="mini-heartwood-layer tree-center-heart" src="assets/heartwood-rising-heart.png" alt="">
-      <img class="mini-heartwood-layer tree-seed" src="assets/heartwood-seed.png" alt="">
-    </div>`;
+    <div class="mini-heartwood-lockup">
+      <div class="mini-heartwood-mark layered-mark" aria-hidden="true">
+        <img class="mini-heartwood-layer tree-left" src="assets/heartwood-left.png" alt="">
+        <img class="mini-heartwood-layer tree-right" src="assets/heartwood-right.png" alt="">
+        <img class="mini-heartwood-layer tree-leaves-1" src="assets/heartwood-leaves-1.png" alt="">
+        <img class="mini-heartwood-layer tree-leaves-2" src="assets/heartwood-leaves-2.png" alt="">
+        <img class="mini-heartwood-layer tree-leaves-3" src="assets/heartwood-leaves-3.png" alt="">
+        <img class="mini-heartwood-layer tree-leaves-4" src="assets/heartwood-leaves-4.png" alt="">
+        <img class="mini-heartwood-layer tree-center-heart" src="assets/heartwood-rising-heart.png" alt="">
+        <img class="mini-heartwood-layer tree-seed" src="assets/heartwood-seed.png" alt="">
+      </div>
+      <div class="mini-heartwood-wordmark">Better Together</div>
+    </div>
+  `;
   const stateMark = `
     <div class="mini-heartwood-mark" aria-hidden="true">
       <img class="mini-logo-img" src="assets/heartwood-logo.png" alt="">
