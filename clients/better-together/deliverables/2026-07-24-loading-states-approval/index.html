@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=loading-states-5">
+  <link rel="stylesheet" href="styles.css?v=loading-states-6">
 </head>
 <body>
   <header class="hero">
@@ -29,7 +29,7 @@
       <section class="hero-copy">
         <p class="eyebrow">Loading system approval</p>
         <h1>Heartwood loading states</h1>
-        <p class="kicker">One uninterrupted green field. Both trees and the foliage grow slowly together, then the heart rises to fill the center.</p>
+        <p class="kicker">One uninterrupted green field. Both trees grow together from their roots through five trunk and branch stages, then the leaves sprout and the heart rises to fill the center.</p>
         <div class="hero-actions">
           <a class="button primary" href="#states">Review states</a>
           <button class="button secondary" id="shareReview" type="button">Copy review link</button>
@@ -41,8 +41,16 @@
           <div class="app-screen">
             <div class="heartwood-lockup">
               <div class="heartwood-mark" aria-hidden="true">
-                <img class="heartwood-layer tree-left" src="assets/heartwood-left.png" alt="">
-                <img class="heartwood-layer tree-right" src="assets/heartwood-right.png" alt="">
+                <img class="heartwood-layer tree-segment tree-growth-stage-1" src="assets/heartwood-left-growth-1.png" alt="">
+                <img class="heartwood-layer tree-segment tree-growth-stage-1" src="assets/heartwood-right-growth-1.png" alt="">
+                <img class="heartwood-layer tree-segment tree-growth-stage-2" src="assets/heartwood-left-growth-2.png" alt="">
+                <img class="heartwood-layer tree-segment tree-growth-stage-2" src="assets/heartwood-right-growth-2.png" alt="">
+                <img class="heartwood-layer tree-segment tree-growth-stage-3" src="assets/heartwood-left-growth-3.png" alt="">
+                <img class="heartwood-layer tree-segment tree-growth-stage-3" src="assets/heartwood-right-growth-3.png" alt="">
+                <img class="heartwood-layer tree-segment tree-growth-stage-4" src="assets/heartwood-left-growth-4.png" alt="">
+                <img class="heartwood-layer tree-segment tree-growth-stage-4" src="assets/heartwood-right-growth-4.png" alt="">
+                <img class="heartwood-layer tree-segment tree-growth-stage-5" src="assets/heartwood-left-growth-5.png" alt="">
+                <img class="heartwood-layer tree-segment tree-growth-stage-5" src="assets/heartwood-right-growth-5.png" alt="">
                 <img class="heartwood-layer tree-leaves-1" src="assets/heartwood-leaves-1.png" alt="">
                 <img class="heartwood-layer tree-leaves-2" src="assets/heartwood-leaves-2.png" alt="">
                 <img class="heartwood-layer tree-leaves-3" src="assets/heartwood-leaves-3.png" alt="">
@@ -67,7 +75,7 @@
       <div class="principle-grid">
         <article><strong>No launch copy</strong><span>The opening state uses motion alone. No loading sentence and no progress bar.</span></article>
         <article><strong>Brand first</strong><span>The approved Heartwood Bonsai logo is the actual visual, not a redraw.</span></article>
-        <article><strong>Motion has purpose</strong><span>The seed settles first. Both trees and foliage grow slowly together, then the heart rises to fill the center above the wordmark.</span></article>
+        <article><strong>Motion has purpose</strong><span>The seed settles first. Both trees progress together through five root-to-branch stages, leaves sprout, and then the heart rises above the wordmark. The completed logo is never simply revealed.</span></article>
         <article><strong>Skeleton before spinner</strong><span>Content-heavy screens use shaped placeholders, not indefinite waiting.</span></article>
       </div>
     </section>
@@ -123,6 +131,6 @@
   </main>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="app.js?v=loading-states-5"></script>
+  <script src="app.js?v=loading-states-6"></script>
 </body>
 </html>
