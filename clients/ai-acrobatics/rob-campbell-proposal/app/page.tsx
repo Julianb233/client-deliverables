@@ -1,4 +1,5 @@
 const robEmail = "Robert.t.campbell5@gmail.com";
+const remainingSetupCheckout = "https://www.fanbasis.com/agency-checkout/Aiacrobatics/MNYXB";
 
 const implementationItems = [
   "HubSpot cleanup and pipeline mapping: data hygiene, lifecycle stages, deal stages, tags, owner fields, and the manual handoff point before anything becomes client-side.",
@@ -111,7 +112,7 @@ export default function Page() {
 
         <div className="wrap heroBody">
           <div className="heroCopy reveal">
-            <div className="eyebrow">Implementation status updated - July 19, 2026</div>
+            <div className="eyebrow">Implementation status updated - July 30, 2026</div>
             <h1>
               Rob, this is the build path for your <span className="gradientText">AI Prospect Engine.</span>
             </h1>
@@ -123,6 +124,9 @@ export default function Page() {
             <div className="actions">
               <span className="button primary">$5,500 deposit paid</span>
               <span className="button secondary">$2,500/mo Growth active</span>
+              <a className="button secondary" href={remainingSetupCheckout}>
+                Pay $2,625 setup balance
+              </a>
               <a className="button secondary" href="https://rob.aiacrobatics.com/rob-os">
                 Open Agent OS
               </a>
@@ -159,9 +163,9 @@ export default function Page() {
             <div className="eyebrow">Investment options</div>
             <h2>The build and operating plan are active.</h2>
             <p>
-              The $5,500 implementation deposit is paid and the Growth Retainer is signed at $2,500 per month. The setup
-              balance is being reconciled before a payment request is issued: the original $7,500 total leaves $2,000,
-              while the latest instruction states $2,500 remains.
+              The $5,500 implementation deposit is paid and the Growth Retainer is signed at $2,500 per month. The
+              remaining setup balance is $2,500. Card, Apple Pay, or Google Pay checkout includes the 5% merchant
+              processing fee of $125, for a total FanBasis payment of $2,625.
             </p>
           </div>
           <div className="grid three stagger">
@@ -177,14 +181,16 @@ export default function Page() {
             </article>
 
             <article className="card liftCard featured">
-              <span className="pill">Original scope</span>
-              <div className="price">$7,500</div>
-              <h3>Implementation paid in full</h3>
+              <span className="pill">Balance due</span>
+              <div className="price">$2,625</div>
+              <h3>Remaining setup balance</h3>
               <p>
-                Covers the full initial build we discussed: CRM cleanup, agent workflows, signal radar, brief templates,
-                dashboards, and the launch handoff.
+                Includes the $2,500 remaining setup balance and the $125 merchant processing fee for card or digital
+                wallet checkout through FanBasis.
               </p>
-              <span className="button light">Balance reconciliation in progress</span>
+              <a className="button primary" href={remainingSetupCheckout}>
+                Pay securely through FanBasis
+              </a>
             </article>
 
             <article className="card liftCard">
