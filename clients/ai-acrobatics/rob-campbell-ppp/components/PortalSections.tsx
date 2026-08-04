@@ -730,7 +730,7 @@ export function OperationsPage() {
           <p>
             Each monthly report should break down delivered work, public-signal output, HubSpot hygiene progress, AI credit usage, dev hours, consulting hours, blockers, and recommended next systems.
           </p>
-          <Link className="button secondary" href="/billing">Review retainer tiers</Link>
+          <Link className="button secondary" href="/billing">Review current retainer</Link>
         </div>
       </section>
       <section className="section">
@@ -1093,11 +1093,12 @@ export function MorePage() {
       <h1>More</h1>
       <section className="section grid cols-2">
         <div className="panel">
-          <h2>Retainer Options</h2>
+          <h2>Retainer Plan</h2>
           <div className="grid">
             {retainerTiers.map((tier) => (
               <article className="panel soft" key={tier.name}>
                 <h3>{tier.name} · {tier.price}</h3>
+                <span className={`badge status-${tier.status === "Current plan" ? "active" : "pending"}`}>{tier.status}</span>
                 <ul className="list">
                   {tier.includes.map((item) => (
                     <li key={item}>{item}</li>
@@ -1136,6 +1137,7 @@ export function MorePage() {
 
 export async function BillingPage() {
   const runtime = await getPortalRuntimeData();
+  const visibleUpsellOffers = runtime.upsellOffers.filter((offer) => offer.status !== "hidden");
   const visibleUpsellIntents = runtime.upsellIntents.filter((intent) => isClientVisiblePortalRecord([
     intent.title,
     intent.offerSlug,
@@ -1146,7 +1148,7 @@ export async function BillingPage() {
   return (
     <main className="page">
       <h1>Billing</h1>
-      <p className="lead">Deposit, paid-in-full option, monthly retainers, and recommended next systems are tracked here with Julian's review gate intact.</p>
+      <p className="lead">The initial build, Rob's active Growth Retainer, and optional next systems are tracked here with Julian's review gate intact.</p>
       <section className="section grid cols-2">
         <div className="panel accent-panel">
           <p className="eyebrow">Current build</p>
@@ -1155,11 +1157,12 @@ export async function BillingPage() {
           <p className="muted">{paymentStatus.note}</p>
         </div>
         <div className="panel">
-          <h2>Retainer ladder</h2>
+          <h2>Current retainer and upgrade option</h2>
           <ul className="list">
             {retainerTiers.map((tier) => (
               <li key={tier.name}>
                 <strong>{tier.name} · {tier.price}</strong>
+                <span className={`badge status-${tier.status === "Current plan" ? "active" : "pending"}`}>{tier.status}</span>
                 <p>{tier.includes.join(", ")}</p>
               </li>
             ))}
@@ -1167,13 +1170,13 @@ export async function BillingPage() {
         </div>
       </section>
       <section className="section grid cols-3">
-        {runtime.upsellOffers.map((offer) => (
+        {visibleUpsellOffers.map((offer) => (
           <article className="panel" key={offer.offerSlug}>
-            <span className={`badge status-${offer.status === "recommended" ? "active" : "pending"}`}>{offer.status}</span>
+            <span className={`badge status-${["recommended", "active"].includes(offer.status) ? "active" : "pending"}`}>{offer.status === "active" ? "Current plan" : offer.status}</span>
             <h2>{offer.title}</h2>
             <p>{offer.outcome}</p>
             <p className="muted">{offer.priceLabel ?? "Request scoped quote"} · {offer.setupEstimate ?? "Timing depends on scope"}</p>
-            <UpsellActionButton offer={offer} />
+            {offer.status === "active" ? <p className="muted">Already included in Rob's active agreement.</p> : <UpsellActionButton offer={offer} />}
           </article>
         ))}
       </section>
@@ -1190,7 +1193,7 @@ export async function BillingPage() {
             ))}
           </ul>
         ) : (
-          <p className="muted">Retainer choice should be confirmed directly with Julian until Convex-backed upsell tracking passes verification.</p>
+          <p className="muted">No plan-change requests are currently under review. Rob's $2,500/month Growth Retainer remains active.</p>
         )}
       </section>
     </main>

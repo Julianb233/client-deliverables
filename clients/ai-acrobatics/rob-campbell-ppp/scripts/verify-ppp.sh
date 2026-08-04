@@ -74,6 +74,16 @@ fi
 grep -q "portalChangelog" "$DASH_DIR/app/api/meeting-sync/route.ts" || { echo "Missing meeting sync changelog write"; ERRORS=$((ERRORS + 1)); }
 grep -q "MEETING_SYNC_SECRET" "$DASH_DIR/app/api/meeting-sync/route.ts" || { echo "Missing meeting sync secret support"; ERRORS=$((ERRORS + 1)); }
 grep -q "portalStandardStatus" "$DASH_DIR/data/operations.ts" || { echo "Missing PPP operations status model"; ERRORS=$((ERRORS + 1)); }
+grep -q 'servicePackage: "$7,500 AI Prospect Engine build plus active $2,500/month Growth Retainer"' "$DASH_DIR/data/client-data.ts" || { echo "Missing confirmed Growth Retainer package"; ERRORS=$((ERRORS + 1)); }
+grep -q 'status: "active"' "$DASH_DIR/data/wizard-services.ts" || { echo "Growth Retainer is not marked active in static fallback"; ERRORS=$((ERRORS + 1)); }
+grep -q 'status: "hidden"' "$DASH_DIR/data/wizard-services.ts" || { echo "Superseded Operator Retainer is not hidden in static fallback"; ERRORS=$((ERRORS + 1)); }
+grep -q 'offer.status !== "hidden"' "$DASH_DIR/components/PortalSections.tsx" || { echo "Billing page does not filter hidden offers"; ERRORS=$((ERRORS + 1)); }
+grep -q 'offer.status === "hidden"' "$DASH_DIR/app/api/upsell-intent/route.ts" || { echo "Upsell API does not reject hidden offers"; ERRORS=$((ERRORS + 1)); }
+grep -q 'offer.status === "active"' "$DASH_DIR/app/api/upsell-intent/route.ts" || { echo "Upsell API does not reject duplicate active-plan requests"; ERRORS=$((ERRORS + 1)); }
+if grep -q "needs to choose the monthly retainer\|Choose the Operator, Growth, or Build Partner retainer\|Retainer choice should be confirmed" "$DASH_DIR/data/client-data.ts" "$DASH_DIR/components/PortalSections.tsx" "$DASH_DIR/scripts/seed-convex-rob.sh"; then
+  echo "Stale retainer-selection language remains"
+  ERRORS=$((ERRORS + 1))
+fi
 
 REAL_LINKS=$(grep -c "https://" "$DASH_DIR/data/client-data.ts" 2>/dev/null || echo 0)
 [ "$REAL_LINKS" -ge 2 ] || { echo "Need 2+ real hub links, found $REAL_LINKS"; ERRORS=$((ERRORS + 1)); }

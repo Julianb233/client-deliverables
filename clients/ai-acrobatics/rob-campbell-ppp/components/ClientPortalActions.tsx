@@ -218,6 +218,14 @@ export function UpsellActionButton({ offer }: { offer: PortalRuntimeData["upsell
   const [checkoutUrl, setCheckoutUrl] = useState<string | undefined>();
   const intentType = useMemo(() => offer.checkoutUrl && !offer.requestOnly ? "checkout" : "request", [offer.checkoutUrl, offer.requestOnly]);
 
+  if (offer.status === "hidden") {
+    return null;
+  }
+
+  if (offer.status === "active") {
+    return <p className="muted">Current agreement</p>;
+  }
+
   async function onClick() {
     setState("submitting");
     setNotice("");

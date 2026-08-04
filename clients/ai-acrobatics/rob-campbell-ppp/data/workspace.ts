@@ -218,7 +218,7 @@ export const workspaceDesignQuestions = [
   "Which team member should own each of the seven assigned workspace usernames?",
   "Which follow-up call fields should appear after Rob approves record-level HubSpot scope?",
   "Which activity metrics should PULSE show daily and weekly?",
-  "Which retainer tier should become the operating default after the initial build?",
+  "Which Growth Retainer priorities should lead the first monthly operating cycle?",
   "What should Rob see weekly so the system feels useful without exposing sensitive client records?",
 ];
 

@@ -28,8 +28,8 @@ export const milestones = [
     name: "Post-Deposit Onboarding",
     status: "active" as const,
     dateRange: "June 9-24, 2026",
-    description: "Move from proposal follow-up into workspace review, retainer decision, and first implementation setup while holding sensitive sends for Julian review.",
-    deliverables: ["Review-gated PPP", "Client workspace review page", "Retainer selection", "HubSpot inspection plan", "Meeting notes source index"],
+    description: "Move from proposal follow-up into workspace review and first implementation setup while holding sensitive sends for Julian review.",
+    deliverables: ["Review-gated PPP", "Client workspace review page", "$2,500 Growth Retainer confirmed", "HubSpot inspection plan", "Meeting notes source index"],
   },
   {
     id: 5,
@@ -51,8 +51,8 @@ export const milestones = [
     id: 7,
     name: "Retainer Operating Cadence",
     status: "active" as const,
-    dateRange: "Decision needed",
-    description: "Rob needs to choose Operator, Growth, or Build Partner so recurring signal reviews, usage tracking, reports, and next-step recommendations match the purchased cadence.",
-    deliverables: ["Daily signal report", "Monthly retainer report", "Client update rhythm"],
+    dateRange: "Growth plan active",
+    description: "Rob's $2,500 monthly Growth Retainer sets the recurring signal-review cadence, 7 included development or consulting hours, expanded AI usage, reporting, and next-step recommendations.",
+    deliverables: ["Daily signal report", "Monthly retainer report", "Included-hours ledger", "AI usage summary", "Client update rhythm"],
   },
 ];

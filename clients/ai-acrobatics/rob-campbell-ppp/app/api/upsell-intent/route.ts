@@ -28,11 +28,18 @@ export async function POST(request: Request) {
     requestOnly?: boolean;
     outcome?: string;
     priceLabel?: string;
+    status?: "recommended" | "available" | "active" | "hidden";
   };
   const fallback = wizardServiceOffers.find((offer) => offer.offerSlug === offerSlug);
   const offer = liveOffer ?? fallback;
   if (!offer) {
     return NextResponse.json({ ok: false, error: "Offer not found." }, { status: 404 });
+  }
+  if (offer.status === "hidden") {
+    return NextResponse.json({ ok: false, error: "Offer is not available for this client." }, { status: 404 });
+  }
+  if (offer.status === "active") {
+    return NextResponse.json({ ok: false, error: "This is already the client's active agreement." }, { status: 409 });
   }
 
   const checkoutUrl = !offer.requestOnly && offer.checkoutUrl ? offer.checkoutUrl : undefined;

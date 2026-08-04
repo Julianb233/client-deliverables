@@ -159,7 +159,7 @@ export default function WorkspacePage() {
                 </div>
               ))}
             </div>
-            <Link className="button secondary" href="/billing">Compare retainer tiers</Link>
+            <Link className="button secondary" href="/billing">Review current retainer</Link>
           </div>
         </section>
 

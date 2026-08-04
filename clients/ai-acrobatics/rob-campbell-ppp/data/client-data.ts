@@ -7,7 +7,7 @@ export const clientInfo = {
   contactPhone: "+1 602 502 5054",
   domain: "rob-campbell-proposal.vercel.app",
   industry: "Financial services and advisor prospecting",
-  servicePackage: "$7,500 AI Prospect Engine build plus optional monthly retainer",
+  servicePackage: "$7,500 AI Prospect Engine build plus active $2,500/month Growth Retainer",
   startDate: "2026-05-27",
 };
 
@@ -29,7 +29,7 @@ export const stats = [
   { label: "Active workspace skills", value: 12, previousValue: 7, format: "number", trend: "up" },
   { label: "Deposit received", value: 5500, previousValue: 0, format: "currency", trend: "up" },
   { label: "HubSpot audit plan", value: 12, previousValue: 0, format: "number", trend: "up" },
-  { label: "Retainer options", value: 3, previousValue: 0, format: "number", trend: "up" },
+  { label: "Active monthly retainer", value: 2500, previousValue: 0, format: "currency", trend: "up" },
 ] as const;
 
 export const hubLinks = [
@@ -125,18 +125,11 @@ export const hubLinks = [
     category: "secondary",
   },
   {
-    label: "Operator Retainer",
-    url: "https://www.fanbasis.com/agency-checkout/Aiacrobatics/DwW1B",
+    label: "Current Growth Retainer",
+    url: "/billing",
     icon: "retainer",
-    description: "$1,500/mo monitoring and reporting tier",
-    category: "secondary",
-  },
-  {
-    label: "Growth Retainer",
-    url: "https://www.fanbasis.com/agency-checkout/Aiacrobatics/rgV2w",
-    icon: "retainer",
-    description: "$2,500/mo signal and workflow growth tier",
-    category: "secondary",
+    description: "$2,500/mo signed plan with 7 development or consulting hours and expanded AI usage",
+    category: "primary",
   },
   {
     label: "Build Partner Retainer",
@@ -231,7 +224,7 @@ export const onboardingBooking = {
     "HubSpot access path and the safest read-only starting scope.",
     "Target San Diego employers and equity/liquidity signals that matter most.",
     "What Rob wants to review manually before any prospect-facing outreach.",
-    "Retainer tier fit after the initial build moves into operating mode.",
+    "Growth Retainer priorities for the first monthly operating cycle.",
   ],
 };
 
@@ -247,7 +240,7 @@ export const snapshotReport = {
     "Connect LinkedIn and Meet Alfred through the approved integration path.",
     "Receive Rob's final annual-review HTML, sample PDF, and Claude skill folder.",
     "Confirm which teammates use each of the seven assigned workspace usernames.",
-    "Choose the Operator, Growth, or Build Partner retainer cadence.",
+    "Run the first $2,500 Growth Retainer operating cadence and report included-hour usage.",
   ],
   lastUpdated: "2026-07-16",
 };
@@ -257,7 +250,7 @@ export const paymentStatus = {
   depositAmount: "$5,500",
   initialBuildTotal: "$7,500",
   statusLabel: "Deposit received",
-  note: "Initial build is active. Rob needs to choose the monthly retainer tier before the operating cadence starts.",
+  note: "The active monthly agreement is the $2,500 Growth Retainer with 7 development or consulting hours and expanded AI usage. Invoice standing is tracked separately.",
 };
 
 export const complianceGuardrails = [
@@ -271,18 +264,15 @@ export const complianceGuardrails = [
 
 export const retainerTiers = [
   {
-    name: "Operator",
-    price: "$1,500/mo",
-    includes: ["Agent monitoring", "AI credit usage allowance", "Light HubSpot hygiene", "Monthly reporting"],
-  },
-  {
     name: "Growth",
     price: "$2,500/mo",
-    includes: ["Operator tier", "Weekly signal reviews", "More dev or consulting hours", "Content/template refreshes"],
+    status: "Current plan",
+    includes: ["Weekly signal reviews", "7 development or consulting hours", "Expanded AI usage", "Content and template refreshes", "Monthly value and usage reporting"],
   },
   {
     name: "Build Partner",
     price: "$4,500/mo",
-    includes: ["Growth tier", "Advanced experiments", "Priority response", "Quarterly strategy", "Deeper workflow iteration"],
+    status: "Optional upgrade",
+    includes: ["Growth plan foundation", "Advanced experiments", "Priority response", "Quarterly strategy", "Deeper workflow iteration"],
   },
 ];

@@ -1,4 +1,5 @@
 export const changelog = [
+  { date: "2026-08-04", title: "$2,500 Growth Retainer confirmed", description: "Rob's signed monthly operating agreement is now recorded as the active Growth Retainer with 7 development or consulting hours and expanded AI usage; the earlier tier-selection request is complete.", type: "billing" },
   { date: "2026-07-16", title: "Unified Rob command center deployed", description: "rob.aiacrobatics.com/rob-os now serves the authenticated AI Practice Command Center from Rob's dedicated Hetzner server with Executive, Team, and Operations views.", type: "portal" },
   { date: "2026-07-16", title: "Twelve business-role agents activated", description: "OPTIMUS, ATLAS, SCOUT, COACH, SCRIBE, PULSE, SHIELD, SENTINEL, ORACLE, BEACON, AXIOM, and CONCIERGE now appear with clear roles, capabilities, state, and next actions.", type: "agents" },
   { date: "2026-07-16", title: "July 16 Fireflies game plan published", description: "The current meeting decisions now drive the visible workflow order: HubSpot follow-up calls, private annual-review reports, LinkedIn and Meet Alfred responses, and team onboarding.", type: "source" },
