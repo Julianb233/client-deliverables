@@ -1,5 +1,5 @@
 const robEmail = "Robert.t.campbell5@gmail.com";
-const remainingSetupCheckout = "https://www.fanbasis.com/agency-checkout/Aiacrobatics/MNYXB";
+const remainingSetupCheckout = "https://www.fanbasis.com/agency-checkout/Aiacrobatics/j6PVl";
 
 const implementationItems = [
   "HubSpot cleanup and pipeline mapping: data hygiene, lifecycle stages, deal stages, tags, owner fields, and the manual handoff point before anything becomes client-side.",
@@ -112,7 +112,7 @@ export default function Page() {
 
         <div className="wrap heroBody">
           <div className="heroCopy reveal">
-            <div className="eyebrow">Implementation status updated - July 30, 2026</div>
+            <div className="eyebrow">Implementation status updated - August 4, 2026</div>
             <h1>
               Rob, this is the build path for your <span className="gradientText">AI Prospect Engine.</span>
             </h1>
@@ -125,7 +125,7 @@ export default function Page() {
               <span className="button primary">$5,500 deposit paid</span>
               <span className="button secondary">$2,500/mo Growth active</span>
               <a className="button secondary" href={remainingSetupCheckout}>
-                Pay $2,625 setup balance
+                Pay $2,000 setup balance
               </a>
               <a className="button secondary" href="https://rob.aiacrobatics.com/rob-os">
                 Open Agent OS
@@ -163,9 +163,9 @@ export default function Page() {
             <div className="eyebrow">Investment options</div>
             <h2>The build and operating plan are active.</h2>
             <p>
-              The $5,500 implementation deposit is paid and the Growth Retainer is signed at $2,500 per month. The
-              remaining setup balance is $2,500. Card, Apple Pay, or Google Pay checkout includes the 5% merchant
-              processing fee of $125, for a total FanBasis payment of $2,625.
+              The initial build was agreed at $7,500. The $5,500 implementation deposit is paid and the Growth
+              Retainer is signed at $2,500 per month. The remaining setup balance is $2,000, payable by card,
+              Apple Pay, or Google Pay through FanBasis with no added processing fee.
             </p>
           </div>
           <div className="grid three stagger">
@@ -182,11 +182,11 @@ export default function Page() {
 
             <article className="card liftCard featured">
               <span className="pill">Balance due</span>
-              <div className="price">$2,625</div>
+              <div className="price">$2,000</div>
               <h3>Remaining setup balance</h3>
               <p>
-                Includes the $2,500 remaining setup balance and the $125 merchant processing fee for card or digital
-                wallet checkout through FanBasis.
+                The final balance on the $7,500 initial build after the $5,500 deposit. Card, Apple Pay, or Google
+                Pay checkout through FanBasis with no added processing fee.
               </p>
               <a className="button primary" href={remainingSetupCheckout}>
                 Pay securely through FanBasis
