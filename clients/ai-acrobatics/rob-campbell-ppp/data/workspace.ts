@@ -70,7 +70,7 @@ export const workspaceAgentProfiles: WorkspaceAgentProfile[] = [
     department: "Control Tower",
     profile: "Orchestrates Rob's AI Prospect Engine, source map, Linear updates, reports, and swarm selection.",
     summary: "Keeps the whole operating plan coherent and decides which specialist agent should run next.",
-    next: "Coordinate workspace review, HubSpot access, retainer selection, and next swarm selection.",
+    next: "Coordinate workspace review, approved integrations, Growth Retainer reporting, and next swarm selection.",
     evidence: "Hermes agency manifest, source map, Linear AI-10321.",
   },
   {

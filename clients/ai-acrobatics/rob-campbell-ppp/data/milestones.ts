@@ -4,8 +4,8 @@ export const milestones = [
     name: "Proposal and Payment Path",
     status: "completed" as const,
     dateRange: "May 27-30, 2026",
-    description: "Updated Rob's proposal with deposit, paid-in-full, and monthly retainer payment paths; deposit is now received.",
-    deliverables: ["Live proposal", "$5,500 deposit received", "$7,500 paid-in-full path", "Three retainer tiers"],
+    description: "Verified the $5,500 deposit, activated the $2,500/month Growth Retainer, and reconciled two successful retainer payments in Commas.",
+    deliverables: ["Live proposal", "$5,500 deposit received", "Growth Retainer activated", "$10,500 total paid verified"],
   },
   {
     id: 2,
@@ -28,8 +28,8 @@ export const milestones = [
     name: "Post-Deposit Onboarding",
     status: "active" as const,
     dateRange: "June 9-24, 2026",
-    description: "Move from proposal follow-up into workspace review, retainer decision, and first implementation setup while holding sensitive sends for Julian review.",
-    deliverables: ["Review-gated PPP", "Client workspace review page", "Retainer selection", "HubSpot inspection plan", "Meeting notes source index"],
+    description: "Move from proposal follow-up into workspace review and implementation setup while holding sensitive sends for Julian review.",
+    deliverables: ["Review-gated PPP", "Client workspace review page", "Growth Retainer activation", "HubSpot inspection plan", "Meeting notes source index"],
   },
   {
     id: 5,
@@ -51,8 +51,8 @@ export const milestones = [
     id: 7,
     name: "Retainer Operating Cadence",
     status: "active" as const,
-    dateRange: "Decision needed",
-    description: "Rob needs to choose Operator, Growth, or Build Partner so recurring signal reviews, usage tracking, reports, and next-step recommendations match the purchased cadence.",
+    dateRange: "Started June 17, 2026",
+    description: "The Growth Retainer is active at $2,500/month. Recurring signal reviews, usage tracking, reports, and next-step recommendations should match that purchased cadence.",
     deliverables: ["Daily signal report", "Monthly retainer report", "Client update rhythm"],
   },
 ];

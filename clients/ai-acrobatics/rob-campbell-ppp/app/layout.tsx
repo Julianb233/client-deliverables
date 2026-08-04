@@ -68,8 +68,8 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
             </Link>
             <div className="operator-card">
               <p className="eyebrow">Private workspace</p>
-              <strong>Deposit received</strong>
-              <span>$5,500 paid. Build is active.</span>
+              <strong>Growth retainer active</strong>
+              <span>$10,500 paid across 3 verified transactions.</span>
             </div>
             <SidebarNav />
             <div className="sidebar-footer">

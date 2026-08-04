@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { complianceGuardrails, driveResources, health, hubLinks, onboardingBooking, paymentStatus, retainerTiers, snapshotReport, stats } from "../data/client-data";
+import { complianceGuardrails, driveResources, health, hubLinks, onboardingBooking, paymentHistory, paymentStatus, retainerTiers, snapshotReport, stats } from "../data/client-data";
 import { deliverables } from "../data/deliverables";
 import { firefliesSource, gamePlans, meetingNotes } from "../data/meeting-notes";
 import { milestones } from "../data/milestones";
@@ -31,7 +31,7 @@ function operationalStatusClass(status: string) {
 export async function HomePage() {
   const runtime = await getPortalRuntimeData();
   const liveGuardrails = runtime.client?.metadata?.complianceGuardrails ?? complianceGuardrails;
-  const paymentLabel = runtime.client?.metadata?.paymentStatus ?? paymentStatus.statusLabel;
+  const paymentLabel = paymentStatus.statusLabel;
   const feedItems = runtime.feed.length > 0 ? runtime.feed.slice(0, 5) : runtime.changelog.slice(0, 5).map((item) => ({
     id: `${item.date}-${item.title}`,
     date: item.date,
@@ -46,7 +46,7 @@ export async function HomePage() {
         <p className="eyebrow">Wizard of AI command center</p>
         <h1>Rob, your AI Prospect Engine is moving.</h1>
         <p className="lead">
-          The deposit is in, the compliance boundary is set, and this portal now tracks both sides of the work: what AI Acrobatics is building and which AI systems make sense to install next.
+          Three payments are verified, the Growth retainer is active, and this portal tracks both sides of the work: what AI Acrobatics is building and what Rob still needs to review.
         </p>
       </div>
       <section className="hero">
@@ -73,7 +73,7 @@ export async function HomePage() {
           <p className="eyebrow">Payment and kickoff</p>
           <h2>{paymentLabel}</h2>
           <p>
-            {paymentStatus.depositAmount} deposit received toward the {paymentStatus.initialBuildTotal} initial build. The remaining balance and retainer start should stay under Julian review before any client-facing send.
+            {paymentStatus.totalPaid} received across {paymentStatus.paidTransactionCount} successful Commas payments. The remaining setup balance stays separate until a matching payment clears.
           </p>
           <table className="ops-table">
             <tbody>
@@ -83,7 +83,7 @@ export async function HomePage() {
               </tr>
               <tr>
                 <th>Retainer</th>
-                <td>$1,500/mo starting tier, with higher tiers for more dev, consulting, and credit usage.</td>
+                <td>{paymentStatus.activeRetainerName} · {paymentStatus.activeRetainerAmount} · active through {paymentStatus.activeThrough}</td>
               </tr>
               <tr>
                 <th>Status</th>
@@ -1144,36 +1144,88 @@ export async function BillingPage() {
   return (
     <main className="page">
       <h1>Billing</h1>
-      <p className="lead">Deposit, paid-in-full option, monthly retainers, and recommended next systems are tracked here with Julian's review gate intact.</p>
+      <p className="lead">Verified payments, the active retainer, and the still-open setup balance are separated here so paid history is never confused with a checkout request.</p>
       <section className="section grid cols-2">
         <div className="panel accent-panel">
-          <p className="eyebrow">Current build</p>
+          <p className="eyebrow">Verified through {paymentStatus.lastVerifiedAt}</p>
           <h2>{paymentStatus.statusLabel}</h2>
-          <p>{paymentStatus.depositAmount} received toward the {paymentStatus.initialBuildTotal} build.</p>
+          <p>{paymentStatus.totalPaid} received across {paymentStatus.paidTransactionCount} successful payments.</p>
           <p className="muted">{paymentStatus.note}</p>
         </div>
         <div className="panel">
-          <h2>Retainer ladder</h2>
-          <ul className="list">
-            {retainerTiers.map((tier) => (
-              <li key={tier.name}>
-                <strong>{tier.name} · {tier.price}</strong>
-                <p>{tier.includes.join(", ")}</p>
-              </li>
-            ))}
-          </ul>
+          <p className="eyebrow">Current subscription</p>
+          <h2>{paymentStatus.activeRetainerName}</h2>
+          <p>{paymentStatus.activeRetainerAmount} · active since {paymentStatus.activeRetainerStartedAt}</p>
+          <p className="muted">Current Commas subscription status is active through {paymentStatus.activeThrough}. Contact Julian before changing tiers so a second subscription is not created.</p>
+        </div>
+      </section>
+      <section className="section grid cols-2">
+        <div className="panel">
+          <div className="panel-heading-row">
+            <div>
+              <p className="eyebrow">Commas receipts</p>
+              <h2>Payment history</h2>
+            </div>
+            <span className="badge status-active">{paymentStatus.paidTransactionCount} paid</span>
+          </div>
+          <div className="table-wrap">
+            <table className="ops-table payment-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Payment</th>
+                  <th>Status</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                {paymentHistory.map((payment) => (
+                  <tr key={`${payment.date}-${payment.description}`}>
+                    <td>{payment.date}</td>
+                    <td>{payment.description}</td>
+                    <td><span className="badge status-active">{payment.status}</span></td>
+                    <td>{payment.amount}</td>
+                  </tr>
+                ))}
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th colSpan={3}>Total paid</th>
+                  <th>{paymentStatus.totalPaid}</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <div className="panel">
+          <p className="eyebrow">Not included in paid history</p>
+          <h2>Remaining setup balance</h2>
+          <p><strong>{paymentStatus.setupBalance}</strong> base balance · {paymentStatus.setupBalanceStatus}</p>
+          <p className="muted">The card checkout totals {paymentStatus.setupBalanceCheckoutTotal} after the 5% merchant fee. Commas shows no successful transaction on either setup-balance checkout as of {paymentStatus.lastVerifiedAt}; Apple Cash completion is also unconfirmed.</p>
+          <p className="muted">Confirm the payment route with Julian before paying so Apple Cash and Commas are not both used.</p>
         </div>
       </section>
       <section className="section grid cols-3">
-        {runtime.upsellOffers.map((offer) => (
-          <article className="panel" key={offer.offerSlug}>
-            <span className={`badge status-${offer.status === "recommended" ? "active" : "pending"}`}>{offer.status}</span>
-            <h2>{offer.title}</h2>
-            <p>{offer.outcome}</p>
-            <p className="muted">{offer.priceLabel ?? "Request scoped quote"} · {offer.setupEstimate ?? "Timing depends on scope"}</p>
-            <UpsellActionButton offer={offer} />
-          </article>
-        ))}
+        {runtime.upsellOffers.map((offer) => {
+          const isRetainer = offer.category === "retainer";
+          const isActiveRetainer = offer.offerSlug === paymentStatus.activeRetainerSlug;
+
+          return (
+            <article className="panel" key={offer.offerSlug}>
+              <span className={`badge status-${isActiveRetainer || offer.status === "recommended" ? "active" : "pending"}`}>
+                {isActiveRetainer ? "active" : isRetainer ? "alternative" : offer.status}
+              </span>
+              <h2>{offer.title}</h2>
+              <p>{offer.outcome}</p>
+              <p className="muted">{offer.priceLabel ?? "Request scoped quote"} · {isActiveRetainer ? `Active since ${paymentStatus.activeRetainerStartedAt}` : offer.setupEstimate ?? "Timing depends on scope"}</p>
+              {isRetainer ? (
+                <p className="muted">{isActiveRetainer ? "Current plan. No additional checkout is needed." : "Contact Julian before changing plans."}</p>
+              ) : (
+                <UpsellActionButton offer={offer} />
+              )}
+            </article>
+          );
+        })}
       </section>
       <section className="section panel">
         <h2>Recent upsell interest</h2>
@@ -1188,7 +1240,7 @@ export async function BillingPage() {
             ))}
           </ul>
         ) : (
-          <p className="muted">Retainer choice should be confirmed directly with Julian until Convex-backed upsell tracking passes verification.</p>
+          <p className="muted">No pending plan-change request. The Growth retainer is already active.</p>
         )}
       </section>
     </main>

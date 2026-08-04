@@ -563,6 +563,11 @@ p {
   font-size: 13px;
 }
 
+.table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 .ops-table th,
 .ops-table td {
   border-top: 1px solid var(--line);
@@ -582,6 +587,11 @@ p {
 
 .ops-table tr:hover td {
   background: rgba(29, 29, 51, 0.72);
+}
+
+.ops-table tfoot th {
+  border-top: 1px solid var(--line);
+  font-weight: 800;
 }
 
 .timeline {
@@ -2139,5 +2149,45 @@ code {
     color: #fff;
     font-size: 22px;
     font-weight: 900;
+  }
+
+  .payment-table {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    overflow: visible;
+    white-space: normal;
+  }
+
+  .payment-table th,
+  .payment-table td {
+    padding: 10px 4px;
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+
+  .payment-table th {
+    font-size: 9px;
+    letter-spacing: 0.04em;
+  }
+
+  .payment-table th:nth-child(1),
+  .payment-table td:nth-child(1) {
+    width: 22%;
+  }
+
+  .payment-table th:nth-child(2),
+  .payment-table td:nth-child(2) {
+    width: 41%;
+  }
+
+  .payment-table th:nth-child(3),
+  .payment-table td:nth-child(3) {
+    width: 17%;
+  }
+
+  .payment-table th:nth-child(4),
+  .payment-table td:nth-child(4) {
+    width: 20%;
   }
 }

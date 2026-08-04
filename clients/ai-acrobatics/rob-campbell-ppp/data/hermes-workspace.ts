@@ -91,8 +91,8 @@ export const hermesSwarmDispatch = [
   },
   {
     name: "monthly-retainer-swarm",
-    status: "waiting on retainer selection",
-    trigger: "Rob chooses Operator, Growth, or Build Partner retainer.",
+    status: "active on Growth Retainer",
+    trigger: "Monthly Growth Retainer reporting cycle or Julian-requested value review.",
     purpose: "Summarize value delivered, usage, hours, credits, and next recommendations.",
     agents: ["retainer-ops-agent", "reporting-agent", "rob-chief-of-staff", "compliance-boundary-agent"],
     flow: ["Collect evidence", "Separate credits and hours", "Map to tier", "Generate report"],

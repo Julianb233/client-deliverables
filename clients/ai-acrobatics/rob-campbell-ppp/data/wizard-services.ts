@@ -121,10 +121,10 @@ export const wizardServiceOffers: WizardServiceOffer[] = [
     category: "retainer",
     outcome: "Adds weekly signal reviews, deeper iteration, and more dev/consulting capacity.",
     whyItFits: "Use this when the prospect engine is producing enough signal to justify faster iteration.",
-    setupEstimate: "Starts after initial build",
+    setupEstimate: "Active since June 17, 2026",
     priceLabel: "$2,500/mo",
     checkoutUrl: "https://www.fanbasis.com/agency-checkout/Aiacrobatics/rgV2w",
-    status: "available",
+    status: "active",
     sortOrder: 60,
   },
   {
