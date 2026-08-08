@@ -67,6 +67,14 @@ fi
 grep -q "portalChangelog" "$DASH_DIR/app/api/meeting-sync/route.ts" || { echo "Missing meeting sync changelog write"; ERRORS=$((ERRORS + 1)); }
 grep -q "MEETING_SYNC_SECRET" "$DASH_DIR/app/api/meeting-sync/route.ts" || { echo "Missing meeting sync secret support"; ERRORS=$((ERRORS + 1)); }
 grep -q "portalStandardStatus" "$DASH_DIR/data/operations.ts" || { echo "Missing PPP operations status model"; ERRORS=$((ERRORS + 1)); }
+grep -q 'totalPaid: "$10,500"' "$DASH_DIR/data/client-data.ts" || { echo "Missing verified Commas total paid"; ERRORS=$((ERRORS + 1)); }
+grep -q 'paidTransactionCount: 3' "$DASH_DIR/data/client-data.ts" || { echo "Missing verified Commas payment count"; ERRORS=$((ERRORS + 1)); }
+grep -q 'July 17, 2026' "$DASH_DIR/data/client-data.ts" || { echo "Missing latest verified Growth retainer renewal"; ERRORS=$((ERRORS + 1)); }
+grep -q 'Payment history' "$DASH_DIR/components/PortalSections.tsx" || { echo "Missing client-visible payment history"; ERRORS=$((ERRORS + 1)); }
+if grep -q "needs to choose the monthly retainer tier\|Retainer choice should be confirmed directly" "$DASH_DIR/data/client-data.ts" "$DASH_DIR/components/PortalSections.tsx"; then
+  echo "Stale retainer-selection copy remains"
+  ERRORS=$((ERRORS + 1))
+fi
 
 REAL_LINKS=$(grep -c "https://" "$DASH_DIR/data/client-data.ts" 2>/dev/null || echo 0)
 [ "$REAL_LINKS" -ge 2 ] || { echo "Need 2+ real hub links, found $REAL_LINKS"; ERRORS=$((ERRORS + 1)); }

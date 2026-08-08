@@ -7,7 +7,7 @@ export const clientInfo = {
   contactPhone: "+1 602 502 5054",
   domain: "rob-campbell-proposal.vercel.app",
   industry: "Financial services and advisor prospecting",
-  servicePackage: "$7,500 AI Prospect Engine build plus optional monthly retainer",
+  servicePackage: "$7,500 AI Prospect Engine build plus active $2,500/month Growth retainer",
   startDate: "2026-05-27",
 };
 
@@ -20,16 +20,16 @@ export const brand = {
 
 export const health = {
   status: "yellow" as "green" | "yellow" | "red",
-  summary: "Deposit is received, the Hermes agency is deployed internally, and the current gates are Rob's agent roster review, retainer selection, HubSpot read-only scope, and the Convex portal backend repair.",
+  summary: "The $5,500 deposit and two $2,500 Growth retainer payments are verified. The remaining setup balance is not included in paid totals until a matching payment clears.",
 };
 
 export const stats = [
   { label: "Hermes agents configured", value: 8, previousValue: 0, format: "number", trend: "up" },
   { label: "Swarms mapped", value: 5, previousValue: 0, format: "number", trend: "up" },
   { label: "Local skills enabled", value: 7, previousValue: 0, format: "number", trend: "up" },
-  { label: "Deposit received", value: 5500, previousValue: 0, format: "currency", trend: "up" },
+  { label: "Total paid", value: 10500, previousValue: 5500, format: "currency", trend: "up" },
   { label: "HubSpot audit plan", value: 12, previousValue: 0, format: "number", trend: "up" },
-  { label: "Retainer options", value: 3, previousValue: 0, format: "number", trend: "up" },
+  { label: "Successful payments", value: 3, previousValue: 1, format: "number", trend: "up" },
 ] as const;
 
 export const hubLinks = [
@@ -121,7 +121,7 @@ export const hubLinks = [
     label: "Growth Retainer",
     url: "https://www.fanbasis.com/agency-checkout/Aiacrobatics/rgV2w",
     icon: "retainer",
-    description: "$2,500/mo signal and workflow growth tier",
+    description: "$2,500/mo active subscription; started June 17, 2026",
     category: "secondary",
   },
   {
@@ -217,7 +217,7 @@ export const onboardingBooking = {
     "HubSpot access path and the safest read-only starting scope.",
     "Target San Diego employers and equity/liquidity signals that matter most.",
     "What Rob wants to review manually before any prospect-facing outreach.",
-    "Retainer tier fit after the initial build moves into operating mode.",
+    "Growth Retainer priorities and the proof Rob wants in each operating report.",
   ],
 };
 
@@ -230,21 +230,54 @@ export const snapshotReport = {
   milestonesOnTrack: "4 of 7",
   nextMonthFocus: [
     "Use the client workspace page to review and shape the focused eight-agent Hermes roster.",
-    "Have Rob choose Operator, Growth, or Build Partner retainer so operating cadence is clear.",
+    "Track the active Growth Retainer against weekly signal, development, and reporting outcomes.",
     "Confirm HubSpot read-only scope and any missing tool access for Apollo, LinkedIn, Meet Alfred, Slack, and Notion.",
     "Run the HubSpot inspection checklist against approved read-only data.",
     "Repair Convex PPP backend binding before calling request/feed operations fully live.",
   ],
-  lastUpdated: "2026-06-21",
+  lastUpdated: "2026-08-04",
 };
 
 export const paymentStatus = {
   depositReceived: true,
   depositAmount: "$5,500",
   initialBuildTotal: "$7,500",
-  statusLabel: "Deposit received",
-  note: "Initial build is active. Rob needs to choose the monthly retainer tier before the operating cadence starts.",
+  totalPaid: "$10,500",
+  paidTransactionCount: 3,
+  activeRetainerName: "Growth Retainer",
+  activeRetainerSlug: "growth-retainer",
+  activeRetainerAmount: "$2,500/month",
+  activeRetainerStartedAt: "June 17, 2026",
+  activeThrough: "August 16, 2026",
+  setupBalance: "$2,500",
+  setupBalanceCheckoutTotal: "$2,625",
+  setupBalanceStatus: "Payment not confirmed",
+  setupBalanceCheckoutUrl: "https://www.fanbasis.com/agency-checkout/Aiacrobatics/MNYXB",
+  statusLabel: "Growth retainer active",
+  note: "Commas confirms three successful payments totaling $10,500. The remaining setup balance is tracked separately and is not counted as paid.",
+  lastVerifiedAt: "August 4, 2026",
 };
+
+export const paymentHistory = [
+  {
+    date: "May 29, 2026",
+    description: "AI Prospect Engine deposit",
+    amount: "$5,500",
+    status: "Paid",
+  },
+  {
+    date: "June 17, 2026",
+    description: "Growth Retainer - first monthly payment",
+    amount: "$2,500",
+    status: "Paid",
+  },
+  {
+    date: "July 17, 2026",
+    description: "Growth Retainer - monthly renewal",
+    amount: "$2,500",
+    status: "Paid",
+  },
+] as const;
 
 export const complianceGuardrails = [
   "No Dynamics writes",
